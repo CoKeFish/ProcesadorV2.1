@@ -1,0 +1,320 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus II 64-Bit"
+// VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Web Edition"
+
+// DATE "11/30/2020 23:49:42"
+
+// 
+// Device: Altera EP4CGX15BF14C6 Package FBGA169
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module ProgramStatus (
+	Clock,
+	ResetSystem,
+	SaveB,
+	SaveInt,
+	IntE,
+	Banderas,
+	StatusR);
+input 	Clock;
+input 	ResetSystem;
+input 	SaveB;
+input 	SaveInt;
+input 	IntE;
+input 	[3:0] Banderas;
+output 	[4:0] StatusR;
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \StatusR[0]~output_o ;
+wire \StatusR[1]~output_o ;
+wire \StatusR[2]~output_o ;
+wire \StatusR[3]~output_o ;
+wire \StatusR[4]~output_o ;
+wire \Clock~input_o ;
+wire \Banderas[0]~input_o ;
+wire \ResetSystem~input_o ;
+wire \SaveB~input_o ;
+wire \FF0~q ;
+wire \Banderas[1]~input_o ;
+wire \FF1~q ;
+wire \Banderas[2]~input_o ;
+wire \FF2~q ;
+wire \Banderas[3]~input_o ;
+wire \FF3~q ;
+wire \IntE~input_o ;
+wire \SaveInt~input_o ;
+wire \FF4~q ;
+
+
+cycloneiv_io_obuf \StatusR[0]~output (
+	.i(\FF0~q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\StatusR[0]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \StatusR[0]~output .bus_hold = "false";
+defparam \StatusR[0]~output .open_drain_output = "false";
+// synopsys translate_on
+
+cycloneiv_io_obuf \StatusR[1]~output (
+	.i(\FF1~q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\StatusR[1]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \StatusR[1]~output .bus_hold = "false";
+defparam \StatusR[1]~output .open_drain_output = "false";
+// synopsys translate_on
+
+cycloneiv_io_obuf \StatusR[2]~output (
+	.i(\FF2~q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\StatusR[2]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \StatusR[2]~output .bus_hold = "false";
+defparam \StatusR[2]~output .open_drain_output = "false";
+// synopsys translate_on
+
+cycloneiv_io_obuf \StatusR[3]~output (
+	.i(\FF3~q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\StatusR[3]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \StatusR[3]~output .bus_hold = "false";
+defparam \StatusR[3]~output .open_drain_output = "false";
+// synopsys translate_on
+
+cycloneiv_io_obuf \StatusR[4]~output (
+	.i(\FF4~q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\StatusR[4]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \StatusR[4]~output .bus_hold = "false";
+defparam \StatusR[4]~output .open_drain_output = "false";
+// synopsys translate_on
+
+cycloneiv_io_ibuf \Clock~input (
+	.i(Clock),
+	.ibar(gnd),
+	.o(\Clock~input_o ));
+// synopsys translate_off
+defparam \Clock~input .bus_hold = "false";
+defparam \Clock~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneiv_io_ibuf \Banderas[0]~input (
+	.i(Banderas[0]),
+	.ibar(gnd),
+	.o(\Banderas[0]~input_o ));
+// synopsys translate_off
+defparam \Banderas[0]~input .bus_hold = "false";
+defparam \Banderas[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneiv_io_ibuf \ResetSystem~input (
+	.i(ResetSystem),
+	.ibar(gnd),
+	.o(\ResetSystem~input_o ));
+// synopsys translate_off
+defparam \ResetSystem~input .bus_hold = "false";
+defparam \ResetSystem~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneiv_io_ibuf \SaveB~input (
+	.i(SaveB),
+	.ibar(gnd),
+	.o(\SaveB~input_o ));
+// synopsys translate_off
+defparam \SaveB~input .bus_hold = "false";
+defparam \SaveB~input .simulate_z_as = "z";
+// synopsys translate_on
+
+dffeas FF0(
+	.clk(\Clock~input_o ),
+	.d(\Banderas[0]~input_o ),
+	.asdata(vcc),
+	.clrn(\ResetSystem~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\SaveB~input_o ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\FF0~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam FF0.is_wysiwyg = "true";
+defparam FF0.power_up = "low";
+// synopsys translate_on
+
+cycloneiv_io_ibuf \Banderas[1]~input (
+	.i(Banderas[1]),
+	.ibar(gnd),
+	.o(\Banderas[1]~input_o ));
+// synopsys translate_off
+defparam \Banderas[1]~input .bus_hold = "false";
+defparam \Banderas[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+dffeas FF1(
+	.clk(\Clock~input_o ),
+	.d(\Banderas[1]~input_o ),
+	.asdata(vcc),
+	.clrn(\ResetSystem~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\SaveB~input_o ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\FF1~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam FF1.is_wysiwyg = "true";
+defparam FF1.power_up = "low";
+// synopsys translate_on
+
+cycloneiv_io_ibuf \Banderas[2]~input (
+	.i(Banderas[2]),
+	.ibar(gnd),
+	.o(\Banderas[2]~input_o ));
+// synopsys translate_off
+defparam \Banderas[2]~input .bus_hold = "false";
+defparam \Banderas[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+dffeas FF2(
+	.clk(\Clock~input_o ),
+	.d(\Banderas[2]~input_o ),
+	.asdata(vcc),
+	.clrn(\ResetSystem~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\SaveB~input_o ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\FF2~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam FF2.is_wysiwyg = "true";
+defparam FF2.power_up = "low";
+// synopsys translate_on
+
+cycloneiv_io_ibuf \Banderas[3]~input (
+	.i(Banderas[3]),
+	.ibar(gnd),
+	.o(\Banderas[3]~input_o ));
+// synopsys translate_off
+defparam \Banderas[3]~input .bus_hold = "false";
+defparam \Banderas[3]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+dffeas FF3(
+	.clk(\Clock~input_o ),
+	.d(\Banderas[3]~input_o ),
+	.asdata(vcc),
+	.clrn(\ResetSystem~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\SaveB~input_o ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\FF3~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam FF3.is_wysiwyg = "true";
+defparam FF3.power_up = "low";
+// synopsys translate_on
+
+cycloneiv_io_ibuf \IntE~input (
+	.i(IntE),
+	.ibar(gnd),
+	.o(\IntE~input_o ));
+// synopsys translate_off
+defparam \IntE~input .bus_hold = "false";
+defparam \IntE~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneiv_io_ibuf \SaveInt~input (
+	.i(SaveInt),
+	.ibar(gnd),
+	.o(\SaveInt~input_o ));
+// synopsys translate_off
+defparam \SaveInt~input .bus_hold = "false";
+defparam \SaveInt~input .simulate_z_as = "z";
+// synopsys translate_on
+
+dffeas FF4(
+	.clk(\Clock~input_o ),
+	.d(\IntE~input_o ),
+	.asdata(vcc),
+	.clrn(\ResetSystem~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\SaveInt~input_o ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\FF4~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam FF4.is_wysiwyg = "true";
+defparam FF4.power_up = "low";
+// synopsys translate_on
+
+assign StatusR[0] = \StatusR[0]~output_o ;
+
+assign StatusR[1] = \StatusR[1]~output_o ;
+
+assign StatusR[2] = \StatusR[2]~output_o ;
+
+assign StatusR[3] = \StatusR[3]~output_o ;
+
+assign StatusR[4] = \StatusR[4]~output_o ;
+
+endmodule

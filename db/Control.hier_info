@@ -1,0 +1,42 @@
+|Control
+Clock => FF0.CLK
+Clock => FF1.CLK
+Clock => FF2.CLK
+Clock => FF3.CLK
+Clock => FF4.CLK
+Clock => FF5.CLK
+ResetSystem => FF0.PRESET
+ResetSystem => FF1.ACLR
+ResetSystem => FF2.ACLR
+ResetSystem => FF3.ACLR
+ResetSystem => FF4.ACLR
+ResetSystem => FF5.ACLR
+Disponible => ~NO_FANOUT~
+Operacion[0] => ~NO_FANOUT~
+Operacion[1] => ~NO_FANOUT~
+Operacion[2] => ~NO_FANOUT~
+Operacion[3] => ~NO_FANOUT~
+Operacion[4] => ~NO_FANOUT~
+Operacion[5] => ~NO_FANOUT~
+ModoDir[0] => ~NO_FANOUT~
+ModoDir[1] => ~NO_FANOUT~
+Overflow => ~NO_FANOUT~
+Result_Negative => ~NO_FANOUT~
+Result_Zero => ~NO_FANOUT~
+Result_Carry => ~NO_FANOUT~
+Ena_Mp <= Ena_Mp.DB_MAX_OUTPUT_PORT_TYPE
+Ena_Md_Read <= Ena_Md_Read.DB_MAX_OUTPUT_PORT_TYPE
+Ena_Md_Write <= Ena_Md_Write.DB_MAX_OUTPUT_PORT_TYPE
+Save_GPR <= FF2.DB_MAX_OUTPUT_PORT_TYPE
+Save_Acum <= Save_Acum.DB_MAX_OUTPUT_PORT_TYPE
+Save_PC <= Save_PC.DB_MAX_OUTPUT_PORT_TYPE
+Inc_PC <= FF1.DB_MAX_OUTPUT_PORT_TYPE
+Use_ALU <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Estados[0] <= FF0.DB_MAX_OUTPUT_PORT_TYPE
+Estados[1] <= FF1.DB_MAX_OUTPUT_PORT_TYPE
+Estados[2] <= FF2.DB_MAX_OUTPUT_PORT_TYPE
+Estados[3] <= FF3.DB_MAX_OUTPUT_PORT_TYPE
+Estados[4] <= FF4.DB_MAX_OUTPUT_PORT_TYPE
+Estados[5] <= FF5.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,26 @@
+|PSRMux
+DataMd[0] => PSRMuxOut.IN0
+DataMd[1] => PSRMuxOut.IN0
+DataMd[2] => PSRMuxOut.IN0
+DataMd[3] => PSRMuxOut.IN0
+DataMd[4] => PSRMuxOut.IN0
+ALUStatus[0] => PSRMuxOut.IN0
+ALUStatus[1] => PSRMuxOut.IN0
+ALUStatus[2] => PSRMuxOut.IN0
+ALUStatus[3] => PSRMuxOut.IN0
+SelectPSR => PSRMuxOut.IN1
+SelectPSR => PSRMuxOut.IN1
+SelectPSR => PSRMuxOut.IN1
+SelectPSR => PSRMuxOut.IN1
+SelectPSR => PSRMuxOut.IN1
+SelectPSR => PSRMuxOut.IN1
+SelectPSR => PSRMuxOut.IN1
+SelectPSR => PSRMuxOut.IN1
+SelectPSR => PSRMuxOut.IN1
+PSRMuxOut[0] << PSRMuxOut.DB_MAX_OUTPUT_PORT_TYPE
+PSRMuxOut[1] << PSRMuxOut.DB_MAX_OUTPUT_PORT_TYPE
+PSRMuxOut[2] << PSRMuxOut.DB_MAX_OUTPUT_PORT_TYPE
+PSRMuxOut[3] << PSRMuxOut.DB_MAX_OUTPUT_PORT_TYPE
+PSRMuxOut[4] << PSRMuxOut.DB_MAX_OUTPUT_PORT_TYPE
+
+

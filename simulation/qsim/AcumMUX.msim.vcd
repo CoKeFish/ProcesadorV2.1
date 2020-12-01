@@ -1,0 +1,204 @@
+$comment
+	File created using the following command:
+		vcd file AcumMUX.msim.vcd -direction
+$end
+$date
+	Tue Dec 01 06:58:25 2020
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module AcumMUX_vlg_vec_tst $end
+$var reg 16 ! DataMd [15:0] $end
+$var reg 16 " ResultALU [15:0] $end
+$var reg 1 # SelectAcum $end
+$var wire 1 $ AcumMUXOut [15] $end
+$var wire 1 % AcumMUXOut [14] $end
+$var wire 1 & AcumMUXOut [13] $end
+$var wire 1 ' AcumMUXOut [12] $end
+$var wire 1 ( AcumMUXOut [11] $end
+$var wire 1 ) AcumMUXOut [10] $end
+$var wire 1 * AcumMUXOut [9] $end
+$var wire 1 + AcumMUXOut [8] $end
+$var wire 1 , AcumMUXOut [7] $end
+$var wire 1 - AcumMUXOut [6] $end
+$var wire 1 . AcumMUXOut [5] $end
+$var wire 1 / AcumMUXOut [4] $end
+$var wire 1 0 AcumMUXOut [3] $end
+$var wire 1 1 AcumMUXOut [2] $end
+$var wire 1 2 AcumMUXOut [1] $end
+$var wire 1 3 AcumMUXOut [0] $end
+$var wire 1 4 sampler $end
+$scope module i1 $end
+$var wire 1 5 gnd $end
+$var wire 1 6 vcc $end
+$var wire 1 7 unknown $end
+$var tri1 1 8 devclrn $end
+$var tri1 1 9 devpor $end
+$var tri1 1 : devoe $end
+$var wire 1 ; AcumMUXOut[0]~output_o $end
+$var wire 1 < AcumMUXOut[1]~output_o $end
+$var wire 1 = AcumMUXOut[2]~output_o $end
+$var wire 1 > AcumMUXOut[3]~output_o $end
+$var wire 1 ? AcumMUXOut[4]~output_o $end
+$var wire 1 @ AcumMUXOut[5]~output_o $end
+$var wire 1 A AcumMUXOut[6]~output_o $end
+$var wire 1 B AcumMUXOut[7]~output_o $end
+$var wire 1 C AcumMUXOut[8]~output_o $end
+$var wire 1 D AcumMUXOut[9]~output_o $end
+$var wire 1 E AcumMUXOut[10]~output_o $end
+$var wire 1 F AcumMUXOut[11]~output_o $end
+$var wire 1 G AcumMUXOut[12]~output_o $end
+$var wire 1 H AcumMUXOut[13]~output_o $end
+$var wire 1 I AcumMUXOut[14]~output_o $end
+$var wire 1 J AcumMUXOut[15]~output_o $end
+$var wire 1 K DataMd[0]~input_o $end
+$var wire 1 L ResultALU[0]~input_o $end
+$var wire 1 M SelectAcum~input_o $end
+$var wire 1 N AcumMUXOut~0_combout $end
+$var wire 1 O ResultALU[1]~input_o $end
+$var wire 1 P DataMd[1]~input_o $end
+$var wire 1 Q AcumMUXOut~1_combout $end
+$var wire 1 R ResultALU[2]~input_o $end
+$var wire 1 S DataMd[2]~input_o $end
+$var wire 1 T AcumMUXOut~2_combout $end
+$var wire 1 U ResultALU[3]~input_o $end
+$var wire 1 V DataMd[3]~input_o $end
+$var wire 1 W AcumMUXOut~3_combout $end
+$var wire 1 X DataMd[4]~input_o $end
+$var wire 1 Y ResultALU[4]~input_o $end
+$var wire 1 Z AcumMUXOut~4_combout $end
+$var wire 1 [ ResultALU[5]~input_o $end
+$var wire 1 \ DataMd[5]~input_o $end
+$var wire 1 ] AcumMUXOut~5_combout $end
+$var wire 1 ^ DataMd[6]~input_o $end
+$var wire 1 _ ResultALU[6]~input_o $end
+$var wire 1 ` AcumMUXOut~6_combout $end
+$var wire 1 a DataMd[7]~input_o $end
+$var wire 1 b ResultALU[7]~input_o $end
+$var wire 1 c AcumMUXOut~7_combout $end
+$var wire 1 d DataMd[8]~input_o $end
+$var wire 1 e ResultALU[8]~input_o $end
+$var wire 1 f AcumMUXOut~8_combout $end
+$var wire 1 g ResultALU[9]~input_o $end
+$var wire 1 h DataMd[9]~input_o $end
+$var wire 1 i AcumMUXOut~9_combout $end
+$var wire 1 j ResultALU[10]~input_o $end
+$var wire 1 k DataMd[10]~input_o $end
+$var wire 1 l AcumMUXOut~10_combout $end
+$var wire 1 m ResultALU[11]~input_o $end
+$var wire 1 n DataMd[11]~input_o $end
+$var wire 1 o AcumMUXOut~11_combout $end
+$var wire 1 p ResultALU[12]~input_o $end
+$var wire 1 q DataMd[12]~input_o $end
+$var wire 1 r AcumMUXOut~12_combout $end
+$var wire 1 s ResultALU[13]~input_o $end
+$var wire 1 t DataMd[13]~input_o $end
+$var wire 1 u AcumMUXOut~13_combout $end
+$var wire 1 v DataMd[14]~input_o $end
+$var wire 1 w ResultALU[14]~input_o $end
+$var wire 1 x AcumMUXOut~14_combout $end
+$var wire 1 y ResultALU[15]~input_o $end
+$var wire 1 z DataMd[15]~input_o $end
+$var wire 1 { AcumMUXOut~15_combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 !
+b111100000 "
+0#
+03
+02
+01
+00
+0/
+1.
+1-
+1,
+1+
+0*
+0)
+0(
+0'
+0&
+0%
+0$
+x4
+05
+16
+x7
+18
+19
+1:
+0;
+0<
+0=
+0>
+0?
+1@
+1A
+1B
+1C
+0D
+0E
+0F
+0G
+0H
+0I
+0J
+0K
+0L
+0M
+0N
+0O
+0P
+0Q
+0R
+0S
+0T
+0U
+0V
+0W
+0X
+0Y
+0Z
+1[
+0\
+1]
+0^
+1_
+1`
+0a
+1b
+1c
+0d
+1e
+1f
+0g
+0h
+0i
+0j
+0k
+0l
+0m
+0n
+0o
+0p
+0q
+0r
+0s
+0t
+0u
+0v
+0w
+0x
+0y
+0z
+0{
+$end
+#1000000

@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="Computador">
+		<CBX_INST_ENTRY INSTANCE_NAME="|Computador|MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_t1q3.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Computador|MemoryROM:B_MemoryROM|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_aes3.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

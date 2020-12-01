@@ -1,0 +1,1013 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus II 64-Bit"
+// VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Web Edition"
+
+// DATE "12/01/2020 06:58:22"
+
+// 
+// Device: Altera EP4CGX22CF19C6 Package FBGA324
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module AcumMUX (
+	DataMd,
+	ResultALU,
+	SelectAcum,
+	AcumMUXOut);
+input 	[15:0] DataMd;
+input 	[15:0] ResultALU;
+input 	SelectAcum;
+output 	[15:0] AcumMUXOut;
+
+// Design Ports Information
+// AcumMUXOut[0]	=>  Location: PIN_N7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// AcumMUXOut[1]	=>  Location: PIN_T6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// AcumMUXOut[2]	=>  Location: PIN_R9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// AcumMUXOut[3]	=>  Location: PIN_V10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// AcumMUXOut[4]	=>  Location: PIN_V9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// AcumMUXOut[5]	=>  Location: PIN_V8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// AcumMUXOut[6]	=>  Location: PIN_M7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// AcumMUXOut[7]	=>  Location: PIN_T13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// AcumMUXOut[8]	=>  Location: PIN_V5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// AcumMUXOut[9]	=>  Location: PIN_B9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// AcumMUXOut[10]	=>  Location: PIN_T8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// AcumMUXOut[11]	=>  Location: PIN_R8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// AcumMUXOut[12]	=>  Location: PIN_T9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// AcumMUXOut[13]	=>  Location: PIN_T7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// AcumMUXOut[14]	=>  Location: PIN_T11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// AcumMUXOut[15]	=>  Location: PIN_N17,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DataMd[0]	=>  Location: PIN_V11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ResultALU[0]	=>  Location: PIN_V12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// SelectAcum	=>  Location: PIN_P16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DataMd[1]	=>  Location: PIN_P6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ResultALU[1]	=>  Location: PIN_U7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DataMd[2]	=>  Location: PIN_V7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ResultALU[2]	=>  Location: PIN_R11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DataMd[3]	=>  Location: PIN_V15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ResultALU[3]	=>  Location: PIN_R10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DataMd[4]	=>  Location: PIN_P10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ResultALU[4]	=>  Location: PIN_R13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DataMd[5]	=>  Location: PIN_U13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ResultALU[5]	=>  Location: PIN_U9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DataMd[6]	=>  Location: PIN_T10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ResultALU[6]	=>  Location: PIN_P13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DataMd[7]	=>  Location: PIN_U12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ResultALU[7]	=>  Location: PIN_T12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DataMd[8]	=>  Location: PIN_U15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ResultALU[8]	=>  Location: PIN_V17,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DataMd[9]	=>  Location: PIN_A10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ResultALU[9]	=>  Location: PIN_R12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DataMd[10]	=>  Location: PIN_T14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ResultALU[10]	=>  Location: PIN_V14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DataMd[11]	=>  Location: PIN_U16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ResultALU[11]	=>  Location: PIN_V16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DataMd[12]	=>  Location: PIN_P12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ResultALU[12]	=>  Location: PIN_V6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DataMd[13]	=>  Location: PIN_R7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ResultALU[13]	=>  Location: PIN_U10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DataMd[14]	=>  Location: PIN_V13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ResultALU[14]	=>  Location: PIN_U6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DataMd[15]	=>  Location: PIN_M17,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ResultALU[15]	=>  Location: PIN_M16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \AcumMUXOut[0]~output_o ;
+wire \AcumMUXOut[1]~output_o ;
+wire \AcumMUXOut[2]~output_o ;
+wire \AcumMUXOut[3]~output_o ;
+wire \AcumMUXOut[4]~output_o ;
+wire \AcumMUXOut[5]~output_o ;
+wire \AcumMUXOut[6]~output_o ;
+wire \AcumMUXOut[7]~output_o ;
+wire \AcumMUXOut[8]~output_o ;
+wire \AcumMUXOut[9]~output_o ;
+wire \AcumMUXOut[10]~output_o ;
+wire \AcumMUXOut[11]~output_o ;
+wire \AcumMUXOut[12]~output_o ;
+wire \AcumMUXOut[13]~output_o ;
+wire \AcumMUXOut[14]~output_o ;
+wire \AcumMUXOut[15]~output_o ;
+wire \DataMd[0]~input_o ;
+wire \ResultALU[0]~input_o ;
+wire \SelectAcum~input_o ;
+wire \AcumMUXOut~0_combout ;
+wire \ResultALU[1]~input_o ;
+wire \DataMd[1]~input_o ;
+wire \AcumMUXOut~1_combout ;
+wire \ResultALU[2]~input_o ;
+wire \DataMd[2]~input_o ;
+wire \AcumMUXOut~2_combout ;
+wire \ResultALU[3]~input_o ;
+wire \DataMd[3]~input_o ;
+wire \AcumMUXOut~3_combout ;
+wire \DataMd[4]~input_o ;
+wire \ResultALU[4]~input_o ;
+wire \AcumMUXOut~4_combout ;
+wire \ResultALU[5]~input_o ;
+wire \DataMd[5]~input_o ;
+wire \AcumMUXOut~5_combout ;
+wire \DataMd[6]~input_o ;
+wire \ResultALU[6]~input_o ;
+wire \AcumMUXOut~6_combout ;
+wire \DataMd[7]~input_o ;
+wire \ResultALU[7]~input_o ;
+wire \AcumMUXOut~7_combout ;
+wire \DataMd[8]~input_o ;
+wire \ResultALU[8]~input_o ;
+wire \AcumMUXOut~8_combout ;
+wire \ResultALU[9]~input_o ;
+wire \DataMd[9]~input_o ;
+wire \AcumMUXOut~9_combout ;
+wire \ResultALU[10]~input_o ;
+wire \DataMd[10]~input_o ;
+wire \AcumMUXOut~10_combout ;
+wire \ResultALU[11]~input_o ;
+wire \DataMd[11]~input_o ;
+wire \AcumMUXOut~11_combout ;
+wire \ResultALU[12]~input_o ;
+wire \DataMd[12]~input_o ;
+wire \AcumMUXOut~12_combout ;
+wire \ResultALU[13]~input_o ;
+wire \DataMd[13]~input_o ;
+wire \AcumMUXOut~13_combout ;
+wire \DataMd[14]~input_o ;
+wire \ResultALU[14]~input_o ;
+wire \AcumMUXOut~14_combout ;
+wire \ResultALU[15]~input_o ;
+wire \DataMd[15]~input_o ;
+wire \AcumMUXOut~15_combout ;
+
+
+// Location: IOOBUF_X10_Y0_N2
+cycloneiv_io_obuf \AcumMUXOut[0]~output (
+	.i(\AcumMUXOut~0_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\AcumMUXOut[0]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \AcumMUXOut[0]~output .bus_hold = "false";
+defparam \AcumMUXOut[0]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X5_Y0_N9
+cycloneiv_io_obuf \AcumMUXOut[1]~output (
+	.i(\AcumMUXOut~1_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\AcumMUXOut[1]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \AcumMUXOut[1]~output .bus_hold = "false";
+defparam \AcumMUXOut[1]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X18_Y0_N9
+cycloneiv_io_obuf \AcumMUXOut[2]~output (
+	.i(\AcumMUXOut~2_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\AcumMUXOut[2]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \AcumMUXOut[2]~output .bus_hold = "false";
+defparam \AcumMUXOut[2]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X21_Y0_N2
+cycloneiv_io_obuf \AcumMUXOut[3]~output (
+	.i(\AcumMUXOut~3_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\AcumMUXOut[3]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \AcumMUXOut[3]~output .bus_hold = "false";
+defparam \AcumMUXOut[3]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X21_Y0_N9
+cycloneiv_io_obuf \AcumMUXOut[4]~output (
+	.i(\AcumMUXOut~4_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\AcumMUXOut[4]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \AcumMUXOut[4]~output .bus_hold = "false";
+defparam \AcumMUXOut[4]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X16_Y0_N2
+cycloneiv_io_obuf \AcumMUXOut[5]~output (
+	.i(\AcumMUXOut~5_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\AcumMUXOut[5]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \AcumMUXOut[5]~output .bus_hold = "false";
+defparam \AcumMUXOut[5]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X10_Y0_N9
+cycloneiv_io_obuf \AcumMUXOut[6]~output (
+	.i(\AcumMUXOut~6_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\AcumMUXOut[6]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \AcumMUXOut[6]~output .bus_hold = "false";
+defparam \AcumMUXOut[6]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X41_Y0_N23
+cycloneiv_io_obuf \AcumMUXOut[7]~output (
+	.i(\AcumMUXOut~7_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\AcumMUXOut[7]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \AcumMUXOut[7]~output .bus_hold = "false";
+defparam \AcumMUXOut[7]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X7_Y0_N23
+cycloneiv_io_obuf \AcumMUXOut[8]~output (
+	.i(\AcumMUXOut~8_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\AcumMUXOut[8]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \AcumMUXOut[8]~output .bus_hold = "false";
+defparam \AcumMUXOut[8]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X21_Y41_N2
+cycloneiv_io_obuf \AcumMUXOut[9]~output (
+	.i(\AcumMUXOut~9_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\AcumMUXOut[9]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \AcumMUXOut[9]~output .bus_hold = "false";
+defparam \AcumMUXOut[9]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X14_Y0_N9
+cycloneiv_io_obuf \AcumMUXOut[10]~output (
+	.i(\AcumMUXOut~10_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\AcumMUXOut[10]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \AcumMUXOut[10]~output .bus_hold = "false";
+defparam \AcumMUXOut[10]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X14_Y0_N2
+cycloneiv_io_obuf \AcumMUXOut[11]~output (
+	.i(\AcumMUXOut~11_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\AcumMUXOut[11]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \AcumMUXOut[11]~output .bus_hold = "false";
+defparam \AcumMUXOut[11]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X18_Y0_N2
+cycloneiv_io_obuf \AcumMUXOut[12]~output (
+	.i(\AcumMUXOut~12_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\AcumMUXOut[12]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \AcumMUXOut[12]~output .bus_hold = "false";
+defparam \AcumMUXOut[12]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X7_Y0_N2
+cycloneiv_io_obuf \AcumMUXOut[13]~output (
+	.i(\AcumMUXOut~13_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\AcumMUXOut[13]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \AcumMUXOut[13]~output .bus_hold = "false";
+defparam \AcumMUXOut[13]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X31_Y0_N16
+cycloneiv_io_obuf \AcumMUXOut[14]~output (
+	.i(\AcumMUXOut~14_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\AcumMUXOut[14]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \AcumMUXOut[14]~output .bus_hold = "false";
+defparam \AcumMUXOut[14]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X52_Y16_N2
+cycloneiv_io_obuf \AcumMUXOut[15]~output (
+	.i(\AcumMUXOut~15_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\AcumMUXOut[15]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \AcumMUXOut[15]~output .bus_hold = "false";
+defparam \AcumMUXOut[15]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOIBUF_X27_Y0_N8
+cycloneiv_io_ibuf \DataMd[0]~input (
+	.i(DataMd[0]),
+	.ibar(gnd),
+	.o(\DataMd[0]~input_o ));
+// synopsys translate_off
+defparam \DataMd[0]~input .bus_hold = "false";
+defparam \DataMd[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X27_Y0_N1
+cycloneiv_io_ibuf \ResultALU[0]~input (
+	.i(ResultALU[0]),
+	.ibar(gnd),
+	.o(\ResultALU[0]~input_o ));
+// synopsys translate_off
+defparam \ResultALU[0]~input .bus_hold = "false";
+defparam \ResultALU[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X52_Y10_N8
+cycloneiv_io_ibuf \SelectAcum~input (
+	.i(SelectAcum),
+	.ibar(gnd),
+	.o(\SelectAcum~input_o ));
+// synopsys translate_off
+defparam \SelectAcum~input .bus_hold = "false";
+defparam \SelectAcum~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X23_Y1_N8
+cycloneiv_lcell_comb \AcumMUXOut~0 (
+// Equation(s):
+// \AcumMUXOut~0_combout  = (\SelectAcum~input_o  & (\DataMd[0]~input_o )) # (!\SelectAcum~input_o  & ((\ResultALU[0]~input_o )))
+
+	.dataa(gnd),
+	.datab(\DataMd[0]~input_o ),
+	.datac(\ResultALU[0]~input_o ),
+	.datad(\SelectAcum~input_o ),
+	.cin(gnd),
+	.combout(\AcumMUXOut~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \AcumMUXOut~0 .lut_mask = 16'hCCF0;
+defparam \AcumMUXOut~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: IOIBUF_X12_Y0_N8
+cycloneiv_io_ibuf \ResultALU[1]~input (
+	.i(ResultALU[1]),
+	.ibar(gnd),
+	.o(\ResultALU[1]~input_o ));
+// synopsys translate_off
+defparam \ResultALU[1]~input .bus_hold = "false";
+defparam \ResultALU[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X3_Y0_N8
+cycloneiv_io_ibuf \DataMd[1]~input (
+	.i(DataMd[1]),
+	.ibar(gnd),
+	.o(\DataMd[1]~input_o ));
+// synopsys translate_off
+defparam \DataMd[1]~input .bus_hold = "false";
+defparam \DataMd[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X23_Y1_N10
+cycloneiv_lcell_comb \AcumMUXOut~1 (
+// Equation(s):
+// \AcumMUXOut~1_combout  = (\SelectAcum~input_o  & ((\DataMd[1]~input_o ))) # (!\SelectAcum~input_o  & (\ResultALU[1]~input_o ))
+
+	.dataa(\ResultALU[1]~input_o ),
+	.datab(gnd),
+	.datac(\DataMd[1]~input_o ),
+	.datad(\SelectAcum~input_o ),
+	.cin(gnd),
+	.combout(\AcumMUXOut~1_combout ),
+	.cout());
+// synopsys translate_off
+defparam \AcumMUXOut~1 .lut_mask = 16'hF0AA;
+defparam \AcumMUXOut~1 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: IOIBUF_X31_Y0_N22
+cycloneiv_io_ibuf \ResultALU[2]~input (
+	.i(ResultALU[2]),
+	.ibar(gnd),
+	.o(\ResultALU[2]~input_o ));
+// synopsys translate_off
+defparam \ResultALU[2]~input .bus_hold = "false";
+defparam \ResultALU[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X12_Y0_N1
+cycloneiv_io_ibuf \DataMd[2]~input (
+	.i(DataMd[2]),
+	.ibar(gnd),
+	.o(\DataMd[2]~input_o ));
+// synopsys translate_off
+defparam \DataMd[2]~input .bus_hold = "false";
+defparam \DataMd[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X23_Y1_N4
+cycloneiv_lcell_comb \AcumMUXOut~2 (
+// Equation(s):
+// \AcumMUXOut~2_combout  = (\SelectAcum~input_o  & ((\DataMd[2]~input_o ))) # (!\SelectAcum~input_o  & (\ResultALU[2]~input_o ))
+
+	.dataa(gnd),
+	.datab(\ResultALU[2]~input_o ),
+	.datac(\DataMd[2]~input_o ),
+	.datad(\SelectAcum~input_o ),
+	.cin(gnd),
+	.combout(\AcumMUXOut~2_combout ),
+	.cout());
+// synopsys translate_off
+defparam \AcumMUXOut~2 .lut_mask = 16'hF0CC;
+defparam \AcumMUXOut~2 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: IOIBUF_X25_Y0_N1
+cycloneiv_io_ibuf \ResultALU[3]~input (
+	.i(ResultALU[3]),
+	.ibar(gnd),
+	.o(\ResultALU[3]~input_o ));
+// synopsys translate_off
+defparam \ResultALU[3]~input .bus_hold = "false";
+defparam \ResultALU[3]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X34_Y0_N1
+cycloneiv_io_ibuf \DataMd[3]~input (
+	.i(DataMd[3]),
+	.ibar(gnd),
+	.o(\DataMd[3]~input_o ));
+// synopsys translate_off
+defparam \DataMd[3]~input .bus_hold = "false";
+defparam \DataMd[3]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X23_Y1_N30
+cycloneiv_lcell_comb \AcumMUXOut~3 (
+// Equation(s):
+// \AcumMUXOut~3_combout  = (\SelectAcum~input_o  & ((\DataMd[3]~input_o ))) # (!\SelectAcum~input_o  & (\ResultALU[3]~input_o ))
+
+	.dataa(\ResultALU[3]~input_o ),
+	.datab(gnd),
+	.datac(\DataMd[3]~input_o ),
+	.datad(\SelectAcum~input_o ),
+	.cin(gnd),
+	.combout(\AcumMUXOut~3_combout ),
+	.cout());
+// synopsys translate_off
+defparam \AcumMUXOut~3 .lut_mask = 16'hF0AA;
+defparam \AcumMUXOut~3 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: IOIBUF_X25_Y0_N8
+cycloneiv_io_ibuf \DataMd[4]~input (
+	.i(DataMd[4]),
+	.ibar(gnd),
+	.o(\DataMd[4]~input_o ));
+// synopsys translate_off
+defparam \DataMd[4]~input .bus_hold = "false";
+defparam \DataMd[4]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X36_Y0_N1
+cycloneiv_io_ibuf \ResultALU[4]~input (
+	.i(ResultALU[4]),
+	.ibar(gnd),
+	.o(\ResultALU[4]~input_o ));
+// synopsys translate_off
+defparam \ResultALU[4]~input .bus_hold = "false";
+defparam \ResultALU[4]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X23_Y1_N16
+cycloneiv_lcell_comb \AcumMUXOut~4 (
+// Equation(s):
+// \AcumMUXOut~4_combout  = (\SelectAcum~input_o  & (\DataMd[4]~input_o )) # (!\SelectAcum~input_o  & ((\ResultALU[4]~input_o )))
+
+	.dataa(gnd),
+	.datab(\DataMd[4]~input_o ),
+	.datac(\ResultALU[4]~input_o ),
+	.datad(\SelectAcum~input_o ),
+	.cin(gnd),
+	.combout(\AcumMUXOut~4_combout ),
+	.cout());
+// synopsys translate_off
+defparam \AcumMUXOut~4 .lut_mask = 16'hCCF0;
+defparam \AcumMUXOut~4 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: IOIBUF_X16_Y0_N8
+cycloneiv_io_ibuf \ResultALU[5]~input (
+	.i(ResultALU[5]),
+	.ibar(gnd),
+	.o(\ResultALU[5]~input_o ));
+// synopsys translate_off
+defparam \ResultALU[5]~input .bus_hold = "false";
+defparam \ResultALU[5]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X29_Y0_N8
+cycloneiv_io_ibuf \DataMd[5]~input (
+	.i(DataMd[5]),
+	.ibar(gnd),
+	.o(\DataMd[5]~input_o ));
+// synopsys translate_off
+defparam \DataMd[5]~input .bus_hold = "false";
+defparam \DataMd[5]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X23_Y1_N2
+cycloneiv_lcell_comb \AcumMUXOut~5 (
+// Equation(s):
+// \AcumMUXOut~5_combout  = (\SelectAcum~input_o  & ((\DataMd[5]~input_o ))) # (!\SelectAcum~input_o  & (\ResultALU[5]~input_o ))
+
+	.dataa(\ResultALU[5]~input_o ),
+	.datab(gnd),
+	.datac(\DataMd[5]~input_o ),
+	.datad(\SelectAcum~input_o ),
+	.cin(gnd),
+	.combout(\AcumMUXOut~5_combout ),
+	.cout());
+// synopsys translate_off
+defparam \AcumMUXOut~5 .lut_mask = 16'hF0AA;
+defparam \AcumMUXOut~5 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: IOIBUF_X23_Y0_N8
+cycloneiv_io_ibuf \DataMd[6]~input (
+	.i(DataMd[6]),
+	.ibar(gnd),
+	.o(\DataMd[6]~input_o ));
+// synopsys translate_off
+defparam \DataMd[6]~input .bus_hold = "false";
+defparam \DataMd[6]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X38_Y0_N1
+cycloneiv_io_ibuf \ResultALU[6]~input (
+	.i(ResultALU[6]),
+	.ibar(gnd),
+	.o(\ResultALU[6]~input_o ));
+// synopsys translate_off
+defparam \ResultALU[6]~input .bus_hold = "false";
+defparam \ResultALU[6]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X23_Y1_N12
+cycloneiv_lcell_comb \AcumMUXOut~6 (
+// Equation(s):
+// \AcumMUXOut~6_combout  = (\SelectAcum~input_o  & (\DataMd[6]~input_o )) # (!\SelectAcum~input_o  & ((\ResultALU[6]~input_o )))
+
+	.dataa(\DataMd[6]~input_o ),
+	.datab(\ResultALU[6]~input_o ),
+	.datac(gnd),
+	.datad(\SelectAcum~input_o ),
+	.cin(gnd),
+	.combout(\AcumMUXOut~6_combout ),
+	.cout());
+// synopsys translate_off
+defparam \AcumMUXOut~6 .lut_mask = 16'hAACC;
+defparam \AcumMUXOut~6 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: IOIBUF_X31_Y0_N1
+cycloneiv_io_ibuf \DataMd[7]~input (
+	.i(DataMd[7]),
+	.ibar(gnd),
+	.o(\DataMd[7]~input_o ));
+// synopsys translate_off
+defparam \DataMd[7]~input .bus_hold = "false";
+defparam \DataMd[7]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X31_Y0_N8
+cycloneiv_io_ibuf \ResultALU[7]~input (
+	.i(ResultALU[7]),
+	.ibar(gnd),
+	.o(\ResultALU[7]~input_o ));
+// synopsys translate_off
+defparam \ResultALU[7]~input .bus_hold = "false";
+defparam \ResultALU[7]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X23_Y1_N6
+cycloneiv_lcell_comb \AcumMUXOut~7 (
+// Equation(s):
+// \AcumMUXOut~7_combout  = (\SelectAcum~input_o  & (\DataMd[7]~input_o )) # (!\SelectAcum~input_o  & ((\ResultALU[7]~input_o )))
+
+	.dataa(\DataMd[7]~input_o ),
+	.datab(\SelectAcum~input_o ),
+	.datac(gnd),
+	.datad(\ResultALU[7]~input_o ),
+	.cin(gnd),
+	.combout(\AcumMUXOut~7_combout ),
+	.cout());
+// synopsys translate_off
+defparam \AcumMUXOut~7 .lut_mask = 16'hBB88;
+defparam \AcumMUXOut~7 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: IOIBUF_X41_Y0_N8
+cycloneiv_io_ibuf \DataMd[8]~input (
+	.i(DataMd[8]),
+	.ibar(gnd),
+	.o(\DataMd[8]~input_o ));
+// synopsys translate_off
+defparam \DataMd[8]~input .bus_hold = "false";
+defparam \DataMd[8]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X43_Y0_N1
+cycloneiv_io_ibuf \ResultALU[8]~input (
+	.i(ResultALU[8]),
+	.ibar(gnd),
+	.o(\ResultALU[8]~input_o ));
+// synopsys translate_off
+defparam \ResultALU[8]~input .bus_hold = "false";
+defparam \ResultALU[8]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X23_Y1_N24
+cycloneiv_lcell_comb \AcumMUXOut~8 (
+// Equation(s):
+// \AcumMUXOut~8_combout  = (\SelectAcum~input_o  & (\DataMd[8]~input_o )) # (!\SelectAcum~input_o  & ((\ResultALU[8]~input_o )))
+
+	.dataa(gnd),
+	.datab(\DataMd[8]~input_o ),
+	.datac(\ResultALU[8]~input_o ),
+	.datad(\SelectAcum~input_o ),
+	.cin(gnd),
+	.combout(\AcumMUXOut~8_combout ),
+	.cout());
+// synopsys translate_off
+defparam \AcumMUXOut~8 .lut_mask = 16'hCCF0;
+defparam \AcumMUXOut~8 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: IOIBUF_X36_Y0_N8
+cycloneiv_io_ibuf \ResultALU[9]~input (
+	.i(ResultALU[9]),
+	.ibar(gnd),
+	.o(\ResultALU[9]~input_o ));
+// synopsys translate_off
+defparam \ResultALU[9]~input .bus_hold = "false";
+defparam \ResultALU[9]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X23_Y41_N1
+cycloneiv_io_ibuf \DataMd[9]~input (
+	.i(DataMd[9]),
+	.ibar(gnd),
+	.o(\DataMd[9]~input_o ));
+// synopsys translate_off
+defparam \DataMd[9]~input .bus_hold = "false";
+defparam \DataMd[9]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X23_Y1_N26
+cycloneiv_lcell_comb \AcumMUXOut~9 (
+// Equation(s):
+// \AcumMUXOut~9_combout  = (\SelectAcum~input_o  & ((\DataMd[9]~input_o ))) # (!\SelectAcum~input_o  & (\ResultALU[9]~input_o ))
+
+	.dataa(\ResultALU[9]~input_o ),
+	.datab(gnd),
+	.datac(\DataMd[9]~input_o ),
+	.datad(\SelectAcum~input_o ),
+	.cin(gnd),
+	.combout(\AcumMUXOut~9_combout ),
+	.cout());
+// synopsys translate_off
+defparam \AcumMUXOut~9 .lut_mask = 16'hF0AA;
+defparam \AcumMUXOut~9 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: IOIBUF_X34_Y0_N8
+cycloneiv_io_ibuf \ResultALU[10]~input (
+	.i(ResultALU[10]),
+	.ibar(gnd),
+	.o(\ResultALU[10]~input_o ));
+// synopsys translate_off
+defparam \ResultALU[10]~input .bus_hold = "false";
+defparam \ResultALU[10]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X41_Y0_N15
+cycloneiv_io_ibuf \DataMd[10]~input (
+	.i(DataMd[10]),
+	.ibar(gnd),
+	.o(\DataMd[10]~input_o ));
+// synopsys translate_off
+defparam \DataMd[10]~input .bus_hold = "false";
+defparam \DataMd[10]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X23_Y1_N20
+cycloneiv_lcell_comb \AcumMUXOut~10 (
+// Equation(s):
+// \AcumMUXOut~10_combout  = (\SelectAcum~input_o  & ((\DataMd[10]~input_o ))) # (!\SelectAcum~input_o  & (\ResultALU[10]~input_o ))
+
+	.dataa(\ResultALU[10]~input_o ),
+	.datab(gnd),
+	.datac(\DataMd[10]~input_o ),
+	.datad(\SelectAcum~input_o ),
+	.cin(gnd),
+	.combout(\AcumMUXOut~10_combout ),
+	.cout());
+// synopsys translate_off
+defparam \AcumMUXOut~10 .lut_mask = 16'hF0AA;
+defparam \AcumMUXOut~10 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: IOIBUF_X43_Y0_N8
+cycloneiv_io_ibuf \ResultALU[11]~input (
+	.i(ResultALU[11]),
+	.ibar(gnd),
+	.o(\ResultALU[11]~input_o ));
+// synopsys translate_off
+defparam \ResultALU[11]~input .bus_hold = "false";
+defparam \ResultALU[11]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X41_Y0_N1
+cycloneiv_io_ibuf \DataMd[11]~input (
+	.i(DataMd[11]),
+	.ibar(gnd),
+	.o(\DataMd[11]~input_o ));
+// synopsys translate_off
+defparam \DataMd[11]~input .bus_hold = "false";
+defparam \DataMd[11]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X23_Y1_N14
+cycloneiv_lcell_comb \AcumMUXOut~11 (
+// Equation(s):
+// \AcumMUXOut~11_combout  = (\SelectAcum~input_o  & ((\DataMd[11]~input_o ))) # (!\SelectAcum~input_o  & (\ResultALU[11]~input_o ))
+
+	.dataa(gnd),
+	.datab(\ResultALU[11]~input_o ),
+	.datac(\DataMd[11]~input_o ),
+	.datad(\SelectAcum~input_o ),
+	.cin(gnd),
+	.combout(\AcumMUXOut~11_combout ),
+	.cout());
+// synopsys translate_off
+defparam \AcumMUXOut~11 .lut_mask = 16'hF0CC;
+defparam \AcumMUXOut~11 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: IOIBUF_X7_Y0_N15
+cycloneiv_io_ibuf \ResultALU[12]~input (
+	.i(ResultALU[12]),
+	.ibar(gnd),
+	.o(\ResultALU[12]~input_o ));
+// synopsys translate_off
+defparam \ResultALU[12]~input .bus_hold = "false";
+defparam \ResultALU[12]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X38_Y0_N8
+cycloneiv_io_ibuf \DataMd[12]~input (
+	.i(DataMd[12]),
+	.ibar(gnd),
+	.o(\DataMd[12]~input_o ));
+// synopsys translate_off
+defparam \DataMd[12]~input .bus_hold = "false";
+defparam \DataMd[12]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X23_Y1_N0
+cycloneiv_lcell_comb \AcumMUXOut~12 (
+// Equation(s):
+// \AcumMUXOut~12_combout  = (\SelectAcum~input_o  & ((\DataMd[12]~input_o ))) # (!\SelectAcum~input_o  & (\ResultALU[12]~input_o ))
+
+	.dataa(\ResultALU[12]~input_o ),
+	.datab(\DataMd[12]~input_o ),
+	.datac(gnd),
+	.datad(\SelectAcum~input_o ),
+	.cin(gnd),
+	.combout(\AcumMUXOut~12_combout ),
+	.cout());
+// synopsys translate_off
+defparam \AcumMUXOut~12 .lut_mask = 16'hCCAA;
+defparam \AcumMUXOut~12 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: IOIBUF_X23_Y0_N1
+cycloneiv_io_ibuf \ResultALU[13]~input (
+	.i(ResultALU[13]),
+	.ibar(gnd),
+	.o(\ResultALU[13]~input_o ));
+// synopsys translate_off
+defparam \ResultALU[13]~input .bus_hold = "false";
+defparam \ResultALU[13]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X7_Y0_N8
+cycloneiv_io_ibuf \DataMd[13]~input (
+	.i(DataMd[13]),
+	.ibar(gnd),
+	.o(\DataMd[13]~input_o ));
+// synopsys translate_off
+defparam \DataMd[13]~input .bus_hold = "false";
+defparam \DataMd[13]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X23_Y1_N18
+cycloneiv_lcell_comb \AcumMUXOut~13 (
+// Equation(s):
+// \AcumMUXOut~13_combout  = (\SelectAcum~input_o  & ((\DataMd[13]~input_o ))) # (!\SelectAcum~input_o  & (\ResultALU[13]~input_o ))
+
+	.dataa(gnd),
+	.datab(\ResultALU[13]~input_o ),
+	.datac(\DataMd[13]~input_o ),
+	.datad(\SelectAcum~input_o ),
+	.cin(gnd),
+	.combout(\AcumMUXOut~13_combout ),
+	.cout());
+// synopsys translate_off
+defparam \AcumMUXOut~13 .lut_mask = 16'hF0CC;
+defparam \AcumMUXOut~13 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: IOIBUF_X29_Y0_N1
+cycloneiv_io_ibuf \DataMd[14]~input (
+	.i(DataMd[14]),
+	.ibar(gnd),
+	.o(\DataMd[14]~input_o ));
+// synopsys translate_off
+defparam \DataMd[14]~input .bus_hold = "false";
+defparam \DataMd[14]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X5_Y0_N1
+cycloneiv_io_ibuf \ResultALU[14]~input (
+	.i(ResultALU[14]),
+	.ibar(gnd),
+	.o(\ResultALU[14]~input_o ));
+// synopsys translate_off
+defparam \ResultALU[14]~input .bus_hold = "false";
+defparam \ResultALU[14]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X23_Y1_N28
+cycloneiv_lcell_comb \AcumMUXOut~14 (
+// Equation(s):
+// \AcumMUXOut~14_combout  = (\SelectAcum~input_o  & (\DataMd[14]~input_o )) # (!\SelectAcum~input_o  & ((\ResultALU[14]~input_o )))
+
+	.dataa(\DataMd[14]~input_o ),
+	.datab(gnd),
+	.datac(\ResultALU[14]~input_o ),
+	.datad(\SelectAcum~input_o ),
+	.cin(gnd),
+	.combout(\AcumMUXOut~14_combout ),
+	.cout());
+// synopsys translate_off
+defparam \AcumMUXOut~14 .lut_mask = 16'hAAF0;
+defparam \AcumMUXOut~14 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: IOIBUF_X52_Y15_N1
+cycloneiv_io_ibuf \ResultALU[15]~input (
+	.i(ResultALU[15]),
+	.ibar(gnd),
+	.o(\ResultALU[15]~input_o ));
+// synopsys translate_off
+defparam \ResultALU[15]~input .bus_hold = "false";
+defparam \ResultALU[15]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X52_Y15_N8
+cycloneiv_io_ibuf \DataMd[15]~input (
+	.i(DataMd[15]),
+	.ibar(gnd),
+	.o(\DataMd[15]~input_o ));
+// synopsys translate_off
+defparam \DataMd[15]~input .bus_hold = "false";
+defparam \DataMd[15]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X51_Y15_N0
+cycloneiv_lcell_comb \AcumMUXOut~15 (
+// Equation(s):
+// \AcumMUXOut~15_combout  = (\SelectAcum~input_o  & ((\DataMd[15]~input_o ))) # (!\SelectAcum~input_o  & (\ResultALU[15]~input_o ))
+
+	.dataa(\ResultALU[15]~input_o ),
+	.datab(gnd),
+	.datac(\SelectAcum~input_o ),
+	.datad(\DataMd[15]~input_o ),
+	.cin(gnd),
+	.combout(\AcumMUXOut~15_combout ),
+	.cout());
+// synopsys translate_off
+defparam \AcumMUXOut~15 .lut_mask = 16'hFA0A;
+defparam \AcumMUXOut~15 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+assign AcumMUXOut[0] = \AcumMUXOut[0]~output_o ;
+
+assign AcumMUXOut[1] = \AcumMUXOut[1]~output_o ;
+
+assign AcumMUXOut[2] = \AcumMUXOut[2]~output_o ;
+
+assign AcumMUXOut[3] = \AcumMUXOut[3]~output_o ;
+
+assign AcumMUXOut[4] = \AcumMUXOut[4]~output_o ;
+
+assign AcumMUXOut[5] = \AcumMUXOut[5]~output_o ;
+
+assign AcumMUXOut[6] = \AcumMUXOut[6]~output_o ;
+
+assign AcumMUXOut[7] = \AcumMUXOut[7]~output_o ;
+
+assign AcumMUXOut[8] = \AcumMUXOut[8]~output_o ;
+
+assign AcumMUXOut[9] = \AcumMUXOut[9]~output_o ;
+
+assign AcumMUXOut[10] = \AcumMUXOut[10]~output_o ;
+
+assign AcumMUXOut[11] = \AcumMUXOut[11]~output_o ;
+
+assign AcumMUXOut[12] = \AcumMUXOut[12]~output_o ;
+
+assign AcumMUXOut[13] = \AcumMUXOut[13]~output_o ;
+
+assign AcumMUXOut[14] = \AcumMUXOut[14]~output_o ;
+
+assign AcumMUXOut[15] = \AcumMUXOut[15]~output_o ;
+
+endmodule

@@ -1,0 +1,28 @@
+|ProgramStatus
+Clock => FF0.CLK
+Clock => FF1.CLK
+Clock => FF2.CLK
+Clock => FF3.CLK
+Clock => FF4.CLK
+ResetSystem => FF0.ACLR
+ResetSystem => FF1.ACLR
+ResetSystem => FF2.ACLR
+ResetSystem => FF3.ACLR
+ResetSystem => FF4.ACLR
+SaveB => FF0.ENA
+SaveB => FF1.ENA
+SaveB => FF2.ENA
+SaveB => FF3.ENA
+SaveInt => FF4.ENA
+IntE => FF4.DATAIN
+Banderas[0] => FF0.DATAIN
+Banderas[1] => FF1.DATAIN
+Banderas[2] => FF2.DATAIN
+Banderas[3] => FF3.DATAIN
+StatusR[0] <= FF0.DB_MAX_OUTPUT_PORT_TYPE
+StatusR[1] <= FF1.DB_MAX_OUTPUT_PORT_TYPE
+StatusR[2] <= FF2.DB_MAX_OUTPUT_PORT_TYPE
+StatusR[3] <= FF3.DB_MAX_OUTPUT_PORT_TYPE
+StatusR[4] <= FF4.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,141 @@
+--******************************************************--
+--        PONTIFICIA UNIVERSIDAD JAVERIANA              --
+--          Organizacion de computadores                --
+--                  PROYECTO ALU			                 --
+-- 													              --
+-- Titulo :    Contador 0-8 Para multiplicacion         --
+-- Fecha  :  	D:18 M:09 Y:2020                         --
+--******************************************************--
+
+
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.all;
+LIBRARY ALTERA;
+USE ALTERA.altera_primitives_components.all;
+
+--******************************************************--
+-- Comentarios:Almacena los datos referentes al cambio de contrasena
+--******************************************************--
+
+ENTITY Computador IS
+	
+	PORT (
+				--ENTRADAS
+				Clock 					:IN STD_LOGIC;
+				ResetSystem				:IN STD_LOGIC;
+				Int 						:IN STD_LOGIC;
+				--------------------------------------------------
+				--SALIDAS
+				MemoryOUT				:OUT STD_LOGIC_VECTOR (22 DOWNTO 0);
+				Count						:OUT STD_LOGIC_VECTOR (15 DOWNTO 0);
+				Estados					:OUT STD_LOGIC_VECTOR (5 DOWNTO 0);
+				SEnaMP					:OUT STD_LOGIC
+		);
+	
+END ENTITY Computador;
+
+ARCHITECTURE	Computador OF Computador IS
+
+	--******************************************************--
+		COMPONENT MemoryROM IS
+		PORT
+		(
+				address		: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+				clock			: IN STD_LOGIC  := '1';
+				rden			: IN STD_LOGIC  := '1';
+				q				: OUT STD_LOGIC_VECTOR (22 DOWNTO 0)
+		);
+		END COMPONENT MemoryROM;
+	--******************************************************--
+		COMPONENT MemoryRAM IS
+			PORT
+			(
+				address		: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+				clock		: IN STD_LOGIC  := '1';
+				data		: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
+				rden		: IN STD_LOGIC  := '1';
+				wren		: IN STD_LOGIC ;
+				q		: OUT STD_LOGIC_VECTOR (15 DOWNTO 0)
+			);
+		END COMPONENT MemoryRAM;
+	--******************************************************--
+		COMPONENT Procesador IS
+			
+				PORT (
+							--ENTRADAS
+							Clock 				:IN STD_LOGIC;
+							ResetSystem			:IN STD_LOGIC;
+							Dato_Mp				:IN STD_LOGIC_VECTOR(22 DOWNTO 0);
+							Datoin_Md			:IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+							Int					:IN STD_LOGIC;
+							--------------------------------------------------
+							--SALIDAS
+							Dir_Mp				:OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+							Ena_Mp				:OUT STD_LOGIC;
+							Read_Mp				:OUT STD_LOGIC;
+							Dataout_Md			:OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+							MDM					:OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+							Ena_Md				:OUT STD_LOGIC;
+							RW_Md					:OUT STD_LOGIC;
+							Count					:OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+							Estados				:OUT STD_LOGIC_VECTOR(5 DOWNTO 0)
+					);
+			
+		END COMPONENT Procesador;
+	--******************************************************--
+	
+		SIGNAL Q							:STD_LOGIC_VECTOR (3 DOWNTO 0);
+		SIGNAL ENA						:STD_LOGIC_VECTOR (3 DOWNTO 0);
+		SIGNAL D							:STD_LOGIC_VECTOR (3 DOWNTO 0);
+		
+		SIGNAL Dato_Mp					:STD_LOGIC_VECTOR(22 DOWNTO 0);
+		SIGNAL Dir_Mp					:STD_LOGIC_VECTOR(15 DOWNTO 0);
+		SIGNAL Ena_Mp					:STD_LOGIC;
+		SIGNAL Read_Mp					:STD_LOGIC;
+		SIGNAL Datoin_Md				:STD_LOGIC_VECTOR(15 DOWNTO 0);
+		SIGNAL Dataout_Md				:STD_LOGIC_VECTOR(15 DOWNTO 0);
+		SIGNAL MDM						:STD_LOGIC_VECTOR(15 DOWNTO 0);
+		SIGNAL RDEN						:STD_LOGIC;
+		SIGNAL WREN						:STD_LOGIC;
+		
+	
+BEGIN
+
+	--******************************************************--
+	
+	
+		MemoryOUT <= Dato_Mp;
+		SEnaMP <= Ena_Mp;
+	   
+	
+		B_Procesador : Procesador PORT MAP (
+															Clock, 
+															ResetSystem, 
+															Dato_Mp, 
+															Datoin_Md, 
+															Int,
+															Dir_Mp,
+															Ena_Mp, 
+															Read_Mp,
+															Dataout_Md,
+															MDM,
+															RDEN,
+															WREN,
+															Count,
+															Estados);
+		B_MemoryRAM : MemoryRAM PORT MAP (
+															MDM(7 DOWNTO 0), 
+															Clock, 
+															Dataout_Md, 
+															RDEN, 
+															WREN, 
+															Datoin_Md);
+		B_MemoryROM : MemoryROM PORT MAP (
+															Dir_Mp(7 DOWNTO 0),
+															Clock, 
+															Ena_Mp, 
+															Dato_Mp);
+	
+	--******************************************************--
+
+END ARCHITECTURE	Computador;

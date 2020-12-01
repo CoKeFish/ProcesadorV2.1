@@ -1,0 +1,76 @@
+--******************************************************--
+--        PONTIFICIA UNIVERSIDAD JAVERIANA              --
+--          Organizacion de computadoras                --
+--               PROYECTO PROCESADOR                    --
+-- 													              --
+-- Titulo :    Registro Proposito General               --
+-- Fecha  :  	D:26 M:11 Y:2020                         --
+--******************************************************--
+
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.all;
+LIBRARY ALTERA;
+USE ALTERA.altera_primitives_components.all;
+
+--******************************************************--
+-- Comentarios:Este registro de 16 bits, se encarga de
+--             almacenar la direccion de memoria del 
+--					datos por medio de una señal de control.
+--              
+--******************************************************--
+
+ENTITY RDATO IS
+	
+	PORT (
+				--ENTRADAS------------------------------------
+				Clock 			 :IN STD_LOGIC; --Reloj del sistema
+				ResetSystem		 :IN STD_LOGIC; --Reset del sistema
+				SaveRDT			 :IN STD_LOGIC; --Señal de control para habilitar registro
+				DMD		 		 :IN STD_LOGIC_VECTOR (15 DOWNTO 0); --Bus de 16 bits que viene de la memoria de datos.
+				----------------------------------------------
+				--SALIDAS
+				InstRDT		    :OUT STD_LOGIC_VECTOR (15 DOWNTO 0) --Valor actual del registro RDATO.
+		);
+	
+END ENTITY ;
+
+ARCHITECTURE RDATO OF RDATO IS
+
+--******************************************************--
+		COMPONENT DFFE IS
+		PORT (
+				D							:IN STD_LOGIC;
+				CLK						:IN STD_LOGIC;
+				CLRN						:IN STD_LOGIC;
+				PRN						:IN STD_LOGIC;
+				ENA						:IN STD_LOGIC;
+				
+				Q							:OUT STD_LOGIC
+		);
+		END COMPONENT DFFE;
+--******************************************************--
+	
+BEGIN
+
+--******************************************************--
+	
+	
+		FF0  : DFFE PORT MAP (DMD(0),  Clock, ResetSystem, '1' , SaveRDT , InstRDT(0));
+		FF1  : DFFE PORT MAP (DMD(1),  Clock, ResetSystem, '1' , SaveRDT , InstRDT(1));
+		FF2  : DFFE PORT MAP (DMD(2),  Clock, ResetSystem, '1' , SaveRDT , InstRDT(2));
+		FF3  : DFFE PORT MAP (DMD(3),  Clock, ResetSystem, '1' , SaveRDT , InstRDT(3));
+		FF4  : DFFE PORT MAP (DMD(4),  Clock, ResetSystem, '1' , SaveRDT , InstRDT(4));
+		FF5  : DFFE PORT MAP (DMD(5),  Clock, ResetSystem, '1' , SaveRDT , InstRDT(5));
+		FF6  : DFFE PORT MAP (DMD(6),  Clock, ResetSystem, '1' , SaveRDT , InstRDT(6));
+		FF7  : DFFE PORT MAP (DMD(7),  Clock, ResetSystem, '1' , SaveRDT , InstRDT(7));
+		FF8  : DFFE PORT MAP (DMD(8),  Clock, ResetSystem, '1' , SaveRDT , InstRDT(8));
+		FF9  : DFFE PORT MAP (DMD(9),  Clock, ResetSystem, '1' , SaveRDT , InstRDT(9));
+		FF10 : DFFE PORT MAP (DMD(10), Clock, ResetSystem, '1' , SaveRDT , InstRDT(10));
+		FF11 : DFFE PORT MAP (DMD(11), Clock, ResetSystem, '1' , SaveRDT , InstRDT(11));
+		FF12 : DFFE PORT MAP (DMD(12), Clock, ResetSystem, '1' , SaveRDT , InstRDT(12));
+		FF13 : DFFE PORT MAP (DMD(13), Clock, ResetSystem, '1' , SaveRDT , InstRDT(13));
+		FF14 : DFFE PORT MAP (DMD(14), Clock, ResetSystem, '1' , SaveRDT , InstRDT(14));
+		FF15 : DFFE PORT MAP (DMD(15), Clock, ResetSystem, '1' , SaveRDT , InstRDT(15));
+	--******************************************************--
+
+END ARCHITECTURE	RDATO;

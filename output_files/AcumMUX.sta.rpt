@@ -1,0 +1,975 @@
+TimeQuest Timing Analyzer report for AcumMUX
+Tue Dec 01 06:56:13 2020
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Propagation Delay
+ 13. Minimum Propagation Delay
+ 14. Slow 1200mV 85C Model Metastability Report
+ 15. Slow 1200mV 0C Model Fmax Summary
+ 16. Slow 1200mV 0C Model Setup Summary
+ 17. Slow 1200mV 0C Model Hold Summary
+ 18. Slow 1200mV 0C Model Recovery Summary
+ 19. Slow 1200mV 0C Model Removal Summary
+ 20. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 21. Propagation Delay
+ 22. Minimum Propagation Delay
+ 23. Slow 1200mV 0C Model Metastability Report
+ 24. Fast 1200mV 0C Model Setup Summary
+ 25. Fast 1200mV 0C Model Hold Summary
+ 26. Fast 1200mV 0C Model Recovery Summary
+ 27. Fast 1200mV 0C Model Removal Summary
+ 28. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 29. Propagation Delay
+ 30. Minimum Propagation Delay
+ 31. Fast 1200mV 0C Model Metastability Report
+ 32. Multicorner Timing Analysis Summary
+ 33. Propagation Delay
+ 34. Minimum Propagation Delay
+ 35. Board Trace Model Assignments
+ 36. Input Transition Times
+ 37. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 38. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 39. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 40. Clock Transfers
+ 41. Report TCCS
+ 42. Report RSKM
+ 43. Unconstrained Paths
+ 44. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                       ;
++--------------------+----------------------------------------------------+
+; Quartus II Version ; Version 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name      ; AcumMUX                                            ;
+; Device Family      ; Cyclone IV GX                                      ;
+; Device Name        ; EP4CGX22CF19C6                                     ;
+; Timing Models      ; Final                                              ;
+; Delay Model        ; Combined                                           ;
+; Rise/Fall Delays   ; Enabled                                            ;
++--------------------+----------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
+----------
+; Clocks ;
+----------
+No clocks to report.
+
+
+--------------------------------------
+; Slow 1200mV 85C Model Fmax Summary ;
+--------------------------------------
+No paths to report.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
+---------------------------------------
+; Slow 1200mV 85C Model Setup Summary ;
+---------------------------------------
+No paths to report.
+
+
+--------------------------------------
+; Slow 1200mV 85C Model Hold Summary ;
+--------------------------------------
+No paths to report.
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
+-----------------------------------------------------
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
+-----------------------------------------------------
+No paths to report.
+
+
++--------------------------------------------------------------------+
+; Propagation Delay                                                  ;
++---------------+----------------+--------+--------+--------+--------+
+; Input Port    ; Output Port    ; RR     ; RF     ; FR     ; FF     ;
++---------------+----------------+--------+--------+--------+--------+
+; DataMd[0]     ; AcumMUXOut[0]  ; 5.568  ;        ;        ; 5.620  ;
+; DataMd[1]     ; AcumMUXOut[1]  ; 8.167  ;        ;        ; 8.538  ;
+; DataMd[2]     ; AcumMUXOut[2]  ; 7.765  ;        ;        ; 8.043  ;
+; DataMd[3]     ; AcumMUXOut[3]  ; 7.764  ;        ;        ; 8.080  ;
+; DataMd[4]     ; AcumMUXOut[4]  ; 7.193  ;        ;        ; 7.508  ;
+; DataMd[5]     ; AcumMUXOut[5]  ; 7.777  ;        ;        ; 8.065  ;
+; DataMd[6]     ; AcumMUXOut[6]  ; 7.581  ;        ;        ; 7.929  ;
+; DataMd[7]     ; AcumMUXOut[7]  ; 8.519  ;        ;        ; 8.873  ;
+; DataMd[8]     ; AcumMUXOut[8]  ; 8.491  ;        ;        ; 8.860  ;
+; DataMd[9]     ; AcumMUXOut[9]  ; 10.512 ;        ;        ; 10.999 ;
+; DataMd[10]    ; AcumMUXOut[10] ; 8.108  ;        ;        ; 8.472  ;
+; DataMd[11]    ; AcumMUXOut[11] ; 8.927  ;        ;        ; 9.373  ;
+; DataMd[12]    ; AcumMUXOut[12] ; 7.819  ;        ;        ; 8.196  ;
+; DataMd[13]    ; AcumMUXOut[13] ; 8.325  ;        ;        ; 8.672  ;
+; DataMd[14]    ; AcumMUXOut[14] ; 7.898  ;        ;        ; 8.202  ;
+; DataMd[15]    ; AcumMUXOut[15] ; 6.733  ;        ;        ; 7.053  ;
+; ResultALU[0]  ; AcumMUXOut[0]  ; 5.466  ;        ;        ; 5.513  ;
+; ResultALU[1]  ; AcumMUXOut[1]  ; 8.481  ;        ;        ; 8.828  ;
+; ResultALU[2]  ; AcumMUXOut[2]  ; 7.837  ;        ;        ; 8.143  ;
+; ResultALU[3]  ; AcumMUXOut[3]  ; 7.304  ;        ;        ; 7.614  ;
+; ResultALU[4]  ; AcumMUXOut[4]  ; 7.739  ;        ;        ; 8.071  ;
+; ResultALU[5]  ; AcumMUXOut[5]  ; 7.905  ;        ;        ; 8.200  ;
+; ResultALU[6]  ; AcumMUXOut[6]  ; 8.068  ;        ;        ; 8.459  ;
+; ResultALU[7]  ; AcumMUXOut[7]  ; 8.309  ;        ;        ; 8.601  ;
+; ResultALU[8]  ; AcumMUXOut[8]  ; 8.370  ;        ;        ; 8.722  ;
+; ResultALU[9]  ; AcumMUXOut[9]  ; 10.576 ;        ;        ; 11.027 ;
+; ResultALU[10] ; AcumMUXOut[10] ; 8.161  ;        ;        ; 8.490  ;
+; ResultALU[11] ; AcumMUXOut[11] ; 8.760  ;        ;        ; 9.186  ;
+; ResultALU[12] ; AcumMUXOut[12] ; 8.120  ;        ;        ; 8.495  ;
+; ResultALU[13] ; AcumMUXOut[13] ; 7.982  ;        ;        ; 8.310  ;
+; ResultALU[14] ; AcumMUXOut[14] ; 7.784  ;        ;        ; 8.116  ;
+; ResultALU[15] ; AcumMUXOut[15] ; 6.973  ;        ;        ; 7.334  ;
+; SelectAcum    ; AcumMUXOut[0]  ; 8.389  ; 8.251  ; 8.895  ; 8.748  ;
+; SelectAcum    ; AcumMUXOut[1]  ; 8.582  ; 8.491  ; 9.087  ; 8.987  ;
+; SelectAcum    ; AcumMUXOut[2]  ; 7.959  ; 7.825  ; 8.465  ; 8.322  ;
+; SelectAcum    ; AcumMUXOut[3]  ; 7.825  ; 7.695  ; 8.329  ; 8.190  ;
+; SelectAcum    ; AcumMUXOut[4]  ; 7.799  ; 7.671  ; 8.303  ; 8.166  ;
+; SelectAcum    ; AcumMUXOut[5]  ; 8.184  ; 8.044  ; 8.690  ; 8.541  ;
+; SelectAcum    ; AcumMUXOut[6]  ; 8.327  ; 8.227  ; 8.832  ; 8.723  ;
+; SelectAcum    ; AcumMUXOut[7]  ; 9.083  ; 8.937  ; 9.555  ; 9.512  ;
+; SelectAcum    ; AcumMUXOut[8]  ; 8.696  ; 8.570  ; 9.200  ; 9.065  ;
+; SelectAcum    ; AcumMUXOut[9]  ; 10.409 ; 10.359 ; 10.913 ; 10.854 ;
+; SelectAcum    ; AcumMUXOut[10] ; 8.133  ; 7.999  ; 8.637  ; 8.494  ;
+; SelectAcum    ; AcumMUXOut[11] ; 8.903  ; 8.824  ; 9.408  ; 9.320  ;
+; SelectAcum    ; AcumMUXOut[12] ; 8.023  ; 7.890  ; 8.529  ; 8.387  ;
+; SelectAcum    ; AcumMUXOut[13] ; 8.674  ; 8.541  ; 9.178  ; 9.036  ;
+; SelectAcum    ; AcumMUXOut[14] ; 8.175  ; 8.031  ; 8.679  ; 8.526  ;
+; SelectAcum    ; AcumMUXOut[15] ; 7.375  ; 7.267  ; 7.808  ; 7.733  ;
++---------------+----------------+--------+--------+--------+--------+
+
+
++-------------------------------------------------------------------+
+; Minimum Propagation Delay                                         ;
++---------------+----------------+--------+-------+--------+--------+
+; Input Port    ; Output Port    ; RR     ; RF    ; FR     ; FF     ;
++---------------+----------------+--------+-------+--------+--------+
+; DataMd[0]     ; AcumMUXOut[0]  ; 5.390  ;       ;        ; 5.427  ;
+; DataMd[1]     ; AcumMUXOut[1]  ; 7.889  ;       ;        ; 8.249  ;
+; DataMd[2]     ; AcumMUXOut[2]  ; 7.505  ;       ;        ; 7.773  ;
+; DataMd[3]     ; AcumMUXOut[3]  ; 7.506  ;       ;        ; 7.812  ;
+; DataMd[4]     ; AcumMUXOut[4]  ; 6.941  ;       ;        ; 7.230  ;
+; DataMd[5]     ; AcumMUXOut[5]  ; 7.517  ;       ;        ; 7.797  ;
+; DataMd[6]     ; AcumMUXOut[6]  ; 7.312  ;       ;        ; 7.638  ;
+; DataMd[7]     ; AcumMUXOut[7]  ; 8.180  ;       ;        ; 8.514  ;
+; DataMd[8]     ; AcumMUXOut[8]  ; 8.189  ;       ;        ; 8.530  ;
+; DataMd[9]     ; AcumMUXOut[9]  ; 10.142 ;       ;        ; 10.612 ;
+; DataMd[10]    ; AcumMUXOut[10] ; 7.830  ;       ;        ; 8.182  ;
+; DataMd[11]    ; AcumMUXOut[11] ; 8.650  ;       ;        ; 9.084  ;
+; DataMd[12]    ; AcumMUXOut[12] ; 7.543  ;       ;        ; 7.890  ;
+; DataMd[13]    ; AcumMUXOut[13] ; 8.041  ;       ;        ; 8.377  ;
+; DataMd[14]    ; AcumMUXOut[14] ; 7.616  ;       ;        ; 7.900  ;
+; DataMd[15]    ; AcumMUXOut[15] ; 6.516  ;       ;        ; 6.824  ;
+; ResultALU[0]  ; AcumMUXOut[0]  ; 5.306  ;       ;        ; 5.353  ;
+; ResultALU[1]  ; AcumMUXOut[1]  ; 8.166  ;       ;        ; 8.482  ;
+; ResultALU[2]  ; AcumMUXOut[2]  ; 7.550  ;       ;        ; 7.819  ;
+; ResultALU[3]  ; AcumMUXOut[3]  ; 7.037  ;       ;        ; 7.317  ;
+; ResultALU[4]  ; AcumMUXOut[4]  ; 7.479  ;       ;        ; 7.800  ;
+; ResultALU[5]  ; AcumMUXOut[5]  ; 7.613  ;       ;        ; 7.879  ;
+; ResultALU[6]  ; AcumMUXOut[6]  ; 7.773  ;       ;        ; 8.124  ;
+; ResultALU[7]  ; AcumMUXOut[7]  ; 8.028  ;       ;        ; 8.310  ;
+; ResultALU[8]  ; AcumMUXOut[8]  ; 8.086  ;       ;        ; 8.427  ;
+; ResultALU[9]  ; AcumMUXOut[9]  ; 10.177 ;       ;        ; 10.592 ;
+; ResultALU[10] ; AcumMUXOut[10] ; 7.856  ;       ;        ; 8.154  ;
+; ResultALU[11] ; AcumMUXOut[11] ; 8.468  ;       ;        ; 8.856  ;
+; ResultALU[12] ; AcumMUXOut[12] ; 7.821  ;       ;        ; 8.162  ;
+; ResultALU[13] ; AcumMUXOut[13] ; 7.691  ;       ;        ; 7.982  ;
+; ResultALU[14] ; AcumMUXOut[14] ; 7.522  ;       ;        ; 7.843  ;
+; ResultALU[15] ; AcumMUXOut[15] ; 6.683  ;       ;        ; 7.016  ;
+; SelectAcum    ; AcumMUXOut[0]  ; 8.109  ; 7.972 ; 8.598  ; 8.452  ;
+; SelectAcum    ; AcumMUXOut[1]  ; 8.294  ; 8.203 ; 8.783  ; 8.683  ;
+; SelectAcum    ; AcumMUXOut[2]  ; 7.695  ; 7.561 ; 8.185  ; 8.042  ;
+; SelectAcum    ; AcumMUXOut[3]  ; 7.568  ; 7.439 ; 8.055  ; 7.917  ;
+; SelectAcum    ; AcumMUXOut[4]  ; 7.542  ; 7.414 ; 8.031  ; 7.894  ;
+; SelectAcum    ; AcumMUXOut[5]  ; 7.912  ; 7.774 ; 8.401  ; 8.254  ;
+; SelectAcum    ; AcumMUXOut[6]  ; 8.050  ; 7.949 ; 8.539  ; 8.429  ;
+; SelectAcum    ; AcumMUXOut[7]  ; 8.763  ; 8.628 ; 9.233  ; 9.160  ;
+; SelectAcum    ; AcumMUXOut[8]  ; 8.404  ; 8.278 ; 8.892  ; 8.757  ;
+; SelectAcum    ; AcumMUXOut[9]  ; 10.048 ; 9.995 ; 10.536 ; 10.474 ;
+; SelectAcum    ; AcumMUXOut[10] ; 7.858  ; 7.725 ; 8.347  ; 8.205  ;
+; SelectAcum    ; AcumMUXOut[11] ; 8.632  ; 8.554 ; 9.120  ; 9.033  ;
+; SelectAcum    ; AcumMUXOut[12] ; 7.757  ; 7.624 ; 8.247  ; 8.105  ;
+; SelectAcum    ; AcumMUXOut[13] ; 8.381  ; 8.249 ; 8.870  ; 8.729  ;
+; SelectAcum    ; AcumMUXOut[14] ; 7.902  ; 7.759 ; 8.390  ; 8.238  ;
+; SelectAcum    ; AcumMUXOut[15] ; 7.132  ; 7.026 ; 7.552  ; 7.477  ;
++---------------+----------------+--------+-------+--------+--------+
+
+
+----------------------------------------------
+; Slow 1200mV 85C Model Metastability Report ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
+-------------------------------------
+; Slow 1200mV 0C Model Fmax Summary ;
+-------------------------------------
+No paths to report.
+
+
+--------------------------------------
+; Slow 1200mV 0C Model Setup Summary ;
+--------------------------------------
+No paths to report.
+
+
+-------------------------------------
+; Slow 1200mV 0C Model Hold Summary ;
+-------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
+----------------------------------------------------
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
+----------------------------------------------------
+No paths to report.
+
+
++----------------------------------------------------------------+
+; Propagation Delay                                              ;
++---------------+----------------+-------+-------+-------+-------+
+; Input Port    ; Output Port    ; RR    ; RF    ; FR    ; FF    ;
++---------------+----------------+-------+-------+-------+-------+
+; DataMd[0]     ; AcumMUXOut[0]  ; 5.032 ;       ;       ; 5.040 ;
+; DataMd[1]     ; AcumMUXOut[1]  ; 7.273 ;       ;       ; 7.485 ;
+; DataMd[2]     ; AcumMUXOut[2]  ; 6.898 ;       ;       ; 7.051 ;
+; DataMd[3]     ; AcumMUXOut[3]  ; 6.898 ;       ;       ; 7.093 ;
+; DataMd[4]     ; AcumMUXOut[4]  ; 6.370 ;       ;       ; 6.564 ;
+; DataMd[5]     ; AcumMUXOut[5]  ; 6.924 ;       ;       ; 7.072 ;
+; DataMd[6]     ; AcumMUXOut[6]  ; 6.723 ;       ;       ; 6.943 ;
+; DataMd[7]     ; AcumMUXOut[7]  ; 7.598 ;       ;       ; 7.786 ;
+; DataMd[8]     ; AcumMUXOut[8]  ; 7.591 ;       ;       ; 7.775 ;
+; DataMd[9]     ; AcumMUXOut[9]  ; 9.408 ;       ;       ; 9.729 ;
+; DataMd[10]    ; AcumMUXOut[10] ; 7.196 ;       ;       ; 7.441 ;
+; DataMd[11]    ; AcumMUXOut[11] ; 7.910 ;       ;       ; 8.216 ;
+; DataMd[12]    ; AcumMUXOut[12] ; 6.953 ;       ;       ; 7.180 ;
+; DataMd[13]    ; AcumMUXOut[13] ; 7.431 ;       ;       ; 7.613 ;
+; DataMd[14]    ; AcumMUXOut[14] ; 7.022 ;       ;       ; 7.189 ;
+; DataMd[15]    ; AcumMUXOut[15] ; 5.959 ;       ;       ; 6.160 ;
+; ResultALU[0]  ; AcumMUXOut[0]  ; 4.943 ;       ;       ; 4.948 ;
+; ResultALU[1]  ; AcumMUXOut[1]  ; 7.561 ;       ;       ; 7.741 ;
+; ResultALU[2]  ; AcumMUXOut[2]  ; 6.970 ;       ;       ; 7.128 ;
+; ResultALU[3]  ; AcumMUXOut[3]  ; 6.468 ;       ;       ; 6.661 ;
+; ResultALU[4]  ; AcumMUXOut[4]  ; 6.871 ;       ;       ; 7.071 ;
+; ResultALU[5]  ; AcumMUXOut[5]  ; 7.036 ;       ;       ; 7.184 ;
+; ResultALU[6]  ; AcumMUXOut[6]  ; 7.182 ;       ;       ; 7.415 ;
+; ResultALU[7]  ; AcumMUXOut[7]  ; 7.403 ;       ;       ; 7.548 ;
+; ResultALU[8]  ; AcumMUXOut[8]  ; 7.478 ;       ;       ; 7.661 ;
+; ResultALU[9]  ; AcumMUXOut[9]  ; 9.457 ;       ;       ; 9.744 ;
+; ResultALU[10] ; AcumMUXOut[10] ; 7.246 ;       ;       ; 7.449 ;
+; ResultALU[11] ; AcumMUXOut[11] ; 7.752 ;       ;       ; 8.043 ;
+; ResultALU[12] ; AcumMUXOut[12] ; 7.233 ;       ;       ; 7.453 ;
+; ResultALU[13] ; AcumMUXOut[13] ; 7.111 ;       ;       ; 7.287 ;
+; ResultALU[14] ; AcumMUXOut[14] ; 6.921 ;       ;       ; 7.118 ;
+; ResultALU[15] ; AcumMUXOut[15] ; 6.174 ;       ;       ; 6.409 ;
+; SelectAcum    ; AcumMUXOut[0]  ; 7.514 ; 7.319 ; 7.887 ; 7.684 ;
+; SelectAcum    ; AcumMUXOut[1]  ; 7.682 ; 7.528 ; 8.054 ; 7.892 ;
+; SelectAcum    ; AcumMUXOut[2]  ; 7.106 ; 6.938 ; 7.479 ; 7.303 ;
+; SelectAcum    ; AcumMUXOut[3]  ; 6.978 ; 6.823 ; 7.349 ; 7.186 ;
+; SelectAcum    ; AcumMUXOut[4]  ; 6.954 ; 6.802 ; 7.326 ; 7.166 ;
+; SelectAcum    ; AcumMUXOut[5]  ; 7.323 ; 7.134 ; 7.696 ; 7.499 ;
+; SelectAcum    ; AcumMUXOut[6]  ; 7.447 ; 7.298 ; 7.819 ; 7.662 ;
+; SelectAcum    ; AcumMUXOut[7]  ; 8.128 ; 7.935 ; 8.472 ; 8.367 ;
+; SelectAcum    ; AcumMUXOut[8]  ; 7.796 ; 7.605 ; 8.168 ; 7.969 ;
+; SelectAcum    ; AcumMUXOut[9]  ; 9.335 ; 9.233 ; 9.706 ; 9.596 ;
+; SelectAcum    ; AcumMUXOut[10] ; 7.243 ; 7.094 ; 7.615 ; 7.458 ;
+; SelectAcum    ; AcumMUXOut[11] ; 7.908 ; 7.801 ; 8.280 ; 8.165 ;
+; SelectAcum    ; AcumMUXOut[12] ; 7.168 ; 6.997 ; 7.541 ; 7.362 ;
+; SelectAcum    ; AcumMUXOut[13] ; 7.775 ; 7.581 ; 8.147 ; 7.945 ;
+; SelectAcum    ; AcumMUXOut[14] ; 7.298 ; 7.123 ; 7.669 ; 7.486 ;
+; SelectAcum    ; AcumMUXOut[15] ; 6.541 ; 6.398 ; 6.886 ; 6.772 ;
++---------------+----------------+-------+-------+-------+-------+
+
+
++----------------------------------------------------------------+
+; Minimum Propagation Delay                                      ;
++---------------+----------------+-------+-------+-------+-------+
+; Input Port    ; Output Port    ; RR    ; RF    ; FR    ; FF    ;
++---------------+----------------+-------+-------+-------+-------+
+; DataMd[0]     ; AcumMUXOut[0]  ; 4.867 ;       ;       ; 4.867 ;
+; DataMd[1]     ; AcumMUXOut[1]  ; 7.025 ;       ;       ; 7.230 ;
+; DataMd[2]     ; AcumMUXOut[2]  ; 6.665 ;       ;       ; 6.814 ;
+; DataMd[3]     ; AcumMUXOut[3]  ; 6.668 ;       ;       ; 6.856 ;
+; DataMd[4]     ; AcumMUXOut[4]  ; 6.145 ;       ;       ; 6.322 ;
+; DataMd[5]     ; AcumMUXOut[5]  ; 6.692 ;       ;       ; 6.836 ;
+; DataMd[6]     ; AcumMUXOut[6]  ; 6.482 ;       ;       ; 6.688 ;
+; DataMd[7]     ; AcumMUXOut[7]  ; 7.296 ;       ;       ; 7.468 ;
+; DataMd[8]     ; AcumMUXOut[8]  ; 7.320 ;       ;       ; 7.488 ;
+; DataMd[9]     ; AcumMUXOut[9]  ; 9.075 ;       ;       ; 9.386 ;
+; DataMd[10]    ; AcumMUXOut[10] ; 6.948 ;       ;       ; 7.185 ;
+; DataMd[11]    ; AcumMUXOut[11] ; 7.662 ;       ;       ; 7.961 ;
+; DataMd[12]    ; AcumMUXOut[12] ; 6.705 ;       ;       ; 6.912 ;
+; DataMd[13]    ; AcumMUXOut[13] ; 7.177 ;       ;       ; 7.352 ;
+; DataMd[14]    ; AcumMUXOut[14] ; 6.769 ;       ;       ; 6.924 ;
+; DataMd[15]    ; AcumMUXOut[15] ; 5.767 ;       ;       ; 5.963 ;
+; ResultALU[0]  ; AcumMUXOut[0]  ; 4.796 ;       ;       ; 4.802 ;
+; ResultALU[1]  ; AcumMUXOut[1]  ; 7.277 ;       ;       ; 7.436 ;
+; ResultALU[2]  ; AcumMUXOut[2]  ; 6.711 ;       ;       ; 6.845 ;
+; ResultALU[3]  ; AcumMUXOut[3]  ; 6.228 ;       ;       ; 6.399 ;
+; ResultALU[4]  ; AcumMUXOut[4]  ; 6.640 ;       ;       ; 6.833 ;
+; ResultALU[5]  ; AcumMUXOut[5]  ; 6.773 ;       ;       ; 6.902 ;
+; ResultALU[6]  ; AcumMUXOut[6]  ; 6.916 ;       ;       ; 7.123 ;
+; ResultALU[7]  ; AcumMUXOut[7]  ; 7.151 ;       ;       ; 7.292 ;
+; ResultALU[8]  ; AcumMUXOut[8]  ; 7.225 ;       ;       ; 7.402 ;
+; ResultALU[9]  ; AcumMUXOut[9]  ; 9.096 ;       ;       ; 9.358 ;
+; ResultALU[10] ; AcumMUXOut[10] ; 6.971 ;       ;       ; 7.153 ;
+; ResultALU[11] ; AcumMUXOut[11] ; 7.489 ;       ;       ; 7.754 ;
+; ResultALU[12] ; AcumMUXOut[12] ; 6.962 ;       ;       ; 7.160 ;
+; ResultALU[13] ; AcumMUXOut[13] ; 6.849 ;       ;       ; 7.000 ;
+; ResultALU[14] ; AcumMUXOut[14] ; 6.687 ;       ;       ; 6.878 ;
+; ResultALU[15] ; AcumMUXOut[15] ; 5.915 ;       ;       ; 6.131 ;
+; SelectAcum    ; AcumMUXOut[0]  ; 7.259 ; 7.067 ; 7.622 ; 7.424 ;
+; SelectAcum    ; AcumMUXOut[1]  ; 7.420 ; 7.267 ; 7.783 ; 7.624 ;
+; SelectAcum    ; AcumMUXOut[2]  ; 6.866 ; 6.700 ; 7.229 ; 7.057 ;
+; SelectAcum    ; AcumMUXOut[3]  ; 6.745 ; 6.591 ; 7.107 ; 6.947 ;
+; SelectAcum    ; AcumMUXOut[4]  ; 6.722 ; 6.571 ; 7.084 ; 6.927 ;
+; SelectAcum    ; AcumMUXOut[5]  ; 7.076 ; 6.890 ; 7.440 ; 7.248 ;
+; SelectAcum    ; AcumMUXOut[6]  ; 7.194 ; 7.047 ; 7.557 ; 7.404 ;
+; SelectAcum    ; AcumMUXOut[7]  ; 7.839 ; 7.659 ; 8.183 ; 8.057 ;
+; SelectAcum    ; AcumMUXOut[8]  ; 7.531 ; 7.343 ; 7.893 ; 7.699 ;
+; SelectAcum    ; AcumMUXOut[9]  ; 9.007 ; 8.905 ; 9.369 ; 9.261 ;
+; SelectAcum    ; AcumMUXOut[10] ; 6.995 ; 6.848 ; 7.357 ; 7.204 ;
+; SelectAcum    ; AcumMUXOut[11] ; 7.661 ; 7.557 ; 8.024 ; 7.914 ;
+; SelectAcum    ; AcumMUXOut[12] ; 6.927 ; 6.757 ; 7.291 ; 7.115 ;
+; SelectAcum    ; AcumMUXOut[13] ; 7.510 ; 7.318 ; 7.872 ; 7.674 ;
+; SelectAcum    ; AcumMUXOut[14] ; 7.051 ; 6.879 ; 7.413 ; 7.235 ;
+; SelectAcum    ; AcumMUXOut[15] ; 6.327 ; 6.185 ; 6.663 ; 6.549 ;
++---------------+----------------+-------+-------+-------+-------+
+
+
+---------------------------------------------
+; Slow 1200mV 0C Model Metastability Report ;
+---------------------------------------------
+No synchronizer chains to report.
+
+
+--------------------------------------
+; Fast 1200mV 0C Model Setup Summary ;
+--------------------------------------
+No paths to report.
+
+
+-------------------------------------
+; Fast 1200mV 0C Model Hold Summary ;
+-------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
+----------------------------------------------------
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
+----------------------------------------------------
+No paths to report.
+
+
++----------------------------------------------------------------+
+; Propagation Delay                                              ;
++---------------+----------------+-------+-------+-------+-------+
+; Input Port    ; Output Port    ; RR    ; RF    ; FR    ; FF    ;
++---------------+----------------+-------+-------+-------+-------+
+; DataMd[0]     ; AcumMUXOut[0]  ; 3.240 ;       ;       ; 3.627 ;
+; DataMd[1]     ; AcumMUXOut[1]  ; 4.699 ;       ;       ; 5.377 ;
+; DataMd[2]     ; AcumMUXOut[2]  ; 4.470 ;       ;       ; 5.076 ;
+; DataMd[3]     ; AcumMUXOut[3]  ; 4.497 ;       ;       ; 5.127 ;
+; DataMd[4]     ; AcumMUXOut[4]  ; 4.168 ;       ;       ; 4.746 ;
+; DataMd[5]     ; AcumMUXOut[5]  ; 4.502 ;       ;       ; 5.107 ;
+; DataMd[6]     ; AcumMUXOut[6]  ; 4.383 ;       ;       ; 5.008 ;
+; DataMd[7]     ; AcumMUXOut[7]  ; 4.916 ;       ;       ; 5.595 ;
+; DataMd[8]     ; AcumMUXOut[8]  ; 4.922 ;       ;       ; 5.621 ;
+; DataMd[9]     ; AcumMUXOut[9]  ; 6.122 ;       ;       ; 7.007 ;
+; DataMd[10]    ; AcumMUXOut[10] ; 4.679 ;       ;       ; 5.343 ;
+; DataMd[11]    ; AcumMUXOut[11] ; 5.320 ;       ;       ; 5.997 ;
+; DataMd[12]    ; AcumMUXOut[12] ; 4.515 ;       ;       ; 5.177 ;
+; DataMd[13]    ; AcumMUXOut[13] ; 4.787 ;       ;       ; 5.472 ;
+; DataMd[14]    ; AcumMUXOut[14] ; 4.551 ;       ;       ; 5.177 ;
+; DataMd[15]    ; AcumMUXOut[15] ; 3.969 ;       ;       ; 4.476 ;
+; ResultALU[0]  ; AcumMUXOut[0]  ; 3.179 ;       ;       ; 3.567 ;
+; ResultALU[1]  ; AcumMUXOut[1]  ; 4.881 ;       ;       ; 5.553 ;
+; ResultALU[2]  ; AcumMUXOut[2]  ; 4.505 ;       ;       ; 5.118 ;
+; ResultALU[3]  ; AcumMUXOut[3]  ; 4.226 ;       ;       ; 4.808 ;
+; ResultALU[4]  ; AcumMUXOut[4]  ; 4.474 ;       ;       ; 5.095 ;
+; ResultALU[5]  ; AcumMUXOut[5]  ; 4.554 ;       ;       ; 5.172 ;
+; ResultALU[6]  ; AcumMUXOut[6]  ; 4.651 ;       ;       ; 5.328 ;
+; ResultALU[7]  ; AcumMUXOut[7]  ; 4.796 ;       ;       ; 5.445 ;
+; ResultALU[8]  ; AcumMUXOut[8]  ; 4.848 ;       ;       ; 5.533 ;
+; ResultALU[9]  ; AcumMUXOut[9]  ; 6.137 ;       ;       ; 7.001 ;
+; ResultALU[10] ; AcumMUXOut[10] ; 4.709 ;       ;       ; 5.344 ;
+; ResultALU[11] ; AcumMUXOut[11] ; 5.214 ;       ;       ; 5.877 ;
+; ResultALU[12] ; AcumMUXOut[12] ; 4.685 ;       ;       ; 5.364 ;
+; ResultALU[13] ; AcumMUXOut[13] ; 4.610 ;       ;       ; 5.253 ;
+; ResultALU[14] ; AcumMUXOut[14] ; 4.484 ;       ;       ; 5.122 ;
+; ResultALU[15] ; AcumMUXOut[15] ; 4.105 ;       ;       ; 4.631 ;
+; SelectAcum    ; AcumMUXOut[0]  ; 4.854 ; 4.898 ; 5.506 ; 5.543 ;
+; SelectAcum    ; AcumMUXOut[1]  ; 4.957 ; 5.032 ; 5.609 ; 5.677 ;
+; SelectAcum    ; AcumMUXOut[2]  ; 4.608 ; 4.622 ; 5.261 ; 5.268 ;
+; SelectAcum    ; AcumMUXOut[3]  ; 4.545 ; 4.553 ; 5.196 ; 5.197 ;
+; SelectAcum    ; AcumMUXOut[4]  ; 4.531 ; 4.538 ; 5.182 ; 5.182 ;
+; SelectAcum    ; AcumMUXOut[5]  ; 4.743 ; 4.769 ; 5.396 ; 5.415 ;
+; SelectAcum    ; AcumMUXOut[6]  ; 4.826 ; 4.878 ; 5.478 ; 5.523 ;
+; SelectAcum    ; AcumMUXOut[7]  ; 5.251 ; 5.304 ; 5.887 ; 6.001 ;
+; SelectAcum    ; AcumMUXOut[8]  ; 5.038 ; 5.103 ; 5.689 ; 5.747 ;
+; SelectAcum    ; AcumMUXOut[9]  ; 6.054 ; 6.273 ; 6.705 ; 6.917 ;
+; SelectAcum    ; AcumMUXOut[10] ; 4.696 ; 4.713 ; 5.347 ; 5.357 ;
+; SelectAcum    ; AcumMUXOut[11] ; 5.289 ; 5.317 ; 5.941 ; 5.962 ;
+; SelectAcum    ; AcumMUXOut[12] ; 4.645 ; 4.668 ; 5.298 ; 5.314 ;
+; SelectAcum    ; AcumMUXOut[13] ; 5.008 ; 5.077 ; 5.659 ; 5.721 ;
+; SelectAcum    ; AcumMUXOut[14] ; 4.720 ; 4.745 ; 5.371 ; 5.389 ;
+; SelectAcum    ; AcumMUXOut[15] ; 4.334 ; 4.298 ; 4.908 ; 4.891 ;
++---------------+----------------+-------+-------+-------+-------+
+
+
++----------------------------------------------------------------+
+; Minimum Propagation Delay                                      ;
++---------------+----------------+-------+-------+-------+-------+
+; Input Port    ; Output Port    ; RR    ; RF    ; FR    ; FF    ;
++---------------+----------------+-------+-------+-------+-------+
+; DataMd[0]     ; AcumMUXOut[0]  ; 3.136 ;       ;       ; 3.509 ;
+; DataMd[1]     ; AcumMUXOut[1]  ; 4.537 ;       ;       ; 5.202 ;
+; DataMd[2]     ; AcumMUXOut[2]  ; 4.317 ;       ;       ; 4.914 ;
+; DataMd[3]     ; AcumMUXOut[3]  ; 4.344 ;       ;       ; 4.965 ;
+; DataMd[4]     ; AcumMUXOut[4]  ; 4.021 ;       ;       ; 4.577 ;
+; DataMd[5]     ; AcumMUXOut[5]  ; 4.349 ;       ;       ; 4.946 ;
+; DataMd[6]     ; AcumMUXOut[6]  ; 4.226 ;       ;       ; 4.834 ;
+; DataMd[7]     ; AcumMUXOut[7]  ; 4.717 ;       ;       ; 5.383 ;
+; DataMd[8]     ; AcumMUXOut[8]  ; 4.746 ;       ;       ; 5.420 ;
+; DataMd[9]     ; AcumMUXOut[9]  ; 5.904 ;       ;       ; 6.769 ;
+; DataMd[10]    ; AcumMUXOut[10] ; 4.516 ;       ;       ; 5.167 ;
+; DataMd[11]    ; AcumMUXOut[11] ; 5.156 ;       ;       ; 5.823 ;
+; DataMd[12]    ; AcumMUXOut[12] ; 4.353 ;       ;       ; 4.991 ;
+; DataMd[13]    ; AcumMUXOut[13] ; 4.620 ;       ;       ; 5.293 ;
+; DataMd[14]    ; AcumMUXOut[14] ; 4.388 ;       ;       ; 4.996 ;
+; DataMd[15]    ; AcumMUXOut[15] ; 3.839 ;       ;       ; 4.339 ;
+; ResultALU[0]  ; AcumMUXOut[0]  ; 3.084 ;       ;       ; 3.470 ;
+; ResultALU[1]  ; AcumMUXOut[1]  ; 4.699 ;       ;       ; 5.348 ;
+; ResultALU[2]  ; AcumMUXOut[2]  ; 4.336 ;       ;       ; 4.924 ;
+; ResultALU[3]  ; AcumMUXOut[3]  ; 4.069 ;       ;       ; 4.633 ;
+; ResultALU[4]  ; AcumMUXOut[4]  ; 4.321 ;       ;       ; 4.932 ;
+; ResultALU[5]  ; AcumMUXOut[5]  ; 4.385 ;       ;       ; 4.983 ;
+; ResultALU[6]  ; AcumMUXOut[6]  ; 4.478 ;       ;       ; 5.127 ;
+; ResultALU[7]  ; AcumMUXOut[7]  ; 4.630 ;       ;       ; 5.270 ;
+; ResultALU[8]  ; AcumMUXOut[8]  ; 4.682 ;       ;       ; 5.355 ;
+; ResultALU[9]  ; AcumMUXOut[9]  ; 5.904 ;       ;       ; 6.738 ;
+; ResultALU[10] ; AcumMUXOut[10] ; 4.532 ;       ;       ; 5.144 ;
+; ResultALU[11] ; AcumMUXOut[11] ; 5.041 ;       ;       ; 5.678 ;
+; ResultALU[12] ; AcumMUXOut[12] ; 4.510 ;       ;       ; 5.167 ;
+; ResultALU[13] ; AcumMUXOut[13] ; 4.438 ;       ;       ; 5.055 ;
+; ResultALU[14] ; AcumMUXOut[14] ; 4.330 ;       ;       ; 4.958 ;
+; ResultALU[15] ; AcumMUXOut[15] ; 3.935 ;       ;       ; 4.445 ;
+; SelectAcum    ; AcumMUXOut[0]  ; 4.687 ; 4.729 ; 5.328 ; 5.363 ;
+; SelectAcum    ; AcumMUXOut[1]  ; 4.785 ; 4.857 ; 5.426 ; 5.491 ;
+; SelectAcum    ; AcumMUXOut[2]  ; 4.449 ; 4.463 ; 5.090 ; 5.097 ;
+; SelectAcum    ; AcumMUXOut[3]  ; 4.389 ; 4.398 ; 5.029 ; 5.031 ;
+; SelectAcum    ; AcumMUXOut[4]  ; 4.376 ; 4.383 ; 5.016 ; 5.016 ;
+; SelectAcum    ; AcumMUXOut[5]  ; 4.580 ; 4.606 ; 5.222 ; 5.241 ;
+; SelectAcum    ; AcumMUXOut[6]  ; 4.659 ; 4.710 ; 5.300 ; 5.344 ;
+; SelectAcum    ; AcumMUXOut[7]  ; 5.061 ; 5.120 ; 5.692 ; 5.790 ;
+; SelectAcum    ; AcumMUXOut[8]  ; 4.863 ; 4.926 ; 5.503 ; 5.559 ;
+; SelectAcum    ; AcumMUXOut[9]  ; 5.838 ; 6.049 ; 6.478 ; 6.682 ;
+; SelectAcum    ; AcumMUXOut[10] ; 4.532 ; 4.547 ; 5.172 ; 5.180 ;
+; SelectAcum    ; AcumMUXOut[11] ; 5.126 ; 5.154 ; 5.767 ; 5.788 ;
+; SelectAcum    ; AcumMUXOut[12] ; 4.485 ; 4.508 ; 5.127 ; 5.143 ;
+; SelectAcum    ; AcumMUXOut[13] ; 4.833 ; 4.900 ; 5.473 ; 5.533 ;
+; SelectAcum    ; AcumMUXOut[14] ; 4.556 ; 4.581 ; 5.196 ; 5.214 ;
+; SelectAcum    ; AcumMUXOut[15] ; 4.190 ; 4.153 ; 4.755 ; 4.737 ;
++---------------+----------------+-------+-------+-------+-------+
+
+
+---------------------------------------------
+; Fast 1200mV 0C Model Metastability Report ;
+---------------------------------------------
+No synchronizer chains to report.
+
+
++----------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                        ;
++------------------+-------+------+----------+---------+---------------------+
+; Clock            ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-------+------+----------+---------+---------------------+
+; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; N/A                 ;
+; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; 0.0                 ;
++------------------+-------+------+----------+---------+---------------------+
+
+
++--------------------------------------------------------------------+
+; Propagation Delay                                                  ;
++---------------+----------------+--------+--------+--------+--------+
+; Input Port    ; Output Port    ; RR     ; RF     ; FR     ; FF     ;
++---------------+----------------+--------+--------+--------+--------+
+; DataMd[0]     ; AcumMUXOut[0]  ; 5.568  ;        ;        ; 5.620  ;
+; DataMd[1]     ; AcumMUXOut[1]  ; 8.167  ;        ;        ; 8.538  ;
+; DataMd[2]     ; AcumMUXOut[2]  ; 7.765  ;        ;        ; 8.043  ;
+; DataMd[3]     ; AcumMUXOut[3]  ; 7.764  ;        ;        ; 8.080  ;
+; DataMd[4]     ; AcumMUXOut[4]  ; 7.193  ;        ;        ; 7.508  ;
+; DataMd[5]     ; AcumMUXOut[5]  ; 7.777  ;        ;        ; 8.065  ;
+; DataMd[6]     ; AcumMUXOut[6]  ; 7.581  ;        ;        ; 7.929  ;
+; DataMd[7]     ; AcumMUXOut[7]  ; 8.519  ;        ;        ; 8.873  ;
+; DataMd[8]     ; AcumMUXOut[8]  ; 8.491  ;        ;        ; 8.860  ;
+; DataMd[9]     ; AcumMUXOut[9]  ; 10.512 ;        ;        ; 10.999 ;
+; DataMd[10]    ; AcumMUXOut[10] ; 8.108  ;        ;        ; 8.472  ;
+; DataMd[11]    ; AcumMUXOut[11] ; 8.927  ;        ;        ; 9.373  ;
+; DataMd[12]    ; AcumMUXOut[12] ; 7.819  ;        ;        ; 8.196  ;
+; DataMd[13]    ; AcumMUXOut[13] ; 8.325  ;        ;        ; 8.672  ;
+; DataMd[14]    ; AcumMUXOut[14] ; 7.898  ;        ;        ; 8.202  ;
+; DataMd[15]    ; AcumMUXOut[15] ; 6.733  ;        ;        ; 7.053  ;
+; ResultALU[0]  ; AcumMUXOut[0]  ; 5.466  ;        ;        ; 5.513  ;
+; ResultALU[1]  ; AcumMUXOut[1]  ; 8.481  ;        ;        ; 8.828  ;
+; ResultALU[2]  ; AcumMUXOut[2]  ; 7.837  ;        ;        ; 8.143  ;
+; ResultALU[3]  ; AcumMUXOut[3]  ; 7.304  ;        ;        ; 7.614  ;
+; ResultALU[4]  ; AcumMUXOut[4]  ; 7.739  ;        ;        ; 8.071  ;
+; ResultALU[5]  ; AcumMUXOut[5]  ; 7.905  ;        ;        ; 8.200  ;
+; ResultALU[6]  ; AcumMUXOut[6]  ; 8.068  ;        ;        ; 8.459  ;
+; ResultALU[7]  ; AcumMUXOut[7]  ; 8.309  ;        ;        ; 8.601  ;
+; ResultALU[8]  ; AcumMUXOut[8]  ; 8.370  ;        ;        ; 8.722  ;
+; ResultALU[9]  ; AcumMUXOut[9]  ; 10.576 ;        ;        ; 11.027 ;
+; ResultALU[10] ; AcumMUXOut[10] ; 8.161  ;        ;        ; 8.490  ;
+; ResultALU[11] ; AcumMUXOut[11] ; 8.760  ;        ;        ; 9.186  ;
+; ResultALU[12] ; AcumMUXOut[12] ; 8.120  ;        ;        ; 8.495  ;
+; ResultALU[13] ; AcumMUXOut[13] ; 7.982  ;        ;        ; 8.310  ;
+; ResultALU[14] ; AcumMUXOut[14] ; 7.784  ;        ;        ; 8.116  ;
+; ResultALU[15] ; AcumMUXOut[15] ; 6.973  ;        ;        ; 7.334  ;
+; SelectAcum    ; AcumMUXOut[0]  ; 8.389  ; 8.251  ; 8.895  ; 8.748  ;
+; SelectAcum    ; AcumMUXOut[1]  ; 8.582  ; 8.491  ; 9.087  ; 8.987  ;
+; SelectAcum    ; AcumMUXOut[2]  ; 7.959  ; 7.825  ; 8.465  ; 8.322  ;
+; SelectAcum    ; AcumMUXOut[3]  ; 7.825  ; 7.695  ; 8.329  ; 8.190  ;
+; SelectAcum    ; AcumMUXOut[4]  ; 7.799  ; 7.671  ; 8.303  ; 8.166  ;
+; SelectAcum    ; AcumMUXOut[5]  ; 8.184  ; 8.044  ; 8.690  ; 8.541  ;
+; SelectAcum    ; AcumMUXOut[6]  ; 8.327  ; 8.227  ; 8.832  ; 8.723  ;
+; SelectAcum    ; AcumMUXOut[7]  ; 9.083  ; 8.937  ; 9.555  ; 9.512  ;
+; SelectAcum    ; AcumMUXOut[8]  ; 8.696  ; 8.570  ; 9.200  ; 9.065  ;
+; SelectAcum    ; AcumMUXOut[9]  ; 10.409 ; 10.359 ; 10.913 ; 10.854 ;
+; SelectAcum    ; AcumMUXOut[10] ; 8.133  ; 7.999  ; 8.637  ; 8.494  ;
+; SelectAcum    ; AcumMUXOut[11] ; 8.903  ; 8.824  ; 9.408  ; 9.320  ;
+; SelectAcum    ; AcumMUXOut[12] ; 8.023  ; 7.890  ; 8.529  ; 8.387  ;
+; SelectAcum    ; AcumMUXOut[13] ; 8.674  ; 8.541  ; 9.178  ; 9.036  ;
+; SelectAcum    ; AcumMUXOut[14] ; 8.175  ; 8.031  ; 8.679  ; 8.526  ;
+; SelectAcum    ; AcumMUXOut[15] ; 7.375  ; 7.267  ; 7.808  ; 7.733  ;
++---------------+----------------+--------+--------+--------+--------+
+
+
++----------------------------------------------------------------+
+; Minimum Propagation Delay                                      ;
++---------------+----------------+-------+-------+-------+-------+
+; Input Port    ; Output Port    ; RR    ; RF    ; FR    ; FF    ;
++---------------+----------------+-------+-------+-------+-------+
+; DataMd[0]     ; AcumMUXOut[0]  ; 3.136 ;       ;       ; 3.509 ;
+; DataMd[1]     ; AcumMUXOut[1]  ; 4.537 ;       ;       ; 5.202 ;
+; DataMd[2]     ; AcumMUXOut[2]  ; 4.317 ;       ;       ; 4.914 ;
+; DataMd[3]     ; AcumMUXOut[3]  ; 4.344 ;       ;       ; 4.965 ;
+; DataMd[4]     ; AcumMUXOut[4]  ; 4.021 ;       ;       ; 4.577 ;
+; DataMd[5]     ; AcumMUXOut[5]  ; 4.349 ;       ;       ; 4.946 ;
+; DataMd[6]     ; AcumMUXOut[6]  ; 4.226 ;       ;       ; 4.834 ;
+; DataMd[7]     ; AcumMUXOut[7]  ; 4.717 ;       ;       ; 5.383 ;
+; DataMd[8]     ; AcumMUXOut[8]  ; 4.746 ;       ;       ; 5.420 ;
+; DataMd[9]     ; AcumMUXOut[9]  ; 5.904 ;       ;       ; 6.769 ;
+; DataMd[10]    ; AcumMUXOut[10] ; 4.516 ;       ;       ; 5.167 ;
+; DataMd[11]    ; AcumMUXOut[11] ; 5.156 ;       ;       ; 5.823 ;
+; DataMd[12]    ; AcumMUXOut[12] ; 4.353 ;       ;       ; 4.991 ;
+; DataMd[13]    ; AcumMUXOut[13] ; 4.620 ;       ;       ; 5.293 ;
+; DataMd[14]    ; AcumMUXOut[14] ; 4.388 ;       ;       ; 4.996 ;
+; DataMd[15]    ; AcumMUXOut[15] ; 3.839 ;       ;       ; 4.339 ;
+; ResultALU[0]  ; AcumMUXOut[0]  ; 3.084 ;       ;       ; 3.470 ;
+; ResultALU[1]  ; AcumMUXOut[1]  ; 4.699 ;       ;       ; 5.348 ;
+; ResultALU[2]  ; AcumMUXOut[2]  ; 4.336 ;       ;       ; 4.924 ;
+; ResultALU[3]  ; AcumMUXOut[3]  ; 4.069 ;       ;       ; 4.633 ;
+; ResultALU[4]  ; AcumMUXOut[4]  ; 4.321 ;       ;       ; 4.932 ;
+; ResultALU[5]  ; AcumMUXOut[5]  ; 4.385 ;       ;       ; 4.983 ;
+; ResultALU[6]  ; AcumMUXOut[6]  ; 4.478 ;       ;       ; 5.127 ;
+; ResultALU[7]  ; AcumMUXOut[7]  ; 4.630 ;       ;       ; 5.270 ;
+; ResultALU[8]  ; AcumMUXOut[8]  ; 4.682 ;       ;       ; 5.355 ;
+; ResultALU[9]  ; AcumMUXOut[9]  ; 5.904 ;       ;       ; 6.738 ;
+; ResultALU[10] ; AcumMUXOut[10] ; 4.532 ;       ;       ; 5.144 ;
+; ResultALU[11] ; AcumMUXOut[11] ; 5.041 ;       ;       ; 5.678 ;
+; ResultALU[12] ; AcumMUXOut[12] ; 4.510 ;       ;       ; 5.167 ;
+; ResultALU[13] ; AcumMUXOut[13] ; 4.438 ;       ;       ; 5.055 ;
+; ResultALU[14] ; AcumMUXOut[14] ; 4.330 ;       ;       ; 4.958 ;
+; ResultALU[15] ; AcumMUXOut[15] ; 3.935 ;       ;       ; 4.445 ;
+; SelectAcum    ; AcumMUXOut[0]  ; 4.687 ; 4.729 ; 5.328 ; 5.363 ;
+; SelectAcum    ; AcumMUXOut[1]  ; 4.785 ; 4.857 ; 5.426 ; 5.491 ;
+; SelectAcum    ; AcumMUXOut[2]  ; 4.449 ; 4.463 ; 5.090 ; 5.097 ;
+; SelectAcum    ; AcumMUXOut[3]  ; 4.389 ; 4.398 ; 5.029 ; 5.031 ;
+; SelectAcum    ; AcumMUXOut[4]  ; 4.376 ; 4.383 ; 5.016 ; 5.016 ;
+; SelectAcum    ; AcumMUXOut[5]  ; 4.580 ; 4.606 ; 5.222 ; 5.241 ;
+; SelectAcum    ; AcumMUXOut[6]  ; 4.659 ; 4.710 ; 5.300 ; 5.344 ;
+; SelectAcum    ; AcumMUXOut[7]  ; 5.061 ; 5.120 ; 5.692 ; 5.790 ;
+; SelectAcum    ; AcumMUXOut[8]  ; 4.863 ; 4.926 ; 5.503 ; 5.559 ;
+; SelectAcum    ; AcumMUXOut[9]  ; 5.838 ; 6.049 ; 6.478 ; 6.682 ;
+; SelectAcum    ; AcumMUXOut[10] ; 4.532 ; 4.547 ; 5.172 ; 5.180 ;
+; SelectAcum    ; AcumMUXOut[11] ; 5.126 ; 5.154 ; 5.767 ; 5.788 ;
+; SelectAcum    ; AcumMUXOut[12] ; 4.485 ; 4.508 ; 5.127 ; 5.143 ;
+; SelectAcum    ; AcumMUXOut[13] ; 4.833 ; 4.900 ; 5.473 ; 5.533 ;
+; SelectAcum    ; AcumMUXOut[14] ; 4.556 ; 4.581 ; 5.196 ; 5.214 ;
+; SelectAcum    ; AcumMUXOut[15] ; 4.190 ; 4.153 ; 4.755 ; 4.737 ;
++---------------+----------------+-------+-------+-------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                     ;
++----------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin            ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++----------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; AcumMUXOut[0]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; AcumMUXOut[1]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; AcumMUXOut[2]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; AcumMUXOut[3]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; AcumMUXOut[4]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; AcumMUXOut[5]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; AcumMUXOut[6]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; AcumMUXOut[7]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; AcumMUXOut[8]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; AcumMUXOut[9]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; AcumMUXOut[10] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; AcumMUXOut[11] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; AcumMUXOut[12] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; AcumMUXOut[13] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; AcumMUXOut[14] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; AcumMUXOut[15] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_NCEO~  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++----------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++-------------------------------------------------------------------+
+; Input Transition Times                                            ;
++----------------+--------------+-----------------+-----------------+
+; Pin            ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++----------------+--------------+-----------------+-----------------+
+; DataMd[0]      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ResultALU[0]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SelectAcum     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; DataMd[1]      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ResultALU[1]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; DataMd[2]      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ResultALU[2]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; DataMd[3]      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ResultALU[3]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; DataMd[4]      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ResultALU[4]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; DataMd[5]      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ResultALU[5]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; DataMd[6]      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ResultALU[6]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; DataMd[7]      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ResultALU[7]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; DataMd[8]      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ResultALU[8]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; DataMd[9]      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ResultALU[9]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; DataMd[10]     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ResultALU[10]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; DataMd[11]     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ResultALU[11]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; DataMd[12]     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ResultALU[12]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; DataMd[13]     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ResultALU[13]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; DataMd[14]     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ResultALU[14]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; DataMd[15]     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ResultALU[15]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO~  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_NCSO~  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++----------------+--------------+-----------------+-----------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
++----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin            ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; AcumMUXOut[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.29e-09 V                   ; 2.39 V              ; -0.00317 V          ; 0.179 V                              ; 0.007 V                              ; 4.7e-10 s                   ; 4.72e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 7.29e-09 V                  ; 2.39 V             ; -0.00317 V         ; 0.179 V                             ; 0.007 V                             ; 4.7e-10 s                  ; 4.72e-10 s                 ; No                        ; Yes                       ;
+; AcumMUXOut[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.29e-09 V                   ; 2.39 V              ; -0.00317 V          ; 0.179 V                              ; 0.007 V                              ; 4.7e-10 s                   ; 4.72e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 7.29e-09 V                  ; 2.39 V             ; -0.00317 V         ; 0.179 V                             ; 0.007 V                             ; 4.7e-10 s                  ; 4.72e-10 s                 ; No                        ; Yes                       ;
+; AcumMUXOut[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.29e-09 V                   ; 2.39 V              ; -0.00317 V          ; 0.179 V                              ; 0.007 V                              ; 4.7e-10 s                   ; 4.72e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 7.29e-09 V                  ; 2.39 V             ; -0.00317 V         ; 0.179 V                             ; 0.007 V                             ; 4.7e-10 s                  ; 4.72e-10 s                 ; No                        ; Yes                       ;
+; AcumMUXOut[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.29e-09 V                   ; 2.39 V              ; -0.00317 V          ; 0.179 V                              ; 0.007 V                              ; 4.7e-10 s                   ; 4.72e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 7.29e-09 V                  ; 2.39 V             ; -0.00317 V         ; 0.179 V                             ; 0.007 V                             ; 4.7e-10 s                  ; 4.72e-10 s                 ; No                        ; Yes                       ;
+; AcumMUXOut[4]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.29e-09 V                   ; 2.39 V              ; -0.00317 V          ; 0.179 V                              ; 0.007 V                              ; 4.7e-10 s                   ; 4.72e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 7.29e-09 V                  ; 2.39 V             ; -0.00317 V         ; 0.179 V                             ; 0.007 V                             ; 4.7e-10 s                  ; 4.72e-10 s                 ; No                        ; Yes                       ;
+; AcumMUXOut[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.29e-09 V                   ; 2.39 V              ; -0.00317 V          ; 0.179 V                              ; 0.007 V                              ; 4.7e-10 s                   ; 4.72e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 7.29e-09 V                  ; 2.39 V             ; -0.00317 V         ; 0.179 V                             ; 0.007 V                             ; 4.7e-10 s                  ; 4.72e-10 s                 ; No                        ; Yes                       ;
+; AcumMUXOut[6]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.29e-09 V                   ; 2.39 V              ; -0.00317 V          ; 0.179 V                              ; 0.007 V                              ; 4.7e-10 s                   ; 4.72e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 7.29e-09 V                  ; 2.39 V             ; -0.00317 V         ; 0.179 V                             ; 0.007 V                             ; 4.7e-10 s                  ; 4.72e-10 s                 ; No                        ; Yes                       ;
+; AcumMUXOut[7]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.29e-09 V                   ; 2.39 V              ; -0.00317 V          ; 0.179 V                              ; 0.007 V                              ; 4.7e-10 s                   ; 4.72e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 7.29e-09 V                  ; 2.39 V             ; -0.00317 V         ; 0.179 V                             ; 0.007 V                             ; 4.7e-10 s                  ; 4.72e-10 s                 ; No                        ; Yes                       ;
+; AcumMUXOut[8]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.29e-09 V                   ; 2.39 V              ; -0.00317 V          ; 0.179 V                              ; 0.007 V                              ; 4.7e-10 s                   ; 4.72e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 7.29e-09 V                  ; 2.39 V             ; -0.00317 V         ; 0.179 V                             ; 0.007 V                             ; 4.7e-10 s                  ; 4.72e-10 s                 ; No                        ; Yes                       ;
+; AcumMUXOut[9]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.29e-09 V                   ; 2.39 V              ; -0.00317 V          ; 0.179 V                              ; 0.007 V                              ; 4.7e-10 s                   ; 4.72e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 7.29e-09 V                  ; 2.39 V             ; -0.00317 V         ; 0.179 V                             ; 0.007 V                             ; 4.7e-10 s                  ; 4.72e-10 s                 ; No                        ; Yes                       ;
+; AcumMUXOut[10] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.29e-09 V                   ; 2.39 V              ; -0.00339 V          ; 0.206 V                              ; 0.007 V                              ; 2.77e-10 s                  ; 3.24e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.29e-09 V                  ; 2.39 V             ; -0.00339 V         ; 0.206 V                             ; 0.007 V                             ; 2.77e-10 s                 ; 3.24e-10 s                 ; Yes                       ; Yes                       ;
+; AcumMUXOut[11] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.29e-09 V                   ; 2.34 V              ; -0.00668 V          ; 0.218 V                              ; 0.076 V                              ; 1.92e-09 s                  ; 1.81e-09 s                  ; No                         ; Yes                        ; 2.32 V                      ; 7.29e-09 V                  ; 2.34 V             ; -0.00668 V         ; 0.218 V                             ; 0.076 V                             ; 1.92e-09 s                 ; 1.81e-09 s                 ; No                        ; Yes                       ;
+; AcumMUXOut[12] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.29e-09 V                   ; 2.39 V              ; -0.00317 V          ; 0.179 V                              ; 0.007 V                              ; 4.7e-10 s                   ; 4.72e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 7.29e-09 V                  ; 2.39 V             ; -0.00317 V         ; 0.179 V                             ; 0.007 V                             ; 4.7e-10 s                  ; 4.72e-10 s                 ; No                        ; Yes                       ;
+; AcumMUXOut[13] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.29e-09 V                   ; 2.39 V              ; -0.00317 V          ; 0.179 V                              ; 0.007 V                              ; 4.7e-10 s                   ; 4.72e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 7.29e-09 V                  ; 2.39 V             ; -0.00317 V         ; 0.179 V                             ; 0.007 V                             ; 4.7e-10 s                  ; 4.72e-10 s                 ; No                        ; Yes                       ;
+; AcumMUXOut[14] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.29e-09 V                   ; 2.39 V              ; -0.00317 V          ; 0.179 V                              ; 0.007 V                              ; 4.7e-10 s                   ; 4.72e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 7.29e-09 V                  ; 2.39 V             ; -0.00317 V         ; 0.179 V                             ; 0.007 V                             ; 4.7e-10 s                  ; 4.72e-10 s                 ; No                        ; Yes                       ;
+; AcumMUXOut[15] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.16e-09 V                   ; 2.37 V              ; -0.00861 V          ; 0.168 V                              ; 0.038 V                              ; 6.79e-10 s                  ; 6.49e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 5.16e-09 V                  ; 2.37 V             ; -0.00861 V         ; 0.168 V                             ; 0.038 V                             ; 6.79e-10 s                 ; 6.49e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_NCEO~  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.76e-09 V                   ; 2.4 V               ; -0.034 V            ; 0.102 V                              ; 0.065 V                              ; 2.49e-10 s                  ; 3.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.76e-09 V                  ; 2.4 V              ; -0.034 V           ; 0.102 V                             ; 0.065 V                             ; 2.49e-10 s                 ; 3.49e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.94e-09 V                   ; 2.39 V              ; -0.0344 V           ; 0.156 V                              ; 0.089 V                              ; 2.68e-10 s                  ; 2.6e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 5.94e-09 V                  ; 2.39 V             ; -0.0344 V          ; 0.156 V                             ; 0.089 V                             ; 2.68e-10 s                 ; 2.6e-10 s                  ; Yes                       ; Yes                       ;
++----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin            ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; AcumMUXOut[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.21e-06 V                   ; 2.36 V              ; -0.00833 V          ; 0.113 V                              ; 0.035 V                              ; 6.32e-10 s                  ; 5.89e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.21e-06 V                  ; 2.36 V             ; -0.00833 V         ; 0.113 V                             ; 0.035 V                             ; 6.32e-10 s                 ; 5.89e-10 s                 ; No                        ; Yes                       ;
+; AcumMUXOut[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.21e-06 V                   ; 2.36 V              ; -0.00833 V          ; 0.113 V                              ; 0.035 V                              ; 6.32e-10 s                  ; 5.89e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.21e-06 V                  ; 2.36 V             ; -0.00833 V         ; 0.113 V                             ; 0.035 V                             ; 6.32e-10 s                 ; 5.89e-10 s                 ; No                        ; Yes                       ;
+; AcumMUXOut[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.21e-06 V                   ; 2.36 V              ; -0.00833 V          ; 0.113 V                              ; 0.035 V                              ; 6.32e-10 s                  ; 5.89e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.21e-06 V                  ; 2.36 V             ; -0.00833 V         ; 0.113 V                             ; 0.035 V                             ; 6.32e-10 s                 ; 5.89e-10 s                 ; No                        ; Yes                       ;
+; AcumMUXOut[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.21e-06 V                   ; 2.36 V              ; -0.00833 V          ; 0.113 V                              ; 0.035 V                              ; 6.32e-10 s                  ; 5.89e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.21e-06 V                  ; 2.36 V             ; -0.00833 V         ; 0.113 V                             ; 0.035 V                             ; 6.32e-10 s                 ; 5.89e-10 s                 ; No                        ; Yes                       ;
+; AcumMUXOut[4]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.21e-06 V                   ; 2.36 V              ; -0.00833 V          ; 0.113 V                              ; 0.035 V                              ; 6.32e-10 s                  ; 5.89e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.21e-06 V                  ; 2.36 V             ; -0.00833 V         ; 0.113 V                             ; 0.035 V                             ; 6.32e-10 s                 ; 5.89e-10 s                 ; No                        ; Yes                       ;
+; AcumMUXOut[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.21e-06 V                   ; 2.36 V              ; -0.00833 V          ; 0.113 V                              ; 0.035 V                              ; 6.32e-10 s                  ; 5.89e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.21e-06 V                  ; 2.36 V             ; -0.00833 V         ; 0.113 V                             ; 0.035 V                             ; 6.32e-10 s                 ; 5.89e-10 s                 ; No                        ; Yes                       ;
+; AcumMUXOut[6]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.21e-06 V                   ; 2.36 V              ; -0.00833 V          ; 0.113 V                              ; 0.035 V                              ; 6.32e-10 s                  ; 5.89e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.21e-06 V                  ; 2.36 V             ; -0.00833 V         ; 0.113 V                             ; 0.035 V                             ; 6.32e-10 s                 ; 5.89e-10 s                 ; No                        ; Yes                       ;
+; AcumMUXOut[7]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.21e-06 V                   ; 2.36 V              ; -0.00833 V          ; 0.113 V                              ; 0.035 V                              ; 6.32e-10 s                  ; 5.89e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.21e-06 V                  ; 2.36 V             ; -0.00833 V         ; 0.113 V                             ; 0.035 V                             ; 6.32e-10 s                 ; 5.89e-10 s                 ; No                        ; Yes                       ;
+; AcumMUXOut[8]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.21e-06 V                   ; 2.36 V              ; -0.00833 V          ; 0.113 V                              ; 0.035 V                              ; 6.32e-10 s                  ; 5.89e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.21e-06 V                  ; 2.36 V             ; -0.00833 V         ; 0.113 V                             ; 0.035 V                             ; 6.32e-10 s                 ; 5.89e-10 s                 ; No                        ; Yes                       ;
+; AcumMUXOut[9]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.21e-06 V                   ; 2.36 V              ; -0.00833 V          ; 0.113 V                              ; 0.035 V                              ; 6.32e-10 s                  ; 5.89e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.21e-06 V                  ; 2.36 V             ; -0.00833 V         ; 0.113 V                             ; 0.035 V                             ; 6.32e-10 s                 ; 5.89e-10 s                 ; No                        ; Yes                       ;
+; AcumMUXOut[10] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.21e-06 V                   ; 2.37 V              ; -0.00606 V          ; 0.107 V                              ; 0.021 V                              ; 4.26e-10 s                  ; 4.03e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.21e-06 V                  ; 2.37 V             ; -0.00606 V         ; 0.107 V                             ; 0.021 V                             ; 4.26e-10 s                 ; 4.03e-10 s                 ; Yes                       ; Yes                       ;
+; AcumMUXOut[11] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.21e-06 V                   ; 2.33 V              ; -0.00286 V          ; 0.193 V                              ; 0.042 V                              ; 2.32e-09 s                  ; 2.21e-09 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.21e-06 V                  ; 2.33 V             ; -0.00286 V         ; 0.193 V                             ; 0.042 V                             ; 2.32e-09 s                 ; 2.21e-09 s                 ; Yes                       ; Yes                       ;
+; AcumMUXOut[12] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.21e-06 V                   ; 2.36 V              ; -0.00833 V          ; 0.113 V                              ; 0.035 V                              ; 6.32e-10 s                  ; 5.89e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.21e-06 V                  ; 2.36 V             ; -0.00833 V         ; 0.113 V                             ; 0.035 V                             ; 6.32e-10 s                 ; 5.89e-10 s                 ; No                        ; Yes                       ;
+; AcumMUXOut[13] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.21e-06 V                   ; 2.36 V              ; -0.00833 V          ; 0.113 V                              ; 0.035 V                              ; 6.32e-10 s                  ; 5.89e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.21e-06 V                  ; 2.36 V             ; -0.00833 V         ; 0.113 V                             ; 0.035 V                             ; 6.32e-10 s                 ; 5.89e-10 s                 ; No                        ; Yes                       ;
+; AcumMUXOut[14] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.21e-06 V                   ; 2.36 V              ; -0.00833 V          ; 0.113 V                              ; 0.035 V                              ; 6.32e-10 s                  ; 5.89e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.21e-06 V                  ; 2.36 V             ; -0.00833 V         ; 0.113 V                             ; 0.035 V                             ; 6.32e-10 s                 ; 5.89e-10 s                 ; No                        ; Yes                       ;
+; AcumMUXOut[15] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.13e-07 V                   ; 2.35 V              ; -0.00662 V          ; 0.129 V                              ; 0.049 V                              ; 8.55e-10 s                  ; 8.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.13e-07 V                  ; 2.35 V             ; -0.00662 V         ; 0.129 V                             ; 0.049 V                             ; 8.55e-10 s                 ; 8.01e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_NCEO~  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.93e-07 V                   ; 2.37 V              ; -0.0278 V           ; 0.106 V                              ; 0.115 V                              ; 2.69e-10 s                  ; 4.05e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.93e-07 V                  ; 2.37 V             ; -0.0278 V          ; 0.106 V                             ; 0.115 V                             ; 2.69e-10 s                 ; 4.05e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.76e-07 V                   ; 2.36 V              ; -0.00439 V          ; 0.088 V                              ; 0.007 V                              ; 4.05e-10 s                  ; 3.35e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.76e-07 V                  ; 2.36 V             ; -0.00439 V         ; 0.088 V                             ; 0.007 V                             ; 4.05e-10 s                 ; 3.35e-10 s                 ; Yes                       ; Yes                       ;
++----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
++----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin            ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; AcumMUXOut[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.66e-08 V                   ; 2.72 V              ; -0.0215 V           ; 0.161 V                              ; 0.061 V                              ; 4.44e-10 s                  ; 4.06e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 4.66e-08 V                  ; 2.72 V             ; -0.0215 V          ; 0.161 V                             ; 0.061 V                             ; 4.44e-10 s                 ; 4.06e-10 s                 ; No                        ; Yes                       ;
+; AcumMUXOut[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.66e-08 V                   ; 2.72 V              ; -0.0215 V           ; 0.161 V                              ; 0.061 V                              ; 4.44e-10 s                  ; 4.06e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 4.66e-08 V                  ; 2.72 V             ; -0.0215 V          ; 0.161 V                             ; 0.061 V                             ; 4.44e-10 s                 ; 4.06e-10 s                 ; No                        ; Yes                       ;
+; AcumMUXOut[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.66e-08 V                   ; 2.72 V              ; -0.0215 V           ; 0.161 V                              ; 0.061 V                              ; 4.44e-10 s                  ; 4.06e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 4.66e-08 V                  ; 2.72 V             ; -0.0215 V          ; 0.161 V                             ; 0.061 V                             ; 4.44e-10 s                 ; 4.06e-10 s                 ; No                        ; Yes                       ;
+; AcumMUXOut[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.66e-08 V                   ; 2.72 V              ; -0.0215 V           ; 0.161 V                              ; 0.061 V                              ; 4.44e-10 s                  ; 4.06e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 4.66e-08 V                  ; 2.72 V             ; -0.0215 V          ; 0.161 V                             ; 0.061 V                             ; 4.44e-10 s                 ; 4.06e-10 s                 ; No                        ; Yes                       ;
+; AcumMUXOut[4]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.66e-08 V                   ; 2.72 V              ; -0.0215 V           ; 0.161 V                              ; 0.061 V                              ; 4.44e-10 s                  ; 4.06e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 4.66e-08 V                  ; 2.72 V             ; -0.0215 V          ; 0.161 V                             ; 0.061 V                             ; 4.44e-10 s                 ; 4.06e-10 s                 ; No                        ; Yes                       ;
+; AcumMUXOut[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.66e-08 V                   ; 2.72 V              ; -0.0215 V           ; 0.161 V                              ; 0.061 V                              ; 4.44e-10 s                  ; 4.06e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 4.66e-08 V                  ; 2.72 V             ; -0.0215 V          ; 0.161 V                             ; 0.061 V                             ; 4.44e-10 s                 ; 4.06e-10 s                 ; No                        ; Yes                       ;
+; AcumMUXOut[6]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.66e-08 V                   ; 2.72 V              ; -0.0215 V           ; 0.161 V                              ; 0.061 V                              ; 4.44e-10 s                  ; 4.06e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 4.66e-08 V                  ; 2.72 V             ; -0.0215 V          ; 0.161 V                             ; 0.061 V                             ; 4.44e-10 s                 ; 4.06e-10 s                 ; No                        ; Yes                       ;
+; AcumMUXOut[7]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.66e-08 V                   ; 2.72 V              ; -0.0215 V           ; 0.161 V                              ; 0.061 V                              ; 4.44e-10 s                  ; 4.06e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 4.66e-08 V                  ; 2.72 V             ; -0.0215 V          ; 0.161 V                             ; 0.061 V                             ; 4.44e-10 s                 ; 4.06e-10 s                 ; No                        ; Yes                       ;
+; AcumMUXOut[8]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.66e-08 V                   ; 2.72 V              ; -0.0215 V           ; 0.161 V                              ; 0.061 V                              ; 4.44e-10 s                  ; 4.06e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 4.66e-08 V                  ; 2.72 V             ; -0.0215 V          ; 0.161 V                             ; 0.061 V                             ; 4.44e-10 s                 ; 4.06e-10 s                 ; No                        ; Yes                       ;
+; AcumMUXOut[9]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.66e-08 V                   ; 2.72 V              ; -0.0215 V           ; 0.161 V                              ; 0.061 V                              ; 4.44e-10 s                  ; 4.06e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 4.66e-08 V                  ; 2.72 V             ; -0.0215 V          ; 0.161 V                             ; 0.061 V                             ; 4.44e-10 s                 ; 4.06e-10 s                 ; No                        ; Yes                       ;
+; AcumMUXOut[10] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.66e-08 V                   ; 2.73 V              ; -0.0205 V           ; 0.17 V                               ; 0.027 V                              ; 2.58e-10 s                  ; 2.57e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.66e-08 V                  ; 2.73 V             ; -0.0205 V          ; 0.17 V                              ; 0.027 V                             ; 2.58e-10 s                 ; 2.57e-10 s                 ; Yes                       ; Yes                       ;
+; AcumMUXOut[11] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.66e-08 V                   ; 2.65 V              ; -0.0115 V           ; 0.219 V                              ; 0.115 V                              ; 1.64e-09 s                  ; 1.57e-09 s                  ; No                         ; Yes                        ; 2.62 V                      ; 4.66e-08 V                  ; 2.65 V             ; -0.0115 V          ; 0.219 V                             ; 0.115 V                             ; 1.64e-09 s                 ; 1.57e-09 s                 ; No                        ; Yes                       ;
+; AcumMUXOut[12] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.66e-08 V                   ; 2.72 V              ; -0.0215 V           ; 0.161 V                              ; 0.061 V                              ; 4.44e-10 s                  ; 4.06e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 4.66e-08 V                  ; 2.72 V             ; -0.0215 V          ; 0.161 V                             ; 0.061 V                             ; 4.44e-10 s                 ; 4.06e-10 s                 ; No                        ; Yes                       ;
+; AcumMUXOut[13] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.66e-08 V                   ; 2.72 V              ; -0.0215 V           ; 0.161 V                              ; 0.061 V                              ; 4.44e-10 s                  ; 4.06e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 4.66e-08 V                  ; 2.72 V             ; -0.0215 V          ; 0.161 V                             ; 0.061 V                             ; 4.44e-10 s                 ; 4.06e-10 s                 ; No                        ; Yes                       ;
+; AcumMUXOut[14] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.66e-08 V                   ; 2.72 V              ; -0.0215 V           ; 0.161 V                              ; 0.061 V                              ; 4.44e-10 s                  ; 4.06e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 4.66e-08 V                  ; 2.72 V             ; -0.0215 V          ; 0.161 V                             ; 0.061 V                             ; 4.44e-10 s                 ; 4.06e-10 s                 ; No                        ; Yes                       ;
+; AcumMUXOut[15] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.16e-08 V                   ; 2.71 V              ; -0.0171 V           ; 0.273 V                              ; 0.065 V                              ; 4.95e-10 s                  ; 5.37e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.16e-08 V                  ; 2.71 V             ; -0.0171 V          ; 0.273 V                             ; 0.065 V                             ; 4.95e-10 s                 ; 5.37e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_NCEO~  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.06e-08 V                   ; 2.86 V              ; -0.0341 V           ; 0.364 V                              ; 0.046 V                              ; 1.17e-10 s                  ; 2.6e-10 s                   ; No                         ; Yes                        ; 2.62 V                      ; 3.06e-08 V                  ; 2.86 V             ; -0.0341 V          ; 0.364 V                             ; 0.046 V                             ; 1.17e-10 s                 ; 2.6e-10 s                  ; No                        ; Yes                       ;
+; ~ALTERA_DCLK~  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.81e-08 V                   ; 2.72 V              ; -0.0542 V           ; 0.144 V                              ; 0.087 V                              ; 2.55e-10 s                  ; 2.14e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 3.81e-08 V                  ; 2.72 V             ; -0.0542 V          ; 0.144 V                             ; 0.087 V                             ; 2.55e-10 s                 ; 2.14e-10 s                 ; Yes                       ; Yes                       ;
++----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
+-------------------
+; Clock Transfers ;
+-------------------
+Nothing to report.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 33    ; 33   ;
+; Unconstrained Input Port Paths  ; 48    ; 48   ;
+; Unconstrained Output Ports      ; 16    ; 16   ;
+; Unconstrained Output Port Paths ; 48    ; 48   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+    Info: Processing started: Tue Dec 01 06:56:10 2020
+Info: Command: quartus_sta AcumMUX -c AcumMUX
+Info: qsta_default_script.tcl version: #1
+Warning (136002): Ignored duplicate of assignment PARTITION_PRESERVE_HIGH_SPEED_TILES for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IGNORE_SOURCE_FILE_CHANGES for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_ALWAYS_USE_QXP_NETLIST for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_NEW_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_EXISTING_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_PIN_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_PROMOTE_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_TYPE for node ""
+Warning (136002): Ignored duplicate of assignment ALLOW_MULTIPLE_PERSONAS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_ASD_REGION_ID for node ""
+Warning (136002): Ignored duplicate of assignment CROSS_BOUNDARY_OPTIMIZATIONS for node ""
+Warning (136002): Ignored duplicate of assignment PROPAGATE_CONSTANTS_ON_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment PROPAGATE_INVERSIONS_ON_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS for node ""
+Warning (136002): Ignored duplicate of assignment MERGE_EQUIVALENT_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment MERGE_EQUIVALENT_BIDIRS for node ""
+Warning (136002): Ignored duplicate of assignment ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_EXTRACT_HARD_BLOCK_NODES for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_ENABLE_STRICT_PRESERVATION for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_SOURCE for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_BACK_ANNOTATION for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_COLOR for node ""
+Warning (136002): Ignored duplicate of assignment HIERARCHY_BLACKBOX_FILE for node "|"
+Warning (136002): Ignored duplicate of assignment PARTITION_PRESERVE_HIGH_SPEED_TILES for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IGNORE_SOURCE_FILE_CHANGES for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_ALWAYS_USE_QXP_NETLIST for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_NEW_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_EXISTING_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_PIN_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_PROMOTE_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_TYPE for node ""
+Warning (136002): Ignored duplicate of assignment ALLOW_MULTIPLE_PERSONAS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_ASD_REGION_ID for node ""
+Warning (136002): Ignored duplicate of assignment CROSS_BOUNDARY_OPTIMIZATIONS for node ""
+Warning (136002): Ignored duplicate of assignment PROPAGATE_CONSTANTS_ON_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment PROPAGATE_INVERSIONS_ON_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS for node ""
+Warning (136002): Ignored duplicate of assignment MERGE_EQUIVALENT_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment MERGE_EQUIVALENT_BIDIRS for node ""
+Warning (136002): Ignored duplicate of assignment ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_EXTRACT_HARD_BLOCK_NODES for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_ENABLE_STRICT_PRESERVATION for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_SOURCE for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_BACK_ANNOTATION for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_COLOR for node ""
+Warning (136002): Ignored duplicate of assignment HIERARCHY_BLACKBOX_FILE for node "|"
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21076): High junction temperature operating condition is not set. Assuming a default value of '85'.
+Info (21076): Low junction temperature operating condition is not set. Assuming a default value of '0'.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'AcumMUX.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info (332159): No clocks to report
+Info: Analyzing Slow 1200mV 85C Model
+Info (332140): No fmax paths to report
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info (332140): No fmax paths to report
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info: Analyzing Fast 1200mV 0C Model
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 53 warnings
+    Info: Peak virtual memory: 4622 megabytes
+    Info: Processing ended: Tue Dec 01 06:56:13 2020
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
+
+

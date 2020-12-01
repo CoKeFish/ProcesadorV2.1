@@ -1,0 +1,272 @@
+$comment
+	File created using the following command:
+		vcd file DirMdMux.msim.vcd -direction
+$end
+$date
+	Tue Dec 01 02:35:26 2020
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module DirMdMux_vlg_vec_tst $end
+$var reg 16 ! DirROut [15:0] $end
+$var reg 16 " GPROut [15:0] $end
+$var reg 2 # SelectDir [1:0] $end
+$var reg 16 $ SPOut [15:0] $end
+$var wire 1 % DirMd [15] $end
+$var wire 1 & DirMd [14] $end
+$var wire 1 ' DirMd [13] $end
+$var wire 1 ( DirMd [12] $end
+$var wire 1 ) DirMd [11] $end
+$var wire 1 * DirMd [10] $end
+$var wire 1 + DirMd [9] $end
+$var wire 1 , DirMd [8] $end
+$var wire 1 - DirMd [7] $end
+$var wire 1 . DirMd [6] $end
+$var wire 1 / DirMd [5] $end
+$var wire 1 0 DirMd [4] $end
+$var wire 1 1 DirMd [3] $end
+$var wire 1 2 DirMd [2] $end
+$var wire 1 3 DirMd [1] $end
+$var wire 1 4 DirMd [0] $end
+$var wire 1 5 sampler $end
+$scope module i1 $end
+$var wire 1 6 gnd $end
+$var wire 1 7 vcc $end
+$var wire 1 8 unknown $end
+$var tri1 1 9 devclrn $end
+$var tri1 1 : devpor $end
+$var tri1 1 ; devoe $end
+$var wire 1 < DirMd[0]~output_o $end
+$var wire 1 = DirMd[1]~output_o $end
+$var wire 1 > DirMd[2]~output_o $end
+$var wire 1 ? DirMd[3]~output_o $end
+$var wire 1 @ DirMd[4]~output_o $end
+$var wire 1 A DirMd[5]~output_o $end
+$var wire 1 B DirMd[6]~output_o $end
+$var wire 1 C DirMd[7]~output_o $end
+$var wire 1 D DirMd[8]~output_o $end
+$var wire 1 E DirMd[9]~output_o $end
+$var wire 1 F DirMd[10]~output_o $end
+$var wire 1 G DirMd[11]~output_o $end
+$var wire 1 H DirMd[12]~output_o $end
+$var wire 1 I DirMd[13]~output_o $end
+$var wire 1 J DirMd[14]~output_o $end
+$var wire 1 K DirMd[15]~output_o $end
+$var wire 1 L SelectDir[0]~input_o $end
+$var wire 1 M DirROut[0]~input_o $end
+$var wire 1 N SPOut[0]~input_o $end
+$var wire 1 O SelectDir[1]~input_o $end
+$var wire 1 P DirMd~0_combout $end
+$var wire 1 Q GPROut[0]~input_o $end
+$var wire 1 R DirMd~1_combout $end
+$var wire 1 S DirROut[1]~input_o $end
+$var wire 1 T SPOut[1]~input_o $end
+$var wire 1 U DirMd~2_combout $end
+$var wire 1 V GPROut[1]~input_o $end
+$var wire 1 W DirMd~3_combout $end
+$var wire 1 X DirROut[2]~input_o $end
+$var wire 1 Y SPOut[2]~input_o $end
+$var wire 1 Z DirMd~4_combout $end
+$var wire 1 [ GPROut[2]~input_o $end
+$var wire 1 \ DirMd~5_combout $end
+$var wire 1 ] DirROut[3]~input_o $end
+$var wire 1 ^ SPOut[3]~input_o $end
+$var wire 1 _ DirMd~6_combout $end
+$var wire 1 ` GPROut[3]~input_o $end
+$var wire 1 a DirMd~7_combout $end
+$var wire 1 b DirROut[4]~input_o $end
+$var wire 1 c SPOut[4]~input_o $end
+$var wire 1 d DirMd~8_combout $end
+$var wire 1 e GPROut[4]~input_o $end
+$var wire 1 f DirMd~9_combout $end
+$var wire 1 g DirROut[5]~input_o $end
+$var wire 1 h SPOut[5]~input_o $end
+$var wire 1 i DirMd~10_combout $end
+$var wire 1 j GPROut[5]~input_o $end
+$var wire 1 k DirMd~11_combout $end
+$var wire 1 l DirROut[6]~input_o $end
+$var wire 1 m SPOut[6]~input_o $end
+$var wire 1 n DirMd~12_combout $end
+$var wire 1 o GPROut[6]~input_o $end
+$var wire 1 p DirMd~13_combout $end
+$var wire 1 q DirROut[7]~input_o $end
+$var wire 1 r SPOut[7]~input_o $end
+$var wire 1 s DirMd~14_combout $end
+$var wire 1 t GPROut[7]~input_o $end
+$var wire 1 u DirMd~15_combout $end
+$var wire 1 v DirROut[8]~input_o $end
+$var wire 1 w SPOut[8]~input_o $end
+$var wire 1 x DirMd~16_combout $end
+$var wire 1 y GPROut[8]~input_o $end
+$var wire 1 z DirMd~17_combout $end
+$var wire 1 { DirROut[9]~input_o $end
+$var wire 1 | SPOut[9]~input_o $end
+$var wire 1 } DirMd~18_combout $end
+$var wire 1 ~ GPROut[9]~input_o $end
+$var wire 1 !! DirMd~19_combout $end
+$var wire 1 "! DirROut[10]~input_o $end
+$var wire 1 #! SPOut[10]~input_o $end
+$var wire 1 $! DirMd~20_combout $end
+$var wire 1 %! GPROut[10]~input_o $end
+$var wire 1 &! DirMd~21_combout $end
+$var wire 1 '! DirROut[11]~input_o $end
+$var wire 1 (! SPOut[11]~input_o $end
+$var wire 1 )! DirMd~22_combout $end
+$var wire 1 *! GPROut[11]~input_o $end
+$var wire 1 +! DirMd~23_combout $end
+$var wire 1 ,! DirROut[12]~input_o $end
+$var wire 1 -! SPOut[12]~input_o $end
+$var wire 1 .! DirMd~24_combout $end
+$var wire 1 /! GPROut[12]~input_o $end
+$var wire 1 0! DirMd~25_combout $end
+$var wire 1 1! DirROut[13]~input_o $end
+$var wire 1 2! SPOut[13]~input_o $end
+$var wire 1 3! DirMd~26_combout $end
+$var wire 1 4! GPROut[13]~input_o $end
+$var wire 1 5! DirMd~27_combout $end
+$var wire 1 6! DirROut[14]~input_o $end
+$var wire 1 7! SPOut[14]~input_o $end
+$var wire 1 8! DirMd~28_combout $end
+$var wire 1 9! GPROut[14]~input_o $end
+$var wire 1 :! DirMd~29_combout $end
+$var wire 1 ;! DirROut[15]~input_o $end
+$var wire 1 <! SPOut[15]~input_o $end
+$var wire 1 =! DirMd~30_combout $end
+$var wire 1 >! GPROut[15]~input_o $end
+$var wire 1 ?! DirMd~31_combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1000000000000000 !
+b1 "
+b10 #
+b110000000000 $
+14
+03
+02
+01
+00
+0/
+0.
+0-
+0,
+0+
+0*
+0)
+0(
+0'
+0&
+0%
+x5
+06
+17
+x8
+19
+1:
+1;
+1<
+0=
+0>
+0?
+0@
+0A
+0B
+0C
+0D
+0E
+0F
+0G
+0H
+0I
+0J
+0K
+0L
+0M
+0N
+1O
+0P
+1Q
+1R
+0S
+0T
+0U
+0V
+0W
+0X
+0Y
+0Z
+0[
+0\
+0]
+0^
+0_
+0`
+0a
+0b
+0c
+0d
+0e
+0f
+0g
+0h
+0i
+0j
+0k
+0l
+0m
+0n
+0o
+0p
+0q
+0r
+0s
+0t
+0u
+0v
+0w
+0x
+0y
+0z
+0{
+0|
+0}
+0~
+0!!
+0"!
+1#!
+0$!
+0%!
+0&!
+0'!
+1(!
+0)!
+0*!
+0+!
+0,!
+0-!
+0.!
+0/!
+00!
+01!
+02!
+03!
+04!
+05!
+06!
+07!
+08!
+09!
+0:!
+1;!
+0<!
+0=!
+0>!
+0?!
+$end
+#1000000
