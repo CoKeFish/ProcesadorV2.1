@@ -25,11 +25,11 @@ ENTITY StackPointer IS
 				--ENTRADAS------------------------------------
 				Clock 			:IN STD_LOGIC; --Reloj del sistema
 				ResetSystem		:IN STD_LOGIC; --Reset del sistema
-				Ena_SP			:IN STD_LOGIC; --Señal de control que habilita contador
-				IncDec         :IN STD_LOGIC_VECTOR(1 DOWNTO 0); --Señal de control que indica conteo Asc-Desc     
+				Enable			:IN STD_LOGIC; --Señal de control que habilita contador
+				IncDec         :IN STD_LOGIC; --Señal de control que indica conteo Asc-Desc     
 				----------------------------------------------
 				--SALIDAS
-				SP_out   		:OUT STD_LOGIC_VECTOR(15 DOWNTO 0) --Valor actual del contador
+				Valor_out		:OUT STD_LOGIC_VECTOR(15 DOWNTO 0) --Valor actual del contador
 		);
 	
 END ENTITY StackPointer;
@@ -53,8 +53,6 @@ ARCHITECTURE StackPointer OF StackPointer IS
 		SIGNAL Q					:STD_LOGIC_VECTOR (15 DOWNTO 0);
 		SIGNAL ENA				:STD_LOGIC_VECTOR (15 DOWNTO 0);
 		SIGNAL D					:STD_LOGIC_VECTOR (15 DOWNTO 0);
-		SIGNAL Inc           :STD_LOGIC;
-		SIGNAL Dec           :STD_LOGIC;
 	
 BEGIN
 
@@ -77,25 +75,22 @@ BEGIN
 		D(14) <= (NOT Q(14));
 		D(15) <= (NOT Q(15));
 		
-		Inc <= IncDec(0)       AND (NOT IncDec(1));
-		Dec <= (NOT IncDec(0)) AND  IncDec(1);
-		
-		ENA(0)  <=  Ena_SP;
-		ENA(1)  <= ((Q(0)  AND Inc) OR (NOT(Q(0))  AND (Dec))) AND ENA(0);
-		ENA(2)  <= ((Q(1)  AND Inc) OR (NOT(Q(1))  AND (Dec))) AND ENA(1);
-		ENA(3)  <= ((Q(2)  AND Inc) OR (NOT(Q(2))  AND (Dec))) AND ENA(2);
-		ENA(4)  <= ((Q(3)  AND Inc) OR (NOT(Q(3))  AND (Dec))) AND ENA(3);
-		ENA(5)  <= ((Q(4)  AND Inc) OR (NOT(Q(4))  AND (Dec))) AND ENA(4);
-	   ENA(6)  <= ((Q(5)  AND Inc) OR (NOT(Q(5))  AND (Dec))) AND ENA(5);
-		ENA(7)  <= ((Q(6)  AND Inc) OR (NOT(Q(6))  AND (Dec))) AND ENA(6);
-		ENA(8)  <= ((Q(7)  AND Inc) OR (NOT(Q(7))  AND (Dec))) AND ENA(7);
-		ENA(9)  <= ((Q(8)  AND Inc) OR (NOT(Q(8))  AND (Dec))) AND ENA(8);
-		ENA(10) <= ((Q(9)  AND Inc) OR (NOT(Q(9))  AND (Dec))) AND ENA(9);
-		ENA(11) <= ((Q(10) AND Inc) OR (NOT(Q(10)) AND (Dec))) AND ENA(10);
-		ENA(12) <= ((Q(11) AND Inc) OR (NOT(Q(11)) AND (Dec))) AND ENA(11);
-		ENA(13) <= ((Q(12) AND Inc) OR (NOT(Q(12)) AND (Dec))) AND ENA(12);
-		ENA(14) <= ((Q(13) AND Inc) OR (NOT(Q(13)) AND (Dec))) AND ENA(13);
-	   ENA(15) <= ((Q(14) AND Inc) OR (NOT(Q(14)) AND (Dec))) AND ENA(14);
+		ENA(0)  <=  Enable;
+		ENA(1)  <= ((Q(0)  AND IncDec) OR (NOT(Q(0))  AND NOT(IncDec))) AND ENA(0);
+		ENA(2)  <= ((Q(1)  AND IncDec) OR (NOT(Q(1))  AND NOT(IncDec))) AND ENA(1);
+		ENA(3)  <= ((Q(2)  AND IncDec) OR (NOT(Q(2))  AND NOT(IncDec))) AND ENA(2);
+		ENA(4)  <= ((Q(3)  AND IncDec) OR (NOT(Q(3))  AND NOT(IncDec))) AND ENA(3);
+		ENA(5)  <= ((Q(4)  AND IncDec) OR (NOT(Q(4))  AND NOT(IncDec))) AND ENA(4);
+	   ENA(6)  <= ((Q(5)  AND IncDec) OR (NOT(Q(5))  AND NOT(IncDec))) AND ENA(5);
+		ENA(7)  <= ((Q(6)  AND IncDec) OR (NOT(Q(6))  AND NOT(IncDec))) AND ENA(6);
+		ENA(8)  <= ((Q(7)  AND IncDec) OR (NOT(Q(7))  AND NOT(IncDec))) AND ENA(7);
+		ENA(9)  <= ((Q(8)  AND IncDec) OR (NOT(Q(8))  AND NOT(IncDec))) AND ENA(8);
+		ENA(10) <= ((Q(9)  AND IncDec) OR (NOT(Q(9))  AND NOT(IncDec))) AND ENA(9);
+		ENA(11) <= ((Q(10) AND IncDec) OR (NOT(Q(10)) AND NOT(IncDec))) AND ENA(10);
+		ENA(12) <= ((Q(11) AND IncDec) OR (NOT(Q(11)) AND NOT(IncDec))) AND ENA(11);
+		ENA(13) <= ((Q(12) AND IncDec) OR (NOT(Q(12)) AND NOT(IncDec))) AND ENA(12);
+		ENA(14) <= ((Q(13) AND IncDec) OR (NOT(Q(13)) AND NOT(IncDec))) AND ENA(13);
+	   ENA(15) <= ((Q(14) AND IncDec) OR (NOT(Q(14)) AND NOT(IncDec))) AND ENA(14);
 		
 		
 		FF0  : DFFE PORT MAP (D(0) , Clock, ResetSystem, '1', ENA(0) , Q(0));
@@ -115,7 +110,7 @@ BEGIN
 		FF14 : DFFE PORT MAP (D(14), Clock, ResetSystem, '1', ENA(14), Q(14));
 		
 		
-		SP_out <= Q;
+		Valor_out <= Q;
 --******************************************************--
 
 END ARCHITECTURE	StackPointer;
