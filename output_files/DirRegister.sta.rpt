@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for DirRegister
-Mon Nov 30 22:07:49 2020
+Tue Dec 01 10:41:11 2020
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -280,7 +280,7 @@ No paths to report.
 ;  InDir[13] ; Clock      ; 2.256  ; 2.761  ; Rise       ; Clock           ;
 ;  InDir[14] ; Clock      ; 2.332  ; 2.838  ; Rise       ; Clock           ;
 ;  InDir[15] ; Clock      ; 2.271  ; 2.771  ; Rise       ; Clock           ;
-; Save       ; Clock      ; 0.108  ; 0.257  ; Rise       ; Clock           ;
+; SaveDir    ; Clock      ; 0.108  ; 0.257  ; Rise       ; Clock           ;
 +------------+------------+--------+--------+------------+-----------------+
 
 
@@ -306,7 +306,7 @@ No paths to report.
 ;  InDir[13] ; Clock      ; -1.856 ; -2.347 ; Rise       ; Clock           ;
 ;  InDir[14] ; Clock      ; -1.929 ; -2.421 ; Rise       ; Clock           ;
 ;  InDir[15] ; Clock      ; -1.869 ; -2.356 ; Rise       ; Clock           ;
-; Save       ; Clock      ; 0.089  ; -0.059 ; Rise       ; Clock           ;
+; SaveDir    ; Clock      ; 0.089  ; -0.059 ; Rise       ; Clock           ;
 +------------+------------+--------+--------+------------+-----------------+
 
 
@@ -524,7 +524,7 @@ No paths to report.
 ;  InDir[13] ; Clock      ; 1.957  ; 2.353  ; Rise       ; Clock           ;
 ;  InDir[14] ; Clock      ; 2.017  ; 2.426  ; Rise       ; Clock           ;
 ;  InDir[15] ; Clock      ; 1.960  ; 2.361  ; Rise       ; Clock           ;
-; Save       ; Clock      ; 0.113  ; 0.273  ; Rise       ; Clock           ;
+; SaveDir    ; Clock      ; 0.113  ; 0.273  ; Rise       ; Clock           ;
 +------------+------------+--------+--------+------------+-----------------+
 
 
@@ -550,7 +550,7 @@ No paths to report.
 ;  InDir[13] ; Clock      ; -1.600 ; -1.986 ; Rise       ; Clock           ;
 ;  InDir[14] ; Clock      ; -1.658 ; -2.057 ; Rise       ; Clock           ;
 ;  InDir[15] ; Clock      ; -1.603 ; -1.994 ; Rise       ; Clock           ;
-; Save       ; Clock      ; 0.067  ; -0.092 ; Rise       ; Clock           ;
+; SaveDir    ; Clock      ; 0.067  ; -0.092 ; Rise       ; Clock           ;
 +------------+------------+--------+--------+------------+-----------------+
 
 
@@ -762,7 +762,7 @@ No paths to report.
 ;  InDir[13] ; Clock      ; 1.283  ; 1.908 ; Rise       ; Clock           ;
 ;  InDir[14] ; Clock      ; 1.324  ; 1.958 ; Rise       ; Clock           ;
 ;  InDir[15] ; Clock      ; 1.265  ; 1.903 ; Rise       ; Clock           ;
-; Save       ; Clock      ; 0.053  ; 0.361 ; Rise       ; Clock           ;
+; SaveDir    ; Clock      ; 0.053  ; 0.361 ; Rise       ; Clock           ;
 +------------+------------+--------+-------+------------+-----------------+
 
 
@@ -788,7 +788,7 @@ No paths to report.
 ;  InDir[13] ; Clock      ; -1.056 ; -1.672 ; Rise       ; Clock           ;
 ;  InDir[14] ; Clock      ; -1.096 ; -1.720 ; Rise       ; Clock           ;
 ;  InDir[15] ; Clock      ; -1.039 ; -1.666 ; Rise       ; Clock           ;
-; Save       ; Clock      ; 0.061  ; -0.249 ; Rise       ; Clock           ;
+; SaveDir    ; Clock      ; 0.061  ; -0.249 ; Rise       ; Clock           ;
 +------------+------------+--------+--------+------------+-----------------+
 
 
@@ -882,7 +882,7 @@ No synchronizer chains to report.
 ;  InDir[13] ; Clock      ; 2.256  ; 2.761 ; Rise       ; Clock           ;
 ;  InDir[14] ; Clock      ; 2.332  ; 2.838 ; Rise       ; Clock           ;
 ;  InDir[15] ; Clock      ; 2.271  ; 2.771 ; Rise       ; Clock           ;
-; Save       ; Clock      ; 0.113  ; 0.361 ; Rise       ; Clock           ;
+; SaveDir    ; Clock      ; 0.113  ; 0.361 ; Rise       ; Clock           ;
 +------------+------------+--------+-------+------------+-----------------+
 
 
@@ -908,7 +908,7 @@ No synchronizer chains to report.
 ;  InDir[13] ; Clock      ; -1.056 ; -1.672 ; Rise       ; Clock           ;
 ;  InDir[14] ; Clock      ; -1.096 ; -1.720 ; Rise       ; Clock           ;
 ;  InDir[15] ; Clock      ; -1.039 ; -1.666 ; Rise       ; Clock           ;
-; Save       ; Clock      ; 0.089  ; -0.059 ; Rise       ; Clock           ;
+; SaveDir    ; Clock      ; 0.089  ; -0.059 ; Rise       ; Clock           ;
 +------------+------------+--------+--------+------------+-----------------+
 
 
@@ -996,7 +996,7 @@ No synchronizer chains to report.
 ; InDir[0]       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; Clock          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; ResetSystem    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; Save           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SaveDir        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; InDir[1]       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; InDir[2]       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; InDir[3]       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
@@ -1134,7 +1134,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Mon Nov 30 22:07:46 2020
+    Info: Processing started: Tue Dec 01 10:41:09 2020
 Info: Command: quartus_sta DirRegister -c DirRegister
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -1189,9 +1189,9 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4625 megabytes
-    Info: Processing ended: Mon Nov 30 22:07:49 2020
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Peak virtual memory: 4621 megabytes
+    Info: Processing ended: Tue Dec 01 10:41:11 2020
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 

@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "11/23/2020 05:54:21"
+// Generated on "12/01/2020 10:56:11"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    ProgramCounter
 // 
@@ -28,22 +28,22 @@
 `timescale 1 ps/ 1 ps
 module ProgramCounter_vlg_sample_tst(
 	Clock,
-	Incremente,
+	Inc_PC,
 	PC_in,
 	ResetSystem,
-	SavePC,
+	Save_PC,
 	sampler_tx
 );
 input  Clock;
-input  Incremente;
+input  Inc_PC;
 input [15:0] PC_in;
 input  ResetSystem;
-input  SavePC;
+input  Save_PC;
 output sampler_tx;
 
 reg sample;
 time current_time;
-always @(Clock or Incremente or PC_in or ResetSystem or SavePC)
+always @(Clock or Inc_PC or PC_in or ResetSystem or Save_PC)
                                                                                 
 begin                                                 
  if ($realtime > 0)                                   
@@ -430,10 +430,10 @@ module ProgramCounter_vlg_vec_tst();
 // constants                                           
 // general purpose registers
 reg Clock;
-reg Incremente;
+reg Inc_PC;
 reg [15:0] PC_in;
 reg ResetSystem;
-reg SavePC;
+reg Save_PC;
 // wires                                               
 wire [15:0] PC_out;
 
@@ -443,11 +443,11 @@ wire sampler;
 ProgramCounter i1 (
 // port map - connection between master ports and signals/registers   
 	.Clock(Clock),
-	.Incremente(Incremente),
+	.Inc_PC(Inc_PC),
 	.PC_in(PC_in),
 	.PC_out(PC_out),
 	.ResetSystem(ResetSystem),
-	.SavePC(SavePC)
+	.Save_PC(Save_PC)
 );
 
 // Clock
@@ -462,16 +462,6 @@ end
 initial
 begin
 	ResetSystem = 1'b1;
-end 
-
-// Incremente
-initial
-begin
-	Incremente = 1'b0;
-	Incremente = #160000 1'b1;
-	Incremente = #20000 1'b0;
-	Incremente = #90000 1'b1;
-	Incremente = #20000 1'b0;
 end 
 // PC_in[ 15 ]
 initial
@@ -554,20 +544,12 @@ begin
 	PC_in[0] = 1'b0;
 end 
 
-// SavePC
-initial
-begin
-	SavePC = 1'b0;
-	SavePC = #450000 1'b1;
-	SavePC = #30000 1'b0;
-end 
-
 ProgramCounter_vlg_sample_tst tb_sample (
 	.Clock(Clock),
-	.Incremente(Incremente),
+	.Inc_PC(Inc_PC),
 	.PC_in(PC_in),
 	.ResetSystem(ResetSystem),
-	.SavePC(SavePC),
+	.Save_PC(Save_PC),
 	.sampler_tx(sampler)
 );
 

@@ -16,7 +16,7 @@
 // PROGRAM "Quartus II 64-Bit"
 // VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Web Edition"
 
-// DATE "11/30/2020 22:15:32"
+// DATE "12/01/2020 10:42:23"
 
 // 
 // Device: Altera EP4CGX15BF14C6 Package FBGA169
@@ -31,12 +31,12 @@
 module DirRegister (
 	Clock,
 	ResetSystem,
-	Save,
+	SaveDir,
 	InDir,
 	DirOut);
 input 	Clock;
 input 	ResetSystem;
-input 	Save;
+input 	SaveDir;
 input 	[15:0] InDir;
 output 	[15:0] DirOut;
 
@@ -60,7 +60,7 @@ output 	[15:0] DirOut;
 // InDir[0]	=>  Location: PIN_M7,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // Clock	=>  Location: PIN_J7,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // ResetSystem	=>  Location: PIN_J6,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// Save	=>  Location: PIN_N7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// SaveDir	=>  Location: PIN_N7,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // InDir[1]	=>  Location: PIN_K8,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // InDir[2]	=>  Location: PIN_N11,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // InDir[3]	=>  Location: PIN_N4,	 I/O Standard: 2.5 V,	 Current Strength: Default
@@ -89,10 +89,6 @@ assign unknown = 1'bx;
 tri1 devclrn;
 tri1 devpor;
 tri1 devoe;
-// synopsys translate_off
-initial $sdf_annotate("DirRegister_v.sdo");
-// synopsys translate_on
-
 wire \DirOut[0]~output_o ;
 wire \DirOut[1]~output_o ;
 wire \DirOut[2]~output_o ;
@@ -115,7 +111,7 @@ wire \InDir[0]~input_o ;
 wire \FF0~feeder_combout ;
 wire \ResetSystem~input_o ;
 wire \ResetSystem~inputclkctrl_outclk ;
-wire \Save~input_o ;
+wire \SaveDir~input_o ;
 wire \FF0~q ;
 wire \InDir[1]~input_o ;
 wire \FF1~feeder_combout ;
@@ -440,13 +436,13 @@ defparam \ResetSystem~inputclkctrl .ena_register_mode = "none";
 // synopsys translate_on
 
 // Location: IOIBUF_X16_Y0_N1
-cycloneiv_io_ibuf \Save~input (
-	.i(Save),
+cycloneiv_io_ibuf \SaveDir~input (
+	.i(SaveDir),
 	.ibar(gnd),
-	.o(\Save~input_o ));
+	.o(\SaveDir~input_o ));
 // synopsys translate_off
-defparam \Save~input .bus_hold = "false";
-defparam \Save~input .simulate_z_as = "z";
+defparam \SaveDir~input .bus_hold = "false";
+defparam \SaveDir~input .simulate_z_as = "z";
 // synopsys translate_on
 
 // Location: FF_X13_Y9_N17
@@ -458,7 +454,7 @@ dffeas FF0(
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(\Save~input_o ),
+	.ena(\SaveDir~input_o ),
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.q(\FF0~q ),
@@ -504,7 +500,7 @@ dffeas FF1(
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(\Save~input_o ),
+	.ena(\SaveDir~input_o ),
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.q(\FF1~q ),
@@ -533,7 +529,7 @@ dffeas FF2(
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(vcc),
-	.ena(\Save~input_o ),
+	.ena(\SaveDir~input_o ),
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.q(\FF2~q ),
@@ -579,7 +575,7 @@ dffeas FF3(
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(\Save~input_o ),
+	.ena(\SaveDir~input_o ),
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.q(\FF3~q ),
@@ -625,7 +621,7 @@ dffeas FF4(
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(\Save~input_o ),
+	.ena(\SaveDir~input_o ),
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.q(\FF4~q ),
@@ -671,7 +667,7 @@ dffeas FF5(
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(\Save~input_o ),
+	.ena(\SaveDir~input_o ),
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.q(\FF5~q ),
@@ -717,7 +713,7 @@ dffeas FF6(
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(\Save~input_o ),
+	.ena(\SaveDir~input_o ),
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.q(\FF6~q ),
@@ -746,7 +742,7 @@ dffeas FF7(
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(vcc),
-	.ena(\Save~input_o ),
+	.ena(\SaveDir~input_o ),
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.q(\FF7~q ),
@@ -792,7 +788,7 @@ dffeas FF8(
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(\Save~input_o ),
+	.ena(\SaveDir~input_o ),
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.q(\FF8~q ),
@@ -821,7 +817,7 @@ dffeas FF9(
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(vcc),
-	.ena(\Save~input_o ),
+	.ena(\SaveDir~input_o ),
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.q(\FF9~q ),
@@ -867,7 +863,7 @@ dffeas FF10(
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(\Save~input_o ),
+	.ena(\SaveDir~input_o ),
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.q(\FF10~q ),
@@ -913,7 +909,7 @@ dffeas FF11(
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(\Save~input_o ),
+	.ena(\SaveDir~input_o ),
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.q(\FF11~q ),
@@ -959,7 +955,7 @@ dffeas FF12(
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(\Save~input_o ),
+	.ena(\SaveDir~input_o ),
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.q(\FF12~q ),
@@ -988,7 +984,7 @@ dffeas FF13(
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(vcc),
-	.ena(\Save~input_o ),
+	.ena(\SaveDir~input_o ),
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.q(\FF13~q ),
@@ -1017,7 +1013,7 @@ dffeas FF14(
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(vcc),
-	.ena(\Save~input_o ),
+	.ena(\SaveDir~input_o ),
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.q(\FF14~q ),
@@ -1046,7 +1042,7 @@ dffeas FF15(
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(vcc),
-	.ena(\Save~input_o ),
+	.ena(\SaveDir~input_o ),
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.q(\FF15~q ),

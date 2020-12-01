@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "11/30/2020 22:15:30"
+// Generated on "12/01/2020 10:40:14"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    DirRegister
 // 
@@ -30,18 +30,18 @@ module DirRegister_vlg_sample_tst(
 	Clock,
 	InDir,
 	ResetSystem,
-	Save,
+	SaveDir,
 	sampler_tx
 );
 input  Clock;
 input [15:0] InDir;
 input  ResetSystem;
-input  Save;
+input  SaveDir;
 output sampler_tx;
 
 reg sample;
 time current_time;
-always @(Clock or InDir or ResetSystem or Save)
+always @(Clock or InDir or ResetSystem or SaveDir)
                                                                                 
 begin                                                 
  if ($realtime > 0)                                   
@@ -430,7 +430,7 @@ module DirRegister_vlg_vec_tst();
 reg Clock;
 reg [15:0] InDir;
 reg ResetSystem;
-reg Save;
+reg SaveDir;
 // wires                                               
 wire [15:0] DirOut;
 
@@ -443,7 +443,7 @@ DirRegister i1 (
 	.DirOut(DirOut),
 	.InDir(InDir),
 	.ResetSystem(ResetSystem),
-	.Save(Save)
+	.SaveDir(SaveDir)
 );
 
 // Clock
@@ -462,7 +462,7 @@ end
 // InDir[ 15 ]
 initial
 begin
-	InDir[15] = 1'b1;
+	InDir[15] = 1'b0;
 end 
 // InDir[ 14 ]
 initial
@@ -527,12 +527,12 @@ end
 // InDir[ 2 ]
 initial
 begin
-	InDir[2] = 1'b0;
+	InDir[2] = 1'b1;
 end 
 // InDir[ 1 ]
 initial
 begin
-	InDir[1] = 1'b0;
+	InDir[1] = 1'b1;
 end 
 // InDir[ 0 ]
 initial
@@ -540,19 +540,19 @@ begin
 	InDir[0] = 1'b1;
 end 
 
-// Save
+// SaveDir
 initial
 begin
-	Save = 1'b0;
-	Save = #540000 1'b1;
-	Save = #40000 1'b0;
+	SaveDir = 1'b0;
+	SaveDir = #480000 1'b1;
+	SaveDir = #20000 1'b0;
 end 
 
 DirRegister_vlg_sample_tst tb_sample (
 	.Clock(Clock),
 	.InDir(InDir),
 	.ResetSystem(ResetSystem),
-	.Save(Save),
+	.SaveDir(SaveDir),
 	.sampler_tx(sampler)
 );
 

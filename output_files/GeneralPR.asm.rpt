@@ -1,5 +1,5 @@
 Assembler report for GeneralPR
-Mon Nov 23 19:05:41 2020
+Tue Dec 01 10:20:17 2020
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -37,11 +37,11 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon Nov 23 19:05:41 2020 ;
+; Assembler Status      ; Successful - Tue Dec 01 10:20:17 2020 ;
 ; Revision Name         ; GeneralPR                             ;
 ; Top-level Entity Name ; GeneralPR                             ;
 ; Family                ; Cyclone IV GX                         ;
-; Device                ; EP4CGX15BF14C6                        ;
+; Device                ; EP4CGX22CF19C6                        ;
 +-----------------------+---------------------------------------+
 
 
@@ -91,9 +91,9 @@ applicable agreement for further details.
 +----------------+------------------------------------------------------------------------+
 ; Option         ; Setting                                                                ;
 +----------------+------------------------------------------------------------------------+
-; Device         ; EP4CGX15BF14C6                                                         ;
-; JTAG usercode  ; 0x000BF255                                                             ;
-; Checksum       ; 0x000BF255                                                             ;
+; Device         ; EP4CGX22CF19C6                                                         ;
+; JTAG usercode  ; 0x00173A10                                                             ;
+; Checksum       ; 0x00173A10                                                             ;
 +----------------+------------------------------------------------------------------------+
 
 
@@ -103,14 +103,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Mon Nov 23 19:05:40 2020
+    Info: Processing started: Tue Dec 01 10:20:15 2020
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off GeneralPR -c GeneralPR
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4636 megabytes
-    Info: Processing ended: Mon Nov 23 19:05:41 2020
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Peak virtual memory: 4626 megabytes
+    Info: Processing ended: Tue Dec 01 10:20:17 2020
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 

@@ -1,20 +1,20 @@
-Fitter Status : Successful - Mon Nov 23 19:05:36 2020
+Fitter Status : Successful - Tue Dec 01 10:20:12 2020
 Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Web Edition
 Revision Name : GeneralPR
 Top-level Entity Name : GeneralPR
 Family : Cyclone IV GX
-Device : EP4CGX15BF14C6
+Device : EP4CGX22CF19C6
 Timing Models : Final
-Total logic elements : 16 / 14,400 ( < 1 % )
-    Total combinational functions : 0 / 14,400 ( 0 % )
-    Dedicated logic registers : 16 / 14,400 ( < 1 % )
-Total registers : 16
-Total pins : 35 / 81 ( 43 % )
+Total logic elements : 23 / 21,280 ( < 1 % )
+    Total combinational functions : 0 / 21,280 ( 0 % )
+    Dedicated logic registers : 23 / 21,280 ( < 1 % )
+Total registers : 23
+Total pins : 49 / 167 ( 29 % )
 Total virtual pins : 0
-Total memory bits : 0 / 552,960 ( 0 % )
-Embedded Multiplier 9-bit elements : 0
-Total GXB Receiver Channel PCS : 0 / 2 ( 0 % )
-Total GXB Receiver Channel PMA : 0 / 2 ( 0 % )
-Total GXB Transmitter Channel PCS : 0 / 2 ( 0 % )
-Total GXB Transmitter Channel PMA : 0 / 2 ( 0 % )
-Total PLLs : 0 / 3 ( 0 % )
+Total memory bits : 0 / 774,144 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 80 ( 0 % )
+Total GXB Receiver Channel PCS : 0 / 4 ( 0 % )
+Total GXB Receiver Channel PMA : 0 / 4 ( 0 % )
+Total GXB Transmitter Channel PCS : 0 / 4 ( 0 % )
+Total GXB Transmitter Channel PMA : 0 / 4 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

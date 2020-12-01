@@ -237,7 +237,7 @@ MSEL1                        : N3        :        :                   :         
 InDir[3]                     : N4        : input  : 2.5 V             :         : 3         : N              
 ~ALTERA_NCEO~ / RESERVED_OUTPUT_OPEN_DRAIN : N5        : output : 2.5 V             :         : 3         : N              
 InDir[4]                     : N6        : input  : 2.5 V             :         : 3         : N              
-Save                         : N7        : input  : 2.5 V             :         : 4         : N              
+SaveDir                      : N7        : input  : 2.5 V             :         : 4         : N              
 InDir[9]                     : N8        : input  : 2.5 V             :         : 4         : N              
 InDir[8]                     : N9        : input  : 2.5 V             :         : 4         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : N10       :        :                   :         : 4         :                

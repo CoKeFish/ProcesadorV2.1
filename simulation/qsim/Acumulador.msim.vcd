@@ -1,0 +1,608 @@
+$comment
+	File created using the following command:
+		vcd file Acumulador.msim.vcd -direction
+$end
+$date
+	Tue Dec 01 11:03:06 2020
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module Acumulador_vlg_vec_tst $end
+$var reg 16 ! AC_in [15:0] $end
+$var reg 1 " Clock $end
+$var reg 1 # ResetSystem $end
+$var reg 1 $ SaveAC $end
+$var wire 1 % AC_out [15] $end
+$var wire 1 & AC_out [14] $end
+$var wire 1 ' AC_out [13] $end
+$var wire 1 ( AC_out [12] $end
+$var wire 1 ) AC_out [11] $end
+$var wire 1 * AC_out [10] $end
+$var wire 1 + AC_out [9] $end
+$var wire 1 , AC_out [8] $end
+$var wire 1 - AC_out [7] $end
+$var wire 1 . AC_out [6] $end
+$var wire 1 / AC_out [5] $end
+$var wire 1 0 AC_out [4] $end
+$var wire 1 1 AC_out [3] $end
+$var wire 1 2 AC_out [2] $end
+$var wire 1 3 AC_out [1] $end
+$var wire 1 4 AC_out [0] $end
+$var wire 1 5 sampler $end
+$scope module i1 $end
+$var wire 1 6 gnd $end
+$var wire 1 7 vcc $end
+$var wire 1 8 unknown $end
+$var tri1 1 9 devclrn $end
+$var tri1 1 : devpor $end
+$var tri1 1 ; devoe $end
+$var wire 1 < AC_out[0]~output_o $end
+$var wire 1 = AC_out[1]~output_o $end
+$var wire 1 > AC_out[2]~output_o $end
+$var wire 1 ? AC_out[3]~output_o $end
+$var wire 1 @ AC_out[4]~output_o $end
+$var wire 1 A AC_out[5]~output_o $end
+$var wire 1 B AC_out[6]~output_o $end
+$var wire 1 C AC_out[7]~output_o $end
+$var wire 1 D AC_out[8]~output_o $end
+$var wire 1 E AC_out[9]~output_o $end
+$var wire 1 F AC_out[10]~output_o $end
+$var wire 1 G AC_out[11]~output_o $end
+$var wire 1 H AC_out[12]~output_o $end
+$var wire 1 I AC_out[13]~output_o $end
+$var wire 1 J AC_out[14]~output_o $end
+$var wire 1 K AC_out[15]~output_o $end
+$var wire 1 L Clock~input_o $end
+$var wire 1 M AC_in[0]~input_o $end
+$var wire 1 N ResetSystem~input_o $end
+$var wire 1 O SaveAC~input_o $end
+$var wire 1 P FF0~q $end
+$var wire 1 Q AC_in[1]~input_o $end
+$var wire 1 R FF1~q $end
+$var wire 1 S AC_in[2]~input_o $end
+$var wire 1 T FF2~q $end
+$var wire 1 U AC_in[3]~input_o $end
+$var wire 1 V FF3~q $end
+$var wire 1 W AC_in[4]~input_o $end
+$var wire 1 X FF4~q $end
+$var wire 1 Y AC_in[5]~input_o $end
+$var wire 1 Z FF5~q $end
+$var wire 1 [ AC_in[6]~input_o $end
+$var wire 1 \ FF6~q $end
+$var wire 1 ] AC_in[7]~input_o $end
+$var wire 1 ^ FF7~q $end
+$var wire 1 _ AC_in[8]~input_o $end
+$var wire 1 ` FF8~q $end
+$var wire 1 a AC_in[9]~input_o $end
+$var wire 1 b FF9~q $end
+$var wire 1 c AC_in[10]~input_o $end
+$var wire 1 d FF10~q $end
+$var wire 1 e AC_in[11]~input_o $end
+$var wire 1 f FF11~q $end
+$var wire 1 g AC_in[12]~input_o $end
+$var wire 1 h FF12~q $end
+$var wire 1 i AC_in[13]~input_o $end
+$var wire 1 j FF13~q $end
+$var wire 1 k AC_in[14]~input_o $end
+$var wire 1 l FF14~q $end
+$var wire 1 m AC_in[15]~input_o $end
+$var wire 1 n FF15~q $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1111111111000 !
+0"
+1#
+0$
+04
+03
+02
+01
+00
+0/
+0.
+0-
+0,
+0+
+0*
+0)
+0(
+0'
+0&
+0%
+x5
+06
+17
+x8
+19
+1:
+1;
+0<
+0=
+0>
+0?
+0@
+0A
+0B
+0C
+0D
+0E
+0F
+0G
+0H
+0I
+0J
+0K
+0L
+0M
+1N
+0O
+0P
+0Q
+0R
+0S
+0T
+1U
+0V
+1W
+0X
+1Y
+0Z
+1[
+0\
+1]
+0^
+1_
+0`
+1a
+0b
+1c
+0d
+1e
+0f
+1g
+0h
+0i
+0j
+0k
+0l
+0m
+0n
+$end
+#10000
+1"
+1L
+05
+#20000
+0"
+0L
+15
+#30000
+1"
+1L
+05
+#40000
+0"
+0L
+15
+#50000
+1"
+1L
+05
+#60000
+0"
+0L
+15
+#70000
+1"
+1L
+05
+#80000
+0"
+0L
+15
+#90000
+1"
+1L
+05
+#100000
+0"
+0L
+15
+#110000
+1"
+1L
+05
+#120000
+0"
+0L
+15
+#130000
+1"
+1L
+05
+#140000
+0"
+0L
+15
+#150000
+1"
+1L
+05
+#160000
+0"
+0L
+15
+#170000
+1"
+1L
+05
+#180000
+0"
+0L
+15
+#190000
+1"
+1L
+05
+#200000
+0"
+0L
+15
+#210000
+1"
+1L
+05
+#220000
+0"
+0L
+15
+#230000
+1"
+1L
+05
+#240000
+0"
+0L
+15
+#250000
+1"
+1L
+05
+#260000
+0"
+0L
+15
+#270000
+1"
+1L
+05
+#280000
+0"
+0L
+15
+#290000
+1"
+1L
+05
+#300000
+0"
+0L
+15
+#310000
+1"
+1L
+05
+#320000
+0"
+0L
+15
+#330000
+1"
+1L
+05
+#340000
+0"
+0L
+15
+#350000
+1"
+1L
+05
+#360000
+0"
+0L
+15
+#370000
+1"
+1L
+05
+#380000
+0"
+0L
+15
+#390000
+1"
+1L
+05
+#400000
+0"
+0L
+15
+#410000
+1"
+1L
+05
+#420000
+0"
+0L
+15
+#430000
+1"
+1L
+05
+#440000
+0"
+0L
+15
+#450000
+1"
+1L
+05
+#460000
+0"
+0L
+15
+#470000
+1"
+1L
+05
+#480000
+0"
+0L
+15
+#490000
+1"
+1L
+05
+#500000
+0"
+0L
+15
+#510000
+1$
+1"
+1O
+1L
+05
+#520000
+0"
+0L
+15
+#530000
+0$
+1"
+0O
+1L
+05
+1h
+1f
+1d
+1b
+1`
+1^
+1\
+1Z
+1X
+1V
+1H
+1G
+1F
+1E
+1D
+1C
+1B
+1A
+1@
+1?
+1(
+1)
+1*
+1+
+1,
+1-
+1.
+1/
+10
+11
+#540000
+0"
+0L
+15
+#550000
+1"
+1L
+05
+#560000
+0"
+0L
+15
+#570000
+1"
+1L
+05
+#580000
+0"
+0L
+15
+#590000
+1"
+1L
+05
+#600000
+0"
+0L
+15
+#610000
+1"
+1L
+05
+#620000
+0"
+0L
+15
+#630000
+1"
+1L
+05
+#640000
+0"
+0L
+15
+#650000
+1"
+1L
+05
+#660000
+0"
+0L
+15
+#670000
+1"
+1L
+05
+#680000
+0"
+0L
+15
+#690000
+1"
+1L
+05
+#700000
+0"
+0L
+15
+#710000
+1"
+1L
+05
+#720000
+0"
+0L
+15
+#730000
+1"
+1L
+05
+#740000
+0"
+0L
+15
+#750000
+1"
+1L
+05
+#760000
+0"
+0L
+15
+#770000
+1"
+1L
+05
+#780000
+0"
+0L
+15
+#790000
+1"
+1L
+05
+#800000
+0"
+0L
+15
+#810000
+1"
+1L
+05
+#820000
+0"
+0L
+15
+#830000
+1"
+1L
+05
+#840000
+0"
+0L
+15
+#850000
+1"
+1L
+05
+#860000
+0"
+0L
+15
+#870000
+1"
+1L
+05
+#880000
+0"
+0L
+15
+#890000
+1"
+1L
+05
+#900000
+0"
+0L
+15
+#910000
+1"
+1L
+05
+#920000
+0"
+0L
+15
+#930000
+1"
+1L
+05
+#940000
+0"
+0L
+15
+#950000
+1"
+1L
+05
+#960000
+0"
+0L
+15
+#970000
+1"
+1L
+05
+#980000
+0"
+0L
+15
+#990000
+1"
+1L
+05
+#1000000

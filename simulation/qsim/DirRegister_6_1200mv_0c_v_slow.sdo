@@ -29,7 +29,7 @@
 (DELAYFILE
   (SDFVERSION "2.1")
   (DESIGN "DirRegister")
-  (DATE "11/30/2020 22:15:32")
+  (DATE "12/01/2020 10:40:00")
   (VENDOR "Altera")
   (PROGRAM "Quartus II 64-Bit")
   (VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Web Edition")
@@ -253,7 +253,7 @@
   )
   (CELL
     (CELLTYPE "cycloneiv_io_ibuf")
-    (INSTANCE Save\~input)
+    (INSTANCE SaveDir\~input)
     (DELAY
       (ABSOLUTE
         (IOPATH i o (488:488:488) (644:644:644))

@@ -1,6 +1,7 @@
 vendor_name = ModelSim
 source_file = 1, C:/Users/OMEN/Desktop/ProcesadorV2/DirRegister.vhd
 source_file = 1, C:/Users/OMEN/Desktop/ProcesadorV2/DirRegister.vwf
+source_file = 1, C:/Users/OMEN/Desktop/ProcesadorV2/Waveform5.vwf
 source_file = 1, C:/Users/OMEN/Desktop/ProcesadorV2/db/DirRegister.cbx.xml
 source_file = 1, d:/quartus/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
 source_file = 1, d:/quartus/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
@@ -29,7 +30,7 @@ instance = comp, \InDir[0]~input , InDir[0]~input, DirRegister, 1
 instance = comp, \FF0~feeder , FF0~feeder, DirRegister, 1
 instance = comp, \ResetSystem~input , ResetSystem~input, DirRegister, 1
 instance = comp, \ResetSystem~inputclkctrl , ResetSystem~inputclkctrl, DirRegister, 1
-instance = comp, \Save~input , Save~input, DirRegister, 1
+instance = comp, \SaveDir~input , SaveDir~input, DirRegister, 1
 instance = comp, \InDir[1]~input , InDir[1]~input, DirRegister, 1
 instance = comp, \FF1~feeder , FF1~feeder, DirRegister, 1
 instance = comp, \InDir[2]~input , InDir[2]~input, DirRegister, 1

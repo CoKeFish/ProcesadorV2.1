@@ -392,7 +392,7 @@ SIGNAL("ResetSystem")
 	PARENT = "";
 }
 
-SIGNAL("Save")
+SIGNAL("SaveDir")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -522,9 +522,7 @@ TRANSITION_LIST("DirOut[15]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL X FOR 4.604;
-			LEVEL 0 FOR 552.597;
-			LEVEL 1 FOR 442.799;
+			LEVEL 0 FOR 1000.0;
 		}
 	}
 }
@@ -537,8 +535,7 @@ TRANSITION_LIST("DirOut[14]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL X FOR 5.061;
-			LEVEL 0 FOR 994.939;
+			LEVEL 0 FOR 1000.0;
 		}
 	}
 }
@@ -551,8 +548,7 @@ TRANSITION_LIST("DirOut[13]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL X FOR 5.436;
-			LEVEL 0 FOR 994.564;
+			LEVEL 0 FOR 1000.0;
 		}
 	}
 }
@@ -565,8 +561,7 @@ TRANSITION_LIST("DirOut[12]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL X FOR 3.534;
-			LEVEL 0 FOR 996.466;
+			LEVEL 0 FOR 1000.0;
 		}
 	}
 }
@@ -579,8 +574,8 @@ TRANSITION_LIST("DirOut[11]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL X FOR 4.173;
-			LEVEL 0 FOR 995.827;
+			LEVEL 0 FOR 450.0;
+			LEVEL 1 FOR 550.0;
 		}
 	}
 }
@@ -593,8 +588,8 @@ TRANSITION_LIST("DirOut[10]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL X FOR 3.6;
-			LEVEL 0 FOR 996.4;
+			LEVEL 0 FOR 450.0;
+			LEVEL 1 FOR 550.0;
 		}
 	}
 }
@@ -607,8 +602,8 @@ TRANSITION_LIST("DirOut[9]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL X FOR 5.173;
-			LEVEL 0 FOR 994.827;
+			LEVEL 0 FOR 450.0;
+			LEVEL 1 FOR 550.0;
 		}
 	}
 }
@@ -621,8 +616,8 @@ TRANSITION_LIST("DirOut[8]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL X FOR 5.027;
-			LEVEL 0 FOR 994.973;
+			LEVEL 0 FOR 450.0;
+			LEVEL 1 FOR 550.0;
 		}
 	}
 }
@@ -635,8 +630,8 @@ TRANSITION_LIST("DirOut[7]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL X FOR 4.392;
-			LEVEL 0 FOR 995.608;
+			LEVEL 0 FOR 450.0;
+			LEVEL 1 FOR 550.0;
 		}
 	}
 }
@@ -649,8 +644,8 @@ TRANSITION_LIST("DirOut[6]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL X FOR 4.41;
-			LEVEL 0 FOR 995.59;
+			LEVEL 0 FOR 450.0;
+			LEVEL 1 FOR 550.0;
 		}
 	}
 }
@@ -663,8 +658,7 @@ TRANSITION_LIST("DirOut[5]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL X FOR 5.072;
-			LEVEL 0 FOR 994.928;
+			LEVEL 0 FOR 1000.0;
 		}
 	}
 }
@@ -677,8 +671,7 @@ TRANSITION_LIST("DirOut[4]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL X FOR 3.961;
-			LEVEL 0 FOR 996.039;
+			LEVEL 0 FOR 1000.0;
 		}
 	}
 }
@@ -691,8 +684,7 @@ TRANSITION_LIST("DirOut[3]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL X FOR 4.872;
-			LEVEL 0 FOR 995.128;
+			LEVEL 0 FOR 1000.0;
 		}
 	}
 }
@@ -705,8 +697,7 @@ TRANSITION_LIST("DirOut[2]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL X FOR 5.504;
-			LEVEL 0 FOR 994.496;
+			LEVEL 0 FOR 1000.0;
 		}
 	}
 }
@@ -719,8 +710,7 @@ TRANSITION_LIST("DirOut[1]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL X FOR 4.205;
-			LEVEL 0 FOR 995.795;
+			LEVEL 0 FOR 1000.0;
 		}
 	}
 }
@@ -733,9 +723,7 @@ TRANSITION_LIST("DirOut[0]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL X FOR 5.863;
-			LEVEL 0 FOR 552.477;
-			LEVEL 1 FOR 441.66;
+			LEVEL 0 FOR 1000.0;
 		}
 	}
 }
@@ -748,7 +736,7 @@ TRANSITION_LIST("InDir[15]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 1 FOR 1000.0;
+			LEVEL 0 FOR 1000.0;
 		}
 	}
 }
@@ -800,7 +788,7 @@ TRANSITION_LIST("InDir[11]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
+			LEVEL 1 FOR 1000.0;
 		}
 	}
 }
@@ -813,7 +801,7 @@ TRANSITION_LIST("InDir[10]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
+			LEVEL 1 FOR 1000.0;
 		}
 	}
 }
@@ -826,7 +814,7 @@ TRANSITION_LIST("InDir[9]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
+			LEVEL 1 FOR 1000.0;
 		}
 	}
 }
@@ -839,7 +827,7 @@ TRANSITION_LIST("InDir[8]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
+			LEVEL 1 FOR 1000.0;
 		}
 	}
 }
@@ -852,7 +840,7 @@ TRANSITION_LIST("InDir[7]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
+			LEVEL 1 FOR 1000.0;
 		}
 	}
 }
@@ -865,7 +853,7 @@ TRANSITION_LIST("InDir[6]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
+			LEVEL 1 FOR 1000.0;
 		}
 	}
 }
@@ -943,7 +931,7 @@ TRANSITION_LIST("InDir[0]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 1 FOR 1000.0;
+			LEVEL 0 FOR 1000.0;
 		}
 	}
 }
@@ -961,7 +949,7 @@ TRANSITION_LIST("ResetSystem")
 	}
 }
 
-TRANSITION_LIST("Save")
+TRANSITION_LIST("SaveDir")
 {
 	NODE
 	{
@@ -969,9 +957,9 @@ TRANSITION_LIST("Save")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 0 FOR 540.0;
-			LEVEL 1 FOR 40.0;
-			LEVEL 0 FOR 420.0;
+			LEVEL 0 FOR 450.0;
+			LEVEL 1 FOR 20.0;
+			LEVEL 0 FOR 530.0;
 		}
 	}
 }
@@ -1336,7 +1324,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "Save";
+	CHANNEL = "SaveDir";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 36;

@@ -1,5 +1,5 @@
 Fitter report for DirRegister
-Mon Nov 30 22:07:39 2020
+Tue Dec 01 10:41:03 2020
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -66,7 +66,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Fitter Summary                                                                  ;
 +------------------------------------+--------------------------------------------+
-; Fitter Status                      ; Successful - Mon Nov 30 22:07:39 2020      ;
+; Fitter Status                      ; Successful - Tue Dec 01 10:41:03 2020      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; DirRegister                                ;
 ; Top-level Entity Name              ; DirRegister                                ;
@@ -182,7 +182,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; InDir[0]    ; Incomplete set of assignments ;
 ; Clock       ; Incomplete set of assignments ;
 ; ResetSystem ; Incomplete set of assignments ;
-; Save        ; Incomplete set of assignments ;
+; SaveDir     ; Incomplete set of assignments ;
 ; InDir[1]    ; Incomplete set of assignments ;
 ; InDir[2]    ; Incomplete set of assignments ;
 ; InDir[3]    ; Incomplete set of assignments ;
@@ -390,7 +390,7 @@ The pin-out file can be found in C:/Users/OMEN/Desktop/ProcesadorV2/output_files
 ; InDir[8]    ; N9    ; 4        ; 20           ; 0            ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
 ; InDir[9]    ; N8    ; 4        ; 20           ; 0            ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
 ; ResetSystem ; J6    ; 3A       ; 16           ; 0            ; 21           ; 16                    ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
-; Save        ; N7    ; 4        ; 16           ; 0            ; 0            ; 16                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; SaveDir     ; N7    ; 4        ; 16           ; 0            ; 0            ; 16                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
 +-------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+
 
 
@@ -627,7 +627,7 @@ The pin-out file can be found in C:/Users/OMEN/Desktop/ProcesadorV2/output_files
 ; N4       ; 23         ; 3        ; InDir[3]                                         ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; N5       ; 24         ; 3        ; ~ALTERA_NCEO~ / RESERVED_OUTPUT_OPEN_DRAIN       ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; N6       ; 26         ; 3        ; InDir[4]                                         ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; N7       ; 32         ; 4        ; Save                                             ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; N7       ; 32         ; 4        ; SaveDir                                          ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; N8       ; 33         ; 4        ; InDir[9]                                         ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; N9       ; 34         ; 4        ; InDir[8]                                         ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; N10      ; 39         ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -672,7 +672,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; InDir[0]    ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 ; Clock       ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 ; ResetSystem ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
-; Save        ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
+; SaveDir     ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 ; InDir[1]    ; Input    ; (6) 1313 ps   ; --            ; --                    ; --  ; --   ;
 ; InDir[2]    ; Input    ; (6) 1313 ps   ; --            ; --                    ; --  ; --   ;
 ; InDir[3]    ; Input    ; (6) 1313 ps   ; --            ; --                    ; --  ; --   ;
@@ -699,7 +699,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; InDir[0]            ;                   ;         ;
 ; Clock               ;                   ;         ;
 ; ResetSystem         ;                   ;         ;
-; Save                ;                   ;         ;
+; SaveDir             ;                   ;         ;
 ; InDir[1]            ;                   ;         ;
 ;      - FF1~feeder   ; 0                 ; 6       ;
 ; InDir[2]            ;                   ;         ;
@@ -740,7 +740,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------+----------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; Clock       ; PIN_J7   ; 16      ; Clock        ; yes    ; Global Clock         ; GCLK17           ; --                        ;
 ; ResetSystem ; PIN_J6   ; 16      ; Async. clear ; yes    ; Global Clock         ; GCLK19           ; --                        ;
-; Save        ; PIN_N7   ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; SaveDir     ; PIN_N7   ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
 +-------------+----------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -759,7 +759,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+---------------+
 ; Name            ; Fan-Out       ;
 +-----------------+---------------+
-; Save~input      ; 16            ;
+; SaveDir~input   ; 16            ;
 ; InDir[15]~input ; 1             ;
 ; InDir[14]~input ; 1             ;
 ; InDir[13]~input ; 1             ;
@@ -1019,7 +1019,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; InDir[0]           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; Clock              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; ResetSystem        ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; Save               ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SaveDir            ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; InDir[1]           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; InDir[2]           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; InDir[3]           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
@@ -1113,7 +1113,7 @@ Critical Warning (169085): No exact pin location assignment(s) for 35 pins of 35
     Info (169086): Pin InDir[0] not assigned to an exact location on the device
     Info (169086): Pin Clock not assigned to an exact location on the device
     Info (169086): Pin ResetSystem not assigned to an exact location on the device
-    Info (169086): Pin Save not assigned to an exact location on the device
+    Info (169086): Pin SaveDir not assigned to an exact location on the device
     Info (169086): Pin InDir[1] not assigned to an exact location on the device
     Info (169086): Pin InDir[2] not assigned to an exact location on the device
     Info (169086): Pin InDir[3] not assigned to an exact location on the device
@@ -1156,7 +1156,7 @@ Info (176215): I/O bank details before I/O pin placement
         Info (176213): I/O bank number 8A does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  2 pins available
         Info (176213): I/O bank number 8 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  5 pins available
         Info (176213): I/O bank number 9 does not use VREF pins and has undetermined VCCIO pins. 4 total pin(s) used --  0 pins available
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
@@ -1169,7 +1169,7 @@ Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.11 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.13 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -1180,9 +1180,9 @@ Warning (169177): 2 pins must meet Altera requirements for 3.3-, 3.0-, and 2.5-V
     Info (169178): Pin ResetSystem uses I/O standard 2.5 V at J6
 Info (144001): Generated suppressed messages file C:/Users/OMEN/Desktop/ProcesadorV2/output_files/DirRegister.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4947 megabytes
-    Info: Processing ended: Mon Nov 30 22:07:40 2020
-    Info: Elapsed time: 00:00:12
+    Info: Peak virtual memory: 4935 megabytes
+    Info: Processing ended: Tue Dec 01 10:41:04 2020
+    Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:06
 
 

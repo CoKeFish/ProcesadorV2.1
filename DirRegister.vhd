@@ -24,7 +24,7 @@ ENTITY DirRegister IS
 				--ENTRADAS------------------------------------
 				Clock 			 :IN STD_LOGIC; --Reloj del sistema
 				ResetSystem		 :IN STD_LOGIC; --Reset del sistema
-				Save				 :IN STD_LOGIC; --Señal de control para habilitar registro
+				SaveDir			 :IN STD_LOGIC; --Señal de control para habilitar registro
 				InDir		   	 :IN STD_LOGIC_VECTOR (15 DOWNTO 0); --Bus de 16 bits que viene de Selector_AC.
 				----------------------------------------------
 				--SALIDAS
@@ -54,22 +54,22 @@ BEGIN
 --******************************************************--
 	
 	
-		FF0  : DFFE PORT MAP (InDir(0),  Clock, ResetSystem, '1' , Save , DirOut(0));
-		FF1  : DFFE PORT MAP (InDir(1),  Clock, ResetSystem, '1' , Save , DirOut(1));
-		FF2  : DFFE PORT MAP (InDir(2),  Clock, ResetSystem, '1' , Save , DirOut(2));
-		FF3  : DFFE PORT MAP (InDir(3),  Clock, ResetSystem, '1' , Save , DirOut(3));
-		FF4  : DFFE PORT MAP (InDir(4),  Clock, ResetSystem, '1' , Save , DirOut(4));
-		FF5  : DFFE PORT MAP (InDir(5),  Clock, ResetSystem, '1' , Save , DirOut(5));
-		FF6  : DFFE PORT MAP (InDir(6),  Clock, ResetSystem, '1' , Save , DirOut(6));
-		FF7  : DFFE PORT MAP (InDir(7),  Clock, ResetSystem, '1' , Save , DirOut(7));
-		FF8  : DFFE PORT MAP (InDir(8),  Clock, ResetSystem, '1' , Save , DirOut(8));
-		FF9  : DFFE PORT MAP (InDir(9),  Clock, ResetSystem, '1' , Save , DirOut(9));
-		FF10 : DFFE PORT MAP (InDir(10), Clock, ResetSystem, '1' , Save , DirOut(10));
-		FF11 : DFFE PORT MAP (InDir(11), Clock, ResetSystem, '1' , Save , DirOut(11));
-		FF12 : DFFE PORT MAP (InDir(12), Clock, ResetSystem, '1' , Save , DirOut(12));
-		FF13 : DFFE PORT MAP (InDir(13), Clock, ResetSystem, '1' , Save , DirOut(13));
-		FF14 : DFFE PORT MAP (InDir(14), Clock, ResetSystem, '1' , Save , DirOut(14));
-		FF15 : DFFE PORT MAP (InDir(15), Clock, ResetSystem, '1' , Save , DirOut(15));
+		FF0  : DFFE PORT MAP (InDir(0),  Clock, ResetSystem, '1' , SaveDir , DirOut(0));
+		FF1  : DFFE PORT MAP (InDir(1),  Clock, ResetSystem, '1' , SaveDir , DirOut(1));
+		FF2  : DFFE PORT MAP (InDir(2),  Clock, ResetSystem, '1' , SaveDir , DirOut(2));
+		FF3  : DFFE PORT MAP (InDir(3),  Clock, ResetSystem, '1' , SaveDir , DirOut(3));
+		FF4  : DFFE PORT MAP (InDir(4),  Clock, ResetSystem, '1' , SaveDir , DirOut(4));
+		FF5  : DFFE PORT MAP (InDir(5),  Clock, ResetSystem, '1' , SaveDir , DirOut(5));
+		FF6  : DFFE PORT MAP (InDir(6),  Clock, ResetSystem, '1' , SaveDir , DirOut(6));
+		FF7  : DFFE PORT MAP (InDir(7),  Clock, ResetSystem, '1' , SaveDir , DirOut(7));
+		FF8  : DFFE PORT MAP (InDir(8),  Clock, ResetSystem, '1' , SaveDir , DirOut(8));
+		FF9  : DFFE PORT MAP (InDir(9),  Clock, ResetSystem, '1' , SaveDir , DirOut(9));
+		FF10 : DFFE PORT MAP (InDir(10), Clock, ResetSystem, '1' , SaveDir , DirOut(10));
+		FF11 : DFFE PORT MAP (InDir(11), Clock, ResetSystem, '1' , SaveDir , DirOut(11));
+		FF12 : DFFE PORT MAP (InDir(12), Clock, ResetSystem, '1' , SaveDir , DirOut(12));
+		FF13 : DFFE PORT MAP (InDir(13), Clock, ResetSystem, '1' , SaveDir , DirOut(13));
+		FF14 : DFFE PORT MAP (InDir(14), Clock, ResetSystem, '1' , SaveDir , DirOut(14));
+		FF15 : DFFE PORT MAP (InDir(15), Clock, ResetSystem, '1' , SaveDir , DirOut(15));
 	
 	--******************************************************--
 

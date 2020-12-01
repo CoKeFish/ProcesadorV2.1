@@ -3,7 +3,7 @@ $comment
 		vcd file AcumMUX.msim.vcd -direction
 $end
 $date
-	Tue Dec 01 06:58:25 2020
+	Tue Dec 01 09:58:25 2020
 $end
 $version
 	ModelSim Version 10.1d
