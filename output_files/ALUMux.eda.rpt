@@ -1,5 +1,5 @@
 EDA Netlist Writer report for ALUMux
-Tue Dec 01 19:03:59 2020
+Wed Dec 02 00:11:15 2020
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue Dec 01 19:03:59 2020 ;
+; EDA Netlist Writer Status ; Successful - Wed Dec 02 00:11:15 2020 ;
 ; Revision Name             ; ALUMux                                ;
 ; Top-level Entity Name     ; ALUMux                                ;
 ; Family                    ; Cyclone IV GX                         ;
@@ -50,7 +50,8 @@ applicable agreement for further details.
 ; Option                                                                                            ; Setting                   ;
 +---------------------------------------------------------------------------------------------------+---------------------------+
 ; Tool Name                                                                                         ; ModelSim-Altera (Verilog) ;
-; Generate netlist for functional simulation only                                                   ; On                        ;
+; Generate netlist for functional simulation only                                                   ; Off                       ;
+; Time scale                                                                                        ; 1 ps                      ;
 ; Truncate long hierarchy paths                                                                     ; Off                       ;
 ; Map illegal HDL characters                                                                        ; Off                       ;
 ; Flatten buses into individual nodes                                                               ; Off                       ;
@@ -65,13 +66,20 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------+---------------------------+
 
 
-+---------------------------------------------------------------+
-; Simulation Generated Files                                    ;
-+---------------------------------------------------------------+
-; Generated Files                                               ;
-+---------------------------------------------------------------+
-; C:/Users/OMEN/Desktop/ProcesadorV2/simulation/qsim//ALUMux.vo ;
-+---------------------------------------------------------------+
++-------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                          ;
++-------------------------------------------------------------------------------------+
+; Generated Files                                                                     ;
++-------------------------------------------------------------------------------------+
+; C:/Users/OMEN/Desktop/ProcesadorV2/simulation/qsim//ALUMux_6_1200mv_85c_slow.vo     ;
+; C:/Users/OMEN/Desktop/ProcesadorV2/simulation/qsim//ALUMux_6_1200mv_0c_slow.vo      ;
+; C:/Users/OMEN/Desktop/ProcesadorV2/simulation/qsim//ALUMux_min_1200mv_0c_fast.vo    ;
+; C:/Users/OMEN/Desktop/ProcesadorV2/simulation/qsim//ALUMux.vo                       ;
+; C:/Users/OMEN/Desktop/ProcesadorV2/simulation/qsim//ALUMux_6_1200mv_85c_v_slow.sdo  ;
+; C:/Users/OMEN/Desktop/ProcesadorV2/simulation/qsim//ALUMux_6_1200mv_0c_v_slow.sdo   ;
+; C:/Users/OMEN/Desktop/ProcesadorV2/simulation/qsim//ALUMux_min_1200mv_0c_v_fast.sdo ;
+; C:/Users/OMEN/Desktop/ProcesadorV2/simulation/qsim//ALUMux_v.sdo                    ;
++-------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -93,15 +101,20 @@ Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: programming logic devices manufactured by Altera and sold by 
     Info: Altera or its authorized distributors.  Please refer to the 
     Info: applicable agreement for further details.
-    Info: Processing started: Tue Dec 01 19:03:58 2020
-Info: Command: quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/OMEN/Desktop/ProcesadorV2/simulation/qsim/ ALUMux -c ALUMux
-Info (119004): Automatically selected device EP4CGX22CF19C6 for design ALUMux
-Info (119005): Fitting design with smaller device may be possible, but smaller device must be specified
+    Info: Processing started: Wed Dec 02 00:11:13 2020
+Info: Command: quartus_eda --functional=off --flatten_buses=off --timescale=1ps --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/OMEN/Desktop/ProcesadorV2/simulation/qsim/ ALUMux -c ALUMux
+Info (204019): Generated file ALUMux_6_1200mv_85c_slow.vo in folder "C:/Users/OMEN/Desktop/ProcesadorV2/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file ALUMux_6_1200mv_0c_slow.vo in folder "C:/Users/OMEN/Desktop/ProcesadorV2/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file ALUMux_min_1200mv_0c_fast.vo in folder "C:/Users/OMEN/Desktop/ProcesadorV2/simulation/qsim//" for EDA simulation tool
 Info (204019): Generated file ALUMux.vo in folder "C:/Users/OMEN/Desktop/ProcesadorV2/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file ALUMux_6_1200mv_85c_v_slow.sdo in folder "C:/Users/OMEN/Desktop/ProcesadorV2/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file ALUMux_6_1200mv_0c_v_slow.sdo in folder "C:/Users/OMEN/Desktop/ProcesadorV2/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file ALUMux_min_1200mv_0c_v_fast.sdo in folder "C:/Users/OMEN/Desktop/ProcesadorV2/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file ALUMux_v.sdo in folder "C:/Users/OMEN/Desktop/ProcesadorV2/simulation/qsim//" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4601 megabytes
-    Info: Processing ended: Tue Dec 01 19:03:59 2020
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 4606 megabytes
+    Info: Processing ended: Wed Dec 02 00:11:15 2020
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
 

@@ -28,7 +28,7 @@ ENTITY Computador IS
 				--SALIDAS
 				MemoryOUT				:OUT STD_LOGIC_VECTOR (22 DOWNTO 0);
 				Count						:OUT STD_LOGIC_VECTOR (15 DOWNTO 0);
-				Estados					:OUT STD_LOGIC_VECTOR (5 DOWNTO 0);
+				Estados					:OUT STD_LOGIC_VECTOR (49 DOWNTO 0);
 				SEnaMP					:OUT STD_LOGIC
 		);
 	
@@ -83,7 +83,7 @@ ARCHITECTURE	Computador OF Computador IS
 						Ena_Md_Write		:OUT STD_LOGIC;
 						--Test
 						Count					:OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
-						Estados				:OUT STD_LOGIC_VECTOR(5 DOWNTO 0)
+						Estados				:OUT STD_LOGIC_VECTOR(49 DOWNTO 0)
 				);
 			
 		END COMPONENT Procesador;

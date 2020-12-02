@@ -1,26 +1,31 @@
-# do PSRMux.do 
+# do Computador.do 
 # ** Warning: (vlib-34) Library already exists at "work".
 # 
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module PSRMux
+# -- Compiling module Computador
 # 
 # Top level modules:
-# 	PSRMux
+# 	Computador
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module PSRMux_vlg_sample_tst
-# -- Compiling module PSRMux_vlg_check_tst
-# -- Compiling module PSRMux_vlg_vec_tst
+# -- Compiling module Computador_vlg_sample_tst
+# -- Compiling module Computador_vlg_check_tst
+# -- Compiling module Computador_vlg_vec_tst
 # 
 # Top level modules:
-# 	PSRMux_vlg_vec_tst
-# vsim -L cycloneiv_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -voptargs=\"+acc\" -t 1ps -novopt work.PSRMux_vlg_vec_tst 
-# Loading work.PSRMux_vlg_vec_tst
-# Loading work.PSRMux
+# 	Computador_vlg_vec_tst
+# vsim -L cycloneiv_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -voptargs=\"+acc\" -t 1ps -novopt work.Computador_vlg_vec_tst 
+# Loading work.Computador_vlg_vec_tst
+# Loading work.Computador
 # Loading cycloneiv_ver.cycloneiv_io_obuf
 # Loading cycloneiv_ver.cycloneiv_io_ibuf
+# Loading altera_ver.dffeas
 # Loading cycloneiv_ver.cycloneiv_lcell_comb
-# Loading work.PSRMux_vlg_sample_tst
-# Loading work.PSRMux_vlg_check_tst
+# Loading cycloneiv_ver.cycloneiv_ram_block
+# Loading cycloneiv_ver.cycloneiv_ram_register
+# Loading cycloneiv_ver.cycloneiv_ram_pulse_generator
+# Loading work.Computador_vlg_sample_tst
+# Loading work.Computador_vlg_check_tst
+# Loading altera_ver.PRIM_GDFF_LOW
 # Simulation passed !
-# ** Note: $finish    : PSRMux.vwf.vt(223)
-#    Time: 1 us  Iteration: 0  Instance: /PSRMux_vlg_vec_tst/tb_out
+# ** Note: $finish    : Waveform9.vwf.vt(1778)
+#    Time: 2 us  Iteration: 0  Instance: /Computador_vlg_vec_tst/tb_out

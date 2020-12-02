@@ -36,7 +36,7 @@ ENTITY Procesador IS
 				Ena_Md_Write		:OUT STD_LOGIC;
 				--Test
 				Count					:OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
-				Estados				:OUT STD_LOGIC_VECTOR(5 DOWNTO 0)
+				Estados				:OUT STD_LOGIC_VECTOR(49 DOWNTO 0)
 		);
 	
 END ENTITY Procesador;
@@ -93,6 +93,7 @@ ARCHITECTURE	Procesador OF Procesador IS
 						Ena_Md_Read 			:OUT STD_LOGIC;--Habilitamos la memoria de datos para lectura
 						Ena_Md_Write			:OUT STD_LOGIC;--Habilitamos la memoria de datos para escritura
 						Ena_SP					:OUT STD_LOGIC;
+						Ena_AcALU				:OUT STD_LOGIC;
 								
 						--Control
 						Save_GPR					:OUT STD_LOGIC;--Guardamos el valor a la entrada de GPR
@@ -117,7 +118,7 @@ ARCHITECTURE	Procesador OF Procesador IS
 						
 						--Test   (salidas exclusivamente para realizar pruebas
 								
-						Estados 					:OUT STD_LOGIC_VECTOR(5 DOWNTO 0)
+						Estados 					:OUT STD_LOGIC_VECTOR(49 DOWNTO 0)
 				);
 			
 		END COMPONENT Control;
@@ -479,7 +480,7 @@ ARCHITECTURE	Procesador OF Procesador IS
 			SIGNAL SDirMp					:STD_LOGIC_VECTOR(15 DOWNTO 0);
 			SIGNAL TempStatusPSR			:STD_LOGIC_VECTOR(15 DOWNTO 0);
 			
-			SIGNAL SEstados					:STD_LOGIC_VECTOR(5 DOWNTO 0);
+			SIGNAL SEstados					:STD_LOGIC_VECTOR(49 DOWNTO 0);
 			
 			
 			
@@ -490,7 +491,7 @@ BEGIN
 	--******************************************************--
 	
 	
-		Count <= SDirMp;
+		Count <= AC_Out;
 		Dir_Mp <= SDirMp;
 		Estados <= SEstados;
 		B_Program_counter	:	ProgramCounter	PORT MAP (
@@ -513,6 +514,7 @@ BEGIN
 																			Ena_Md_Read,
 																			Ena_Md_Write,
 																			Ena_SP,
+																			Ena_AcALU,
 																			Save_GPR,
 																			Save_Acum,
 																			Save_PC,
@@ -552,9 +554,9 @@ BEGIN
 		B_ALU	:	ALU	PORT MAP	(									
 																			Clock,
 																			ResetSystem,
-																			Habilitar,
-																			Num_ALU,
+																			NOT (Habilitar),
 																			AC_out,
+																			Num_ALU,
 																			opGPR(3 DOWNTO 0),
 																			ResultALU,
 																			Disponibilidad,

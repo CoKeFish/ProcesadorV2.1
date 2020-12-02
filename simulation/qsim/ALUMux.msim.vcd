@@ -3,7 +3,7 @@ $comment
 		vcd file ALUMux.msim.vcd -direction
 $end
 $date
-	Tue Dec 01 19:04:01 2020
+	Wed Dec 02 00:11:16 2020
 $end
 $version
 	ModelSim Version 10.1d
@@ -57,32 +57,32 @@ $var wire 1 I ALUMUXOut[12]~output_o $end
 $var wire 1 J ALUMUXOut[13]~output_o $end
 $var wire 1 K ALUMUXOut[14]~output_o $end
 $var wire 1 L ALUMUXOut[15]~output_o $end
-$var wire 1 M Datoin_Md[0]~input_o $end
-$var wire 1 N DataGPR[0]~input_o $end
-$var wire 1 O SelectALU~input_o $end
+$var wire 1 M AC_Out[0]~input_o $end
+$var wire 1 N Datoin_Md[0]~input_o $end
+$var wire 1 O DataGPR[0]~input_o $end
 $var wire 1 P Ena_AcALU~input_o $end
-$var wire 1 Q ALUMUXOut~0_combout $end
-$var wire 1 R AC_Out[0]~input_o $end
+$var wire 1 Q SelectALU~input_o $end
+$var wire 1 R ALUMUXOut~0_combout $end
 $var wire 1 S ALUMUXOut~1_combout $end
-$var wire 1 T Datoin_Md[1]~input_o $end
-$var wire 1 U DataGPR[1]~input_o $end
-$var wire 1 V ALUMUXOut~2_combout $end
-$var wire 1 W AC_Out[1]~input_o $end
+$var wire 1 T AC_Out[1]~input_o $end
+$var wire 1 U Datoin_Md[1]~input_o $end
+$var wire 1 V DataGPR[1]~input_o $end
+$var wire 1 W ALUMUXOut~2_combout $end
 $var wire 1 X ALUMUXOut~3_combout $end
-$var wire 1 Y Datoin_Md[2]~input_o $end
+$var wire 1 Y AC_Out[2]~input_o $end
 $var wire 1 Z DataGPR[2]~input_o $end
-$var wire 1 [ ALUMUXOut~4_combout $end
-$var wire 1 \ AC_Out[2]~input_o $end
+$var wire 1 [ Datoin_Md[2]~input_o $end
+$var wire 1 \ ALUMUXOut~4_combout $end
 $var wire 1 ] ALUMUXOut~5_combout $end
 $var wire 1 ^ Datoin_Md[3]~input_o $end
 $var wire 1 _ DataGPR[3]~input_o $end
 $var wire 1 ` ALUMUXOut~6_combout $end
 $var wire 1 a AC_Out[3]~input_o $end
 $var wire 1 b ALUMUXOut~7_combout $end
-$var wire 1 c Datoin_Md[4]~input_o $end
+$var wire 1 c AC_Out[4]~input_o $end
 $var wire 1 d DataGPR[4]~input_o $end
-$var wire 1 e ALUMUXOut~8_combout $end
-$var wire 1 f AC_Out[4]~input_o $end
+$var wire 1 e Datoin_Md[4]~input_o $end
+$var wire 1 f ALUMUXOut~8_combout $end
 $var wire 1 g ALUMUXOut~9_combout $end
 $var wire 1 h Datoin_Md[5]~input_o $end
 $var wire 1 i DataGPR[5]~input_o $end
@@ -94,50 +94,50 @@ $var wire 1 n DataGPR[6]~input_o $end
 $var wire 1 o ALUMUXOut~12_combout $end
 $var wire 1 p AC_Out[6]~input_o $end
 $var wire 1 q ALUMUXOut~13_combout $end
-$var wire 1 r Datoin_Md[7]~input_o $end
+$var wire 1 r AC_Out[7]~input_o $end
 $var wire 1 s DataGPR[7]~input_o $end
-$var wire 1 t ALUMUXOut~14_combout $end
-$var wire 1 u AC_Out[7]~input_o $end
+$var wire 1 t Datoin_Md[7]~input_o $end
+$var wire 1 u ALUMUXOut~14_combout $end
 $var wire 1 v ALUMUXOut~15_combout $end
-$var wire 1 w Datoin_Md[8]~input_o $end
+$var wire 1 w AC_Out[8]~input_o $end
 $var wire 1 x DataGPR[8]~input_o $end
-$var wire 1 y ALUMUXOut~16_combout $end
-$var wire 1 z AC_Out[8]~input_o $end
+$var wire 1 y Datoin_Md[8]~input_o $end
+$var wire 1 z ALUMUXOut~16_combout $end
 $var wire 1 { ALUMUXOut~17_combout $end
-$var wire 1 | Datoin_Md[9]~input_o $end
+$var wire 1 | AC_Out[9]~input_o $end
 $var wire 1 } DataGPR[9]~input_o $end
-$var wire 1 ~ ALUMUXOut~18_combout $end
-$var wire 1 !! AC_Out[9]~input_o $end
+$var wire 1 ~ Datoin_Md[9]~input_o $end
+$var wire 1 !! ALUMUXOut~18_combout $end
 $var wire 1 "! ALUMUXOut~19_combout $end
-$var wire 1 #! Datoin_Md[10]~input_o $end
+$var wire 1 #! AC_Out[10]~input_o $end
 $var wire 1 $! DataGPR[10]~input_o $end
-$var wire 1 %! ALUMUXOut~20_combout $end
-$var wire 1 &! AC_Out[10]~input_o $end
+$var wire 1 %! Datoin_Md[10]~input_o $end
+$var wire 1 &! ALUMUXOut~20_combout $end
 $var wire 1 '! ALUMUXOut~21_combout $end
 $var wire 1 (! Datoin_Md[11]~input_o $end
 $var wire 1 )! DataGPR[11]~input_o $end
 $var wire 1 *! ALUMUXOut~22_combout $end
 $var wire 1 +! AC_Out[11]~input_o $end
 $var wire 1 ,! ALUMUXOut~23_combout $end
-$var wire 1 -! Datoin_Md[12]~input_o $end
-$var wire 1 .! DataGPR[12]~input_o $end
+$var wire 1 -! DataGPR[12]~input_o $end
+$var wire 1 .! Datoin_Md[12]~input_o $end
 $var wire 1 /! ALUMUXOut~24_combout $end
 $var wire 1 0! AC_Out[12]~input_o $end
 $var wire 1 1! ALUMUXOut~25_combout $end
-$var wire 1 2! Datoin_Md[13]~input_o $end
-$var wire 1 3! DataGPR[13]~input_o $end
+$var wire 1 2! DataGPR[13]~input_o $end
+$var wire 1 3! Datoin_Md[13]~input_o $end
 $var wire 1 4! ALUMUXOut~26_combout $end
 $var wire 1 5! AC_Out[13]~input_o $end
 $var wire 1 6! ALUMUXOut~27_combout $end
-$var wire 1 7! Datoin_Md[14]~input_o $end
-$var wire 1 8! DataGPR[14]~input_o $end
+$var wire 1 7! DataGPR[14]~input_o $end
+$var wire 1 8! Datoin_Md[14]~input_o $end
 $var wire 1 9! ALUMUXOut~28_combout $end
 $var wire 1 :! AC_Out[14]~input_o $end
 $var wire 1 ;! ALUMUXOut~29_combout $end
-$var wire 1 <! Datoin_Md[15]~input_o $end
-$var wire 1 =! DataGPR[15]~input_o $end
-$var wire 1 >! ALUMUXOut~30_combout $end
-$var wire 1 ?! AC_Out[15]~input_o $end
+$var wire 1 <! AC_Out[15]~input_o $end
+$var wire 1 =! Datoin_Md[15]~input_o $end
+$var wire 1 >! DataGPR[15]~input_o $end
+$var wire 1 ?! ALUMUXOut~30_combout $end
 $var wire 1 @! ALUMUXOut~31_combout $end
 $upscope $end
 $upscope $end
@@ -149,22 +149,22 @@ b1100000000000000 "
 b11110000000 #
 0$
 0%
-05
-04
-03
-02
-01
-00
-0/
-0.
-0-
-0,
-0+
-0*
-0)
-0(
-1'
-1&
+x5
+x4
+x3
+x2
+x1
+x0
+x/
+x.
+x-
+x,
+x+
+x*
+x)
+x(
+x'
+x&
 x6
 07
 18
@@ -172,201 +172,377 @@ x9
 1:
 1;
 1<
-0=
-0>
-0?
-0@
-0A
-0B
-0C
-0D
-0E
-0F
-0G
-0H
-0I
-0J
-1K
-1L
-0M
+x=
+x>
+x?
+x@
+xA
+xB
+xC
+xD
+xE
+xF
+xG
+xH
+xI
+xJ
+xK
+xL
+1M
 0N
 0O
 0P
 0Q
-1R
-0S
-0T
+xR
+xS
+1T
 0U
 0V
-1W
-0X
-0Y
+xW
+xX
+1Y
 0Z
 0[
-1\
-0]
+x\
+x]
 0^
 0_
-0`
+x`
 0a
-0b
+xb
 0c
 0d
 0e
-0f
-0g
+xf
+xg
 0h
 0i
-0j
+xj
 0k
-0l
+xl
 0m
 0n
-0o
+xo
 0p
-0q
-1r
+xq
+0r
 0s
-0t
-0u
-0v
-1w
+1t
+xu
+xv
+0w
 0x
-0y
-0z
-0{
-1|
+1y
+xz
+x{
+0|
 0}
-0~
-0!!
-0"!
-1#!
+1~
+x!!
+x"!
+0#!
 0$!
-0%!
-0&!
-0'!
+1%!
+x&!
+x'!
 0(!
 0)!
-0*!
+x*!
 0+!
-0,!
+x,!
 0-!
 0.!
-0/!
+x/!
 00!
-01!
+x1!
 02!
 03!
-04!
+x4!
 05!
-06!
-07!
-18!
-19!
+x6!
+17!
+08!
+x9!
 0:!
-1;!
+x;!
 0<!
-1=!
+0=!
 1>!
-0?!
-1@!
+x?!
+x@!
 $end
+#1783
+0R
+#4069
+0o
+#4079
+0W
+#4174
+0f
+#4191
+0*!
+#4207
+1?!
+#4252
+0j
+#4260
+0`
+#4275
+0\
+#4282
+0u
+#4284
+0!!
+#4293
+0/!
+#4298
+0S
+#4321
+0z
+#4324
+0&!
+#4370
+04!
+#4484
+19!
+#4513
+1@!
+#4526
+0X
+#4592
+0]
+#4600
+0v
+#4602
+0"!
+#4620
+0g
+#4639
+0{
+#4642
+0'!
+#4677
+0q
+#4801
+0,!
+#4860
+0l
+#4870
+0b
+#4900
+01!
+#4977
+06!
+#5045
+1;!
+#7508
+0>
+04
+#7690
+0E
+0-
+#7816
+0?
+03
+#7823
+0A
+01
+#7851
+1L
+1&
+#7973
+0=
+05
+#8066
+0@
+02
+#8159
+1K
+1'
+#8223
+0G
+0+
+#8312
+0I
+0)
+#8430
+0C
+0/
+#8440
+0J
+0(
+#8516
+0H
+0*
+#8641
+0D
+0.
+#8825
+0B
+00
+#8923
+0F
+0,
 #40000
 1$
-1P
 06
-0>!
-09!
-1]
-1X
+#40537
+1P
+#44491
 1S
-1?
-1>
-1=
-13
-14
-15
+#44494
+0?!
+#44594
+1]
+#44639
+1X
+#44680
+09!
+#44814
 0@!
+#45287
 0;!
+#47742
+1>
+14
+#47939
+1?
+13
+#48033
 0L
-0K
 0&
+#48277
+0K
 0'
+#48280
+1=
+15
 #240000
 0$
-0P
 16
-1>!
-19!
-0]
-0X
+#240711
+0P
+#245009
 0S
-0?
-0>
-0=
-03
-04
-05
+#245013
+1?!
+#245026
+0]
+#245187
+0X
+#245195
+19!
+#245319
 1@!
+#245756
 1;!
+#248169
+0>
+04
+#248250
+0?
+03
+#248657
 1L
-1K
 1&
+#248684
+0=
+05
+#248870
+1K
 1'
 #510000
 1%
-1O
 06
-0>!
+#510537
+1Q
+#514390
+0?!
+#514391
 09!
-1%!
-1~
-1y
-1t
+#514494
+1u
+#514496
+1!!
+#514529
+1z
+#514532
+1&!
+#514710
 0@!
-0;!
-1'!
-1"!
-1{
+#514798
 1v
+#514800
+1"!
+#514833
+1{
+#514836
+1'!
+#514998
+0;!
+#517929
 0L
-0K
-1G
-1F
-1E
-1D
 0&
+#517988
+0K
 0'
-1+
-1,
+#518012
+1E
 1-
+#518498
+1G
+1+
+#518895
+1D
 1.
+#519169
+1F
+1,
 #600000
 0%
-0O
 16
-1>!
+#600711
+0Q
+#604918
+1?!
+#604919
 19!
-0%!
-0~
-0y
-0t
+#604993
+0u
+#604995
+0!!
+#605032
+0z
+#605035
+0&!
+#605224
 1@!
-1;!
-0'!
-0"!
-0{
+#605311
 0v
-1L
-1K
-0G
-0F
+#605313
+0"!
+#605350
+0{
+#605353
+0'!
+#605480
+1;!
+#608401
 0E
-0D
-1&
-1'
-0+
-0,
 0-
+#608562
+1L
+1&
+#608594
+1K
+1'
+#608934
+0G
+0+
+#609352
+0D
 0.
+#609634
+0F
+0,
 #1000000

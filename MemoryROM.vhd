@@ -141,7 +141,7 @@ END SYN;
 -- Retrieval info: CONNECT: q 0 0 23 0 @q_a 0 0 23 0
 -- Retrieval info: GEN_FILE: TYPE_NORMAL MemoryROM.vhd TRUE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL MemoryROM.inc FALSE
--- Retrieval info: GEN_FILE: TYPE_NORMAL MemoryROM.cmp FALSE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL MemoryROM.cmp TRUE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL MemoryROM.bsf FALSE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL MemoryROM_inst.vhd FALSE
 -- Retrieval info: LIB_FILE: altera_mf
