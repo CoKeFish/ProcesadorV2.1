@@ -8,6 +8,6 @@ entity ProgramStatus is
         SaveInt         : in     vl_logic;
         IntE            : in     vl_logic;
         Banderas        : in     vl_logic_vector(3 downto 0);
-        StatusR         : out    vl_logic_vector(4 downto 0)
+        PSROut          : out    vl_logic_vector(4 downto 0)
     );
 end ProgramStatus;

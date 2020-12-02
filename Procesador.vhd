@@ -69,7 +69,7 @@ ARCHITECTURE	Procesador OF Procesador IS
 	
 		COMPONENT Control IS
 			
-			PORT (
+					PORT (
 						--ENTRADAS
 						Clock 					:IN STD_LOGIC;--Reloj del sistema
 						ResetSystem				:IN STD_LOGIC;--Señal para restablecer los valores del sistema
@@ -78,33 +78,44 @@ ARCHITECTURE	Procesador OF Procesador IS
 						Disponible				:IN STD_LOGIC;
 						
 						--GPR
-						Operacion				:IN STD_LOGIC_VECTOR(5 DOWNTO 0);--Operacion de la instruccion
-						ModoDir					:IN STD_LOGIC_VECTOR(1 DOWNTO 0);--Modo de direccionamiento de la instruccion
+						OpControl				:IN STD_LOGIC_VECTOR(4 DOWNTO 0);--Operacion de la instruccion
+						ModeDir					:IN STD_LOGIC_VECTOR(1 DOWNTO 0);--Modo de direccionamiento de la instruccion
 						
 						--Status
-						Overflow					:IN STD_LOGIC;--Verificamos si hay overflow
-						Result_Negative		:IN STD_LOGIC;--Verificamos si el resultado es negativo
-						Result_Zero				:IN STD_LOGIC;--Verificamos si el resultado es cero
-						Result_Carry			:IN STD_LOGIC;--Verificamos si el resultado tiene carry
+						PSROut					:IN STD_LOGIC_VECTOR(4 DOWNTO 0);
 						
 						--------------------------------------------------
 						--SALIDAS				
-						
+							
 						--Enable
-						
+								
 						Ena_Mp 					:OUT STD_LOGIC;--Habilitamos la memoria de programa
 						Ena_Md_Read 			:OUT STD_LOGIC;--Habilitamos la memoria de datos para lectura
 						Ena_Md_Write			:OUT STD_LOGIC;--Habilitamos la memoria de datos para escritura
-						
+						Ena_SP					:OUT STD_LOGIC;
+								
 						--Control
 						Save_GPR					:OUT STD_LOGIC;--Guardamos el valor a la entrada de GPR
 						Save_Acum				:OUT STD_LOGIC;--Guardamos el valor a la entrada del acumulador
 						Save_PC					:OUT STD_LOGIC;--Guardamos el valor a la entrada del program counter
+						SaveB						:OUT STD_LOGIC;
+						SaveInt					:OUT STD_LOGIC;
+						SaveDirR					:OUT STD_LOGIC;
+						
 						Inc_PC					:OUT STD_LOGIC;--Incrementamos el valor del program counter
-						Use_ALU					:OUT STD_LOGIC;--Realizamos una operacion con la ALU
+						Habilitar				:OUT STD_LOGIC;--Realizamos una operacion con la ALU
+						IncDec 					:OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+						
+						--Select
+						SelectALU				:OUT STD_LOGIC;
+						SelectAcum				:OUT STD_LOGIC;
+						SelectPC					:OUT STD_LOGIC;
+						SelectPSR				:OUT STD_LOGIC;
+						SelectDataMd			:OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+						SelectDir				:OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
 						
 						--Test   (salidas exclusivamente para realizar pruebas
-						
+								
 						Estados 					:OUT STD_LOGIC_VECTOR(5 DOWNTO 0)
 				);
 			
@@ -119,35 +130,52 @@ ARCHITECTURE	Procesador OF Procesador IS
 	
 		COMPONENT ProgramCounter IS
 			
-			PORT (
-						--ENTRADAS
-						Clock 				:IN STD_LOGIC;--Reloj del sistema
-						ResetSystem			:IN STD_LOGIC;--Reset del sistema
-						Inc_PC				:IN STD_LOGIC;--Incrementamos el program counter
-						Save_PC      		:IN STD_LOGIC;
-						PC_in       		:IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-						--------------------------------------------------
-						--SALIDAS
-						PC_out    			:OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
-				);
+					PORT (
+								--ENTRADAS
+								Clock 				:IN STD_LOGIC;--Reloj del sistema
+								ResetSystem			:IN STD_LOGIC;--Reset del sistema
+								Inc_PC				:IN STD_LOGIC;--Incrementamos el program counter
+								Save_PC      		:IN STD_LOGIC;
+								PC_in       		:IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+								--------------------------------------------------
+								--SALIDAS
+								PC_out    			:OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
+						);
 			
 		END COMPONENT ProgramCounter;
+		
+		
+		
+		
 	--******************************************************--
+	
+	
+	
+	
 		COMPONENT GeneralPR IS
-		
-		PORT (
-					--ENTRADAS------------------------------------
-					Clock 			 :IN STD_LOGIC; --Reloj del sistema
-					ResetSystem		 :IN STD_LOGIC; --Reset del sistema
-					Save_GPR			 :IN STD_LOGIC; --Señal de control para habilitar registro
-					Data_Mp	 		 :IN STD_LOGIC_VECTOR (22 DOWNTO 0); --Bus de 16 bits que viene de la memoria de datos.
-					----------------------------------------------
-					--SALIDAS
-					GPR_out		    :OUT STD_LOGIC_VECTOR (22 DOWNTO 0) --Valor actual del registro RDATO.
-			);
-		
+			
+				PORT (
+							--ENTRADAS------------------------------------
+							Clock 			 :IN STD_LOGIC; --Reloj del sistema
+							ResetSystem		 :IN STD_LOGIC; --Reset del sistema
+							Save_GPR			 :IN STD_LOGIC; --Señal de control para habilitar registro
+							InGPR		 		 :IN STD_LOGIC_VECTOR (22 DOWNTO 0); --Bus de 16 bits que viene de la memoria de datos.
+							----------------------------------------------
+							--SALIDAS
+							DataGPR		    :OUT STD_LOGIC_VECTOR (15 DOWNTO 0); --Valor actual del registro RDATO.
+							OpGPR			    :OUT STD_LOGIC_VECTOR (4 DOWNTO 0);
+							ModeGPR		    :OUT STD_LOGIC_VECTOR (1 DOWNTO 0)
+					);
+			
 		END COMPONENT ;
+		
+		
+		
+		
 	--******************************************************--
+	
+	
+	
 		COMPONENT ALU IS
 			
 			PORT (
@@ -162,30 +190,241 @@ ARCHITECTURE	Procesador OF Procesador IS
 						--SALIDAS			
 						
 						ResultadoTotal			:OUT STD_LOGIC_VECTOR (15 DOWNTO 0);--Registro de resultado
-						Disponible				:OUT STD_LOGIC;--Salida indica que el sistema puede recibir datos a la entrada.
+						Disponibilidad			:OUT STD_LOGIC;--Salida indica que el sistema puede recibir datos a la entrada.
 						Resultado_Z				:OUT STD_LOGIC;--Salida que indica si el resultado es cero
 						Resultado_C				:OUT STD_LOGIC;--Salida que indica si la suma tuvo carry
 						Resultado_O				:OUT STD_LOGIC;--Resultado que me indica si la operacion dio overflow
 						Resultado_N				:OUT STD_LOGIC--Salida que indica si el resultaod es un numero negativo
+						--StateQ					:OUT STD_LOGIC;--Desplazamiento de registro_A_Q_E
+						--EstadosM					:OUT STD_LOGIC_VECTOR (5 DOWNTO 0)--Estados de control
 				);
 			
 		END COMPONENT ALU;
+		
+		
+		
+		
 	--******************************************************--
+	
+	
+	
+	
 		COMPONENT Acumulador IS
-		
-		PORT (
-					--ENTRADAS------------------------------------
-					Clock 			 :IN STD_LOGIC; --Reloj del sistema
-					ResetSystem		 :IN STD_LOGIC; --Reset del sistema
-					Save_Acum			 :IN STD_LOGIC; --Señal de control para habilitar registro
-					AC_in		   	 :IN STD_LOGIC_VECTOR (15 DOWNTO 0); --Bus de 16 bits que viene de Selector_AC.
-					----------------------------------------------
-					--SALIDAS
-					AC_out		    :OUT STD_LOGIC_VECTOR (15 DOWNTO 0) --Valor actual del registro acumulador.
+			
+			PORT (
+						--ENTRADAS------------------------------------
+						Clock 			 :IN STD_LOGIC; --Reloj del sistema
+						ResetSystem		 :IN STD_LOGIC; --Reset del sistema
+						Save_Acum		 :IN STD_LOGIC; --Señal de control para habilitar registro
+						AC_in		   	 :IN STD_LOGIC_VECTOR (15 DOWNTO 0); --Bus de 16 bits que viene de Selector_AC.
+						----------------------------------------------
+						--SALIDAS
+						AC_out		    :OUT STD_LOGIC_VECTOR (15 DOWNTO 0) --Valor actual del registro acumulador.
 			);
-		
+			
 		END COMPONENT Acumulador;
+		
+		
+		
+		
 	--******************************************************--
+	
+	
+	
+	
+	COMPONENT AcumMUX IS
+	
+	PORT (
+				--ENTRADAS
+				DataMd					:IN STD_LOGIC_VECTOR (15 DOWNTO 0);--Señal de 16 bits correspondiente al numero_2
+				ResultALU				:IN STD_LOGIC_VECTOR (15 DOWNTO 0);--Señal que viene de bloque NOT de numero_2
+				SelectAcum				:IN STD_LOGIC;--Señal que viene control, indica que se realizará una resta
+				--------------------------------------------------
+				--SALIDAS
+				AcumMUXOut				:OUT STD_LOGIC_VECTOR (15 DOWNTO 0)--Señal de numero_2-M o NOT numero_2-M 
+				
+		);
+	
+	END COMPONENT AcumMUX;
+	
+	
+	
+	--******************************************************--
+	
+	
+	
+	
+	COMPONENT DirRegister IS
+	
+	PORT (
+				--ENTRADAS------------------------------------
+				Clock 			 :IN STD_LOGIC; --Reloj del sistema
+				ResetSystem		 :IN STD_LOGIC; --Reset del sistema
+				SaveDir			 :IN STD_LOGIC; --Señal de control para habilitar registro
+				InDir		   	 :IN STD_LOGIC_VECTOR (15 DOWNTO 0); --Bus de 16 bits que viene de Selector_AC.
+				----------------------------------------------
+				--SALIDAS
+				DirOut		    :OUT STD_LOGIC_VECTOR (15 DOWNTO 0) --Valor actual del registro acumulador.
+	);
+	
+	END COMPONENT DirRegister;
+	
+	
+	
+	
+	--******************************************************--
+	
+	
+	
+	COMPONENT ProgramCounterMUX IS
+	
+	PORT (
+				--ENTRADAS
+				DataMd				:IN STD_LOGIC_VECTOR (15 DOWNTO 0);--Señal de 16 bits correspondiente al numero_2
+				DataGPR				:IN STD_LOGIC_VECTOR (15 DOWNTO 0);--Señal que viene de bloque NOT de numero_2
+				SelectPC				:IN STD_LOGIC;--Señal que viene control, indica que se realizará una resta
+				--------------------------------------------------
+				--SALIDAS
+				PCMUXOut				:OUT STD_LOGIC_VECTOR (15 DOWNTO 0)--Señal de numero_2-M o NOT numero_2-M 
+				
+		);
+	
+	END COMPONENT ProgramCounterMUX;
+	
+	
+	
+	--******************************************************--
+	
+	
+	
+	COMPONENT ProgramStatus IS
+	
+	PORT (
+				--ENTRADAS------------------------------------
+				Clock 			 :IN STD_LOGIC; --Reloj del sistema
+				ResetSystem		 :IN STD_LOGIC; --Reset del sistema
+				SaveB  			 :IN STD_LOGIC; --Señal de control para habilitar el guardado de las banderas
+				SaveInt			 :IN STD_LOGIC; --Señal de control para habilitar el estado de las interrupciones.
+				IntE  			 :IN STD_LOGIC; --Señal de habilitar o desabilitar las interrupciones globales.
+				Banderas  		 :IN STD_LOGIC_VECTOR(3 DOWNTO 0); --Bus de datos de 4 bits que contiene el estado de las banderas.
+				----------------------------------------------
+				--SALIDAS
+				PSROut		    :OUT STD_LOGIC_VECTOR(4 DOWNTO 0) --Bus de 5 bits que contiene el estado del programa.
+		);
+	
+	END COMPONENT ProgramStatus;
+	
+	
+	
+	--******************************************************--
+	
+	
+	COMPONENT DirMdMux IS
+	
+	PORT (
+				--ENTRADAS
+				DataGPR				:IN STD_LOGIC_VECTOR (15 DOWNTO 0);--Señal de 16 bits correspondiente al numero_2
+				SP_out				:IN STD_LOGIC_VECTOR (15 DOWNTO 0);--Señal que viene de bloque NOT de numero_2
+				DirROut				:IN STD_LOGIC_VECTOR (15 DOWNTO 0);
+				SelectDir			:IN STD_LOGIC_VECTOR (1 DOWNTO 0);--Señal que viene control, indica que se realizará una resta
+				--------------------------------------------------
+				--SALIDAS
+				DirMd				:OUT STD_LOGIC_VECTOR (15 DOWNTO 0)--Señal de numero_2-M o NOT numero_2-M 
+				
+		);
+	
+	END COMPONENT DirMdMux;
+	
+	
+	
+	--******************************************************--
+	
+	
+	
+	COMPONENT Data_MdMux IS
+	
+	PORT (
+				--ENTRADAS
+				DirMd					:IN STD_LOGIC_VECTOR (15 DOWNTO 0);--Señal de 16 bits correspondiente al numero_2
+				ACOut					:IN STD_LOGIC_VECTOR (15 DOWNTO 0);--Señal que viene de bloque NOT de numero_2
+				PSROut				:IN STD_LOGIC_VECTOR (15 DOWNTO 0);--Señal de 16 bits correspondiente al numero_2
+				GPROut				:IN STD_LOGIC_VECTOR (15 DOWNTO 0);--Señal que viene de bloque NOT de numero_2
+				SelectDataMd		:IN STD_LOGIC_VECTOR (1 DOWNTO 0);--Señal que viene control, indica que se realizará una resta
+				--------------------------------------------------
+				--SALIDAS
+				DatOut_Md				:OUT STD_LOGIC_VECTOR (15 DOWNTO 0)--Señal de numero_2-M o NOT numero_2-M 
+				
+		);
+	
+	END COMPONENT Data_MdMux;
+	
+	
+	
+	--******************************************************--
+	
+	
+	COMPONENT ALUMux IS
+	
+	PORT (
+				--ENTRADAS
+				Datoin_Md			:IN STD_LOGIC_VECTOR (15 DOWNTO 0);--Señal de 16 bits correspondiente al numero_2
+				DataGPR				:IN STD_LOGIC_VECTOR (15 DOWNTO 0);--Señal que viene de bloque NOT de numero_2
+				AC_Out				:IN STD_LOGIC_VECTOR (15 DOWNTO 0);
+				SelectALU			:IN STD_LOGIC;--Señal que viene control, indica que se realizará una resta
+				Ena_AcALU			:IN STD_LOGIC;
+				--------------------------------------------------
+				--SALIDAS
+				ALUMUXOut			:OUT STD_LOGIC_VECTOR (15 DOWNTO 0)--Señal de numero_2-M o NOT numero_2-M 
+				
+		);
+	
+	END COMPONENT ALUMux;
+	
+	
+	
+	--******************************************************--
+	
+	
+	
+	COMPONENT StackPointer IS
+	
+	PORT (
+				--ENTRADAS------------------------------------
+				Clock 			:IN STD_LOGIC; --Reloj del sistema
+				ResetSystem		:IN STD_LOGIC; --Reset del sistema
+				Ena_SP			:IN STD_LOGIC; --Señal de control que habilita contador
+				IncDec         :IN STD_LOGIC_VECTOR(1 DOWNTO 0); --Señal de control que indica conteo Asc-Desc     
+				----------------------------------------------
+				--SALIDAS
+				SP_out   		:OUT STD_LOGIC_VECTOR(15 DOWNTO 0) --Valor actual del contador
+		);
+	
+	END COMPONENT StackPointer;
+	
+	
+	
+	
+	--******************************************************--
+	
+	
+	
+	COMPONENT PSRMux IS
+	
+	PORT (
+				--ENTRADAS
+				Datoin_Md			:IN STD_LOGIC_VECTOR (4 DOWNTO 0);--Señal de 16 bits correspondiente al numero_2
+				ALUStatus			:IN STD_LOGIC_VECTOR (3 DOWNTO 0);--Señal que viene de bloque NOT de numero_2
+				SelectPSR			:IN STD_LOGIC;--Señal que viene control, indica que se realizará una resta
+				--------------------------------------------------
+				--SALIDAS
+				Banderas			:OUT STD_LOGIC_VECTOR (4 DOWNTO 0)--Señal de numero_2-M o NOT numero_2-M 
+				
+		);
+	
+	END COMPONENT PSRMux;
+	
+	
+	
 	
 	--******************************************************--
 

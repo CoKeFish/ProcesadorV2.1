@@ -1,0 +1,372 @@
+$comment
+	File created using the following command:
+		vcd file ALUMux.msim.vcd -direction
+$end
+$date
+	Tue Dec 01 19:04:01 2020
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module ALUMux_vlg_vec_tst $end
+$var reg 16 ! AC_Out [15:0] $end
+$var reg 16 " DataGPR [15:0] $end
+$var reg 16 # Datoin_Md [15:0] $end
+$var reg 1 $ Ena_AcALU $end
+$var reg 1 % SelectALU $end
+$var wire 1 & ALUMUXOut [15] $end
+$var wire 1 ' ALUMUXOut [14] $end
+$var wire 1 ( ALUMUXOut [13] $end
+$var wire 1 ) ALUMUXOut [12] $end
+$var wire 1 * ALUMUXOut [11] $end
+$var wire 1 + ALUMUXOut [10] $end
+$var wire 1 , ALUMUXOut [9] $end
+$var wire 1 - ALUMUXOut [8] $end
+$var wire 1 . ALUMUXOut [7] $end
+$var wire 1 / ALUMUXOut [6] $end
+$var wire 1 0 ALUMUXOut [5] $end
+$var wire 1 1 ALUMUXOut [4] $end
+$var wire 1 2 ALUMUXOut [3] $end
+$var wire 1 3 ALUMUXOut [2] $end
+$var wire 1 4 ALUMUXOut [1] $end
+$var wire 1 5 ALUMUXOut [0] $end
+$var wire 1 6 sampler $end
+$scope module i1 $end
+$var wire 1 7 gnd $end
+$var wire 1 8 vcc $end
+$var wire 1 9 unknown $end
+$var tri1 1 : devclrn $end
+$var tri1 1 ; devpor $end
+$var tri1 1 < devoe $end
+$var wire 1 = ALUMUXOut[0]~output_o $end
+$var wire 1 > ALUMUXOut[1]~output_o $end
+$var wire 1 ? ALUMUXOut[2]~output_o $end
+$var wire 1 @ ALUMUXOut[3]~output_o $end
+$var wire 1 A ALUMUXOut[4]~output_o $end
+$var wire 1 B ALUMUXOut[5]~output_o $end
+$var wire 1 C ALUMUXOut[6]~output_o $end
+$var wire 1 D ALUMUXOut[7]~output_o $end
+$var wire 1 E ALUMUXOut[8]~output_o $end
+$var wire 1 F ALUMUXOut[9]~output_o $end
+$var wire 1 G ALUMUXOut[10]~output_o $end
+$var wire 1 H ALUMUXOut[11]~output_o $end
+$var wire 1 I ALUMUXOut[12]~output_o $end
+$var wire 1 J ALUMUXOut[13]~output_o $end
+$var wire 1 K ALUMUXOut[14]~output_o $end
+$var wire 1 L ALUMUXOut[15]~output_o $end
+$var wire 1 M Datoin_Md[0]~input_o $end
+$var wire 1 N DataGPR[0]~input_o $end
+$var wire 1 O SelectALU~input_o $end
+$var wire 1 P Ena_AcALU~input_o $end
+$var wire 1 Q ALUMUXOut~0_combout $end
+$var wire 1 R AC_Out[0]~input_o $end
+$var wire 1 S ALUMUXOut~1_combout $end
+$var wire 1 T Datoin_Md[1]~input_o $end
+$var wire 1 U DataGPR[1]~input_o $end
+$var wire 1 V ALUMUXOut~2_combout $end
+$var wire 1 W AC_Out[1]~input_o $end
+$var wire 1 X ALUMUXOut~3_combout $end
+$var wire 1 Y Datoin_Md[2]~input_o $end
+$var wire 1 Z DataGPR[2]~input_o $end
+$var wire 1 [ ALUMUXOut~4_combout $end
+$var wire 1 \ AC_Out[2]~input_o $end
+$var wire 1 ] ALUMUXOut~5_combout $end
+$var wire 1 ^ Datoin_Md[3]~input_o $end
+$var wire 1 _ DataGPR[3]~input_o $end
+$var wire 1 ` ALUMUXOut~6_combout $end
+$var wire 1 a AC_Out[3]~input_o $end
+$var wire 1 b ALUMUXOut~7_combout $end
+$var wire 1 c Datoin_Md[4]~input_o $end
+$var wire 1 d DataGPR[4]~input_o $end
+$var wire 1 e ALUMUXOut~8_combout $end
+$var wire 1 f AC_Out[4]~input_o $end
+$var wire 1 g ALUMUXOut~9_combout $end
+$var wire 1 h Datoin_Md[5]~input_o $end
+$var wire 1 i DataGPR[5]~input_o $end
+$var wire 1 j ALUMUXOut~10_combout $end
+$var wire 1 k AC_Out[5]~input_o $end
+$var wire 1 l ALUMUXOut~11_combout $end
+$var wire 1 m Datoin_Md[6]~input_o $end
+$var wire 1 n DataGPR[6]~input_o $end
+$var wire 1 o ALUMUXOut~12_combout $end
+$var wire 1 p AC_Out[6]~input_o $end
+$var wire 1 q ALUMUXOut~13_combout $end
+$var wire 1 r Datoin_Md[7]~input_o $end
+$var wire 1 s DataGPR[7]~input_o $end
+$var wire 1 t ALUMUXOut~14_combout $end
+$var wire 1 u AC_Out[7]~input_o $end
+$var wire 1 v ALUMUXOut~15_combout $end
+$var wire 1 w Datoin_Md[8]~input_o $end
+$var wire 1 x DataGPR[8]~input_o $end
+$var wire 1 y ALUMUXOut~16_combout $end
+$var wire 1 z AC_Out[8]~input_o $end
+$var wire 1 { ALUMUXOut~17_combout $end
+$var wire 1 | Datoin_Md[9]~input_o $end
+$var wire 1 } DataGPR[9]~input_o $end
+$var wire 1 ~ ALUMUXOut~18_combout $end
+$var wire 1 !! AC_Out[9]~input_o $end
+$var wire 1 "! ALUMUXOut~19_combout $end
+$var wire 1 #! Datoin_Md[10]~input_o $end
+$var wire 1 $! DataGPR[10]~input_o $end
+$var wire 1 %! ALUMUXOut~20_combout $end
+$var wire 1 &! AC_Out[10]~input_o $end
+$var wire 1 '! ALUMUXOut~21_combout $end
+$var wire 1 (! Datoin_Md[11]~input_o $end
+$var wire 1 )! DataGPR[11]~input_o $end
+$var wire 1 *! ALUMUXOut~22_combout $end
+$var wire 1 +! AC_Out[11]~input_o $end
+$var wire 1 ,! ALUMUXOut~23_combout $end
+$var wire 1 -! Datoin_Md[12]~input_o $end
+$var wire 1 .! DataGPR[12]~input_o $end
+$var wire 1 /! ALUMUXOut~24_combout $end
+$var wire 1 0! AC_Out[12]~input_o $end
+$var wire 1 1! ALUMUXOut~25_combout $end
+$var wire 1 2! Datoin_Md[13]~input_o $end
+$var wire 1 3! DataGPR[13]~input_o $end
+$var wire 1 4! ALUMUXOut~26_combout $end
+$var wire 1 5! AC_Out[13]~input_o $end
+$var wire 1 6! ALUMUXOut~27_combout $end
+$var wire 1 7! Datoin_Md[14]~input_o $end
+$var wire 1 8! DataGPR[14]~input_o $end
+$var wire 1 9! ALUMUXOut~28_combout $end
+$var wire 1 :! AC_Out[14]~input_o $end
+$var wire 1 ;! ALUMUXOut~29_combout $end
+$var wire 1 <! Datoin_Md[15]~input_o $end
+$var wire 1 =! DataGPR[15]~input_o $end
+$var wire 1 >! ALUMUXOut~30_combout $end
+$var wire 1 ?! AC_Out[15]~input_o $end
+$var wire 1 @! ALUMUXOut~31_combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b111 !
+b1100000000000000 "
+b11110000000 #
+0$
+0%
+05
+04
+03
+02
+01
+00
+0/
+0.
+0-
+0,
+0+
+0*
+0)
+0(
+1'
+1&
+x6
+07
+18
+x9
+1:
+1;
+1<
+0=
+0>
+0?
+0@
+0A
+0B
+0C
+0D
+0E
+0F
+0G
+0H
+0I
+0J
+1K
+1L
+0M
+0N
+0O
+0P
+0Q
+1R
+0S
+0T
+0U
+0V
+1W
+0X
+0Y
+0Z
+0[
+1\
+0]
+0^
+0_
+0`
+0a
+0b
+0c
+0d
+0e
+0f
+0g
+0h
+0i
+0j
+0k
+0l
+0m
+0n
+0o
+0p
+0q
+1r
+0s
+0t
+0u
+0v
+1w
+0x
+0y
+0z
+0{
+1|
+0}
+0~
+0!!
+0"!
+1#!
+0$!
+0%!
+0&!
+0'!
+0(!
+0)!
+0*!
+0+!
+0,!
+0-!
+0.!
+0/!
+00!
+01!
+02!
+03!
+04!
+05!
+06!
+07!
+18!
+19!
+0:!
+1;!
+0<!
+1=!
+1>!
+0?!
+1@!
+$end
+#40000
+1$
+1P
+06
+0>!
+09!
+1]
+1X
+1S
+1?
+1>
+1=
+13
+14
+15
+0@!
+0;!
+0L
+0K
+0&
+0'
+#240000
+0$
+0P
+16
+1>!
+19!
+0]
+0X
+0S
+0?
+0>
+0=
+03
+04
+05
+1@!
+1;!
+1L
+1K
+1&
+1'
+#510000
+1%
+1O
+06
+0>!
+09!
+1%!
+1~
+1y
+1t
+0@!
+0;!
+1'!
+1"!
+1{
+1v
+0L
+0K
+1G
+1F
+1E
+1D
+0&
+0'
+1+
+1,
+1-
+1.
+#600000
+0%
+0O
+16
+1>!
+19!
+0%!
+0~
+0y
+0t
+1@!
+1;!
+0'!
+0"!
+0{
+0v
+1L
+1K
+0G
+0F
+0E
+0D
+1&
+1'
+0+
+0,
+0-
+0.
+#1000000

@@ -1,0 +1,311 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "12/01/2020 19:19:59"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    PSRMux
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module PSRMux_vlg_sample_tst(
+	ALUStatus,
+	Datoin_Md,
+	SelectPSR,
+	sampler_tx
+);
+input [3:0] ALUStatus;
+input [4:0] Datoin_Md;
+input  SelectPSR;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(ALUStatus or Datoin_Md or SelectPSR)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module PSRMux_vlg_check_tst (
+	Banderas,
+	sampler_rx
+);
+input [4:0] Banderas;
+input sampler_rx;
+
+reg [4:0] Banderas_expected;
+
+reg [4:0] Banderas_prev;
+
+reg [4:0] Banderas_expected_prev;
+
+reg [4:0] last_Banderas_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:1] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 1'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	Banderas_prev = Banderas;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	Banderas_expected_prev = Banderas_expected;
+end
+
+
+// expected Banderas[ 4 ]
+initial
+begin
+	Banderas_expected[4] = 1'bX;
+end 
+// expected Banderas[ 3 ]
+initial
+begin
+	Banderas_expected[3] = 1'bX;
+end 
+// expected Banderas[ 2 ]
+initial
+begin
+	Banderas_expected[2] = 1'bX;
+end 
+// expected Banderas[ 1 ]
+initial
+begin
+	Banderas_expected[1] = 1'bX;
+end 
+// expected Banderas[ 0 ]
+initial
+begin
+	Banderas_expected[0] = 1'bX;
+end 
+// generate trigger
+always @(Banderas_expected or Banderas)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected Banderas = %b | ",Banderas_expected_prev);
+	$display("| real Banderas = %b | ",Banderas_prev);
+`endif
+	if (
+		( Banderas_expected_prev[0] !== 1'bx ) && ( Banderas_prev[0] !== Banderas_expected_prev[0] )
+		&& ((Banderas_expected_prev[0] !== last_Banderas_exp[0]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Banderas[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Banderas_expected_prev);
+		$display ("     Real value = %b", Banderas_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Banderas_exp[0] = Banderas_expected_prev[0];
+	end
+	if (
+		( Banderas_expected_prev[1] !== 1'bx ) && ( Banderas_prev[1] !== Banderas_expected_prev[1] )
+		&& ((Banderas_expected_prev[1] !== last_Banderas_exp[1]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Banderas[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Banderas_expected_prev);
+		$display ("     Real value = %b", Banderas_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Banderas_exp[1] = Banderas_expected_prev[1];
+	end
+	if (
+		( Banderas_expected_prev[2] !== 1'bx ) && ( Banderas_prev[2] !== Banderas_expected_prev[2] )
+		&& ((Banderas_expected_prev[2] !== last_Banderas_exp[2]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Banderas[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Banderas_expected_prev);
+		$display ("     Real value = %b", Banderas_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Banderas_exp[2] = Banderas_expected_prev[2];
+	end
+	if (
+		( Banderas_expected_prev[3] !== 1'bx ) && ( Banderas_prev[3] !== Banderas_expected_prev[3] )
+		&& ((Banderas_expected_prev[3] !== last_Banderas_exp[3]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Banderas[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Banderas_expected_prev);
+		$display ("     Real value = %b", Banderas_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Banderas_exp[3] = Banderas_expected_prev[3];
+	end
+	if (
+		( Banderas_expected_prev[4] !== 1'bx ) && ( Banderas_prev[4] !== Banderas_expected_prev[4] )
+		&& ((Banderas_expected_prev[4] !== last_Banderas_exp[4]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Banderas[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Banderas_expected_prev);
+		$display ("     Real value = %b", Banderas_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Banderas_exp[4] = Banderas_expected_prev[4];
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#1000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module PSRMux_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg [3:0] ALUStatus;
+reg [4:0] Datoin_Md;
+reg SelectPSR;
+// wires                                               
+wire [4:0] Banderas;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+PSRMux i1 (
+// port map - connection between master ports and signals/registers   
+	.ALUStatus(ALUStatus),
+	.Banderas(Banderas),
+	.Datoin_Md(Datoin_Md),
+	.SelectPSR(SelectPSR)
+);
+
+// SelectPSR
+initial
+begin
+	SelectPSR = 1'b1;
+	SelectPSR = #480000 1'b0;
+end 
+// ALUStatus[ 3 ]
+initial
+begin
+	ALUStatus[3] = 1'b1;
+end 
+// ALUStatus[ 2 ]
+initial
+begin
+	ALUStatus[2] = 1'b0;
+end 
+// ALUStatus[ 1 ]
+initial
+begin
+	ALUStatus[1] = 1'b0;
+end 
+// ALUStatus[ 0 ]
+initial
+begin
+	ALUStatus[0] = 1'b1;
+end 
+// Datoin_Md[ 4 ]
+initial
+begin
+	Datoin_Md[4] = 1'b1;
+end 
+// Datoin_Md[ 3 ]
+initial
+begin
+	Datoin_Md[3] = 1'b1;
+end 
+// Datoin_Md[ 2 ]
+initial
+begin
+	Datoin_Md[2] = 1'b0;
+end 
+// Datoin_Md[ 1 ]
+initial
+begin
+	Datoin_Md[1] = 1'b0;
+end 
+// Datoin_Md[ 0 ]
+initial
+begin
+	Datoin_Md[0] = 1'b0;
+end 
+
+PSRMux_vlg_sample_tst tb_sample (
+	.ALUStatus(ALUStatus),
+	.Datoin_Md(Datoin_Md),
+	.SelectPSR(SelectPSR),
+	.sampler_tx(sampler)
+);
+
+PSRMux_vlg_check_tst tb_out(
+	.Banderas(Banderas),
+	.sampler_rx(sampler)
+);
+endmodule
+

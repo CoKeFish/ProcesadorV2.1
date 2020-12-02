@@ -3,7 +3,7 @@ $comment
 		vcd file ProgramStatus.msim.vcd -direction
 $end
 $date
-	Mon Nov 30 23:49:44 2020
+	Tue Dec 01 17:32:51 2020
 $end
 $version
 	ModelSim Version 10.1d
@@ -18,11 +18,11 @@ $var reg 1 # IntE $end
 $var reg 1 $ ResetSystem $end
 $var reg 1 % SaveB $end
 $var reg 1 & SaveInt $end
-$var wire 1 ' StatusR [4] $end
-$var wire 1 ( StatusR [3] $end
-$var wire 1 ) StatusR [2] $end
-$var wire 1 * StatusR [1] $end
-$var wire 1 + StatusR [0] $end
+$var wire 1 ' PSROut [4] $end
+$var wire 1 ( PSROut [3] $end
+$var wire 1 ) PSROut [2] $end
+$var wire 1 * PSROut [1] $end
+$var wire 1 + PSROut [0] $end
 $var wire 1 , sampler $end
 $scope module i1 $end
 $var wire 1 - gnd $end
@@ -31,35 +31,40 @@ $var wire 1 / unknown $end
 $var tri1 1 0 devclrn $end
 $var tri1 1 1 devpor $end
 $var tri1 1 2 devoe $end
-$var wire 1 3 StatusR[0]~output_o $end
-$var wire 1 4 StatusR[1]~output_o $end
-$var wire 1 5 StatusR[2]~output_o $end
-$var wire 1 6 StatusR[3]~output_o $end
-$var wire 1 7 StatusR[4]~output_o $end
+$var wire 1 3 PSROut[0]~output_o $end
+$var wire 1 4 PSROut[1]~output_o $end
+$var wire 1 5 PSROut[2]~output_o $end
+$var wire 1 6 PSROut[3]~output_o $end
+$var wire 1 7 PSROut[4]~output_o $end
 $var wire 1 8 Clock~input_o $end
-$var wire 1 9 Banderas[0]~input_o $end
-$var wire 1 : ResetSystem~input_o $end
-$var wire 1 ; SaveB~input_o $end
-$var wire 1 < FF0~q $end
-$var wire 1 = Banderas[1]~input_o $end
-$var wire 1 > FF1~q $end
-$var wire 1 ? Banderas[2]~input_o $end
-$var wire 1 @ FF2~q $end
-$var wire 1 A Banderas[3]~input_o $end
-$var wire 1 B FF3~q $end
-$var wire 1 C IntE~input_o $end
-$var wire 1 D SaveInt~input_o $end
-$var wire 1 E FF4~q $end
+$var wire 1 9 Clock~inputclkctrl_outclk $end
+$var wire 1 : Banderas[0]~input_o $end
+$var wire 1 ; ResetSystem~input_o $end
+$var wire 1 < ResetSystem~inputclkctrl_outclk $end
+$var wire 1 = SaveB~input_o $end
+$var wire 1 > FF0~q $end
+$var wire 1 ? Banderas[1]~input_o $end
+$var wire 1 @ FF1~feeder_combout $end
+$var wire 1 A FF1~q $end
+$var wire 1 B Banderas[2]~input_o $end
+$var wire 1 C FF2~feeder_combout $end
+$var wire 1 D FF2~q $end
+$var wire 1 E Banderas[3]~input_o $end
+$var wire 1 F FF3~feeder_combout $end
+$var wire 1 G FF3~q $end
+$var wire 1 H IntE~input_o $end
+$var wire 1 I SaveInt~input_o $end
+$var wire 1 J FF4~q $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
-b1111 !
+b1100 !
 0"
 0#
 1$
-1%
+0%
 0&
 0+
 0*
@@ -79,426 +84,546 @@ x/
 06
 07
 08
-19
-1:
+09
+0:
 1;
-0<
-1=
+1<
+0=
 0>
-1?
+0?
 0@
-1A
-0B
-0C
+0A
+1B
+1C
 0D
-0E
+1E
+1F
+0G
+0H
+0I
+0J
 $end
 #10000
 1"
 18
+19
 0,
-1B
-1@
-1>
-1<
-16
-15
-14
-13
-1(
-1)
-1*
-1+
 #20000
 0"
 08
+09
 1,
 #30000
 1"
 18
+19
 0,
 #40000
 0"
 08
+09
 1,
 #50000
 1"
 18
+19
 0,
 #60000
 0"
 08
+09
 1,
 #70000
 1"
 18
+19
 0,
 #80000
 0"
 08
+09
 1,
 #90000
 1"
 18
+19
 0,
 #100000
 0"
 08
+09
 1,
 #110000
 1"
 18
+19
 0,
 #120000
 0"
 08
+09
 1,
 #130000
 1"
 18
+19
 0,
 #140000
 0"
 08
+09
 1,
 #150000
 1"
 18
+19
 0,
 #160000
 0"
 08
+09
 1,
 #170000
 1"
 18
+19
 0,
 #180000
 0"
 08
+09
 1,
 #190000
 1"
 18
+19
 0,
 #200000
 0"
 08
+09
 1,
 #210000
 1"
 18
+19
 0,
 #220000
 0"
 08
+09
 1,
 #230000
 1"
 18
+19
 0,
 #240000
 0"
 08
+09
 1,
 #250000
 1"
 18
+19
 0,
 #260000
 0"
 08
+09
 1,
 #270000
 1"
 18
+19
 0,
 #280000
 0"
 08
+09
 1,
 #290000
 1"
 18
+19
 0,
 #300000
 0"
 08
+09
 1,
 #310000
 1"
 18
+19
 0,
 #320000
 0"
 08
+09
 1,
 #330000
 1"
 18
+19
 0,
 #340000
 0"
 08
+09
 1,
 #350000
 1"
 18
+19
 0,
 #360000
 0"
 08
+09
 1,
 #370000
 1"
 18
+19
 0,
 #380000
 0"
 08
+09
 1,
 #390000
 1"
 18
+19
 0,
 #400000
 0"
 08
+09
 1,
 #410000
 1"
 18
+19
 0,
 #420000
 0"
 08
+09
 1,
 #430000
+1%
 1"
+1=
 18
+19
 0,
+1G
+1D
+16
+15
+1(
+1)
 #440000
 0"
 08
+09
 1,
 #450000
 1"
 18
+19
 0,
 #460000
+0%
 0"
+0=
 08
+09
 1,
 #470000
 1"
 18
+19
 0,
 #480000
 0"
 08
+09
 1,
 #490000
 1"
 18
+19
 0,
 #500000
 0"
 08
+09
 1,
 #510000
 1"
 18
+19
 0,
 #520000
 0"
 08
+09
 1,
 #530000
 1"
 18
+19
 0,
 #540000
 0"
 08
+09
 1,
 #550000
 1"
 18
+19
 0,
 #560000
 0"
 08
+09
 1,
 #570000
 1"
 18
+19
 0,
 #580000
 0"
 08
+09
 1,
 #590000
 1"
 18
+19
 0,
 #600000
 0"
 08
+09
 1,
 #610000
 1"
 18
+19
 0,
 #620000
 0"
 08
+09
 1,
 #630000
 1"
 18
+19
 0,
 #640000
 0"
 08
+09
 1,
 #650000
 1"
 18
+19
 0,
 #660000
+1#
 0"
+1H
 08
+09
 1,
 #670000
 1"
 18
+19
 0,
 #680000
 0"
 08
+09
 1,
 #690000
+1&
 1"
+1I
 18
+19
 0,
+1J
+17
+1'
 #700000
 0"
 08
+09
 1,
 #710000
+0&
 1"
+0I
 18
+19
 0,
 #720000
 0"
 08
+09
 1,
 #730000
 1"
 18
+19
 0,
 #740000
 0"
 08
+09
 1,
 #750000
+0#
 1"
+0H
 18
+19
 0,
 #760000
 0"
 08
+09
 1,
 #770000
 1"
 18
+19
 0,
 #780000
 0"
 08
+09
 1,
 #790000
 1"
 18
+19
 0,
 #800000
 0"
 08
+09
 1,
 #810000
 1"
 18
+19
 0,
 #820000
 0"
 08
+09
 1,
 #830000
 1"
 18
+19
 0,
 #840000
+1&
 0"
+1I
 08
+09
 1,
 #850000
 1"
 18
+19
 0,
+0J
+07
+0'
 #860000
+0&
 0"
+0I
 08
+09
 1,
 #870000
 1"
 18
+19
 0,
 #880000
 0"
 08
+09
 1,
 #890000
 1"
 18
+19
 0,
 #900000
 0"
 08
+09
 1,
 #910000
 1"
 18
+19
 0,
 #920000
 0"
 08
+09
 1,
 #930000
 1"
 18
+19
 0,
 #940000
 0"
 08
+09
 1,
 #950000
 1"
 18
+19
 0,
 #960000
 0"
 08
+09
 1,
 #970000
 1"
 18
+19
 0,
 #980000
 0"
 08
+09
 1,
 #990000
 1"
 18
+19
 0,
 #1000000

@@ -3,7 +3,7 @@ $comment
 		vcd file DirMdMux.msim.vcd -direction
 $end
 $date
-	Tue Dec 01 02:35:26 2020
+	Tue Dec 01 17:42:57 2020
 $end
 $version
 	ModelSim Version 10.1d
@@ -12,10 +12,10 @@ $timescale
 	1ps
 $end
 $scope module DirMdMux_vlg_vec_tst $end
-$var reg 16 ! DirROut [15:0] $end
-$var reg 16 " GPROut [15:0] $end
+$var reg 16 ! DataGPR [15:0] $end
+$var reg 16 " DirROut [15:0] $end
 $var reg 2 # SelectDir [1:0] $end
-$var reg 16 $ SPOut [15:0] $end
+$var reg 16 $ SP_out [15:0] $end
 $var wire 1 % DirMd [15] $end
 $var wire 1 & DirMd [14] $end
 $var wire 1 ' DirMd [13] $end
@@ -58,96 +58,96 @@ $var wire 1 J DirMd[14]~output_o $end
 $var wire 1 K DirMd[15]~output_o $end
 $var wire 1 L SelectDir[0]~input_o $end
 $var wire 1 M DirROut[0]~input_o $end
-$var wire 1 N SPOut[0]~input_o $end
+$var wire 1 N SP_out[0]~input_o $end
 $var wire 1 O SelectDir[1]~input_o $end
 $var wire 1 P DirMd~0_combout $end
-$var wire 1 Q GPROut[0]~input_o $end
+$var wire 1 Q DataGPR[0]~input_o $end
 $var wire 1 R DirMd~1_combout $end
 $var wire 1 S DirROut[1]~input_o $end
-$var wire 1 T SPOut[1]~input_o $end
+$var wire 1 T SP_out[1]~input_o $end
 $var wire 1 U DirMd~2_combout $end
-$var wire 1 V GPROut[1]~input_o $end
+$var wire 1 V DataGPR[1]~input_o $end
 $var wire 1 W DirMd~3_combout $end
 $var wire 1 X DirROut[2]~input_o $end
-$var wire 1 Y SPOut[2]~input_o $end
+$var wire 1 Y SP_out[2]~input_o $end
 $var wire 1 Z DirMd~4_combout $end
-$var wire 1 [ GPROut[2]~input_o $end
+$var wire 1 [ DataGPR[2]~input_o $end
 $var wire 1 \ DirMd~5_combout $end
 $var wire 1 ] DirROut[3]~input_o $end
-$var wire 1 ^ SPOut[3]~input_o $end
+$var wire 1 ^ SP_out[3]~input_o $end
 $var wire 1 _ DirMd~6_combout $end
-$var wire 1 ` GPROut[3]~input_o $end
+$var wire 1 ` DataGPR[3]~input_o $end
 $var wire 1 a DirMd~7_combout $end
 $var wire 1 b DirROut[4]~input_o $end
-$var wire 1 c SPOut[4]~input_o $end
+$var wire 1 c SP_out[4]~input_o $end
 $var wire 1 d DirMd~8_combout $end
-$var wire 1 e GPROut[4]~input_o $end
+$var wire 1 e DataGPR[4]~input_o $end
 $var wire 1 f DirMd~9_combout $end
 $var wire 1 g DirROut[5]~input_o $end
-$var wire 1 h SPOut[5]~input_o $end
+$var wire 1 h SP_out[5]~input_o $end
 $var wire 1 i DirMd~10_combout $end
-$var wire 1 j GPROut[5]~input_o $end
+$var wire 1 j DataGPR[5]~input_o $end
 $var wire 1 k DirMd~11_combout $end
 $var wire 1 l DirROut[6]~input_o $end
-$var wire 1 m SPOut[6]~input_o $end
+$var wire 1 m SP_out[6]~input_o $end
 $var wire 1 n DirMd~12_combout $end
-$var wire 1 o GPROut[6]~input_o $end
+$var wire 1 o DataGPR[6]~input_o $end
 $var wire 1 p DirMd~13_combout $end
 $var wire 1 q DirROut[7]~input_o $end
-$var wire 1 r SPOut[7]~input_o $end
+$var wire 1 r SP_out[7]~input_o $end
 $var wire 1 s DirMd~14_combout $end
-$var wire 1 t GPROut[7]~input_o $end
+$var wire 1 t DataGPR[7]~input_o $end
 $var wire 1 u DirMd~15_combout $end
 $var wire 1 v DirROut[8]~input_o $end
-$var wire 1 w SPOut[8]~input_o $end
+$var wire 1 w SP_out[8]~input_o $end
 $var wire 1 x DirMd~16_combout $end
-$var wire 1 y GPROut[8]~input_o $end
+$var wire 1 y DataGPR[8]~input_o $end
 $var wire 1 z DirMd~17_combout $end
 $var wire 1 { DirROut[9]~input_o $end
-$var wire 1 | SPOut[9]~input_o $end
+$var wire 1 | SP_out[9]~input_o $end
 $var wire 1 } DirMd~18_combout $end
-$var wire 1 ~ GPROut[9]~input_o $end
+$var wire 1 ~ DataGPR[9]~input_o $end
 $var wire 1 !! DirMd~19_combout $end
 $var wire 1 "! DirROut[10]~input_o $end
-$var wire 1 #! SPOut[10]~input_o $end
+$var wire 1 #! SP_out[10]~input_o $end
 $var wire 1 $! DirMd~20_combout $end
-$var wire 1 %! GPROut[10]~input_o $end
+$var wire 1 %! DataGPR[10]~input_o $end
 $var wire 1 &! DirMd~21_combout $end
 $var wire 1 '! DirROut[11]~input_o $end
-$var wire 1 (! SPOut[11]~input_o $end
+$var wire 1 (! SP_out[11]~input_o $end
 $var wire 1 )! DirMd~22_combout $end
-$var wire 1 *! GPROut[11]~input_o $end
+$var wire 1 *! DataGPR[11]~input_o $end
 $var wire 1 +! DirMd~23_combout $end
 $var wire 1 ,! DirROut[12]~input_o $end
-$var wire 1 -! SPOut[12]~input_o $end
+$var wire 1 -! SP_out[12]~input_o $end
 $var wire 1 .! DirMd~24_combout $end
-$var wire 1 /! GPROut[12]~input_o $end
+$var wire 1 /! DataGPR[12]~input_o $end
 $var wire 1 0! DirMd~25_combout $end
 $var wire 1 1! DirROut[13]~input_o $end
-$var wire 1 2! SPOut[13]~input_o $end
+$var wire 1 2! SP_out[13]~input_o $end
 $var wire 1 3! DirMd~26_combout $end
-$var wire 1 4! GPROut[13]~input_o $end
+$var wire 1 4! DataGPR[13]~input_o $end
 $var wire 1 5! DirMd~27_combout $end
 $var wire 1 6! DirROut[14]~input_o $end
-$var wire 1 7! SPOut[14]~input_o $end
+$var wire 1 7! SP_out[14]~input_o $end
 $var wire 1 8! DirMd~28_combout $end
-$var wire 1 9! GPROut[14]~input_o $end
+$var wire 1 9! DataGPR[14]~input_o $end
 $var wire 1 :! DirMd~29_combout $end
 $var wire 1 ;! DirROut[15]~input_o $end
-$var wire 1 <! SPOut[15]~input_o $end
+$var wire 1 <! SP_out[15]~input_o $end
 $var wire 1 =! DirMd~30_combout $end
-$var wire 1 >! GPROut[15]~input_o $end
+$var wire 1 >! DataGPR[15]~input_o $end
 $var wire 1 ?! DirMd~31_combout $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
-b1000000000000000 !
-b1 "
+b1110000000000000 !
+b1111 "
 b10 #
-b110000000000 $
-14
+b111000000 $
+04
 03
 02
 01
@@ -160,9 +160,9 @@ b110000000000 $
 0*
 0)
 0(
-0'
-0&
-0%
+1'
+1&
+1%
 x5
 06
 17
@@ -170,7 +170,7 @@ x8
 19
 1:
 1;
-1<
+0<
 0=
 0>
 0?
@@ -183,27 +183,27 @@ x8
 0F
 0G
 0H
-0I
-0J
-0K
+1I
+1J
+1K
 0L
-0M
+1M
 0N
 1O
 0P
-1Q
-1R
-0S
+0Q
+0R
+1S
 0T
 0U
 0V
 0W
-0X
+1X
 0Y
 0Z
 0[
 0\
-0]
+1]
 0^
 0_
 0`
@@ -219,17 +219,17 @@ x8
 0j
 0k
 0l
-0m
+1m
 0n
 0o
 0p
 0q
-0r
+1r
 0s
 0t
 0u
 0v
-0w
+1w
 0x
 0y
 0z
@@ -239,12 +239,12 @@ x8
 0~
 0!!
 0"!
-1#!
+0#!
 0$!
 0%!
 0&!
 0'!
-1(!
+0(!
 0)!
 0*!
 0+!
@@ -256,17 +256,17 @@ x8
 01!
 02!
 03!
-04!
-05!
+14!
+15!
 06!
 07!
 08!
-09!
-0:!
-1;!
+19!
+1:!
+0;!
 0<!
 0=!
-0>!
-0?!
+1>!
+1?!
 $end
 #1000000

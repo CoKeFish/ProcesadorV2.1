@@ -3,7 +3,7 @@ $comment
 		vcd file Data_MdMux.msim.vcd -direction
 $end
 $date
-	Tue Dec 01 05:53:49 2020
+	Tue Dec 01 17:48:36 2020
 $end
 $version
 	ModelSim Version 10.1d
@@ -17,22 +17,22 @@ $var reg 16 " DirMd [15:0] $end
 $var reg 16 # GPROut [15:0] $end
 $var reg 16 $ PSROut [15:0] $end
 $var reg 2 % SelectDataMd [1:0] $end
-$var wire 1 & DataMd [15] $end
-$var wire 1 ' DataMd [14] $end
-$var wire 1 ( DataMd [13] $end
-$var wire 1 ) DataMd [12] $end
-$var wire 1 * DataMd [11] $end
-$var wire 1 + DataMd [10] $end
-$var wire 1 , DataMd [9] $end
-$var wire 1 - DataMd [8] $end
-$var wire 1 . DataMd [7] $end
-$var wire 1 / DataMd [6] $end
-$var wire 1 0 DataMd [5] $end
-$var wire 1 1 DataMd [4] $end
-$var wire 1 2 DataMd [3] $end
-$var wire 1 3 DataMd [2] $end
-$var wire 1 4 DataMd [1] $end
-$var wire 1 5 DataMd [0] $end
+$var wire 1 & DatOut_Md [15] $end
+$var wire 1 ' DatOut_Md [14] $end
+$var wire 1 ( DatOut_Md [13] $end
+$var wire 1 ) DatOut_Md [12] $end
+$var wire 1 * DatOut_Md [11] $end
+$var wire 1 + DatOut_Md [10] $end
+$var wire 1 , DatOut_Md [9] $end
+$var wire 1 - DatOut_Md [8] $end
+$var wire 1 . DatOut_Md [7] $end
+$var wire 1 / DatOut_Md [6] $end
+$var wire 1 0 DatOut_Md [5] $end
+$var wire 1 1 DatOut_Md [4] $end
+$var wire 1 2 DatOut_Md [3] $end
+$var wire 1 3 DatOut_Md [2] $end
+$var wire 1 4 DatOut_Md [1] $end
+$var wire 1 5 DatOut_Md [0] $end
 $var wire 1 6 sampler $end
 $scope module i1 $end
 $var wire 1 7 gnd $end
@@ -41,136 +41,136 @@ $var wire 1 9 unknown $end
 $var tri1 1 : devclrn $end
 $var tri1 1 ; devpor $end
 $var tri1 1 < devoe $end
-$var wire 1 = DataMd[0]~output_o $end
-$var wire 1 > DataMd[1]~output_o $end
-$var wire 1 ? DataMd[2]~output_o $end
-$var wire 1 @ DataMd[3]~output_o $end
-$var wire 1 A DataMd[4]~output_o $end
-$var wire 1 B DataMd[5]~output_o $end
-$var wire 1 C DataMd[6]~output_o $end
-$var wire 1 D DataMd[7]~output_o $end
-$var wire 1 E DataMd[8]~output_o $end
-$var wire 1 F DataMd[9]~output_o $end
-$var wire 1 G DataMd[10]~output_o $end
-$var wire 1 H DataMd[11]~output_o $end
-$var wire 1 I DataMd[12]~output_o $end
-$var wire 1 J DataMd[13]~output_o $end
-$var wire 1 K DataMd[14]~output_o $end
-$var wire 1 L DataMd[15]~output_o $end
+$var wire 1 = DatOut_Md[0]~output_o $end
+$var wire 1 > DatOut_Md[1]~output_o $end
+$var wire 1 ? DatOut_Md[2]~output_o $end
+$var wire 1 @ DatOut_Md[3]~output_o $end
+$var wire 1 A DatOut_Md[4]~output_o $end
+$var wire 1 B DatOut_Md[5]~output_o $end
+$var wire 1 C DatOut_Md[6]~output_o $end
+$var wire 1 D DatOut_Md[7]~output_o $end
+$var wire 1 E DatOut_Md[8]~output_o $end
+$var wire 1 F DatOut_Md[9]~output_o $end
+$var wire 1 G DatOut_Md[10]~output_o $end
+$var wire 1 H DatOut_Md[11]~output_o $end
+$var wire 1 I DatOut_Md[12]~output_o $end
+$var wire 1 J DatOut_Md[13]~output_o $end
+$var wire 1 K DatOut_Md[14]~output_o $end
+$var wire 1 L DatOut_Md[15]~output_o $end
 $var wire 1 M ACOut[0]~input_o $end
 $var wire 1 N SelectDataMd[0]~input_o $end
 $var wire 1 O DirMd[0]~input_o $end
 $var wire 1 P SelectDataMd[1]~input_o $end
 $var wire 1 Q PSROut[0]~input_o $end
-$var wire 1 R DataMd~0_combout $end
+$var wire 1 R DatOut_Md~0_combout $end
 $var wire 1 S GPROut[0]~input_o $end
-$var wire 1 T DataMd~1_combout $end
+$var wire 1 T DatOut_Md~1_combout $end
 $var wire 1 U DirMd[1]~input_o $end
 $var wire 1 V ACOut[1]~input_o $end
 $var wire 1 W PSROut[1]~input_o $end
-$var wire 1 X DataMd~2_combout $end
+$var wire 1 X DatOut_Md~2_combout $end
 $var wire 1 Y GPROut[1]~input_o $end
-$var wire 1 Z DataMd~3_combout $end
+$var wire 1 Z DatOut_Md~3_combout $end
 $var wire 1 [ ACOut[2]~input_o $end
 $var wire 1 \ DirMd[2]~input_o $end
 $var wire 1 ] PSROut[2]~input_o $end
-$var wire 1 ^ DataMd~4_combout $end
+$var wire 1 ^ DatOut_Md~4_combout $end
 $var wire 1 _ GPROut[2]~input_o $end
-$var wire 1 ` DataMd~5_combout $end
+$var wire 1 ` DatOut_Md~5_combout $end
 $var wire 1 a DirMd[3]~input_o $end
 $var wire 1 b ACOut[3]~input_o $end
 $var wire 1 c PSROut[3]~input_o $end
-$var wire 1 d DataMd~6_combout $end
+$var wire 1 d DatOut_Md~6_combout $end
 $var wire 1 e GPROut[3]~input_o $end
-$var wire 1 f DataMd~7_combout $end
+$var wire 1 f DatOut_Md~7_combout $end
 $var wire 1 g ACOut[4]~input_o $end
 $var wire 1 h DirMd[4]~input_o $end
 $var wire 1 i PSROut[4]~input_o $end
-$var wire 1 j DataMd~8_combout $end
+$var wire 1 j DatOut_Md~8_combout $end
 $var wire 1 k GPROut[4]~input_o $end
-$var wire 1 l DataMd~9_combout $end
+$var wire 1 l DatOut_Md~9_combout $end
 $var wire 1 m DirMd[5]~input_o $end
 $var wire 1 n ACOut[5]~input_o $end
 $var wire 1 o PSROut[5]~input_o $end
-$var wire 1 p DataMd~10_combout $end
+$var wire 1 p DatOut_Md~10_combout $end
 $var wire 1 q GPROut[5]~input_o $end
-$var wire 1 r DataMd~11_combout $end
+$var wire 1 r DatOut_Md~11_combout $end
 $var wire 1 s ACOut[6]~input_o $end
 $var wire 1 t DirMd[6]~input_o $end
 $var wire 1 u PSROut[6]~input_o $end
-$var wire 1 v DataMd~12_combout $end
+$var wire 1 v DatOut_Md~12_combout $end
 $var wire 1 w GPROut[6]~input_o $end
-$var wire 1 x DataMd~13_combout $end
+$var wire 1 x DatOut_Md~13_combout $end
 $var wire 1 y DirMd[7]~input_o $end
 $var wire 1 z ACOut[7]~input_o $end
 $var wire 1 { PSROut[7]~input_o $end
-$var wire 1 | DataMd~14_combout $end
+$var wire 1 | DatOut_Md~14_combout $end
 $var wire 1 } GPROut[7]~input_o $end
-$var wire 1 ~ DataMd~15_combout $end
+$var wire 1 ~ DatOut_Md~15_combout $end
 $var wire 1 !! ACOut[8]~input_o $end
 $var wire 1 "! DirMd[8]~input_o $end
 $var wire 1 #! PSROut[8]~input_o $end
-$var wire 1 $! DataMd~16_combout $end
+$var wire 1 $! DatOut_Md~16_combout $end
 $var wire 1 %! GPROut[8]~input_o $end
-$var wire 1 &! DataMd~17_combout $end
+$var wire 1 &! DatOut_Md~17_combout $end
 $var wire 1 '! DirMd[9]~input_o $end
 $var wire 1 (! ACOut[9]~input_o $end
 $var wire 1 )! PSROut[9]~input_o $end
-$var wire 1 *! DataMd~18_combout $end
+$var wire 1 *! DatOut_Md~18_combout $end
 $var wire 1 +! GPROut[9]~input_o $end
-$var wire 1 ,! DataMd~19_combout $end
+$var wire 1 ,! DatOut_Md~19_combout $end
 $var wire 1 -! ACOut[10]~input_o $end
 $var wire 1 .! DirMd[10]~input_o $end
 $var wire 1 /! PSROut[10]~input_o $end
-$var wire 1 0! DataMd~20_combout $end
+$var wire 1 0! DatOut_Md~20_combout $end
 $var wire 1 1! GPROut[10]~input_o $end
-$var wire 1 2! DataMd~21_combout $end
+$var wire 1 2! DatOut_Md~21_combout $end
 $var wire 1 3! DirMd[11]~input_o $end
 $var wire 1 4! ACOut[11]~input_o $end
 $var wire 1 5! PSROut[11]~input_o $end
-$var wire 1 6! DataMd~22_combout $end
+$var wire 1 6! DatOut_Md~22_combout $end
 $var wire 1 7! GPROut[11]~input_o $end
-$var wire 1 8! DataMd~23_combout $end
+$var wire 1 8! DatOut_Md~23_combout $end
 $var wire 1 9! ACOut[12]~input_o $end
 $var wire 1 :! DirMd[12]~input_o $end
 $var wire 1 ;! PSROut[12]~input_o $end
-$var wire 1 <! DataMd~24_combout $end
+$var wire 1 <! DatOut_Md~24_combout $end
 $var wire 1 =! GPROut[12]~input_o $end
-$var wire 1 >! DataMd~25_combout $end
+$var wire 1 >! DatOut_Md~25_combout $end
 $var wire 1 ?! DirMd[13]~input_o $end
 $var wire 1 @! ACOut[13]~input_o $end
 $var wire 1 A! PSROut[13]~input_o $end
-$var wire 1 B! DataMd~26_combout $end
+$var wire 1 B! DatOut_Md~26_combout $end
 $var wire 1 C! GPROut[13]~input_o $end
-$var wire 1 D! DataMd~27_combout $end
+$var wire 1 D! DatOut_Md~27_combout $end
 $var wire 1 E! ACOut[14]~input_o $end
 $var wire 1 F! DirMd[14]~input_o $end
 $var wire 1 G! PSROut[14]~input_o $end
-$var wire 1 H! DataMd~28_combout $end
+$var wire 1 H! DatOut_Md~28_combout $end
 $var wire 1 I! GPROut[14]~input_o $end
-$var wire 1 J! DataMd~29_combout $end
+$var wire 1 J! DatOut_Md~29_combout $end
 $var wire 1 K! DirMd[15]~input_o $end
 $var wire 1 L! ACOut[15]~input_o $end
 $var wire 1 M! PSROut[15]~input_o $end
-$var wire 1 N! DataMd~30_combout $end
+$var wire 1 N! DatOut_Md~30_combout $end
 $var wire 1 O! GPROut[15]~input_o $end
-$var wire 1 P! DataMd~31_combout $end
+$var wire 1 P! DatOut_Md~31_combout $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
-b1111111000 !
-b111000000011100 "
-b1111000000000000 #
-b111111 $
+b1111000000000000 !
+b11111 "
+b11110000000 #
+b1110000000000111 $
 b0 %
 15
 14
 13
-12
-11
-10
+02
+01
+00
 0/
 0.
 0-
@@ -178,9 +178,9 @@ b0 %
 0+
 0*
 0)
-0(
-0'
-0&
+1(
+1'
+1&
 x6
 07
 18
@@ -191,9 +191,9 @@ x9
 1=
 1>
 1?
-1@
-1A
-1B
+0@
+0A
+0B
 0C
 0D
 0E
@@ -201,18 +201,18 @@ x9
 0G
 0H
 0I
-0J
-0K
-0L
+1J
+1K
+1L
 0M
 0N
-0O
+1O
 0P
 1Q
 1R
 0S
 1T
-0U
+1U
 0V
 1W
 1X
@@ -225,52 +225,52 @@ x9
 0_
 1`
 1a
-1b
-1c
-1d
+0b
+0c
+0d
 0e
-1f
-1g
+0f
+0g
 1h
-1i
-1j
+0i
+0j
 0k
-1l
+0l
 0m
-1n
-1o
-1p
+0n
+0o
+0p
 0q
-1r
-1s
+0r
+0s
 0t
 0u
 0v
 0w
 0x
 0y
-1z
+0z
 0{
 0|
-0}
+1}
 0~
-1!!
+0!!
 0"!
 0#!
 0$!
-0%!
+1%!
 0&!
 0'!
-1(!
+0(!
 0)!
 0*!
-0+!
+1+!
 0,!
 0-!
 0.!
 0/!
 00!
-01!
+11!
 02!
 03!
 04!
@@ -278,159 +278,29 @@ x9
 06!
 07!
 08!
-09!
-1:!
+19!
+0:!
 0;!
 0<!
-1=!
+0=!
 0>!
-1?!
-0@!
-0A!
-0B!
-1C!
-0D!
-0E!
-1F!
-0G!
-0H!
-1I!
-0J!
-0K!
-0L!
-0M!
-0N!
-1O!
-0P!
-$end
-#260000
-b1 %
-1N
-06
-1*!
-1|
-0j
-0^
-0X
-0R
-1&!
-1x
-0l
-0`
-0T
-1E
-1C
-0A
-0?
-0=
-1-
-1/
-01
-03
-05
-1,!
-1~
-1l
-0Z
-1F
-1D
-1A
-0>
-1,
-1.
-11
-04
-#460000
-b11 %
-b10 %
-0N
-1P
-16
-1H!
-1<!
-0*!
-0|
-0p
-1j
-0d
-1^
-0&!
-0x
-0l
-1D!
-0,!
-0~
-0r
-0f
-0E
-0C
-0A
-1J
-0F
-0D
-0B
-0@
-0-
-0/
-01
-1(
-0,
-0.
-00
-02
-1J!
-1>!
-1l
-1f
-1`
-1K
-1I
-1A
-1@
-1?
-1'
-1)
-11
-12
-13
-#750000
-b11 %
-1N
-06
-1N!
+0?!
+1@!
+1A!
 1B!
-16!
-10!
-1*!
-1$!
-1|
-1v
-1p
-1d
-1X
-1R
-1&!
-1x
-0l
-0`
-1E
-1C
-0A
-0?
-1-
-1/
-01
-03
+0C!
+1D!
+1E!
+0F!
+1G!
+1H!
+0I!
+1J!
+0K!
+1L!
+1M!
+1N!
+0O!
 1P!
-0&!
-0x
-0f
-1L
-0E
-0C
-0@
-1&
-0-
-0/
-02
+$end
 #1000000

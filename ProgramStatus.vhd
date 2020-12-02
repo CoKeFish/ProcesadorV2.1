@@ -30,7 +30,7 @@ ENTITY ProgramStatus IS
 				Banderas  		 :IN STD_LOGIC_VECTOR(3 DOWNTO 0); --Bus de datos de 4 bits que contiene el estado de las banderas.
 				----------------------------------------------
 				--SALIDAS
-				StatusR		    :OUT STD_LOGIC_VECTOR(4 DOWNTO 0) --Bus de 5 bits que contiene el estado del programa.
+				PSROut		    :OUT STD_LOGIC_VECTOR(4 DOWNTO 0) --Bus de 5 bits que contiene el estado del programa.
 		);
 	
 END ENTITY ProgramStatus;
@@ -56,11 +56,11 @@ BEGIN
 --******************************************************--
 	
 	
-		FF0  : DFFE PORT MAP (Banderas(0), Clock, ResetSystem, '1' , SaveB   , StatusR(0));-- Bandera Cero
-		FF1  : DFFE PORT MAP (Banderas(1), Clock, ResetSystem, '1' , SaveB   , StatusR(1));-- Bandera Ngeativo
-		FF2  : DFFE PORT MAP (Banderas(2), Clock, ResetSystem, '1' , SaveB   , StatusR(2));-- Bandera Overflow
-		FF3  : DFFE PORT MAP (Banderas(3), Clock, ResetSystem, '1' , SaveB   , StatusR(3));-- Bandera Carry
-		FF4  : DFFE PORT MAP (IntE       , Clock, ResetSystem, '1' , SaveInt , StatusR(4));-- Bit Interrucion Global 
+		FF0  : DFFE PORT MAP (Banderas(0), Clock, ResetSystem, '1' , SaveB   , PSROut(0));-- Bandera Cero
+		FF1  : DFFE PORT MAP (Banderas(1), Clock, ResetSystem, '1' , SaveB   , PSROut(1));-- Bandera Ngeativo
+		FF2  : DFFE PORT MAP (Banderas(2), Clock, ResetSystem, '1' , SaveB   , PSROut(2));-- Bandera Overflow
+		FF3  : DFFE PORT MAP (Banderas(3), Clock, ResetSystem, '1' , SaveB   , PSROut(3));-- Bandera Carry
+		FF4  : DFFE PORT MAP (IntE       , Clock, ResetSystem, '1' , SaveInt , PSROut(4));-- Bit Interrucion Global 
 
 	
 	--******************************************************--

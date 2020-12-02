@@ -22,12 +22,12 @@ ENTITY PSRMux IS
 	
 	PORT (
 				--ENTRADAS
-				DataMd				:IN STD_LOGIC_VECTOR (4 DOWNTO 0);--Señal de 16 bits correspondiente al numero_2
+				Datoin_Md			:IN STD_LOGIC_VECTOR (4 DOWNTO 0);--Señal de 16 bits correspondiente al numero_2
 				ALUStatus			:IN STD_LOGIC_VECTOR (3 DOWNTO 0);--Señal que viene de bloque NOT de numero_2
 				SelectPSR			:IN STD_LOGIC;--Señal que viene control, indica que se realizará una resta
 				--------------------------------------------------
 				--SALIDAS
-				PSRMuxOut			:OUT STD_LOGIC_VECTOR (4 DOWNTO 0)--Señal de numero_2-M o NOT numero_2-M 
+				Banderas			:OUT STD_LOGIC_VECTOR (4 DOWNTO 0)--Señal de numero_2-M o NOT numero_2-M 
 				
 		);
 	
@@ -44,11 +44,11 @@ BEGIN
    --	en alto, o el negado de (numero_2 O M) si selectIN esta en bajo
 	--*************************************************************--
 	
-	PSRMuxOut(0)  <= (DataMd(0)  AND SelectPSR) OR ((ALUStatus(0))  AND (NOT SelectPSR));
-	PSRMuxOut(1)  <= (DataMd(1)  AND SelectPSR) OR ((ALUStatus(1))  AND (NOT SelectPSR));
-	PSRMuxOut(2)  <= (DataMd(2)  AND SelectPSR) OR ((ALUStatus(2))  AND (NOT SelectPSR));
-	PSRMuxOut(3)  <= (DataMd(3)  AND SelectPSR) OR ((ALUStatus(3))  AND (NOT SelectPSR));
-	PSRMuxOut(4)  <= (DataMd(4)  AND SelectPSR);
+	Banderas(0)  <= (Datoin_Md(0)  AND SelectPSR) OR ((ALUStatus(0))  AND (NOT SelectPSR));
+	Banderas(1)  <= (Datoin_Md(1)  AND SelectPSR) OR ((ALUStatus(1))  AND (NOT SelectPSR));
+	Banderas(2)  <= (Datoin_Md(2)  AND SelectPSR) OR ((ALUStatus(2))  AND (NOT SelectPSR));
+	Banderas(3)  <= (Datoin_Md(3)  AND SelectPSR) OR ((ALUStatus(3))  AND (NOT SelectPSR));
+	Banderas(4)  <= (Datoin_Md(4)  AND SelectPSR);
 		
 	
 	--******************************************************--

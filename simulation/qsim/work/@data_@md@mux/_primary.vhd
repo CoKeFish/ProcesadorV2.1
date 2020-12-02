@@ -7,6 +7,6 @@ entity Data_MdMux is
         PSROut          : in     vl_logic_vector(15 downto 0);
         GPROut          : in     vl_logic_vector(15 downto 0);
         SelectDataMd    : in     vl_logic_vector(1 downto 0);
-        DataMd          : out    vl_logic_vector(15 downto 0)
+        DatOut_Md       : out    vl_logic_vector(15 downto 0)
     );
 end Data_MdMux;

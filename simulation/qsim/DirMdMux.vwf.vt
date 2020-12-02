@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "12/01/2020 02:35:22"
+// Generated on "12/01/2020 17:42:53"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    DirMdMux
 // 
@@ -27,21 +27,21 @@
 
 `timescale 1 ps/ 1 ps
 module DirMdMux_vlg_sample_tst(
+	DataGPR,
 	DirROut,
-	GPROut,
 	SelectDir,
-	SPOut,
+	SP_out,
 	sampler_tx
 );
+input [15:0] DataGPR;
 input [15:0] DirROut;
-input [15:0] GPROut;
 input [1:0] SelectDir;
-input [15:0] SPOut;
+input [15:0] SP_out;
 output sampler_tx;
 
 reg sample;
 time current_time;
-always @(DirROut or GPROut or SelectDir or SPOut)
+always @(DataGPR or DirROut or SelectDir or SP_out)
                                                                                 
 begin                                                 
  if ($realtime > 0)                                   
@@ -427,10 +427,10 @@ endmodule
 module DirMdMux_vlg_vec_tst();
 // constants                                           
 // general purpose registers
+reg [15:0] DataGPR;
 reg [15:0] DirROut;
-reg [15:0] GPROut;
 reg [1:0] SelectDir;
-reg [15:0] SPOut;
+reg [15:0] SP_out;
 // wires                                               
 wire [15:0] DirMd;
 
@@ -439,16 +439,106 @@ wire sampler;
 // assign statements (if any)                          
 DirMdMux i1 (
 // port map - connection between master ports and signals/registers   
+	.DataGPR(DataGPR),
 	.DirMd(DirMd),
 	.DirROut(DirROut),
-	.GPROut(GPROut),
 	.SelectDir(SelectDir),
-	.SPOut(SPOut)
+	.SP_out(SP_out)
 );
+// SelectDir[ 1 ]
+initial
+begin
+	SelectDir[1] = 1'b1;
+end 
+// SelectDir[ 0 ]
+initial
+begin
+	SelectDir[0] = 1'b0;
+end 
+// DataGPR[ 15 ]
+initial
+begin
+	DataGPR[15] = 1'b1;
+end 
+// DataGPR[ 14 ]
+initial
+begin
+	DataGPR[14] = 1'b1;
+end 
+// DataGPR[ 13 ]
+initial
+begin
+	DataGPR[13] = 1'b1;
+end 
+// DataGPR[ 12 ]
+initial
+begin
+	DataGPR[12] = 1'b0;
+end 
+// DataGPR[ 11 ]
+initial
+begin
+	DataGPR[11] = 1'b0;
+end 
+// DataGPR[ 10 ]
+initial
+begin
+	DataGPR[10] = 1'b0;
+end 
+// DataGPR[ 9 ]
+initial
+begin
+	DataGPR[9] = 1'b0;
+end 
+// DataGPR[ 8 ]
+initial
+begin
+	DataGPR[8] = 1'b0;
+end 
+// DataGPR[ 7 ]
+initial
+begin
+	DataGPR[7] = 1'b0;
+end 
+// DataGPR[ 6 ]
+initial
+begin
+	DataGPR[6] = 1'b0;
+end 
+// DataGPR[ 5 ]
+initial
+begin
+	DataGPR[5] = 1'b0;
+end 
+// DataGPR[ 4 ]
+initial
+begin
+	DataGPR[4] = 1'b0;
+end 
+// DataGPR[ 3 ]
+initial
+begin
+	DataGPR[3] = 1'b0;
+end 
+// DataGPR[ 2 ]
+initial
+begin
+	DataGPR[2] = 1'b0;
+end 
+// DataGPR[ 1 ]
+initial
+begin
+	DataGPR[1] = 1'b0;
+end 
+// DataGPR[ 0 ]
+initial
+begin
+	DataGPR[0] = 1'b0;
+end 
 // DirROut[ 15 ]
 initial
 begin
-	DirROut[15] = 1'b1;
+	DirROut[15] = 1'b0;
 end 
 // DirROut[ 14 ]
 initial
@@ -508,199 +598,109 @@ end
 // DirROut[ 3 ]
 initial
 begin
-	DirROut[3] = 1'b0;
+	DirROut[3] = 1'b1;
 end 
 // DirROut[ 2 ]
 initial
 begin
-	DirROut[2] = 1'b0;
+	DirROut[2] = 1'b1;
 end 
 // DirROut[ 1 ]
 initial
 begin
-	DirROut[1] = 1'b0;
+	DirROut[1] = 1'b1;
 end 
 // DirROut[ 0 ]
 initial
 begin
-	DirROut[0] = 1'b0;
+	DirROut[0] = 1'b1;
 end 
-// GPROut[ 15 ]
+// SP_out[ 15 ]
 initial
 begin
-	GPROut[15] = 1'b0;
+	SP_out[15] = 1'b0;
 end 
-// GPROut[ 14 ]
+// SP_out[ 14 ]
 initial
 begin
-	GPROut[14] = 1'b0;
+	SP_out[14] = 1'b0;
 end 
-// GPROut[ 13 ]
+// SP_out[ 13 ]
 initial
 begin
-	GPROut[13] = 1'b0;
+	SP_out[13] = 1'b0;
 end 
-// GPROut[ 12 ]
+// SP_out[ 12 ]
 initial
 begin
-	GPROut[12] = 1'b0;
+	SP_out[12] = 1'b0;
 end 
-// GPROut[ 11 ]
+// SP_out[ 11 ]
 initial
 begin
-	GPROut[11] = 1'b0;
+	SP_out[11] = 1'b0;
 end 
-// GPROut[ 10 ]
+// SP_out[ 10 ]
 initial
 begin
-	GPROut[10] = 1'b0;
+	SP_out[10] = 1'b0;
 end 
-// GPROut[ 9 ]
+// SP_out[ 9 ]
 initial
 begin
-	GPROut[9] = 1'b0;
+	SP_out[9] = 1'b0;
 end 
-// GPROut[ 8 ]
+// SP_out[ 8 ]
 initial
 begin
-	GPROut[8] = 1'b0;
+	SP_out[8] = 1'b1;
 end 
-// GPROut[ 7 ]
+// SP_out[ 7 ]
 initial
 begin
-	GPROut[7] = 1'b0;
+	SP_out[7] = 1'b1;
 end 
-// GPROut[ 6 ]
+// SP_out[ 6 ]
 initial
 begin
-	GPROut[6] = 1'b0;
+	SP_out[6] = 1'b1;
 end 
-// GPROut[ 5 ]
+// SP_out[ 5 ]
 initial
 begin
-	GPROut[5] = 1'b0;
+	SP_out[5] = 1'b0;
 end 
-// GPROut[ 4 ]
+// SP_out[ 4 ]
 initial
 begin
-	GPROut[4] = 1'b0;
+	SP_out[4] = 1'b0;
 end 
-// GPROut[ 3 ]
+// SP_out[ 3 ]
 initial
 begin
-	GPROut[3] = 1'b0;
+	SP_out[3] = 1'b0;
 end 
-// GPROut[ 2 ]
+// SP_out[ 2 ]
 initial
 begin
-	GPROut[2] = 1'b0;
+	SP_out[2] = 1'b0;
 end 
-// GPROut[ 1 ]
+// SP_out[ 1 ]
 initial
 begin
-	GPROut[1] = 1'b0;
+	SP_out[1] = 1'b0;
 end 
-// GPROut[ 0 ]
+// SP_out[ 0 ]
 initial
 begin
-	GPROut[0] = 1'b1;
-end 
-// SelectDir[ 1 ]
-initial
-begin
-	SelectDir[1] = 1'b1;
-end 
-// SelectDir[ 0 ]
-initial
-begin
-	SelectDir[0] = 1'b0;
-end 
-// SPOut[ 15 ]
-initial
-begin
-	SPOut[15] = 1'b0;
-end 
-// SPOut[ 14 ]
-initial
-begin
-	SPOut[14] = 1'b0;
-end 
-// SPOut[ 13 ]
-initial
-begin
-	SPOut[13] = 1'b0;
-end 
-// SPOut[ 12 ]
-initial
-begin
-	SPOut[12] = 1'b0;
-end 
-// SPOut[ 11 ]
-initial
-begin
-	SPOut[11] = 1'b1;
-end 
-// SPOut[ 10 ]
-initial
-begin
-	SPOut[10] = 1'b1;
-end 
-// SPOut[ 9 ]
-initial
-begin
-	SPOut[9] = 1'b0;
-end 
-// SPOut[ 8 ]
-initial
-begin
-	SPOut[8] = 1'b0;
-end 
-// SPOut[ 7 ]
-initial
-begin
-	SPOut[7] = 1'b0;
-end 
-// SPOut[ 6 ]
-initial
-begin
-	SPOut[6] = 1'b0;
-end 
-// SPOut[ 5 ]
-initial
-begin
-	SPOut[5] = 1'b0;
-end 
-// SPOut[ 4 ]
-initial
-begin
-	SPOut[4] = 1'b0;
-end 
-// SPOut[ 3 ]
-initial
-begin
-	SPOut[3] = 1'b0;
-end 
-// SPOut[ 2 ]
-initial
-begin
-	SPOut[2] = 1'b0;
-end 
-// SPOut[ 1 ]
-initial
-begin
-	SPOut[1] = 1'b0;
-end 
-// SPOut[ 0 ]
-initial
-begin
-	SPOut[0] = 1'b0;
+	SP_out[0] = 1'b0;
 end 
 
 DirMdMux_vlg_sample_tst tb_sample (
+	.DataGPR(DataGPR),
 	.DirROut(DirROut),
-	.GPROut(GPROut),
 	.SelectDir(SelectDir),
-	.SPOut(SPOut),
+	.SP_out(SP_out),
 	.sampler_tx(sampler)
 );
 

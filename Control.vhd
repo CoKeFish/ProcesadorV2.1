@@ -35,14 +35,11 @@ ENTITY Control IS
 				Disponible				:IN STD_LOGIC;
 				
 				--GPR
-				Operacion				:IN STD_LOGIC_VECTOR(5 DOWNTO 0);--Operacion de la instruccion
-				ModoDir					:IN STD_LOGIC_VECTOR(1 DOWNTO 0);--Modo de direccionamiento de la instruccion
+				OpControl				:IN STD_LOGIC_VECTOR(4 DOWNTO 0);--Operacion de la instruccion
+				ModeDir					:IN STD_LOGIC_VECTOR(1 DOWNTO 0);--Modo de direccionamiento de la instruccion
 				
 				--Status
-				Overflow					:IN STD_LOGIC;--Verificamos si hay overflow
-				Result_Negative		:IN STD_LOGIC;--Verificamos si el resultado es negativo
-				Result_Zero				:IN STD_LOGIC;--Verificamos si el resultado es cero
-				Result_Carry			:IN STD_LOGIC;--Verificamos si el resultado tiene carry
+				PSROut					:IN STD_LOGIC_VECTOR(4 DOWNTO 0);
 				
 				--------------------------------------------------
 				--SALIDAS				
@@ -52,13 +49,27 @@ ENTITY Control IS
 				Ena_Mp 					:OUT STD_LOGIC;--Habilitamos la memoria de programa
 				Ena_Md_Read 			:OUT STD_LOGIC;--Habilitamos la memoria de datos para lectura
 				Ena_Md_Write			:OUT STD_LOGIC;--Habilitamos la memoria de datos para escritura
+				Ena_SP					:OUT STD_LOGIC;
 						
 				--Control
 				Save_GPR					:OUT STD_LOGIC;--Guardamos el valor a la entrada de GPR
 				Save_Acum				:OUT STD_LOGIC;--Guardamos el valor a la entrada del acumulador
 				Save_PC					:OUT STD_LOGIC;--Guardamos el valor a la entrada del program counter
+				SaveB						:OUT STD_LOGIC;
+				SaveInt					:OUT STD_LOGIC;
+				SaveDirR					:OUT STD_LOGIC;
+				
 				Inc_PC					:OUT STD_LOGIC;--Incrementamos el valor del program counter
-				Use_ALU					:OUT STD_LOGIC;--Realizamos una operacion con la ALU
+				Habilitar				:OUT STD_LOGIC;--Realizamos una operacion con la ALU
+				IncDec 					:OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+				
+				--Select
+				SelectALU				:OUT STD_LOGIC;
+				SelectAcum				:OUT STD_LOGIC;
+				SelectPC					:OUT STD_LOGIC;
+				SelectPSR				:OUT STD_LOGIC;
+				SelectDataMd			:OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+				SelectDir				:OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
 				
 				--Test   (salidas exclusivamente para realizar pruebas
 						

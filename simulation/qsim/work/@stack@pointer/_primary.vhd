@@ -4,8 +4,8 @@ entity StackPointer is
     port(
         Clock           : in     vl_logic;
         ResetSystem     : in     vl_logic;
-        Enable          : in     vl_logic;
-        IncDec          : in     vl_logic;
-        Valor_out       : out    vl_logic_vector(15 downto 0)
+        Ena_SP          : in     vl_logic;
+        IncDec          : in     vl_logic_vector(1 downto 0);
+        SP_out          : out    vl_logic_vector(15 downto 0)
     );
 end StackPointer;

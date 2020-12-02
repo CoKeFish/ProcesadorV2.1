@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "12/01/2020 05:53:45"
+// Generated on "12/01/2020 17:48:32"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    Data_MdMux
 // 
@@ -63,19 +63,19 @@ assign sampler_tx = sample;
 endmodule
 
 module Data_MdMux_vlg_check_tst (
-	DataMd,
+	DatOut_Md,
 	sampler_rx
 );
-input [15:0] DataMd;
+input [15:0] DatOut_Md;
 input sampler_rx;
 
-reg [15:0] DataMd_expected;
+reg [15:0] DatOut_Md_expected;
 
-reg [15:0] DataMd_prev;
+reg [15:0] DatOut_Md_prev;
 
-reg [15:0] DataMd_expected_prev;
+reg [15:0] DatOut_Md_expected_prev;
 
-reg [15:0] last_DataMd_exp;
+reg [15:0] last_DatOut_Md_exp;
 
 reg trigger;
 
@@ -97,99 +97,99 @@ end
 
 always @(trigger)
 begin
-	DataMd_prev = DataMd;
+	DatOut_Md_prev = DatOut_Md;
 end
 
 // update expected /o prevs
 
 always @(trigger)
 begin
-	DataMd_expected_prev = DataMd_expected;
+	DatOut_Md_expected_prev = DatOut_Md_expected;
 end
 
 
-// expected DataMd[ 15 ]
+// expected DatOut_Md[ 15 ]
 initial
 begin
-	DataMd_expected[15] = 1'bX;
+	DatOut_Md_expected[15] = 1'bX;
 end 
-// expected DataMd[ 14 ]
+// expected DatOut_Md[ 14 ]
 initial
 begin
-	DataMd_expected[14] = 1'bX;
+	DatOut_Md_expected[14] = 1'bX;
 end 
-// expected DataMd[ 13 ]
+// expected DatOut_Md[ 13 ]
 initial
 begin
-	DataMd_expected[13] = 1'bX;
+	DatOut_Md_expected[13] = 1'bX;
 end 
-// expected DataMd[ 12 ]
+// expected DatOut_Md[ 12 ]
 initial
 begin
-	DataMd_expected[12] = 1'bX;
+	DatOut_Md_expected[12] = 1'bX;
 end 
-// expected DataMd[ 11 ]
+// expected DatOut_Md[ 11 ]
 initial
 begin
-	DataMd_expected[11] = 1'bX;
+	DatOut_Md_expected[11] = 1'bX;
 end 
-// expected DataMd[ 10 ]
+// expected DatOut_Md[ 10 ]
 initial
 begin
-	DataMd_expected[10] = 1'bX;
+	DatOut_Md_expected[10] = 1'bX;
 end 
-// expected DataMd[ 9 ]
+// expected DatOut_Md[ 9 ]
 initial
 begin
-	DataMd_expected[9] = 1'bX;
+	DatOut_Md_expected[9] = 1'bX;
 end 
-// expected DataMd[ 8 ]
+// expected DatOut_Md[ 8 ]
 initial
 begin
-	DataMd_expected[8] = 1'bX;
+	DatOut_Md_expected[8] = 1'bX;
 end 
-// expected DataMd[ 7 ]
+// expected DatOut_Md[ 7 ]
 initial
 begin
-	DataMd_expected[7] = 1'bX;
+	DatOut_Md_expected[7] = 1'bX;
 end 
-// expected DataMd[ 6 ]
+// expected DatOut_Md[ 6 ]
 initial
 begin
-	DataMd_expected[6] = 1'bX;
+	DatOut_Md_expected[6] = 1'bX;
 end 
-// expected DataMd[ 5 ]
+// expected DatOut_Md[ 5 ]
 initial
 begin
-	DataMd_expected[5] = 1'bX;
+	DatOut_Md_expected[5] = 1'bX;
 end 
-// expected DataMd[ 4 ]
+// expected DatOut_Md[ 4 ]
 initial
 begin
-	DataMd_expected[4] = 1'bX;
+	DatOut_Md_expected[4] = 1'bX;
 end 
-// expected DataMd[ 3 ]
+// expected DatOut_Md[ 3 ]
 initial
 begin
-	DataMd_expected[3] = 1'bX;
+	DatOut_Md_expected[3] = 1'bX;
 end 
-// expected DataMd[ 2 ]
+// expected DatOut_Md[ 2 ]
 initial
 begin
-	DataMd_expected[2] = 1'bX;
+	DatOut_Md_expected[2] = 1'bX;
 end 
-// expected DataMd[ 1 ]
+// expected DatOut_Md[ 1 ]
 initial
 begin
-	DataMd_expected[1] = 1'bX;
+	DatOut_Md_expected[1] = 1'bX;
 end 
-// expected DataMd[ 0 ]
+// expected DatOut_Md[ 0 ]
 initial
 begin
-	DataMd_expected[0] = 1'bX;
+	DatOut_Md_expected[0] = 1'bX;
 end 
 // generate trigger
-always @(DataMd_expected or DataMd)
+always @(DatOut_Md_expected or DatOut_Md)
 begin
 	trigger <= ~trigger;
 end
@@ -199,216 +199,216 @@ begin
 `ifdef debug_tbench
 	$display("Scanning pattern %d @time = %t",i,$realtime );
 	i = i + 1;
-	$display("| expected DataMd = %b | ",DataMd_expected_prev);
-	$display("| real DataMd = %b | ",DataMd_prev);
+	$display("| expected DatOut_Md = %b | ",DatOut_Md_expected_prev);
+	$display("| real DatOut_Md = %b | ",DatOut_Md_prev);
 `endif
 	if (
-		( DataMd_expected_prev[0] !== 1'bx ) && ( DataMd_prev[0] !== DataMd_expected_prev[0] )
-		&& ((DataMd_expected_prev[0] !== last_DataMd_exp[0]) ||
+		( DatOut_Md_expected_prev[0] !== 1'bx ) && ( DatOut_Md_prev[0] !== DatOut_Md_expected_prev[0] )
+		&& ((DatOut_Md_expected_prev[0] !== last_DatOut_Md_exp[0]) ||
 			on_first_change[1])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port DataMd[0] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", DataMd_expected_prev);
-		$display ("     Real value = %b", DataMd_prev);
+		$display ("ERROR! Vector Mismatch for output port DatOut_Md[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", DatOut_Md_expected_prev);
+		$display ("     Real value = %b", DatOut_Md_prev);
 		nummismatches = nummismatches + 1;
 		on_first_change[1] = 1'b0;
-		last_DataMd_exp[0] = DataMd_expected_prev[0];
+		last_DatOut_Md_exp[0] = DatOut_Md_expected_prev[0];
 	end
 	if (
-		( DataMd_expected_prev[1] !== 1'bx ) && ( DataMd_prev[1] !== DataMd_expected_prev[1] )
-		&& ((DataMd_expected_prev[1] !== last_DataMd_exp[1]) ||
+		( DatOut_Md_expected_prev[1] !== 1'bx ) && ( DatOut_Md_prev[1] !== DatOut_Md_expected_prev[1] )
+		&& ((DatOut_Md_expected_prev[1] !== last_DatOut_Md_exp[1]) ||
 			on_first_change[1])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port DataMd[1] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", DataMd_expected_prev);
-		$display ("     Real value = %b", DataMd_prev);
+		$display ("ERROR! Vector Mismatch for output port DatOut_Md[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", DatOut_Md_expected_prev);
+		$display ("     Real value = %b", DatOut_Md_prev);
 		nummismatches = nummismatches + 1;
 		on_first_change[1] = 1'b0;
-		last_DataMd_exp[1] = DataMd_expected_prev[1];
+		last_DatOut_Md_exp[1] = DatOut_Md_expected_prev[1];
 	end
 	if (
-		( DataMd_expected_prev[2] !== 1'bx ) && ( DataMd_prev[2] !== DataMd_expected_prev[2] )
-		&& ((DataMd_expected_prev[2] !== last_DataMd_exp[2]) ||
+		( DatOut_Md_expected_prev[2] !== 1'bx ) && ( DatOut_Md_prev[2] !== DatOut_Md_expected_prev[2] )
+		&& ((DatOut_Md_expected_prev[2] !== last_DatOut_Md_exp[2]) ||
 			on_first_change[1])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port DataMd[2] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", DataMd_expected_prev);
-		$display ("     Real value = %b", DataMd_prev);
+		$display ("ERROR! Vector Mismatch for output port DatOut_Md[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", DatOut_Md_expected_prev);
+		$display ("     Real value = %b", DatOut_Md_prev);
 		nummismatches = nummismatches + 1;
 		on_first_change[1] = 1'b0;
-		last_DataMd_exp[2] = DataMd_expected_prev[2];
+		last_DatOut_Md_exp[2] = DatOut_Md_expected_prev[2];
 	end
 	if (
-		( DataMd_expected_prev[3] !== 1'bx ) && ( DataMd_prev[3] !== DataMd_expected_prev[3] )
-		&& ((DataMd_expected_prev[3] !== last_DataMd_exp[3]) ||
+		( DatOut_Md_expected_prev[3] !== 1'bx ) && ( DatOut_Md_prev[3] !== DatOut_Md_expected_prev[3] )
+		&& ((DatOut_Md_expected_prev[3] !== last_DatOut_Md_exp[3]) ||
 			on_first_change[1])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port DataMd[3] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", DataMd_expected_prev);
-		$display ("     Real value = %b", DataMd_prev);
+		$display ("ERROR! Vector Mismatch for output port DatOut_Md[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", DatOut_Md_expected_prev);
+		$display ("     Real value = %b", DatOut_Md_prev);
 		nummismatches = nummismatches + 1;
 		on_first_change[1] = 1'b0;
-		last_DataMd_exp[3] = DataMd_expected_prev[3];
+		last_DatOut_Md_exp[3] = DatOut_Md_expected_prev[3];
 	end
 	if (
-		( DataMd_expected_prev[4] !== 1'bx ) && ( DataMd_prev[4] !== DataMd_expected_prev[4] )
-		&& ((DataMd_expected_prev[4] !== last_DataMd_exp[4]) ||
+		( DatOut_Md_expected_prev[4] !== 1'bx ) && ( DatOut_Md_prev[4] !== DatOut_Md_expected_prev[4] )
+		&& ((DatOut_Md_expected_prev[4] !== last_DatOut_Md_exp[4]) ||
 			on_first_change[1])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port DataMd[4] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", DataMd_expected_prev);
-		$display ("     Real value = %b", DataMd_prev);
+		$display ("ERROR! Vector Mismatch for output port DatOut_Md[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", DatOut_Md_expected_prev);
+		$display ("     Real value = %b", DatOut_Md_prev);
 		nummismatches = nummismatches + 1;
 		on_first_change[1] = 1'b0;
-		last_DataMd_exp[4] = DataMd_expected_prev[4];
+		last_DatOut_Md_exp[4] = DatOut_Md_expected_prev[4];
 	end
 	if (
-		( DataMd_expected_prev[5] !== 1'bx ) && ( DataMd_prev[5] !== DataMd_expected_prev[5] )
-		&& ((DataMd_expected_prev[5] !== last_DataMd_exp[5]) ||
+		( DatOut_Md_expected_prev[5] !== 1'bx ) && ( DatOut_Md_prev[5] !== DatOut_Md_expected_prev[5] )
+		&& ((DatOut_Md_expected_prev[5] !== last_DatOut_Md_exp[5]) ||
 			on_first_change[1])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port DataMd[5] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", DataMd_expected_prev);
-		$display ("     Real value = %b", DataMd_prev);
+		$display ("ERROR! Vector Mismatch for output port DatOut_Md[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", DatOut_Md_expected_prev);
+		$display ("     Real value = %b", DatOut_Md_prev);
 		nummismatches = nummismatches + 1;
 		on_first_change[1] = 1'b0;
-		last_DataMd_exp[5] = DataMd_expected_prev[5];
+		last_DatOut_Md_exp[5] = DatOut_Md_expected_prev[5];
 	end
 	if (
-		( DataMd_expected_prev[6] !== 1'bx ) && ( DataMd_prev[6] !== DataMd_expected_prev[6] )
-		&& ((DataMd_expected_prev[6] !== last_DataMd_exp[6]) ||
+		( DatOut_Md_expected_prev[6] !== 1'bx ) && ( DatOut_Md_prev[6] !== DatOut_Md_expected_prev[6] )
+		&& ((DatOut_Md_expected_prev[6] !== last_DatOut_Md_exp[6]) ||
 			on_first_change[1])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port DataMd[6] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", DataMd_expected_prev);
-		$display ("     Real value = %b", DataMd_prev);
+		$display ("ERROR! Vector Mismatch for output port DatOut_Md[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", DatOut_Md_expected_prev);
+		$display ("     Real value = %b", DatOut_Md_prev);
 		nummismatches = nummismatches + 1;
 		on_first_change[1] = 1'b0;
-		last_DataMd_exp[6] = DataMd_expected_prev[6];
+		last_DatOut_Md_exp[6] = DatOut_Md_expected_prev[6];
 	end
 	if (
-		( DataMd_expected_prev[7] !== 1'bx ) && ( DataMd_prev[7] !== DataMd_expected_prev[7] )
-		&& ((DataMd_expected_prev[7] !== last_DataMd_exp[7]) ||
+		( DatOut_Md_expected_prev[7] !== 1'bx ) && ( DatOut_Md_prev[7] !== DatOut_Md_expected_prev[7] )
+		&& ((DatOut_Md_expected_prev[7] !== last_DatOut_Md_exp[7]) ||
 			on_first_change[1])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port DataMd[7] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", DataMd_expected_prev);
-		$display ("     Real value = %b", DataMd_prev);
+		$display ("ERROR! Vector Mismatch for output port DatOut_Md[7] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", DatOut_Md_expected_prev);
+		$display ("     Real value = %b", DatOut_Md_prev);
 		nummismatches = nummismatches + 1;
 		on_first_change[1] = 1'b0;
-		last_DataMd_exp[7] = DataMd_expected_prev[7];
+		last_DatOut_Md_exp[7] = DatOut_Md_expected_prev[7];
 	end
 	if (
-		( DataMd_expected_prev[8] !== 1'bx ) && ( DataMd_prev[8] !== DataMd_expected_prev[8] )
-		&& ((DataMd_expected_prev[8] !== last_DataMd_exp[8]) ||
+		( DatOut_Md_expected_prev[8] !== 1'bx ) && ( DatOut_Md_prev[8] !== DatOut_Md_expected_prev[8] )
+		&& ((DatOut_Md_expected_prev[8] !== last_DatOut_Md_exp[8]) ||
 			on_first_change[1])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port DataMd[8] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", DataMd_expected_prev);
-		$display ("     Real value = %b", DataMd_prev);
+		$display ("ERROR! Vector Mismatch for output port DatOut_Md[8] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", DatOut_Md_expected_prev);
+		$display ("     Real value = %b", DatOut_Md_prev);
 		nummismatches = nummismatches + 1;
 		on_first_change[1] = 1'b0;
-		last_DataMd_exp[8] = DataMd_expected_prev[8];
+		last_DatOut_Md_exp[8] = DatOut_Md_expected_prev[8];
 	end
 	if (
-		( DataMd_expected_prev[9] !== 1'bx ) && ( DataMd_prev[9] !== DataMd_expected_prev[9] )
-		&& ((DataMd_expected_prev[9] !== last_DataMd_exp[9]) ||
+		( DatOut_Md_expected_prev[9] !== 1'bx ) && ( DatOut_Md_prev[9] !== DatOut_Md_expected_prev[9] )
+		&& ((DatOut_Md_expected_prev[9] !== last_DatOut_Md_exp[9]) ||
 			on_first_change[1])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port DataMd[9] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", DataMd_expected_prev);
-		$display ("     Real value = %b", DataMd_prev);
+		$display ("ERROR! Vector Mismatch for output port DatOut_Md[9] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", DatOut_Md_expected_prev);
+		$display ("     Real value = %b", DatOut_Md_prev);
 		nummismatches = nummismatches + 1;
 		on_first_change[1] = 1'b0;
-		last_DataMd_exp[9] = DataMd_expected_prev[9];
+		last_DatOut_Md_exp[9] = DatOut_Md_expected_prev[9];
 	end
 	if (
-		( DataMd_expected_prev[10] !== 1'bx ) && ( DataMd_prev[10] !== DataMd_expected_prev[10] )
-		&& ((DataMd_expected_prev[10] !== last_DataMd_exp[10]) ||
+		( DatOut_Md_expected_prev[10] !== 1'bx ) && ( DatOut_Md_prev[10] !== DatOut_Md_expected_prev[10] )
+		&& ((DatOut_Md_expected_prev[10] !== last_DatOut_Md_exp[10]) ||
 			on_first_change[1])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port DataMd[10] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", DataMd_expected_prev);
-		$display ("     Real value = %b", DataMd_prev);
+		$display ("ERROR! Vector Mismatch for output port DatOut_Md[10] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", DatOut_Md_expected_prev);
+		$display ("     Real value = %b", DatOut_Md_prev);
 		nummismatches = nummismatches + 1;
 		on_first_change[1] = 1'b0;
-		last_DataMd_exp[10] = DataMd_expected_prev[10];
+		last_DatOut_Md_exp[10] = DatOut_Md_expected_prev[10];
 	end
 	if (
-		( DataMd_expected_prev[11] !== 1'bx ) && ( DataMd_prev[11] !== DataMd_expected_prev[11] )
-		&& ((DataMd_expected_prev[11] !== last_DataMd_exp[11]) ||
+		( DatOut_Md_expected_prev[11] !== 1'bx ) && ( DatOut_Md_prev[11] !== DatOut_Md_expected_prev[11] )
+		&& ((DatOut_Md_expected_prev[11] !== last_DatOut_Md_exp[11]) ||
 			on_first_change[1])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port DataMd[11] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", DataMd_expected_prev);
-		$display ("     Real value = %b", DataMd_prev);
+		$display ("ERROR! Vector Mismatch for output port DatOut_Md[11] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", DatOut_Md_expected_prev);
+		$display ("     Real value = %b", DatOut_Md_prev);
 		nummismatches = nummismatches + 1;
 		on_first_change[1] = 1'b0;
-		last_DataMd_exp[11] = DataMd_expected_prev[11];
+		last_DatOut_Md_exp[11] = DatOut_Md_expected_prev[11];
 	end
 	if (
-		( DataMd_expected_prev[12] !== 1'bx ) && ( DataMd_prev[12] !== DataMd_expected_prev[12] )
-		&& ((DataMd_expected_prev[12] !== last_DataMd_exp[12]) ||
+		( DatOut_Md_expected_prev[12] !== 1'bx ) && ( DatOut_Md_prev[12] !== DatOut_Md_expected_prev[12] )
+		&& ((DatOut_Md_expected_prev[12] !== last_DatOut_Md_exp[12]) ||
 			on_first_change[1])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port DataMd[12] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", DataMd_expected_prev);
-		$display ("     Real value = %b", DataMd_prev);
+		$display ("ERROR! Vector Mismatch for output port DatOut_Md[12] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", DatOut_Md_expected_prev);
+		$display ("     Real value = %b", DatOut_Md_prev);
 		nummismatches = nummismatches + 1;
 		on_first_change[1] = 1'b0;
-		last_DataMd_exp[12] = DataMd_expected_prev[12];
+		last_DatOut_Md_exp[12] = DatOut_Md_expected_prev[12];
 	end
 	if (
-		( DataMd_expected_prev[13] !== 1'bx ) && ( DataMd_prev[13] !== DataMd_expected_prev[13] )
-		&& ((DataMd_expected_prev[13] !== last_DataMd_exp[13]) ||
+		( DatOut_Md_expected_prev[13] !== 1'bx ) && ( DatOut_Md_prev[13] !== DatOut_Md_expected_prev[13] )
+		&& ((DatOut_Md_expected_prev[13] !== last_DatOut_Md_exp[13]) ||
 			on_first_change[1])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port DataMd[13] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", DataMd_expected_prev);
-		$display ("     Real value = %b", DataMd_prev);
+		$display ("ERROR! Vector Mismatch for output port DatOut_Md[13] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", DatOut_Md_expected_prev);
+		$display ("     Real value = %b", DatOut_Md_prev);
 		nummismatches = nummismatches + 1;
 		on_first_change[1] = 1'b0;
-		last_DataMd_exp[13] = DataMd_expected_prev[13];
+		last_DatOut_Md_exp[13] = DatOut_Md_expected_prev[13];
 	end
 	if (
-		( DataMd_expected_prev[14] !== 1'bx ) && ( DataMd_prev[14] !== DataMd_expected_prev[14] )
-		&& ((DataMd_expected_prev[14] !== last_DataMd_exp[14]) ||
+		( DatOut_Md_expected_prev[14] !== 1'bx ) && ( DatOut_Md_prev[14] !== DatOut_Md_expected_prev[14] )
+		&& ((DatOut_Md_expected_prev[14] !== last_DatOut_Md_exp[14]) ||
 			on_first_change[1])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port DataMd[14] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", DataMd_expected_prev);
-		$display ("     Real value = %b", DataMd_prev);
+		$display ("ERROR! Vector Mismatch for output port DatOut_Md[14] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", DatOut_Md_expected_prev);
+		$display ("     Real value = %b", DatOut_Md_prev);
 		nummismatches = nummismatches + 1;
 		on_first_change[1] = 1'b0;
-		last_DataMd_exp[14] = DataMd_expected_prev[14];
+		last_DatOut_Md_exp[14] = DatOut_Md_expected_prev[14];
 	end
 	if (
-		( DataMd_expected_prev[15] !== 1'bx ) && ( DataMd_prev[15] !== DataMd_expected_prev[15] )
-		&& ((DataMd_expected_prev[15] !== last_DataMd_exp[15]) ||
+		( DatOut_Md_expected_prev[15] !== 1'bx ) && ( DatOut_Md_prev[15] !== DatOut_Md_expected_prev[15] )
+		&& ((DatOut_Md_expected_prev[15] !== last_DatOut_Md_exp[15]) ||
 			on_first_change[1])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port DataMd[15] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", DataMd_expected_prev);
-		$display ("     Real value = %b", DataMd_prev);
+		$display ("ERROR! Vector Mismatch for output port DatOut_Md[15] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", DatOut_Md_expected_prev);
+		$display ("     Real value = %b", DatOut_Md_prev);
 		nummismatches = nummismatches + 1;
 		on_first_change[1] = 1'b0;
-		last_DataMd_exp[15] = DataMd_expected_prev[15];
+		last_DatOut_Md_exp[15] = DatOut_Md_expected_prev[15];
 	end
 
 	trigger <= ~trigger;
@@ -435,7 +435,7 @@ reg [15:0] GPROut;
 reg [15:0] PSROut;
 reg [1:0] SelectDataMd;
 // wires                                               
-wire [15:0] DataMd;
+wire [15:0] DatOut_Md;
 
 wire sampler;                             
 
@@ -443,31 +443,41 @@ wire sampler;
 Data_MdMux i1 (
 // port map - connection between master ports and signals/registers   
 	.ACOut(ACOut),
-	.DataMd(DataMd),
+	.DatOut_Md(DatOut_Md),
 	.DirMd(DirMd),
 	.GPROut(GPROut),
 	.PSROut(PSROut),
 	.SelectDataMd(SelectDataMd)
 );
+// SelectDataMd[ 1 ]
+initial
+begin
+	SelectDataMd[1] = 1'b0;
+end 
+// SelectDataMd[ 0 ]
+initial
+begin
+	SelectDataMd[0] = 1'b0;
+end 
 // ACOut[ 15 ]
 initial
 begin
-	ACOut[15] = 1'b0;
+	ACOut[15] = 1'b1;
 end 
 // ACOut[ 14 ]
 initial
 begin
-	ACOut[14] = 1'b0;
+	ACOut[14] = 1'b1;
 end 
 // ACOut[ 13 ]
 initial
 begin
-	ACOut[13] = 1'b0;
+	ACOut[13] = 1'b1;
 end 
 // ACOut[ 12 ]
 initial
 begin
-	ACOut[12] = 1'b0;
+	ACOut[12] = 1'b1;
 end 
 // ACOut[ 11 ]
 initial
@@ -482,37 +492,37 @@ end
 // ACOut[ 9 ]
 initial
 begin
-	ACOut[9] = 1'b1;
+	ACOut[9] = 1'b0;
 end 
 // ACOut[ 8 ]
 initial
 begin
-	ACOut[8] = 1'b1;
+	ACOut[8] = 1'b0;
 end 
 // ACOut[ 7 ]
 initial
 begin
-	ACOut[7] = 1'b1;
+	ACOut[7] = 1'b0;
 end 
 // ACOut[ 6 ]
 initial
 begin
-	ACOut[6] = 1'b1;
+	ACOut[6] = 1'b0;
 end 
 // ACOut[ 5 ]
 initial
 begin
-	ACOut[5] = 1'b1;
+	ACOut[5] = 1'b0;
 end 
 // ACOut[ 4 ]
 initial
 begin
-	ACOut[4] = 1'b1;
+	ACOut[4] = 1'b0;
 end 
 // ACOut[ 3 ]
 initial
 begin
-	ACOut[3] = 1'b1;
+	ACOut[3] = 1'b0;
 end 
 // ACOut[ 2 ]
 initial
@@ -537,17 +547,17 @@ end
 // DirMd[ 14 ]
 initial
 begin
-	DirMd[14] = 1'b1;
+	DirMd[14] = 1'b0;
 end 
 // DirMd[ 13 ]
 initial
 begin
-	DirMd[13] = 1'b1;
+	DirMd[13] = 1'b0;
 end 
 // DirMd[ 12 ]
 initial
 begin
-	DirMd[12] = 1'b1;
+	DirMd[12] = 1'b0;
 end 
 // DirMd[ 11 ]
 initial
@@ -602,32 +612,32 @@ end
 // DirMd[ 1 ]
 initial
 begin
-	DirMd[1] = 1'b0;
+	DirMd[1] = 1'b1;
 end 
 // DirMd[ 0 ]
 initial
 begin
-	DirMd[0] = 1'b0;
+	DirMd[0] = 1'b1;
 end 
 // GPROut[ 15 ]
 initial
 begin
-	GPROut[15] = 1'b1;
+	GPROut[15] = 1'b0;
 end 
 // GPROut[ 14 ]
 initial
 begin
-	GPROut[14] = 1'b1;
+	GPROut[14] = 1'b0;
 end 
 // GPROut[ 13 ]
 initial
 begin
-	GPROut[13] = 1'b1;
+	GPROut[13] = 1'b0;
 end 
 // GPROut[ 12 ]
 initial
 begin
-	GPROut[12] = 1'b1;
+	GPROut[12] = 1'b0;
 end 
 // GPROut[ 11 ]
 initial
@@ -637,22 +647,22 @@ end
 // GPROut[ 10 ]
 initial
 begin
-	GPROut[10] = 1'b0;
+	GPROut[10] = 1'b1;
 end 
 // GPROut[ 9 ]
 initial
 begin
-	GPROut[9] = 1'b0;
+	GPROut[9] = 1'b1;
 end 
 // GPROut[ 8 ]
 initial
 begin
-	GPROut[8] = 1'b0;
+	GPROut[8] = 1'b1;
 end 
 // GPROut[ 7 ]
 initial
 begin
-	GPROut[7] = 1'b0;
+	GPROut[7] = 1'b1;
 end 
 // GPROut[ 6 ]
 initial
@@ -692,17 +702,17 @@ end
 // PSROut[ 15 ]
 initial
 begin
-	PSROut[15] = 1'b0;
+	PSROut[15] = 1'b1;
 end 
 // PSROut[ 14 ]
 initial
 begin
-	PSROut[14] = 1'b0;
+	PSROut[14] = 1'b1;
 end 
 // PSROut[ 13 ]
 initial
 begin
-	PSROut[13] = 1'b0;
+	PSROut[13] = 1'b1;
 end 
 // PSROut[ 12 ]
 initial
@@ -742,17 +752,17 @@ end
 // PSROut[ 5 ]
 initial
 begin
-	PSROut[5] = 1'b1;
+	PSROut[5] = 1'b0;
 end 
 // PSROut[ 4 ]
 initial
 begin
-	PSROut[4] = 1'b1;
+	PSROut[4] = 1'b0;
 end 
 // PSROut[ 3 ]
 initial
 begin
-	PSROut[3] = 1'b1;
+	PSROut[3] = 1'b0;
 end 
 // PSROut[ 2 ]
 initial
@@ -769,20 +779,6 @@ initial
 begin
 	PSROut[0] = 1'b1;
 end 
-// SelectDataMd[ 1 ]
-initial
-begin
-	SelectDataMd[1] = 1'b0;
-	SelectDataMd[1] = #460000 1'b1;
-end 
-// SelectDataMd[ 0 ]
-initial
-begin
-	SelectDataMd[0] = 1'b0;
-	SelectDataMd[0] = #260000 1'b1;
-	SelectDataMd[0] = #200000 1'b0;
-	SelectDataMd[0] = #290000 1'b1;
-end 
 
 Data_MdMux_vlg_sample_tst tb_sample (
 	.ACOut(ACOut),
@@ -794,7 +790,7 @@ Data_MdMux_vlg_sample_tst tb_sample (
 );
 
 Data_MdMux_vlg_check_tst tb_out(
-	.DataMd(DataMd),
+	.DatOut_Md(DatOut_Md),
 	.sampler_rx(sampler)
 );
 endmodule

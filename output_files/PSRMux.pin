@@ -165,7 +165,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : G9        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : G10       :        :                   :         : 6         :                
 VCCIO6                       : G11       : power  :                   : 2.5V    : 6         :                
 GND                          : G12       : gnd    :                   :         :           :                
-DataMd[4]                    : G13       : input  : 2.5 V             :         : 5         : N              
+Datoin_Md[4]                 : G13       : input  : 2.5 V             :         : 5         : N              
 GND                          : H1        : gnd    :                   :         :           :                
 GND                          : H2        : gnd    :                   :         :           :                
 VCCL_GXB                     : H3        : power  :                   : 1.2V    :           :                
@@ -199,8 +199,8 @@ VCCA                         : K4        : power  :                   : 2.5V    
 MSEL0                        : K5        :        :                   :         : 3         :                
 nSTATUS                      : K6        :        :                   :         : 3         :                
 VCC_CLKIN3A                  : K7        : power  :                   : 2.5V    : 3A        :                
-DataMd[3]                    : K8        : input  : 2.5 V             :         : 4         : N              
-PSRMuxOut[0]                 : K9        : output : 2.5 V             :         : 4         : N              
+Datoin_Md[3]                 : K8        : input  : 2.5 V             :         : 4         : N              
+Banderas[0]                  : K9        : output : 2.5 V             :         : 4         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : K10       :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : K11       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : K12       :        :                   :         : 5         :                
@@ -208,10 +208,10 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : K13       :        :                   :      
 RREF                         : L1        :        :                   :         :           :                
 GND                          : L2        : gnd    :                   :         :           :                
 MSEL2                        : L3        :        :                   :         : 3         :                
-PSRMuxOut[2]                 : L4        : output : 2.5 V             :         : 3         : N              
-PSRMuxOut[4]                 : L5        : output : 2.5 V             :         : 3         : N              
+Banderas[2]                  : L4        : output : 2.5 V             :         : 3         : N              
+Banderas[4]                  : L5        : output : 2.5 V             :         : 3         : N              
 VCCIO3                       : L6        : power  :                   : 2.5V    : 3         :                
-PSRMuxOut[3]                 : L7        : output : 2.5 V             :         : 3         : N              
+Banderas[3]                  : L7        : output : 2.5 V             :         : 3         : N              
 VCCIO4                       : L8        : power  :                   : 2.5V    : 4         :                
 ALUStatus[2]                 : L9        : input  : 2.5 V             :         : 4         : N              
 VCCIO4                       : L10       : power  :                   : 2.5V    : 4         :                
@@ -228,7 +228,7 @@ GND+                         : M7        :        :                   :         
 GND                          : M8        : gnd    :                   :         :           :                
 ALUStatus[1]                 : M9        : input  : 2.5 V             :         : 4         : N              
 GND                          : M10       : gnd    :                   :         :           :                
-PSRMuxOut[1]                 : M11       : output : 2.5 V             :         : 4         : N              
+Banderas[1]                  : M11       : output : 2.5 V             :         : 4         : N              
 GND                          : M12       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : M13       :        :                   :         : 5         :                
 VCCL_GXB                     : N1        : power  :                   : 1.2V    :           :                
@@ -238,9 +238,9 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : N4        :        :                   :      
 ~ALTERA_NCEO~ / RESERVED_OUTPUT_OPEN_DRAIN : N5        : output : 2.5 V             :         : 3         : N              
 ALUStatus[0]                 : N6        : input  : 2.5 V             :         : 3         : N              
 GND+                         : N7        :        :                   :         : 4         :                
-DataMd[2]                    : N8        : input  : 2.5 V             :         : 4         : N              
-DataMd[1]                    : N9        : input  : 2.5 V             :         : 4         : N              
-DataMd[0]                    : N10       : input  : 2.5 V             :         : 4         : N              
+Datoin_Md[2]                 : N8        : input  : 2.5 V             :         : 4         : N              
+Datoin_Md[1]                 : N9        : input  : 2.5 V             :         : 4         : N              
+Datoin_Md[0]                 : N10       : input  : 2.5 V             :         : 4         : N              
 SelectPSR                    : N11       : input  : 2.5 V             :         : 4         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : N12       :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : N13       :        :                   :         : 5         :                
