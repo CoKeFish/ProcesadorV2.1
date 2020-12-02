@@ -27,7 +27,7 @@ ENTITY ProgramStatus IS
 				SaveB  			 :IN STD_LOGIC; --Señal de control para habilitar el guardado de las banderas
 				SaveInt			 :IN STD_LOGIC; --Señal de control para habilitar el estado de las interrupciones.
 				IntE  			 :IN STD_LOGIC; --Señal de habilitar o desabilitar las interrupciones globales.
-				Banderas  		 :IN STD_LOGIC_VECTOR(3 DOWNTO 0); --Bus de datos de 4 bits que contiene el estado de las banderas.
+				Banderas  		 :IN STD_LOGIC_VECTOR(4 DOWNTO 0); --Bus de datos de 4 bits que contiene el estado de las banderas.
 				----------------------------------------------
 				--SALIDAS
 				PSROut		    :OUT STD_LOGIC_VECTOR(4 DOWNTO 0) --Bus de 5 bits que contiene el estado del programa.

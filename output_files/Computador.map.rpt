@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Computador
-Mon Nov 23 21:24:49 2020
+Tue Dec 01 22:55:07 2020
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -16,19 +16,22 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   8. Analysis & Synthesis RAM Summary
   9. Analysis & Synthesis IP Cores Summary
  10. Registers Removed During Synthesis
- 11. General Register Statistics
- 12. Inverted Register Statistics
- 13. Source assignments for MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_t1q3:auto_generated
- 14. Source assignments for MemoryROM:B_MemoryROM|altsyncram:altsyncram_component|altsyncram_aes3:auto_generated
- 15. Parameter Settings for User Entity Instance: MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component
- 16. Parameter Settings for User Entity Instance: MemoryROM:B_MemoryROM|altsyncram:altsyncram_component
- 17. altsyncram Parameter Settings by Entity Instance
- 18. Port Connectivity Checks: "Procesador:B_Procesador|GeneralPR:B_GPR"
- 19. Port Connectivity Checks: "Procesador:B_Procesador|Control:B_Control"
- 20. Port Connectivity Checks: "Procesador:B_Procesador|ProgramCounter:B_Program_counter"
- 21. Port Connectivity Checks: "Procesador:B_Procesador"
- 22. Elapsed Time Per Partition
- 23. Analysis & Synthesis Messages
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Source assignments for MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_t1q3:auto_generated
+ 15. Source assignments for MemoryROM:B_MemoryROM|altsyncram:altsyncram_component|altsyncram_aes3:auto_generated
+ 16. Parameter Settings for User Entity Instance: MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component
+ 17. Parameter Settings for User Entity Instance: MemoryROM:B_MemoryROM|altsyncram:altsyncram_component
+ 18. altsyncram Parameter Settings by Entity Instance
+ 19. Port Connectivity Checks: "Procesador:B_Procesador|Data_MdMux:B_Data_MdMux"
+ 20. Port Connectivity Checks: "Procesador:B_Procesador|ALU:B_ALU|Banderas:B_Banderas|SelecctorOpera:B_SeleccionOpera"
+ 21. Port Connectivity Checks: "Procesador:B_Procesador|ALU:B_ALU|SelectorSM:B_SelectorMP"
+ 22. Port Connectivity Checks: "Procesador:B_Procesador|ALU:B_ALU|ControlALU:B_Control|SelecctorOpera:B_SeleccionOpera"
+ 23. Port Connectivity Checks: "Procesador:B_Procesador|ALU:B_ALU"
+ 24. Port Connectivity Checks: "Procesador:B_Procesador"
+ 25. Elapsed Time Per Partition
+ 26. Analysis & Synthesis Messages
 
 
 
@@ -54,15 +57,15 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Nov 23 21:24:49 2020      ;
+; Analysis & Synthesis Status        ; Successful - Tue Dec 01 22:55:06 2020      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; Computador                                 ;
 ; Top-level Entity Name              ; Computador                                 ;
 ; Family                             ; Cyclone IV GX                              ;
-; Total logic elements               ; 38                                         ;
-;     Total combinational functions  ; 20                                         ;
-;     Dedicated logic registers      ; 29                                         ;
-; Total registers                    ; 29                                         ;
+; Total logic elements               ; 8                                          ;
+;     Total combinational functions  ; 6                                          ;
+;     Dedicated logic registers      ; 7                                          ;
+; Total registers                    ; 7                                          ;
 ; Total pins                         ; 49                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 5,888                                      ;
@@ -185,6 +188,32 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Computador.hex                   ; yes             ; User Hexadecimal (Intel-Format) File  ; C:/Users/OMEN/Desktop/ProcesadorV2/Computador.hex                ;         ;
 ; MemoryRAM.vhd                    ; yes             ; User Wizard-Generated File            ; C:/Users/OMEN/Desktop/ProcesadorV2/MemoryRAM.vhd                 ;         ;
 ; MemoryROM.vhd                    ; yes             ; User Wizard-Generated File            ; C:/Users/OMEN/Desktop/ProcesadorV2/MemoryROM.vhd                 ;         ;
+; acumulador.vhd                   ; yes             ; Auto-Found VHDL File                  ; C:/Users/OMEN/Desktop/ProcesadorV2/acumulador.vhd                ;         ;
+; alu.vhd                          ; yes             ; Auto-Found VHDL File                  ; C:/Users/OMEN/Desktop/ProcesadorV2/alu.vhd                       ;         ;
+; controlalu.vhd                   ; yes             ; Auto-Found VHDL File                  ; C:/Users/OMEN/Desktop/ProcesadorV2/controlalu.vhd                ;         ;
+; selecctoropera.vhd               ; yes             ; Auto-Found VHDL File                  ; C:/Users/OMEN/Desktop/ProcesadorV2/selecctoropera.vhd            ;         ;
+; countermulti.vhd                 ; yes             ; Auto-Found VHDL File                  ; C:/Users/OMEN/Desktop/ProcesadorV2/countermulti.vhd              ;         ;
+; adder.vhd                        ; yes             ; Auto-Found VHDL File                  ; C:/Users/OMEN/Desktop/ProcesadorV2/adder.vhd                     ;         ;
+; fulladder.vhd                    ; yes             ; Auto-Found VHDL File                  ; C:/Users/OMEN/Desktop/ProcesadorV2/fulladder.vhd                 ;         ;
+; selecctorg.vhd                   ; yes             ; Auto-Found VHDL File                  ; C:/Users/OMEN/Desktop/ProcesadorV2/selecctorg.vhd                ;         ;
+; r_resultado.vhd                  ; yes             ; Auto-Found VHDL File                  ; C:/Users/OMEN/Desktop/ProcesadorV2/r_resultado.vhd               ;         ;
+; notcast.vhd                      ; yes             ; Auto-Found VHDL File                  ; C:/Users/OMEN/Desktop/ProcesadorV2/notcast.vhd                   ;         ;
+; andcast.vhd                      ; yes             ; Auto-Found VHDL File                  ; C:/Users/OMEN/Desktop/ProcesadorV2/andcast.vhd                   ;         ;
+; orcast.vhd                       ; yes             ; Auto-Found VHDL File                  ; C:/Users/OMEN/Desktop/ProcesadorV2/orcast.vhd                    ;         ;
+; registro_a_q_e.vhd               ; yes             ; Auto-Found VHDL File                  ; C:/Users/OMEN/Desktop/ProcesadorV2/registro_a_q_e.vhd            ;         ;
+; selectorsm.vhd                   ; yes             ; Auto-Found VHDL File                  ; C:/Users/OMEN/Desktop/ProcesadorV2/selectorsm.vhd                ;         ;
+; desplazamientologico.vhd         ; yes             ; Auto-Found VHDL File                  ; C:/Users/OMEN/Desktop/ProcesadorV2/desplazamientologico.vhd      ;         ;
+; desplazamientorota.vhd           ; yes             ; Auto-Found VHDL File                  ; C:/Users/OMEN/Desktop/ProcesadorV2/desplazamientorota.vhd        ;         ;
+; banderas.vhd                     ; yes             ; Auto-Found VHDL File                  ; C:/Users/OMEN/Desktop/ProcesadorV2/banderas.vhd                  ;         ;
+; acummux.vhd                      ; yes             ; Auto-Found VHDL File                  ; C:/Users/OMEN/Desktop/ProcesadorV2/acummux.vhd                   ;         ;
+; dirregister.vhd                  ; yes             ; Auto-Found VHDL File                  ; C:/Users/OMEN/Desktop/ProcesadorV2/dirregister.vhd               ;         ;
+; programcountermux.vhd            ; yes             ; Auto-Found VHDL File                  ; C:/Users/OMEN/Desktop/ProcesadorV2/programcountermux.vhd         ;         ;
+; programstatus.vhd                ; yes             ; Auto-Found VHDL File                  ; C:/Users/OMEN/Desktop/ProcesadorV2/programstatus.vhd             ;         ;
+; dirmdmux.vhd                     ; yes             ; Auto-Found VHDL File                  ; C:/Users/OMEN/Desktop/ProcesadorV2/dirmdmux.vhd                  ;         ;
+; data_mdmux.vhd                   ; yes             ; Auto-Found VHDL File                  ; C:/Users/OMEN/Desktop/ProcesadorV2/data_mdmux.vhd                ;         ;
+; alumux.vhd                       ; yes             ; Auto-Found VHDL File                  ; C:/Users/OMEN/Desktop/ProcesadorV2/alumux.vhd                    ;         ;
+; stackpointer.vhd                 ; yes             ; Auto-Found VHDL File                  ; C:/Users/OMEN/Desktop/ProcesadorV2/stackpointer.vhd              ;         ;
+; psrmux.vhd                       ; yes             ; Auto-Found VHDL File                  ; C:/Users/OMEN/Desktop/ProcesadorV2/psrmux.vhd                    ;         ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                          ; d:/quartus/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
 ; stratix_ram_block.inc            ; yes             ; Megafunction                          ; d:/quartus/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
 ; lpm_mux.inc                      ; yes             ; Megafunction                          ; d:/quartus/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
@@ -199,19 +228,19 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+---------------------------------------+------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary ;
-+--------------------------+------------------+
-; Resource                 ; Usage            ;
-+--------------------------+------------------+
-; I/O pins                 ; 49               ;
-; Total memory bits        ; 5888             ;
-; DSP block 9-bit elements ; 0                ;
-; Maximum fan-out node     ; Clock~input      ;
-; Maximum fan-out          ; 52               ;
-; Total fan-out            ; 504              ;
-; Average fan-out          ; 2.96             ;
-+--------------------------+------------------+
++-----------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                             ;
++--------------------------+--------------------------------------------------------------+
+; Resource                 ; Usage                                                        ;
++--------------------------+--------------------------------------------------------------+
+; I/O pins                 ; 49                                                           ;
+; Total memory bits        ; 5888                                                         ;
+; DSP block 9-bit elements ; 0                                                            ;
+; Maximum fan-out node     ; Procesador:B_Procesador|ProgramCounter:B_Program_counter|FF1 ;
+; Maximum fan-out          ; 39                                                           ;
+; Total fan-out            ; 241                                                          ;
+; Average fan-out          ; 1.80                                                         ;
++--------------------------+--------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -219,14 +248,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+--------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                              ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+--------------------------------------------------------------------------------------------------+--------------+
-; |Computador                               ; 20 (0)            ; 29 (0)       ; 5888        ; 0            ; 0       ; 0         ; 0         ; 49   ; 0            ; |Computador                                                                                      ; work         ;
+; |Computador                               ; 6 (0)             ; 7 (0)        ; 5888        ; 0            ; 0       ; 0         ; 0         ; 49   ; 0            ; |Computador                                                                                      ; work         ;
 ;    |MemoryROM:B_MemoryROM|                ; 1 (0)             ; 1 (0)        ; 5888        ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|MemoryROM:B_MemoryROM                                                                ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 1 (0)             ; 1 (0)        ; 5888        ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|MemoryROM:B_MemoryROM|altsyncram:altsyncram_component                                ; work         ;
 ;          |altsyncram_aes3:auto_generated| ; 1 (1)             ; 1 (1)        ; 5888        ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|MemoryROM:B_MemoryROM|altsyncram:altsyncram_component|altsyncram_aes3:auto_generated ; work         ;
-;    |Procesador:B_Procesador|              ; 19 (0)            ; 28 (0)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador                                                              ; work         ;
+;    |Procesador:B_Procesador|              ; 5 (0)             ; 6 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador                                                              ; work         ;
 ;       |Control:B_Control|                 ; 3 (3)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|Control:B_Control                                            ; work         ;
-;       |GeneralPR:B_GPR|                   ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|GeneralPR:B_GPR                                              ; work         ;
-;       |ProgramCounter:B_Program_counter|  ; 16 (16)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ProgramCounter:B_Program_counter                             ; work         ;
+;       |ProgramCounter:B_Program_counter|  ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ProgramCounter:B_Program_counter                             ; work         ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+--------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -250,15 +278,185 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+-----------------------------------+--------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                     ;
-+-----------------------------------------------+----------------------------------------+
-; Register name                                 ; Reason for Removal                     ;
-+-----------------------------------------------+----------------------------------------+
-; Procesador:B_Procesador|Control:B_Control|FF4 ; Stuck at GND due to stuck port data_in ;
-; Procesador:B_Procesador|Control:B_Control|FF5 ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 2         ;                                        ;
-+-----------------------------------------------+----------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                           ;
++-----------------------------------------------------------------------------------+--------------------------------------------------------------------------+
+; Register name                                                                     ; Reason for Removal                                                       ;
++-----------------------------------------------------------------------------------+--------------------------------------------------------------------------+
+; Procesador:B_Procesador|Control:B_Control|FF4                                     ; Stuck at GND due to stuck port data_in                                   ;
+; Procesador:B_Procesador|Control:B_Control|FF5                                     ; Stuck at GND due to stuck port data_in                                   ;
+; Procesador:B_Procesador|StackPointer:B_StackPointer|FF0                           ; Stuck at GND due to stuck port clock_enable                              ;
+; Procesador:B_Procesador|StackPointer:B_StackPointer|FF1                           ; Stuck at GND due to stuck port clock_enable                              ;
+; Procesador:B_Procesador|StackPointer:B_StackPointer|FF2                           ; Stuck at GND due to stuck port clock_enable                              ;
+; Procesador:B_Procesador|StackPointer:B_StackPointer|FF3                           ; Stuck at GND due to stuck port clock_enable                              ;
+; Procesador:B_Procesador|StackPointer:B_StackPointer|FF4                           ; Stuck at GND due to stuck port clock_enable                              ;
+; Procesador:B_Procesador|StackPointer:B_StackPointer|FF5                           ; Stuck at GND due to stuck port clock_enable                              ;
+; Procesador:B_Procesador|StackPointer:B_StackPointer|FF6                           ; Stuck at GND due to stuck port clock_enable                              ;
+; Procesador:B_Procesador|StackPointer:B_StackPointer|FF7                           ; Stuck at GND due to stuck port clock_enable                              ;
+; Procesador:B_Procesador|ProgramStatus:B_ProgramStatus|FF0                         ; Stuck at GND due to stuck port clock_enable                              ;
+; Procesador:B_Procesador|ProgramStatus:B_ProgramStatus|FF1                         ; Stuck at GND due to stuck port clock_enable                              ;
+; Procesador:B_Procesador|ProgramStatus:B_ProgramStatus|FF2                         ; Stuck at GND due to stuck port clock_enable                              ;
+; Procesador:B_Procesador|ProgramStatus:B_ProgramStatus|FF3                         ; Stuck at GND due to stuck port clock_enable                              ;
+; Procesador:B_Procesador|ProgramStatus:B_ProgramStatus|FF4                         ; Stuck at GND due to stuck port clock_enable                              ;
+; Procesador:B_Procesador|DirRegister:B_DirRegister|FF0                             ; Stuck at GND due to stuck port clock_enable                              ;
+; Procesador:B_Procesador|DirRegister:B_DirRegister|FF1                             ; Stuck at GND due to stuck port clock_enable                              ;
+; Procesador:B_Procesador|DirRegister:B_DirRegister|FF2                             ; Stuck at GND due to stuck port clock_enable                              ;
+; Procesador:B_Procesador|DirRegister:B_DirRegister|FF3                             ; Stuck at GND due to stuck port clock_enable                              ;
+; Procesador:B_Procesador|DirRegister:B_DirRegister|FF4                             ; Stuck at GND due to stuck port clock_enable                              ;
+; Procesador:B_Procesador|DirRegister:B_DirRegister|FF5                             ; Stuck at GND due to stuck port clock_enable                              ;
+; Procesador:B_Procesador|DirRegister:B_DirRegister|FF6                             ; Stuck at GND due to stuck port clock_enable                              ;
+; Procesador:B_Procesador|DirRegister:B_DirRegister|FF7                             ; Stuck at GND due to stuck port clock_enable                              ;
+; Procesador:B_Procesador|Acumulador:B_Acum|FF0                                     ; Stuck at GND due to stuck port clock_enable                              ;
+; Procesador:B_Procesador|Acumulador:B_Acum|FF1                                     ; Stuck at GND due to stuck port clock_enable                              ;
+; Procesador:B_Procesador|Acumulador:B_Acum|FF2                                     ; Stuck at GND due to stuck port clock_enable                              ;
+; Procesador:B_Procesador|Acumulador:B_Acum|FF3                                     ; Stuck at GND due to stuck port clock_enable                              ;
+; Procesador:B_Procesador|Acumulador:B_Acum|FF4                                     ; Stuck at GND due to stuck port clock_enable                              ;
+; Procesador:B_Procesador|Acumulador:B_Acum|FF5                                     ; Stuck at GND due to stuck port clock_enable                              ;
+; Procesador:B_Procesador|Acumulador:B_Acum|FF6                                     ; Stuck at GND due to stuck port clock_enable                              ;
+; Procesador:B_Procesador|Acumulador:B_Acum|FF7                                     ; Stuck at GND due to stuck port clock_enable                              ;
+; Procesador:B_Procesador|Acumulador:B_Acum|FF8                                     ; Stuck at GND due to stuck port clock_enable                              ;
+; Procesador:B_Procesador|Acumulador:B_Acum|FF9                                     ; Stuck at GND due to stuck port clock_enable                              ;
+; Procesador:B_Procesador|Acumulador:B_Acum|FF10                                    ; Stuck at GND due to stuck port clock_enable                              ;
+; Procesador:B_Procesador|Acumulador:B_Acum|FF11                                    ; Stuck at GND due to stuck port clock_enable                              ;
+; Procesador:B_Procesador|Acumulador:B_Acum|FF12                                    ; Stuck at GND due to stuck port clock_enable                              ;
+; Procesador:B_Procesador|Acumulador:B_Acum|FF13                                    ; Stuck at GND due to stuck port clock_enable                              ;
+; Procesador:B_Procesador|Acumulador:B_Acum|FF14                                    ; Stuck at GND due to stuck port clock_enable                              ;
+; Procesador:B_Procesador|Acumulador:B_Acum|FF15                                    ; Stuck at GND due to stuck port clock_enable                              ;
+; Procesador:B_Procesador|ALU:B_ALU|BR_Carry                                        ; Lost fanout                                                              ;
+; Procesador:B_Procesador|ALU:B_ALU|Registro_A_Q_E:B_registroAQE|Registro0          ; Lost fanout                                                              ;
+; Procesador:B_Procesador|ALU:B_ALU|Registro_A_Q_E:B_registroAQE|Registro1          ; Lost fanout                                                              ;
+; Procesador:B_Procesador|ALU:B_ALU|Registro_A_Q_E:B_registroAQE|Registro2          ; Lost fanout                                                              ;
+; Procesador:B_Procesador|ALU:B_ALU|Registro_A_Q_E:B_registroAQE|Registro3          ; Lost fanout                                                              ;
+; Procesador:B_Procesador|ALU:B_ALU|Registro_A_Q_E:B_registroAQE|Registro4          ; Lost fanout                                                              ;
+; Procesador:B_Procesador|ALU:B_ALU|Registro_A_Q_E:B_registroAQE|Registro5          ; Lost fanout                                                              ;
+; Procesador:B_Procesador|ALU:B_ALU|Registro_A_Q_E:B_registroAQE|Registro6          ; Lost fanout                                                              ;
+; Procesador:B_Procesador|ALU:B_ALU|Registro_A_Q_E:B_registroAQE|Registro7          ; Lost fanout                                                              ;
+; Procesador:B_Procesador|ALU:B_ALU|Registro_A_Q_E:B_registroAQE|Registro8          ; Lost fanout                                                              ;
+; Procesador:B_Procesador|ALU:B_ALU|Registro_A_Q_E:B_registroAQE|Registro9          ; Lost fanout                                                              ;
+; Procesador:B_Procesador|ALU:B_ALU|Registro_A_Q_E:B_registroAQE|Registro10         ; Lost fanout                                                              ;
+; Procesador:B_Procesador|ALU:B_ALU|Registro_A_Q_E:B_registroAQE|Registro11         ; Lost fanout                                                              ;
+; Procesador:B_Procesador|ALU:B_ALU|Registro_A_Q_E:B_registroAQE|Registro12         ; Lost fanout                                                              ;
+; Procesador:B_Procesador|ALU:B_ALU|Registro_A_Q_E:B_registroAQE|Registro13         ; Lost fanout                                                              ;
+; Procesador:B_Procesador|ALU:B_ALU|Registro_A_Q_E:B_registroAQE|Registro14         ; Lost fanout                                                              ;
+; Procesador:B_Procesador|ALU:B_ALU|Registro_A_Q_E:B_registroAQE|Registro15         ; Lost fanout                                                              ;
+; Procesador:B_Procesador|ALU:B_ALU|Registro_A_Q_E:B_registroAQE|Registro16         ; Lost fanout                                                              ;
+; Procesador:B_Procesador|ALU:B_ALU|ControlALU:B_Control|FF1                        ; Lost fanout                                                              ;
+; Procesador:B_Procesador|ALU:B_ALU|ControlALU:B_Control|FF2                        ; Lost fanout                                                              ;
+; Procesador:B_Procesador|ALU:B_ALU|ControlALU:B_Control|FF3                        ; Lost fanout                                                              ;
+; Procesador:B_Procesador|ALU:B_ALU|ControlALU:B_Control|FF4                        ; Lost fanout                                                              ;
+; Procesador:B_Procesador|ALU:B_ALU|ControlALU:B_Control|FF5                        ; Lost fanout                                                              ;
+; Procesador:B_Procesador|ALU:B_ALU|ControlALU:B_Control|CounterMulti:B_Counter|FF0 ; Lost fanout                                                              ;
+; Procesador:B_Procesador|ALU:B_ALU|ControlALU:B_Control|CounterMulti:B_Counter|FF1 ; Lost fanout                                                              ;
+; Procesador:B_Procesador|ALU:B_ALU|ControlALU:B_Control|CounterMulti:B_Counter|FF2 ; Lost fanout                                                              ;
+; Procesador:B_Procesador|ALU:B_ALU|ControlALU:B_Control|CounterMulti:B_Counter|FF3 ; Lost fanout                                                              ;
+; Procesador:B_Procesador|GeneralPR:B_GPR|FF18                                      ; Lost fanout                                                              ;
+; Procesador:B_Procesador|GeneralPR:B_GPR|FF19                                      ; Lost fanout                                                              ;
+; Procesador:B_Procesador|GeneralPR:B_GPR|FF20                                      ; Lost fanout                                                              ;
+; Procesador:B_Procesador|GeneralPR:B_GPR|FF21                                      ; Lost fanout                                                              ;
+; Procesador:B_Procesador|GeneralPR:B_GPR|FF8                                       ; Lost fanout                                                              ;
+; Procesador:B_Procesador|GeneralPR:B_GPR|FF9                                       ; Lost fanout                                                              ;
+; Procesador:B_Procesador|GeneralPR:B_GPR|FF10                                      ; Lost fanout                                                              ;
+; Procesador:B_Procesador|GeneralPR:B_GPR|FF11                                      ; Lost fanout                                                              ;
+; Procesador:B_Procesador|GeneralPR:B_GPR|FF12                                      ; Lost fanout                                                              ;
+; Procesador:B_Procesador|GeneralPR:B_GPR|FF13                                      ; Lost fanout                                                              ;
+; Procesador:B_Procesador|GeneralPR:B_GPR|FF14                                      ; Lost fanout                                                              ;
+; Procesador:B_Procesador|GeneralPR:B_GPR|FF0                                       ; Lost fanout                                                              ;
+; Procesador:B_Procesador|GeneralPR:B_GPR|FF1                                       ; Lost fanout                                                              ;
+; Procesador:B_Procesador|GeneralPR:B_GPR|FF2                                       ; Lost fanout                                                              ;
+; Procesador:B_Procesador|GeneralPR:B_GPR|FF3                                       ; Lost fanout                                                              ;
+; Procesador:B_Procesador|GeneralPR:B_GPR|FF4                                       ; Lost fanout                                                              ;
+; Procesador:B_Procesador|GeneralPR:B_GPR|FF5                                       ; Lost fanout                                                              ;
+; Procesador:B_Procesador|GeneralPR:B_GPR|FF6                                       ; Lost fanout                                                              ;
+; Procesador:B_Procesador|GeneralPR:B_GPR|FF7                                       ; Lost fanout                                                              ;
+; Procesador:B_Procesador|GeneralPR:B_GPR|FF15                                      ; Lost fanout                                                              ;
+; Procesador:B_Procesador|ProgramCounter:B_Program_counter|FF4                      ; Merged with Procesador:B_Procesador|ProgramCounter:B_Program_counter|FF1 ;
+; Procesador:B_Procesador|ProgramCounter:B_Program_counter|FF8                      ; Merged with Procesador:B_Procesador|ProgramCounter:B_Program_counter|FF1 ;
+; Procesador:B_Procesador|ProgramCounter:B_Program_counter|FF10                     ; Merged with Procesador:B_Procesador|ProgramCounter:B_Program_counter|FF1 ;
+; Procesador:B_Procesador|ProgramCounter:B_Program_counter|FF15                     ; Merged with Procesador:B_Procesador|ProgramCounter:B_Program_counter|FF1 ;
+; Procesador:B_Procesador|ProgramCounter:B_Program_counter|FF3                      ; Merged with Procesador:B_Procesador|ProgramCounter:B_Program_counter|FF1 ;
+; Procesador:B_Procesador|ProgramCounter:B_Program_counter|FF9                      ; Merged with Procesador:B_Procesador|ProgramCounter:B_Program_counter|FF1 ;
+; Procesador:B_Procesador|ProgramCounter:B_Program_counter|FF5                      ; Merged with Procesador:B_Procesador|ProgramCounter:B_Program_counter|FF1 ;
+; Procesador:B_Procesador|ProgramCounter:B_Program_counter|FF11                     ; Merged with Procesador:B_Procesador|ProgramCounter:B_Program_counter|FF1 ;
+; Procesador:B_Procesador|ProgramCounter:B_Program_counter|FF12                     ; Merged with Procesador:B_Procesador|ProgramCounter:B_Program_counter|FF1 ;
+; Procesador:B_Procesador|ProgramCounter:B_Program_counter|FF7                      ; Merged with Procesador:B_Procesador|ProgramCounter:B_Program_counter|FF1 ;
+; Procesador:B_Procesador|ProgramCounter:B_Program_counter|FF13                     ; Merged with Procesador:B_Procesador|ProgramCounter:B_Program_counter|FF1 ;
+; Procesador:B_Procesador|ProgramCounter:B_Program_counter|FF2                      ; Merged with Procesador:B_Procesador|ProgramCounter:B_Program_counter|FF1 ;
+; Procesador:B_Procesador|ProgramCounter:B_Program_counter|FF6                      ; Merged with Procesador:B_Procesador|ProgramCounter:B_Program_counter|FF1 ;
+; Procesador:B_Procesador|ProgramCounter:B_Program_counter|FF14                     ; Merged with Procesador:B_Procesador|ProgramCounter:B_Program_counter|FF1 ;
+; Total Number of Removed Registers = 100                                           ;                                                                          ;
++-----------------------------------------------------------------------------------+--------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                           ;
++---------------------------------------------------------+--------------------------------+----------------------------------------------------------------------------+
+; Register name                                           ; Reason for Removal             ; Registers Removed due to This Register                                     ;
++---------------------------------------------------------+--------------------------------+----------------------------------------------------------------------------+
+; Procesador:B_Procesador|StackPointer:B_StackPointer|FF0 ; Stuck at GND                   ; Procesador:B_Procesador|DirRegister:B_DirRegister|FF0,                     ;
+;                                                         ; due to stuck port clock_enable ; Procesador:B_Procesador|DirRegister:B_DirRegister|FF1,                     ;
+;                                                         ;                                ; Procesador:B_Procesador|DirRegister:B_DirRegister|FF2,                     ;
+;                                                         ;                                ; Procesador:B_Procesador|DirRegister:B_DirRegister|FF3,                     ;
+;                                                         ;                                ; Procesador:B_Procesador|DirRegister:B_DirRegister|FF4,                     ;
+;                                                         ;                                ; Procesador:B_Procesador|DirRegister:B_DirRegister|FF5,                     ;
+;                                                         ;                                ; Procesador:B_Procesador|DirRegister:B_DirRegister|FF6,                     ;
+;                                                         ;                                ; Procesador:B_Procesador|DirRegister:B_DirRegister|FF7,                     ;
+;                                                         ;                                ; Procesador:B_Procesador|Acumulador:B_Acum|FF0,                             ;
+;                                                         ;                                ; Procesador:B_Procesador|Acumulador:B_Acum|FF1,                             ;
+;                                                         ;                                ; Procesador:B_Procesador|Acumulador:B_Acum|FF2,                             ;
+;                                                         ;                                ; Procesador:B_Procesador|Acumulador:B_Acum|FF3,                             ;
+;                                                         ;                                ; Procesador:B_Procesador|Acumulador:B_Acum|FF4,                             ;
+;                                                         ;                                ; Procesador:B_Procesador|Acumulador:B_Acum|FF5,                             ;
+;                                                         ;                                ; Procesador:B_Procesador|Acumulador:B_Acum|FF6,                             ;
+;                                                         ;                                ; Procesador:B_Procesador|Acumulador:B_Acum|FF7,                             ;
+;                                                         ;                                ; Procesador:B_Procesador|Acumulador:B_Acum|FF8,                             ;
+;                                                         ;                                ; Procesador:B_Procesador|Acumulador:B_Acum|FF9,                             ;
+;                                                         ;                                ; Procesador:B_Procesador|Acumulador:B_Acum|FF10,                            ;
+;                                                         ;                                ; Procesador:B_Procesador|Acumulador:B_Acum|FF11,                            ;
+;                                                         ;                                ; Procesador:B_Procesador|Acumulador:B_Acum|FF12,                            ;
+;                                                         ;                                ; Procesador:B_Procesador|Acumulador:B_Acum|FF13,                            ;
+;                                                         ;                                ; Procesador:B_Procesador|Acumulador:B_Acum|FF14,                            ;
+;                                                         ;                                ; Procesador:B_Procesador|Acumulador:B_Acum|FF15,                            ;
+;                                                         ;                                ; Procesador:B_Procesador|ALU:B_ALU|BR_Carry,                                ;
+;                                                         ;                                ; Procesador:B_Procesador|ALU:B_ALU|Registro_A_Q_E:B_registroAQE|Registro1,  ;
+;                                                         ;                                ; Procesador:B_Procesador|ALU:B_ALU|Registro_A_Q_E:B_registroAQE|Registro2,  ;
+;                                                         ;                                ; Procesador:B_Procesador|ALU:B_ALU|Registro_A_Q_E:B_registroAQE|Registro3,  ;
+;                                                         ;                                ; Procesador:B_Procesador|ALU:B_ALU|Registro_A_Q_E:B_registroAQE|Registro4,  ;
+;                                                         ;                                ; Procesador:B_Procesador|ALU:B_ALU|Registro_A_Q_E:B_registroAQE|Registro5,  ;
+;                                                         ;                                ; Procesador:B_Procesador|ALU:B_ALU|Registro_A_Q_E:B_registroAQE|Registro6,  ;
+;                                                         ;                                ; Procesador:B_Procesador|ALU:B_ALU|Registro_A_Q_E:B_registroAQE|Registro7,  ;
+;                                                         ;                                ; Procesador:B_Procesador|ALU:B_ALU|Registro_A_Q_E:B_registroAQE|Registro8,  ;
+;                                                         ;                                ; Procesador:B_Procesador|ALU:B_ALU|Registro_A_Q_E:B_registroAQE|Registro9,  ;
+;                                                         ;                                ; Procesador:B_Procesador|ALU:B_ALU|Registro_A_Q_E:B_registroAQE|Registro10, ;
+;                                                         ;                                ; Procesador:B_Procesador|ALU:B_ALU|Registro_A_Q_E:B_registroAQE|Registro11, ;
+;                                                         ;                                ; Procesador:B_Procesador|ALU:B_ALU|Registro_A_Q_E:B_registroAQE|Registro12, ;
+;                                                         ;                                ; Procesador:B_Procesador|ALU:B_ALU|Registro_A_Q_E:B_registroAQE|Registro13, ;
+;                                                         ;                                ; Procesador:B_Procesador|ALU:B_ALU|Registro_A_Q_E:B_registroAQE|Registro14, ;
+;                                                         ;                                ; Procesador:B_Procesador|ALU:B_ALU|Registro_A_Q_E:B_registroAQE|Registro15, ;
+;                                                         ;                                ; Procesador:B_Procesador|ALU:B_ALU|Registro_A_Q_E:B_registroAQE|Registro16, ;
+;                                                         ;                                ; Procesador:B_Procesador|ALU:B_ALU|ControlALU:B_Control|FF1,                ;
+;                                                         ;                                ; Procesador:B_Procesador|ALU:B_ALU|ControlALU:B_Control|FF3,                ;
+;                                                         ;                                ; Procesador:B_Procesador|ALU:B_ALU|ControlALU:B_Control|FF4,                ;
+;                                                         ;                                ; Procesador:B_Procesador|GeneralPR:B_GPR|FF18,                              ;
+;                                                         ;                                ; Procesador:B_Procesador|GeneralPR:B_GPR|FF19,                              ;
+;                                                         ;                                ; Procesador:B_Procesador|GeneralPR:B_GPR|FF20,                              ;
+;                                                         ;                                ; Procesador:B_Procesador|GeneralPR:B_GPR|FF21,                              ;
+;                                                         ;                                ; Procesador:B_Procesador|GeneralPR:B_GPR|FF8,                               ;
+;                                                         ;                                ; Procesador:B_Procesador|GeneralPR:B_GPR|FF9,                               ;
+;                                                         ;                                ; Procesador:B_Procesador|GeneralPR:B_GPR|FF10,                              ;
+;                                                         ;                                ; Procesador:B_Procesador|GeneralPR:B_GPR|FF11,                              ;
+;                                                         ;                                ; Procesador:B_Procesador|GeneralPR:B_GPR|FF12,                              ;
+;                                                         ;                                ; Procesador:B_Procesador|GeneralPR:B_GPR|FF13,                              ;
+;                                                         ;                                ; Procesador:B_Procesador|GeneralPR:B_GPR|FF14,                              ;
+;                                                         ;                                ; Procesador:B_Procesador|GeneralPR:B_GPR|FF0,                               ;
+;                                                         ;                                ; Procesador:B_Procesador|GeneralPR:B_GPR|FF1,                               ;
+;                                                         ;                                ; Procesador:B_Procesador|GeneralPR:B_GPR|FF2,                               ;
+;                                                         ;                                ; Procesador:B_Procesador|GeneralPR:B_GPR|FF3,                               ;
+;                                                         ;                                ; Procesador:B_Procesador|GeneralPR:B_GPR|FF4,                               ;
+;                                                         ;                                ; Procesador:B_Procesador|GeneralPR:B_GPR|FF5,                               ;
+;                                                         ;                                ; Procesador:B_Procesador|GeneralPR:B_GPR|FF6,                               ;
+;                                                         ;                                ; Procesador:B_Procesador|GeneralPR:B_GPR|FF7,                               ;
+;                                                         ;                                ; Procesador:B_Procesador|GeneralPR:B_GPR|FF15                               ;
++---------------------------------------------------------+--------------------------------+----------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -266,12 +464,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 29    ;
+; Total registers                              ; 7     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 28    ;
+; Number of registers using Asynchronous Clear ; 6     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 24    ;
+; Number of registers using Clock Enable       ; 1     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -457,31 +655,54 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+-------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Procesador:B_Procesador|GeneralPR:B_GPR"                                                       ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port            ; Type   ; Severity ; Details                                                                             ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
-; instrdt[22..16] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------+
+; Port Connectivity Checks: "Procesador:B_Procesador|Data_MdMux:B_Data_MdMux" ;
++---------------+-------+----------+------------------------------------------+
+; Port          ; Type  ; Severity ; Details                                  ;
++---------------+-------+----------+------------------------------------------+
+; psrout[15..5] ; Input ; Info     ; Stuck at GND                             ;
++---------------+-------+----------+------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Procesador:B_Procesador|Control:B_Control"                                                     ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port            ; Type   ; Severity ; Details                                                                             ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
-; pc_dirmp_enable ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Procesador:B_Procesador|ALU:B_ALU|Banderas:B_Banderas|SelecctorOpera:B_SeleccionOpera" ;
++-------+--------+----------+---------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                               ;
++-------+--------+----------+---------------------------------------------------------------------------------------+
+; none  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.   ;
+; and_s ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.   ;
+; or_s  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.   ;
++-------+--------+----------+---------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Procesador:B_Procesador|ProgramCounter:B_Program_counter" ;
-+--------+-------+----------+----------------------------------------------------------+
-; Port   ; Type  ; Severity ; Details                                                  ;
-+--------+-------+----------+----------------------------------------------------------+
-; savepc ; Input ; Info     ; Stuck at GND                                             ;
-+--------+-------+----------+----------------------------------------------------------+
++---------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Procesador:B_Procesador|ALU:B_ALU|SelectorSM:B_SelectorMP" ;
++-----------------+-------+----------+--------------------------------------------------+
+; Port            ; Type  ; Severity ; Details                                          ;
++-----------------+-------+----------+--------------------------------------------------+
+; twodigit[15..8] ; Input ; Info     ; Stuck at GND                                     ;
++-----------------+-------+----------+--------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Procesador:B_Procesador|ALU:B_ALU|ControlALU:B_Control|SelecctorOpera:B_SeleccionOpera" ;
++-------+--------+----------+----------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                ;
++-------+--------+----------+----------------------------------------------------------------------------------------+
+; sra_s ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.    ;
++-------+--------+----------+----------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Procesador:B_Procesador|ALU:B_ALU"                                                         ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; resultado_z ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; resultado_c ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; resultado_o ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; resultado_n ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------+
@@ -490,8 +711,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Port          ; Type   ; Severity ; Details                                                                             ;
 +---------------+--------+----------+-------------------------------------------------------------------------------------+
 ; dir_mp[15..8] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; read_mp       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; mdm[15..8]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; dir_md[15..8] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +---------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
@@ -510,7 +730,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Mon Nov 23 21:24:46 2020
+    Info: Processing started: Tue Dec 01 22:55:01 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Computador -c Computador
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file generalpr.vhd
@@ -538,18 +758,146 @@ Info (12021): Found 2 design units, including 1 entities, in source file memoryr
     Info (12022): Found design unit 1: memoryrom-SYN
     Info (12023): Found entity 1: MemoryROM
 Info (12127): Elaborating entity "Computador" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at Computador.vhd(94): object "Read_Mp" assigned a value but never read
 Info (12128): Elaborating entity "Procesador" for hierarchy "Procesador:B_Procesador"
-Warning (10541): VHDL Signal Declaration warning at Procesador.vhd(33): used implicit default value for signal "Read_Mp" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at Procesador.vhd(34): used implicit default value for signal "Dataout_Md" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at Procesador.vhd(35): used implicit default value for signal "MDM" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at Procesador.vhd(36): used implicit default value for signal "Ena_Md" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at Procesador.vhd(37): used implicit default value for signal "RW_Md" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10036): Verilog HDL or VHDL warning at Procesador.vhd(130): object "PC_DirMP_Enable" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Procesador.vhd(449): object "Resultado_Z" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Procesador.vhd(450): object "Resultado_N" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Procesador.vhd(451): object "Resultado_O" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Procesador.vhd(452): object "Resultado_C" assigned a value but never read
+Warning (10541): VHDL Signal Declaration warning at Procesador.vhd(457): used implicit default value for signal "Ena_AcALU" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at Procesador.vhd(474): used implicit default value for signal "OutStatusALU" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10873): Using initial value X (don't care) for net "TempStatusPSR[15..5]" at Procesador.vhd(480)
 Info (12128): Elaborating entity "ProgramCounter" for hierarchy "Procesador:B_Procesador|ProgramCounter:B_Program_counter"
 Info (12128): Elaborating entity "Control" for hierarchy "Procesador:B_Procesador|Control:B_Control"
-Warning (10873): Using initial value X (don't care) for net "D[5..4]" at Control.vhd(131)
+Warning (10541): VHDL Signal Declaration warning at Control.vhd(51): used implicit default value for signal "Ena_Md_Read" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at Control.vhd(52): used implicit default value for signal "Ena_Md_Write" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at Control.vhd(53): used implicit default value for signal "Ena_SP" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at Control.vhd(57): used implicit default value for signal "Save_Acum" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at Control.vhd(58): used implicit default value for signal "Save_PC" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at Control.vhd(59): used implicit default value for signal "SaveB" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at Control.vhd(60): used implicit default value for signal "SaveInt" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at Control.vhd(61): used implicit default value for signal "SaveDirR" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at Control.vhd(64): used implicit default value for signal "IntE" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at Control.vhd(65): used implicit default value for signal "Habilitar" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at Control.vhd(66): used implicit default value for signal "IncDec" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at Control.vhd(69): used implicit default value for signal "SelectALU" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at Control.vhd(70): used implicit default value for signal "SelectAcum" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at Control.vhd(71): used implicit default value for signal "SelectPC" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at Control.vhd(72): used implicit default value for signal "SelectPSR" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at Control.vhd(73): used implicit default value for signal "SelectDataMd" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at Control.vhd(74): used implicit default value for signal "SelectDir" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10873): Using initial value X (don't care) for net "D[5..4]" at Control.vhd(174)
 Info (12128): Elaborating entity "GeneralPR" for hierarchy "Procesador:B_Procesador|GeneralPR:B_GPR"
+Warning (12125): Using design file acumulador.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: Acumulador-Acumulador
+    Info (12023): Found entity 1: Acumulador
+Info (12128): Elaborating entity "Acumulador" for hierarchy "Procesador:B_Procesador|Acumulador:B_Acum"
+Warning (12125): Using design file alu.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: ALU-ALU
+    Info (12023): Found entity 1: ALU
+Info (12128): Elaborating entity "ALU" for hierarchy "Procesador:B_Procesador|ALU:B_ALU"
+Warning (10873): Using initial value X (don't care) for net "SiRA[15..8]" at alu.vhd(311)
+Warning (12125): Using design file controlalu.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: ControlALU-ControlALU
+    Info (12023): Found entity 1: ControlALU
+Info (12128): Elaborating entity "ControlALU" for hierarchy "Procesador:B_Procesador|ALU:B_ALU|ControlALU:B_Control"
+Warning (10036): Verilog HDL or VHDL warning at controlalu.vhd(128): object "SRA_S" assigned a value but never read
+Warning (12125): Using design file selecctoropera.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: SelecctorOpera-SelecctorOpera
+    Info (12023): Found entity 1: SelecctorOpera
+Info (12128): Elaborating entity "SelecctorOpera" for hierarchy "Procesador:B_Procesador|ALU:B_ALU|ControlALU:B_Control|SelecctorOpera:B_SeleccionOpera"
+Warning (12125): Using design file countermulti.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: CounterMulti-CounterMulti
+    Info (12023): Found entity 1: CounterMulti
+Info (12128): Elaborating entity "CounterMulti" for hierarchy "Procesador:B_Procesador|ALU:B_ALU|ControlALU:B_Control|CounterMulti:B_Counter"
+Warning (12125): Using design file adder.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: ADDER-ADDER
+    Info (12023): Found entity 1: ADDER
+Info (12128): Elaborating entity "ADDER" for hierarchy "Procesador:B_Procesador|ALU:B_ALU|ADDER:B_ADDER"
+Warning (12125): Using design file fulladder.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: FullAdder-FullAdder
+    Info (12023): Found entity 1: FullAdder
+Info (12128): Elaborating entity "FullAdder" for hierarchy "Procesador:B_Procesador|ALU:B_ALU|ADDER:B_ADDER|FullAdder:FA1"
+Warning (12125): Using design file selecctorg.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: SelecctorG-SelecctorG
+    Info (12023): Found entity 1: SelecctorG
+Info (12128): Elaborating entity "SelecctorG" for hierarchy "Procesador:B_Procesador|ALU:B_ALU|SelecctorG:B_SelectorG"
+Warning (12125): Using design file r_resultado.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: R_Resultado-R_Resultado
+    Info (12023): Found entity 1: R_Resultado
+Info (12128): Elaborating entity "R_Resultado" for hierarchy "Procesador:B_Procesador|ALU:B_ALU|R_Resultado:B_R_Resultado"
+Warning (12125): Using design file notcast.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: NOTCast-NOTCast
+    Info (12023): Found entity 1: NOTCast
+Info (12128): Elaborating entity "NOTCast" for hierarchy "Procesador:B_Procesador|ALU:B_ALU|NOTCast:B_NOTCast"
+Warning (12125): Using design file andcast.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: ANDCast-ANDCast
+    Info (12023): Found entity 1: ANDCast
+Info (12128): Elaborating entity "ANDCast" for hierarchy "Procesador:B_Procesador|ALU:B_ALU|ANDCast:B_ANDCast"
+Warning (12125): Using design file orcast.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: ORCast-ORCast
+    Info (12023): Found entity 1: ORCast
+Info (12128): Elaborating entity "ORCast" for hierarchy "Procesador:B_Procesador|ALU:B_ALU|ORCast:B_ORCast"
+Warning (12125): Using design file registro_a_q_e.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: Registro_A_Q_E-Registro_A_Q_EArch
+    Info (12023): Found entity 1: Registro_A_Q_E
+Info (12128): Elaborating entity "Registro_A_Q_E" for hierarchy "Procesador:B_Procesador|ALU:B_ALU|Registro_A_Q_E:B_registroAQE"
+Warning (10873): Using initial value X (don't care) for net "Num[0]" at registro_a_q_e.vhd(49)
+Warning (12125): Using design file selectorsm.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: SelectorSM-SelectorSM
+    Info (12023): Found entity 1: SelectorSM
+Info (12128): Elaborating entity "SelectorSM" for hierarchy "Procesador:B_Procesador|ALU:B_ALU|SelectorSM:B_SelectorSM"
+Warning (12125): Using design file desplazamientologico.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: DesplazamientoLogico-DesplazamientoLogico
+    Info (12023): Found entity 1: DesplazamientoLogico
+Info (12128): Elaborating entity "DesplazamientoLogico" for hierarchy "Procesador:B_Procesador|ALU:B_ALU|DesplazamientoLogico:B_DesplazaLog"
+Warning (12125): Using design file desplazamientorota.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: DesplazamientoRota-DesplazamientoRota
+    Info (12023): Found entity 1: DesplazamientoRota
+Info (12128): Elaborating entity "DesplazamientoRota" for hierarchy "Procesador:B_Procesador|ALU:B_ALU|DesplazamientoRota:B_DesplazaRot"
+Warning (12125): Using design file banderas.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: Banderas-Banderas
+    Info (12023): Found entity 1: Banderas
+Info (12128): Elaborating entity "Banderas" for hierarchy "Procesador:B_Procesador|ALU:B_ALU|Banderas:B_Banderas"
+Warning (10036): Verilog HDL or VHDL warning at banderas.vhd(86): object "None" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at banderas.vhd(92): object "AND_S" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at banderas.vhd(93): object "OR_S" assigned a value but never read
+Warning (12125): Using design file acummux.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: AcumMUX-AcumMUX
+    Info (12023): Found entity 1: AcumMUX
+Info (12128): Elaborating entity "AcumMUX" for hierarchy "Procesador:B_Procesador|AcumMUX:B_AcumMUX"
+Warning (12125): Using design file dirregister.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: DirRegister-DirRegister
+    Info (12023): Found entity 1: DirRegister
+Info (12128): Elaborating entity "DirRegister" for hierarchy "Procesador:B_Procesador|DirRegister:B_DirRegister"
+Warning (12125): Using design file programcountermux.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: ProgramCounterMUX-ProgramCounterMUX
+    Info (12023): Found entity 1: ProgramCounterMUX
+Info (12128): Elaborating entity "ProgramCounterMUX" for hierarchy "Procesador:B_Procesador|ProgramCounterMUX:B_ProgramCounterMUX"
+Warning (12125): Using design file programstatus.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: ProgramStatus-ProgramStatus
+    Info (12023): Found entity 1: ProgramStatus
+Info (12128): Elaborating entity "ProgramStatus" for hierarchy "Procesador:B_Procesador|ProgramStatus:B_ProgramStatus"
+Warning (12125): Using design file dirmdmux.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: DirMdMux-DirMdMux
+    Info (12023): Found entity 1: DirMdMux
+Info (12128): Elaborating entity "DirMdMux" for hierarchy "Procesador:B_Procesador|DirMdMux:B_DirMdMux"
+Warning (12125): Using design file data_mdmux.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: Data_MdMux-Data_MdMux
+    Info (12023): Found entity 1: Data_MdMux
+Info (12128): Elaborating entity "Data_MdMux" for hierarchy "Procesador:B_Procesador|Data_MdMux:B_Data_MdMux"
+Warning (12125): Using design file alumux.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: ALUMux-ALUMux
+    Info (12023): Found entity 1: ALUMux
+Info (12128): Elaborating entity "ALUMux" for hierarchy "Procesador:B_Procesador|ALUMux:B_ALUMux"
+Warning (12125): Using design file stackpointer.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: StackPointer-StackPointer
+    Info (12023): Found entity 1: StackPointer
+Info (12128): Elaborating entity "StackPointer" for hierarchy "Procesador:B_Procesador|StackPointer:B_StackPointer"
+Warning (10873): Using initial value X (don't care) for net "Q[15]" at stackpointer.vhd(53)
+Warning (12125): Using design file psrmux.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: PSRMux-PSRMux
+    Info (12023): Found entity 1: PSRMux
+Info (12128): Elaborating entity "PSRMux" for hierarchy "Procesador:B_Procesador|PSRMux:B_PSRMux"
 Info (12128): Elaborating entity "MemoryRAM" for hierarchy "MemoryRAM:B_MemoryRAM"
 Info (12128): Elaborating entity "altsyncram" for hierarchy "MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component"
 Info (12130): Elaborated megafunction instantiation "MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component"
@@ -682,25 +1030,44 @@ Warning (14284): Synthesized away the following node(s):
         Warning (14320): Synthesized away node "MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_t1q3:auto_generated|q_a[13]"
         Warning (14320): Synthesized away node "MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_t1q3:auto_generated|q_a[14]"
         Warning (14320): Synthesized away node "MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_t1q3:auto_generated|q_a[15]"
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_t1q3:auto_generated|q_a[0]"
+        Warning (14320): Synthesized away node "MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_t1q3:auto_generated|q_a[1]"
+        Warning (14320): Synthesized away node "MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_t1q3:auto_generated|q_a[2]"
+        Warning (14320): Synthesized away node "MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_t1q3:auto_generated|q_a[3]"
+        Warning (14320): Synthesized away node "MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_t1q3:auto_generated|q_a[4]"
+        Warning (14320): Synthesized away node "MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_t1q3:auto_generated|q_a[5]"
+        Warning (14320): Synthesized away node "MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_t1q3:auto_generated|q_a[6]"
+        Warning (14320): Synthesized away node "MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_t1q3:auto_generated|q_a[7]"
+        Warning (14320): Synthesized away node "MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_t1q3:auto_generated|q_a[8]"
+        Warning (14320): Synthesized away node "MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_t1q3:auto_generated|q_a[9]"
+        Warning (14320): Synthesized away node "MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_t1q3:auto_generated|q_a[10]"
+        Warning (14320): Synthesized away node "MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_t1q3:auto_generated|q_a[11]"
+        Warning (14320): Synthesized away node "MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_t1q3:auto_generated|q_a[12]"
+        Warning (14320): Synthesized away node "MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_t1q3:auto_generated|q_a[13]"
+        Warning (14320): Synthesized away node "MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_t1q3:auto_generated|q_a[14]"
+        Warning (14320): Synthesized away node "MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_t1q3:auto_generated|q_a[15]"
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "Estados[4]" is stuck at GND
     Warning (13410): Pin "Estados[5]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
+Info (17049): 47 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "Int"
-Info (21057): Implemented 111 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 81 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 46 output pins
-    Info (21061): Implemented 39 logic cells
+    Info (21061): Implemented 9 logic cells
     Info (21064): Implemented 23 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 32 warnings
-    Info: Peak virtual memory: 4717 megabytes
-    Info: Processing ended: Mon Nov 23 21:24:49 2020
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 100 warnings
+    Info: Peak virtual memory: 4721 megabytes
+    Info: Processing ended: Tue Dec 01 22:55:07 2020
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:04
 
 

@@ -59,29 +59,37 @@ ARCHITECTURE	Computador OF Computador IS
 			);
 		END COMPONENT MemoryRAM;
 	--******************************************************--
+	
+	
+	
+	
+	
 		COMPONENT Procesador IS
 			
-				PORT (
-							--ENTRADAS
-							Clock 				:IN STD_LOGIC;
-							ResetSystem			:IN STD_LOGIC;
-							Dato_Mp				:IN STD_LOGIC_VECTOR(22 DOWNTO 0);
-							Datoin_Md			:IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-							Int					:IN STD_LOGIC;
-							--------------------------------------------------
-							--SALIDAS
-							Dir_Mp				:OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
-							Ena_Mp				:OUT STD_LOGIC;
-							Read_Mp				:OUT STD_LOGIC;
-							Dataout_Md			:OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
-							MDM					:OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
-							Ena_Md				:OUT STD_LOGIC;
-							RW_Md					:OUT STD_LOGIC;
-							Count					:OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
-							Estados				:OUT STD_LOGIC_VECTOR(5 DOWNTO 0)
-					);
+			PORT (
+						--ENTRADAS
+						Clock 				:IN STD_LOGIC;
+						ResetSystem			:IN STD_LOGIC;
+						Dato_Mp				:IN STD_LOGIC_VECTOR(22 DOWNTO 0);
+						Datoin_Md			:IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+						Int					:IN STD_LOGIC;
+						--------------------------------------------------
+						--SALIDAS
+						Dir_Mp				:OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+						Ena_Mp				:OUT STD_LOGIC;
+						Dataout_Md			:OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+						Dir_Md				:OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+						Ena_Md_Read			:OUT STD_LOGIC;
+						Ena_Md_Write		:OUT STD_LOGIC;
+						--Test
+						Count					:OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+						Estados				:OUT STD_LOGIC_VECTOR(5 DOWNTO 0)
+				);
 			
 		END COMPONENT Procesador;
+		
+		
+		
 	--******************************************************--
 	
 		SIGNAL Q							:STD_LOGIC_VECTOR (3 DOWNTO 0);
@@ -94,9 +102,9 @@ ARCHITECTURE	Computador OF Computador IS
 		SIGNAL Read_Mp					:STD_LOGIC;
 		SIGNAL Datoin_Md				:STD_LOGIC_VECTOR(15 DOWNTO 0);
 		SIGNAL Dataout_Md				:STD_LOGIC_VECTOR(15 DOWNTO 0);
-		SIGNAL MDM						:STD_LOGIC_VECTOR(15 DOWNTO 0);
-		SIGNAL RDEN						:STD_LOGIC;
-		SIGNAL WREN						:STD_LOGIC;
+		SIGNAL Dir_Md					:STD_LOGIC_VECTOR(15 DOWNTO 0);
+		SIGNAL Ena_Md_Read			:STD_LOGIC;
+		SIGNAL Ena_Md_Write			:STD_LOGIC;
 		
 	
 BEGIN
@@ -116,19 +124,18 @@ BEGIN
 															Int,
 															Dir_Mp,
 															Ena_Mp, 
-															Read_Mp,
 															Dataout_Md,
-															MDM,
-															RDEN,
-															WREN,
+															Dir_Md,
+															Ena_Md_Read,
+															Ena_Md_Write,
 															Count,
 															Estados);
 		B_MemoryRAM : MemoryRAM PORT MAP (
-															MDM(7 DOWNTO 0), 
+															Dir_Md(7 DOWNTO 0), 
 															Clock, 
 															Dataout_Md, 
-															RDEN, 
-															WREN, 
+															Ena_Md_Read, 
+															Ena_Md_Write, 
 															Datoin_Md);
 		B_MemoryROM : MemoryROM PORT MAP (
 															Dir_Mp(7 DOWNTO 0),

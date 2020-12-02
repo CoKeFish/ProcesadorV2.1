@@ -40,6 +40,7 @@ ENTITY Control IS
 				
 				--Status
 				PSROut					:IN STD_LOGIC_VECTOR(4 DOWNTO 0);
+				Int						:IN STD_LOGIC;
 				
 				--------------------------------------------------
 				--SALIDAS				
@@ -60,6 +61,7 @@ ENTITY Control IS
 				SaveDirR					:OUT STD_LOGIC;
 				
 				Inc_PC					:OUT STD_LOGIC;--Incrementamos el valor del program counter
+				IntE						:OUT STD_LOGIC;
 				Habilitar				:OUT STD_LOGIC;--Realizamos una operacion con la ALU
 				IncDec 					:OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
 				

@@ -30,11 +30,10 @@ ENTITY Procesador IS
 				--SALIDAS
 				Dir_Mp				:OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 				Ena_Mp				:OUT STD_LOGIC;
-				Read_Mp				:OUT STD_LOGIC;
 				Dataout_Md			:OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 				Dir_Md				:OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
-				Read_Md				:OUT STD_LOGIC;
-				Write_Md				:OUT STD_LOGIC;
+				Ena_Md_Read			:OUT STD_LOGIC;
+				Ena_Md_Write		:OUT STD_LOGIC;
 				--Test
 				Count					:OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 				Estados				:OUT STD_LOGIC_VECTOR(5 DOWNTO 0)
@@ -83,6 +82,7 @@ ARCHITECTURE	Procesador OF Procesador IS
 						
 						--Status
 						PSROut					:IN STD_LOGIC_VECTOR(4 DOWNTO 0);
+						Int						:IN STD_LOGIC;
 						
 						--------------------------------------------------
 						--SALIDAS				
@@ -103,6 +103,7 @@ ARCHITECTURE	Procesador OF Procesador IS
 						SaveDirR					:OUT STD_LOGIC;
 						
 						Inc_PC					:OUT STD_LOGIC;--Incrementamos el valor del program counter
+						IntE						:OUT STD_LOGIC;
 						Habilitar				:OUT STD_LOGIC;--Realizamos una operacion con la ALU
 						IncDec 					:OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
 						
@@ -306,7 +307,7 @@ ARCHITECTURE	Procesador OF Procesador IS
 				SaveB  			 :IN STD_LOGIC; --Señal de control para habilitar el guardado de las banderas
 				SaveInt			 :IN STD_LOGIC; --Señal de control para habilitar el estado de las interrupciones.
 				IntE  			 :IN STD_LOGIC; --Señal de habilitar o desabilitar las interrupciones globales.
-				Banderas  		 :IN STD_LOGIC_VECTOR(3 DOWNTO 0); --Bus de datos de 4 bits que contiene el estado de las banderas.
+				Banderas  		 :IN STD_LOGIC_VECTOR(4 DOWNTO 0); --Bus de datos de 4 bits que contiene el estado de las banderas.
 				----------------------------------------------
 				--SALIDAS
 				PSROut		    :OUT STD_LOGIC_VECTOR(4 DOWNTO 0) --Bus de 5 bits que contiene el estado del programa.
@@ -428,40 +429,57 @@ ARCHITECTURE	Procesador OF Procesador IS
 	
 	--******************************************************--
 
-			SIGNAL Q							:STD_LOGIC_VECTOR (5 DOWNTO 0);
-			SIGNAL ENA						:STD_LOGIC_VECTOR (5 DOWNTO 0);
-			SIGNAL D							:STD_LOGIC_VECTOR (5 DOWNTO 0);
 		
 		
 			--ALU 
 			
-			SIGNAL Disponible				:STD_LOGIC;
-			SIGNAL SEna_Mp					:STD_LOGIC;
-			SIGNAL Ena_Md_Read			:STD_LOGIC;
-			SIGNAL Ena_Md_Write			:STD_LOGIC;
-			SIGNAL Save_GPR				:STD_LOGIC;
-			SIGNAL Save_Acum				:STD_LOGIC;
-			SIGNAL Save_PC					:STD_LOGIC;
+			SIGNAL EnaWrite_Md			:STD_LOGIC;
+			SIGNAL EnaRead_Md				:STD_LOGIC;
+			SIGNAL SaveDirR				:STD_LOGIC;
+			SIGNAL SelectProgramCounter:STD_LOGIC;
 			SIGNAL Inc_PC					:STD_LOGIC;
+			SIGNAL Save_PC					:STD_LOGIC;
+			SIGNAL Save_Acum				:STD_LOGIC;
+			SIGNAL Dec_SP					:STD_LOGIC;
+			SIGNAL Save_GPR				:STD_LOGIC;
 			SIGNAL Habilitar				:STD_LOGIC;
-			SIGNAL Resultado_O			:STD_LOGIC;
-			SIGNAL Resultado_N			:STD_LOGIC;
+			SIGNAL Disponibilidad		:STD_LOGIC;
+			SIGNAL SaveB					:STD_LOGIC;	
+			SIGNAL SaveInt					:STD_LOGIC;
 			SIGNAL Resultado_Z			:STD_LOGIC;
-			SIGNAL Resultado_C			:STD_LOGIC;			
+			SIGNAL Resultado_N			:STD_LOGIC;
+			SIGNAL Resultado_O			:STD_LOGIC;
+			SIGNAL Resultado_C			:STD_LOGIC;
+			SIGNAL SelectALU				:STD_LOGIC;
+			SIGNAL SelectPSR				:STD_LOGIC;
+			SIGNAL SelectAcum				:STD_LOGIC;
+			SIGNAL Ena_SP					:STD_LOGIC;
+			SIGNAL Ena_AcALU				:STD_LOGIC;
+			SIGNAL IntE						:STD_LOGIC;
 			
 			
-			SIGNAL Operacion				:STD_LOGIC_VECTOR(5 DOWNTO 0);
-			SIGNAL ModoDir					:STD_LOGIC_VECTOR(1 DOWNTO 0);
+			SIGNAL Datout_Md				:STD_LOGIC_VECTOR(15 DOWNTO 0);
 			SIGNAL PC_in					:STD_LOGIC_VECTOR(15 DOWNTO 0);
-			SIGNAL PC_out					:STD_LOGIC_VECTOR(15 DOWNTO 0);
-			SIGNAL Data_Mp					:STD_LOGIC_VECTOR(22 DOWNTO 0);
-			SIGNAL GPR_out					:STD_LOGIC_VECTOR(22 DOWNTO 0);
-			SIGNAL Numero_1				:STD_LOGIC_VECTOR(15 DOWNTO 0);
-			SIGNAL Numero_2				:STD_LOGIC_VECTOR(15 DOWNTO 0);
-			SIGNAL OperacionALU			:STD_LOGIC_VECTOR(3 DOWNTO 0);
-			SIGNAL ResultadoTotal		:STD_LOGIC_VECTOR(15 DOWNTO 0);
+			SIGNAL DataGPR					:STD_LOGIC_VECTOR(15 DOWNTO 0);
+			SIGNAL Select_DataMd			:STD_LOGIC_VECTOR(1 DOWNTO 0);
 			SIGNAL AC_in					:STD_LOGIC_VECTOR(15 DOWNTO 0);
+			SIGNAL inc_SP					:STD_LOGIC_VECTOR(1 DOWNTO 0);
+			SIGNAL SP_Out					:STD_LOGIC_VECTOR(15 DOWNTO 0);
+			SIGNAL Select_DirMd			:STD_LOGIC_VECTOR(1 DOWNTO 0);
+			SIGNAL opGPR					:STD_LOGIC_VECTOR(4 DOWNTO 0);
+			SIGNAL ModeDirGPR				:STD_LOGIC_VECTOR(1 DOWNTO 0);
+			SIGNAL Num_ALU					:STD_LOGIC_VECTOR(15 DOWNTO 0);
+			SIGNAL Banderas				:STD_LOGIC_VECTOR(4 DOWNTO 0);
+			SIGNAL StatusPSR				:STD_LOGIC_VECTOR(4 DOWNTO 0);
+			SIGNAL OutStatusALU			:STD_LOGIC_VECTOR(3 DOWNTO 0);
+			SIGNAL DirR_Out				:STD_LOGIC_VECTOR(15 DOWNTO 0);
+			SIGNAL ResultALU				:STD_LOGIC_VECTOR(15 DOWNTO 0);
 			SIGNAL AC_out					:STD_LOGIC_VECTOR(15 DOWNTO 0);
+			SIGNAL IncDec					:STD_LOGIC_VECTOR(1 DOWNTO 0);
+			SIGNAL SDirMp					:STD_LOGIC_VECTOR(15 DOWNTO 0);
+			SIGNAL TempStatusPSR			:STD_LOGIC_VECTOR(15 DOWNTO 0);
+			
+			SIGNAL SEstados					:STD_LOGIC_VECTOR(5 DOWNTO 0);
 			
 			
 			
@@ -472,43 +490,55 @@ BEGIN
 	--******************************************************--
 	
 	
-		Count <= GPR_out(15 DOWNTO 0);
-		Dir_Mp <= PC_out;
-		
+		Count <= SDirMp;
+		Dir_Mp <= SDirMp;
+		Estados <= SEstados;
 		B_Program_counter	:	ProgramCounter	PORT MAP (
 																			Clock,
 																			ResetSystem,
 																			Inc_PC,
 																			Save_PC,
-																			PC_out,
-																			PC_out);
+																			PC_in,
+																			SDirMp);
 																			
 		B_Control	:	Control	PORT MAP (
 																			Clock,
 																			ResetSystem,
-																			Disponible,
-																			GPR_out(22 DOWNTO 18),
-																			GPR_out(17 DOWNTO 16),
-																			Resultado_O,
-																			Resultado_N,
-																			Resultado_Z,
-																			Resultado_C,
+																			Disponibilidad,
+																			opGPR,
+																			ModeDirGPR,
+																			StatusPSR,
+																			Int,
 																			Ena_Mp,
 																			Ena_Md_Read,
 																			Ena_Md_Write,
+																			Ena_SP,
 																			Save_GPR,
 																			Save_Acum,
 																			Save_PC,
+																			SaveB,
+																			SaveInt,
+																			SaveDirR,
 																			Inc_PC,
-																			Use_ALU,
-																			Estados);
+																			IntE,
+																			Habilitar,
+																			IncDec,
+																			SelectALU,
+																			SelectAcum,
+																			SelectProgramCounter,
+																			SelectPSR,
+																			Select_DataMd,
+																			Select_DirMd,
+																			SEstados);
 																			
 		B_GPR	:	GeneralPR	PORT MAP	(
 																			Clock,
 																			ResetSystem,
 																			Save_GPR,
 																			Dato_Mp,
-																			GPR_out
+																			DataGPR,
+																			opGPR,
+																			ModeDirGPR
 																			);
 		
 		B_Acum	:	Acumulador	PORT MAP	(
@@ -522,16 +552,104 @@ BEGIN
 		B_ALU	:	ALU	PORT MAP	(									
 																			Clock,
 																			ResetSystem,
-																			Use_ALU,
-																			Numero_1,
-																			Numero_2,
-																			operationALU(21 DOWNTO 18),
-																			ResultadoALU,
-																			DisponibilidadALU,
+																			Habilitar,
+																			Num_ALU,
+																			AC_out,
+																			opGPR(3 DOWNTO 0),
+																			ResultALU,
+																			Disponibilidad,
 																			Resultado_Z,
 																			Resultado_C,
 																			Resultado_O,
 																			Resultado_N);
+																			
+																			
+		B_AcumMUX	:	AcumMUX	PORT MAP	(
+																			Datoin_Md,
+																			ResultALU,
+																			SelectAcum,
+																			AC_in);
+		
+		
+		
+		
+		B_DirRegister	:	DirRegister	PORT MAP	(
+																			Clock,
+																			ResetSystem,
+																			SaveDirR,
+																			Datoin_Md,
+																			DirR_Out);
+		
+		
+		
+		B_ProgramCounterMUX	:	ProgramCounterMUX	PORT MAP	(
+																			Datoin_Md,
+																			DataGPR,
+																			SelectProgramCounter,
+																			PC_in);
+		
+		
+		
+		B_ProgramStatus	:	ProgramStatus	PORT MAP	(
+																			Clock,
+																			ResetSystem,
+																			SaveB,
+																			SaveInt,
+																			IntE,
+																			Banderas,
+																			StatusPSR);
+		
+		
+		
+		
+		B_DirMdMux	:	DirMdMux	PORT MAP	(
+																			DataGPR,
+																			SP_Out,
+																			DirR_Out,
+																			Select_DirMd,
+																			Dir_Md);
+		
+		
+		TempStatusPSR(4 DOWNTO 0) <= StatusPSR;
+		B_Data_MdMux	:	Data_MdMux	PORT MAP	(
+																			SDirMp,
+																			AC_out,
+																			TempStatusPSR,
+																			DataGPR,
+																			Select_DataMd,
+																			Dataout_Md);
+		
+		
+		
+		
+		B_ALUMux	:	ALUMux	PORT MAP	(
+																			Datoin_Md,
+																			DataGPR,
+																			AC_out,
+																			SelectALU,
+																			Ena_AcALU,
+																			Num_ALU);
+		
+		
+		
+		B_StackPointer	:	StackPointer	PORT MAP	(
+																			Clock,
+																			ResetSystem,
+																			Ena_SP,
+																			IncDec,
+																			SP_Out);
+		
+		
+		
+		
+		B_PSRMux	:	PSRMux	PORT MAP	(
+																			Datoin_Md(4 DOWNTO 0),
+																			OutStatusALU,
+																			SelectPSR,
+																			Banderas);
+		
+		
+		
 																			
 		
 		
