@@ -8,7 +8,7 @@ entity Computador is
         MemoryOUT       : out    vl_logic_vector(22 downto 0);
         Count           : out    vl_logic_vector(15 downto 0);
         Acum            : out    vl_logic_vector(15 downto 0);
-        Estados         : out    vl_logic_vector(49 downto 0);
+        Estados         : out    vl_logic_vector(99 downto 0);
         SEnaMP          : out    vl_logic
     );
 end Computador;

@@ -76,7 +76,7 @@ ENTITY Control IS
 				
 				--Test   (salidas exclusivamente para realizar pruebas
 						
-				Estados 					:OUT STD_LOGIC_VECTOR(49 DOWNTO 0)
+				Estados 					:OUT STD_LOGIC_VECTOR(99 DOWNTO 0)
 		);
 	
 END ENTITY Control;
@@ -173,8 +173,8 @@ ARCHITECTURE	Control OF Control IS
 
 	
 	
-			SIGNAL Q					:STD_LOGIC_VECTOR (49 DOWNTO 0);
-			SIGNAL D					:STD_LOGIC_VECTOR (49 DOWNTO 0);
+			SIGNAL Q					:STD_LOGIC_VECTOR (99 DOWNTO 0);
+			SIGNAL D					:STD_LOGIC_VECTOR (99 DOWNTO 0);
 		
 	
 BEGIN	
@@ -188,7 +188,7 @@ BEGIN
 		
 	-----------------------------------Leemos la instruccion----------------------------------------|			
 	--#Estado 1
-		D(0) <= (Q(6) OR Q(7) OR Q(10) OR Q(13) OR Q(16) OR Q(19) OR Q(23) OR Q(24) OR Q(25) OR Q(37)) AND (NOT Int);
+		D(0) <= (Q(6) OR Q(7) OR Q(10) OR Q(13) OR Q(16) OR Q(19) OR Q(23) OR Q(24) OR Q(25) OR Q(46) OR Q(58)) AND (NOT Int);
 		
 	--#Estado 2-
 		D(1) <= Q(0);
@@ -292,7 +292,7 @@ BEGIN
 		
 	--#Estado 26
 		D(25) <= Q(3) AND CLI;
-		SaveInt <= Q(25) OR Q(24);
+		
 	------------------------------------Estado adicional para guardar las banderas----------------------------------------
 	--#Estado 27--SaveB
 		D(26) <= Q(6) OR Q(10);
@@ -327,7 +327,7 @@ BEGIN
 	-------------------------------------Operacion de subrutina----------------------------------------------------
 		
 	--#Estado 36
-		D(35) <= Q(3) AND Directo AND JSR;
+		D(35) <= (Q(3) AND Directo AND JSR) OR Q(34);
 		
 	--#Estado 37
 		D(36) <= Q(35);
@@ -350,35 +350,114 @@ BEGIN
 		D(41) <= Q(40);
 		
 		
+	--#Estado 43
+		D(42) <= Q(41);
+		
+		
+	--#Estado 44
+		D(43) <= Q(42);
+		
+	--#Estado 45
+		D(44) <= Q(43);
+		
+	--#Estado 46
+		D(45) <= Q(44);
+		
+		
+	--#Estado 47
+		D(46) <= Q(45);
+		
+		
+	---------------------------------------Operacion de retorno----------------------------------------- 
+		
+	
+	--#Estado 48
+		D(47) <= Q(3) AND Directo AND RTN;
 		
 		
 		
 		
-		Save_PC <= Q(22);
-		SelectPC <= '0';
+	--#Estado 49
+		D(48) <= Q(47);
+		
+	--#Estado 50
+		D(49) <= Q(48);
+	
+	
+	--#Estado 51
+		D(50) <= Q(49);
+		
+		
+		
+		
+	--#Estado 52
+		D(51) <= Q(50);
+		
+		
+		
+		
+	--#Estado 53
+		D(52) <= Q(51);
+		
+	--#Estado 54
+		D(53) <= Q(52);
+		
+		
+	--#Estado 55
+		D(54) <= Q(53);
+		
+		
+		
+		
+	--#Estado 56
+		D(55) <= Q(54);
+		
+		
+		
+		
+	--#Estado 57
+		D(56) <= Q(55);
+		
+	--#Estado 58
+		D(57) <= Q(56);
+		
+		
+	--#Estado 59
+		D(58) <= Q(57);
+		
+		
+		
+		
+		SaveInt <= Q(25) OR Q(24) OR Q(34);
+		
+		
+		Save_PC <= Q(22) OR Q(45) OR Q(58);
+		SelectPC <= Q(56) OR Q(57) OR Q(58);
 		SelectALU <= Q(27) OR Q(28) OR Q(29) OR Q(30) OR Q(31) OR Q(32);
 		
 		
 		
-		SelectAcum <= Q(17) OR Q(18) OR Q(19);
+		SelectAcum <= Q(17) OR Q(18) OR Q(19) OR Q(52) OR Q(53) OR Q(54);
 		
 		SelectDir(1) <= Q(14) OR Q(15) OR Q(16) OR Q(17) OR Q(18) OR Q(19) OR Q(27) OR Q(28) OR Q(29) OR Q(30) OR Q(31) OR Q(32);
-		SelectDir(0) <= Q(35) OR Q(36) OR Q(37) OR Q(38) OR Q(39) OR Q(40) OR Q(41);
-		
-		SelectDataMd(0) <= Q(14) OR Q(15) OR Q(16);
+		SelectDir(0) <= Q(35) OR Q(36) OR Q(37) OR Q(38) OR Q(39) OR Q(40) OR Q(41) OR Q(43) OR Q(44) OR Q(45) OR Q(47) OR Q(48) OR Q(49) OR Q(50) OR Q(51) OR Q(52) OR Q(53) OR Q(54) OR Q(55) OR Q(56) OR Q(57) OR Q(58);
+		SelectDataMd(0) <= Q(14) OR Q(15) OR Q(16) OR Q(39) OR Q(40) OR Q(41);
 		SelectDataMd(1) <= Q(35) OR Q(36) OR Q(37);
 		
 		Ena_Md_Read <= Q(17) OR Q(18) OR Q(19) OR Q(27) OR Q(28) OR Q(29) OR Q(30) OR Q(31) OR Q(32);
 		
-		Save_Acum <= Q(6) OR Q(10) OR Q(13) OR Q(17) OR Q(18) OR Q(19);
-		SaveB <= Q(26);
-		SelectPSR <= '0';
-		Habilitar <= Q(4) OR Q(8) OR Q(11);
-		Inc_PC <= Q(6) OR Q(7) OR Q(10) OR Q(13) OR Q(16) OR Q(19) OR Q(24) OR Q(25) OR Q(37);
-		Ena_Md_Write <= Q(14) OR Q(15) OR Q(16) OR Q(35) OR Q(36) OR Q(37);
+		Save_Acum <= Q(6) OR Q(10) OR Q(13) OR Q(17) OR Q(18) OR Q(19) OR Q(54);
+		SaveB <= Q(26) OR Q(50);
 		
-		Ena_SP <= Q(38);
-		IncDec(1) <= Q(38);
+		Habilitar <= Q(4) OR Q(8) OR Q(11);
+		Inc_PC <= Q(6) OR Q(7) OR Q(10) OR Q(13) OR Q(16) OR Q(19) OR Q(24) OR Q(25);
+		Ena_Md_Write <= Q(14) OR Q(15) OR Q(16) OR Q(35) OR Q(36) OR Q(37) OR Q(39) OR Q(40) OR Q(41) OR Q(43) OR Q(44) OR Q(45);
+		
+		Ena_SP <= Q(38) OR Q(42) OR Q(46) OR Q(47) OR Q(51) OR Q(55);
+		IncDec(1) <= Q(38) OR Q(42) OR Q(46);
+		IncDec(0) <= Q(47) OR Q(51) OR Q(55);
+		
+		SelectPSR <= Q(48) OR Q(49) OR Q(50);
 		
 
 		Estados <= Q;
@@ -438,6 +517,26 @@ BEGIN
 		FF46 : DFFE PORT MAP (D(46), Clock, ResetSystem, '1', '1', Q(46));
 		FF47 : DFFE PORT MAP (D(47), Clock, ResetSystem, '1', '1', Q(47));
 		FF48 : DFFE PORT MAP (D(48), Clock, ResetSystem, '1', '1', Q(48));
+		FF49 : DFFE PORT MAP (D(49), Clock, ResetSystem, '1', '1', Q(49));
+		FF50 : DFFE PORT MAP (D(50), Clock, ResetSystem, '1', '1', Q(50));
+		FF51 : DFFE PORT MAP (D(51), Clock, ResetSystem, '1', '1', Q(51));
+		FF52 : DFFE PORT MAP (D(52), Clock, ResetSystem, '1', '1', Q(52));
+		FF53 : DFFE PORT MAP (D(53), Clock, ResetSystem, '1', '1', Q(53));
+		FF54 : DFFE PORT MAP (D(54), Clock, ResetSystem, '1', '1', Q(54));
+		FF55 : DFFE PORT MAP (D(55), Clock, ResetSystem, '1', '1', Q(55));
+		FF56 : DFFE PORT MAP (D(56), Clock, ResetSystem, '1', '1', Q(56));
+		FF57 : DFFE PORT MAP (D(57), Clock, ResetSystem, '1', '1', Q(57));
+		FF58 : DFFE PORT MAP (D(58), Clock, ResetSystem, '1', '1', Q(58));
+		FF59 : DFFE PORT MAP (D(59), Clock, ResetSystem, '1', '1', Q(59));
+		FF60 : DFFE PORT MAP (D(60), Clock, ResetSystem, '1', '1', Q(60));
+		FF61 : DFFE PORT MAP (D(61), Clock, ResetSystem, '1', '1', Q(61));
+		FF62 : DFFE PORT MAP (D(62), Clock, ResetSystem, '1', '1', Q(62));
+		FF63 : DFFE PORT MAP (D(63), Clock, ResetSystem, '1', '1', Q(63));
+		FF64 : DFFE PORT MAP (D(64), Clock, ResetSystem, '1', '1', Q(64));
+		FF65 : DFFE PORT MAP (D(65), Clock, ResetSystem, '1', '1', Q(65));
+		FF66 : DFFE PORT MAP (D(66), Clock, ResetSystem, '1', '1', Q(66));
+		FF67 : DFFE PORT MAP (D(67), Clock, ResetSystem, '1', '1', Q(67));
+		FF68 : DFFE PORT MAP (D(68), Clock, ResetSystem, '1', '1', Q(68));
 
 		
 		B_OperatorMUX: OperatorMUX PORT MAP (

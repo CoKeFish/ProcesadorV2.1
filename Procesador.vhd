@@ -36,7 +36,7 @@ ENTITY Procesador IS
 				Ena_Md_Write		:OUT STD_LOGIC;
 				--Test
 				Count					:OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
-				Estados				:OUT STD_LOGIC_VECTOR(49 DOWNTO 0);
+				Estados				:OUT STD_LOGIC_VECTOR(99 DOWNTO 0);
 				Acum						:OUT STD_LOGIC_VECTOR (15 DOWNTO 0)
 		);
 	
@@ -119,7 +119,7 @@ ARCHITECTURE	Procesador OF Procesador IS
 						
 						--Test   (salidas exclusivamente para realizar pruebas
 								
-						Estados 					:OUT STD_LOGIC_VECTOR(49 DOWNTO 0)
+						Estados 					:OUT STD_LOGIC_VECTOR(99 DOWNTO 0)
 				);
 			
 		END COMPONENT Control;
@@ -484,7 +484,7 @@ ARCHITECTURE	Procesador OF Procesador IS
 			SIGNAL SDataout_Md			:STD_LOGIC_VECTOR(15 DOWNTO 0);
 			SIGNAL TempStatusPSR			:STD_LOGIC_VECTOR(15 DOWNTO 0);
 			
-			SIGNAL SEstados					:STD_LOGIC_VECTOR(49 DOWNTO 0);
+			SIGNAL SEstados				:STD_LOGIC_VECTOR(99 DOWNTO 0);
 			
 			
 			
@@ -504,7 +504,6 @@ BEGIN
 		
 		
 		Dataout_Md <= SDataout_Md;
-		
 		Dir_Mp <= SDirMp;
 		Dir_Md <= SDirMd;
 		Estados <= SEstados;
@@ -525,7 +524,7 @@ BEGIN
 																			opGPR,
 																			ModeDirGPR,
 																			StatusPSR,
-																			Int,
+																			Int AND Banderas(4),
 																			Ena_Mp,
 																			Ena_Md_Read,
 																			Ena_Md_Write,
@@ -559,7 +558,7 @@ BEGIN
 																			ModeDirGPR
 																			);
 		
-		B_Acum	:	Acumulador	PORT MAP	(
+		B_Acumulador	:	Acumulador	PORT MAP	(
 																			Clock,
 																			ResetSystem,
 																			Save_Acum,

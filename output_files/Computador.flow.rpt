@@ -1,5 +1,5 @@
 Flow report for Computador
-Wed Dec 02 23:47:04 2020
+Thu Dec 03 03:57:52 2020
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -40,23 +40,21 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Wed Dec 02 23:47:04 2020      ;
+; Flow Status                        ; Successful - Thu Dec 03 03:57:52 2020      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; Computador                                 ;
 ; Top-level Entity Name              ; Computador                                 ;
-; Family                             ; Cyclone IV GX                              ;
-; Total logic elements               ; 459                                        ;
-;     Total combinational functions  ; 406                                        ;
-;     Dedicated logic registers      ; 160                                        ;
-; Total registers                    ; 160                                        ;
-; Total pins                         ; 109                                        ;
+; Family                             ; Cyclone IV E                               ;
+; Device                             ; EP4CE22F17C6                               ;
+; Timing Models                      ; Final                                      ;
+; Total logic elements               ; 502                                        ;
+;     Total combinational functions  ; 438                                        ;
+;     Dedicated logic registers      ; 176                                        ;
+; Total registers                    ; 176                                        ;
+; Total pins                         ; 59                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 9,984                                      ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
-; Total GXB Receiver Channel PCS     ; 0                                          ;
-; Total GXB Receiver Channel PMA     ; 0                                          ;
-; Total GXB Transmitter Channel PCS  ; 0                                          ;
-; Total GXB Transmitter Channel PMA  ; 0                                          ;
 ; Total PLLs                         ; 0                                          ;
 +------------------------------------+--------------------------------------------+
 
@@ -66,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/02/2020 23:46:58 ;
+; Start date & time ; 12/03/2020 03:57:46 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Computador          ;
 +-------------------+---------------------+
@@ -77,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+-----------------------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                               ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+-----------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 193866609351778.160697081815180                     ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 193866609351778.160698586513956                     ; --            ; --          ; --             ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                                                  ; --            ; --          ; eda_simulation ;
 ; EDA_NETLIST_WRITER_OUTPUT_DIR       ; C:/Users/OMEN/Desktop/ProcesadorV2/simulation/qsim/ ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                                         ; --            ; --          ; eda_simulation ;
@@ -87,6 +85,8 @@ applicable agreement for further details.
 ; IP_TOOL_NAME                        ; ROM: 1-PORT                                         ; --            ; --          ; --             ;
 ; IP_TOOL_VERSION                     ; 13.1                                                ; --            ; --          ; --             ;
 ; IP_TOOL_VERSION                     ; 13.1                                                ; --            ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                                  ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                                   ; --            ; --          ; --             ;
 ; MISC_FILE                           ; MemoryROM.cmp                                       ; --            ; --          ; --             ;
 ; PARTITION_COLOR                     ; 16764057                                            ; --            ; --          ; Top            ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                               ; --            ; --          ; Top            ;
@@ -100,8 +100,8 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:07     ; 1.0                     ; 4719 MB             ; 00:00:07                           ;
-; Total                ; 00:00:07     ; --                      ; --                  ; 00:00:07                           ;
+; Analysis & Synthesis ; 00:00:07     ; 1.0                     ; 4665 MB             ; 00:00:05                           ;
+; Total                ; 00:00:07     ; --                      ; --                  ; 00:00:05                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

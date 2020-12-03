@@ -29,7 +29,7 @@ ENTITY Computador IS
 				MemoryOUT				:OUT STD_LOGIC_VECTOR (22 DOWNTO 0);
 				Count						:OUT STD_LOGIC_VECTOR (15 DOWNTO 0);
 				Acum						:OUT STD_LOGIC_VECTOR (15 DOWNTO 0);
-				Estados					:OUT STD_LOGIC_VECTOR (49 DOWNTO 0);
+				--Estados					:OUT STD_LOGIC_VECTOR (99 DOWNTO 0);
 				SEnaMP					:OUT STD_LOGIC
 		);
 	
@@ -84,7 +84,7 @@ ARCHITECTURE	Computador OF Computador IS
 						Ena_Md_Write		:OUT STD_LOGIC;
 						--Test
 						Count					:OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
-						Estados				:OUT STD_LOGIC_VECTOR(49 DOWNTO 0);
+						Estados				:OUT STD_LOGIC_VECTOR(99 DOWNTO 0);
 						Acum						:OUT STD_LOGIC_VECTOR (15 DOWNTO 0)
 				);
 			
@@ -105,6 +105,7 @@ ARCHITECTURE	Computador OF Computador IS
 		SIGNAL Datoin_Md				:STD_LOGIC_VECTOR(15 DOWNTO 0);
 		SIGNAL Dataout_Md				:STD_LOGIC_VECTOR(15 DOWNTO 0);
 		SIGNAL Dir_Md					:STD_LOGIC_VECTOR(15 DOWNTO 0);
+		SIGNAL SEstados				:STD_LOGIC_VECTOR(99 DOWNTO 0);
 		SIGNAL Ena_Md_Read			:STD_LOGIC;
 		SIGNAL Ena_Md_Write			:STD_LOGIC;
 		
@@ -131,7 +132,7 @@ BEGIN
 															Ena_Md_Read,
 															Ena_Md_Write,
 															Count,
-															Estados,
+															SEstados,
 															Acum);
 		B_MemoryRAM : MemoryRAM PORT MAP (
 															Dir_Md(7 DOWNTO 0), 

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Computador
-Wed Dec 02 23:47:04 2020
+Thu Dec 03 03:57:52 2020
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -20,8 +20,8 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
  12. General Register Statistics
  13. Inverted Register Statistics
  14. Multiplexer Restructuring Statistics (Restructuring Performed)
- 15. Source assignments for MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_t1q3:auto_generated
- 16. Source assignments for MemoryROM:B_MemoryROM|altsyncram:altsyncram_component|altsyncram_aes3:auto_generated
+ 15. Source assignments for MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_3up3:auto_generated
+ 16. Source assignments for MemoryROM:B_MemoryROM|altsyncram:altsyncram_component|altsyncram_gas3:auto_generated
  17. Parameter Settings for User Entity Instance: MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component
  18. Parameter Settings for User Entity Instance: MemoryROM:B_MemoryROM|altsyncram:altsyncram_component
  19. altsyncram Parameter Settings by Entity Instance
@@ -58,23 +58,19 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Dec 02 23:47:04 2020      ;
+; Analysis & Synthesis Status        ; Successful - Thu Dec 03 03:57:52 2020      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; Computador                                 ;
 ; Top-level Entity Name              ; Computador                                 ;
-; Family                             ; Cyclone IV GX                              ;
-; Total logic elements               ; 459                                        ;
-;     Total combinational functions  ; 406                                        ;
-;     Dedicated logic registers      ; 160                                        ;
-; Total registers                    ; 160                                        ;
-; Total pins                         ; 109                                        ;
+; Family                             ; Cyclone IV E                               ;
+; Total logic elements               ; 502                                        ;
+;     Total combinational functions  ; 438                                        ;
+;     Dedicated logic registers      ; 176                                        ;
+; Total registers                    ; 176                                        ;
+; Total pins                         ; 59                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 9,984                                      ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
-; Total GXB Receiver Channel PCS     ; 0                                          ;
-; Total GXB Receiver Channel PMA     ; 0                                          ;
-; Total GXB Transmitter Channel PCS  ; 0                                          ;
-; Total GXB Transmitter Channel PMA  ; 0                                          ;
 ; Total PLLs                         ; 0                                          ;
 +------------------------------------+--------------------------------------------+
 
@@ -84,8 +80,9 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE22F17C6       ;                    ;
 ; Top-level entity name                                                      ; Computador         ; Computador         ;
-; Family name                                                                ; Cyclone IV GX      ; Cyclone IV GX      ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
 ; Enable compact report table                                                ; Off                ; Off                ;
@@ -225,77 +222,94 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; altrom.inc                       ; yes             ; Megafunction                          ; d:/quartus/quartus/libraries/megafunctions/altrom.inc            ;         ;
 ; altram.inc                       ; yes             ; Megafunction                          ; d:/quartus/quartus/libraries/megafunctions/altram.inc            ;         ;
 ; altdpram.inc                     ; yes             ; Megafunction                          ; d:/quartus/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_t1q3.tdf           ; yes             ; Auto-Generated Megafunction           ; C:/Users/OMEN/Desktop/ProcesadorV2/db/altsyncram_t1q3.tdf        ;         ;
-; db/altsyncram_aes3.tdf           ; yes             ; Auto-Generated Megafunction           ; C:/Users/OMEN/Desktop/ProcesadorV2/db/altsyncram_aes3.tdf        ;         ;
+; db/altsyncram_3up3.tdf           ; yes             ; Auto-Generated Megafunction           ; C:/Users/OMEN/Desktop/ProcesadorV2/db/altsyncram_3up3.tdf        ;         ;
+; db/altsyncram_gas3.tdf           ; yes             ; Auto-Generated Megafunction           ; C:/Users/OMEN/Desktop/ProcesadorV2/db/altsyncram_gas3.tdf        ;         ;
 +----------------------------------+-----------------+---------------------------------------+------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary ;
-+--------------------------+------------------+
-; Resource                 ; Usage            ;
-+--------------------------+------------------+
-; I/O pins                 ; 109              ;
-; Total memory bits        ; 9984             ;
-; DSP block 9-bit elements ; 0                ;
-; Maximum fan-out node     ; Clock~input      ;
-; Maximum fan-out          ; 199              ;
-; Total fan-out            ; 2677             ;
-; Average fan-out          ; 3.25             ;
-+--------------------------+------------------+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 502         ;
+;                                             ;             ;
+; Total combinational functions               ; 438         ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 291         ;
+;     -- 3 input functions                    ; 108         ;
+;     -- <=2 input functions                  ; 39          ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 438         ;
+;     -- arithmetic mode                      ; 0           ;
+;                                             ;             ;
+; Total registers                             ; 176         ;
+;     -- Dedicated logic registers            ; 176         ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 59          ;
+; Total memory bits                           ; 9984        ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+; Maximum fan-out node                        ; Clock~input ;
+; Maximum fan-out                             ; 215         ;
+; Total fan-out                               ; 2764        ;
+; Average fan-out                             ; 3.58        ;
++---------------------------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                       ;
-+-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                    ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                ; Library Name ;
-+-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------------------------------------------------------------------+--------------+
-; |Computador                                   ; 406 (0)           ; 160 (0)      ; 9984        ; 0            ; 0       ; 0         ; 0         ; 109  ; 0            ; |Computador                                                                                        ; work         ;
-;    |MemoryRAM:B_MemoryRAM|                    ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|MemoryRAM:B_MemoryRAM                                                                  ; work         ;
-;       |altsyncram:altsyncram_component|       ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component                                  ; work         ;
-;          |altsyncram_t1q3:auto_generated|     ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_t1q3:auto_generated   ; work         ;
-;    |MemoryROM:B_MemoryROM|                    ; 1 (0)             ; 1 (0)        ; 5888        ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|MemoryROM:B_MemoryROM                                                                  ; work         ;
-;       |altsyncram:altsyncram_component|       ; 1 (0)             ; 1 (0)        ; 5888        ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|MemoryROM:B_MemoryROM|altsyncram:altsyncram_component                                  ; work         ;
-;          |altsyncram_aes3:auto_generated|     ; 1 (1)             ; 1 (1)        ; 5888        ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|MemoryROM:B_MemoryROM|altsyncram:altsyncram_component|altsyncram_aes3:auto_generated   ; work         ;
-;    |Procesador:B_Procesador|                  ; 405 (0)           ; 159 (0)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador                                                                ; work         ;
-;       |ALU:B_ALU|                             ; 222 (0)           ; 49 (1)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU                                                      ; work         ;
-;          |ADDER:B_ADDER|                      ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ADDER:B_ADDER                                        ; work         ;
-;             |FullAdder:FA10|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ADDER:B_ADDER|FullAdder:FA10                         ; work         ;
-;             |FullAdder:FA11|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ADDER:B_ADDER|FullAdder:FA11                         ; work         ;
-;             |FullAdder:FA12|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ADDER:B_ADDER|FullAdder:FA12                         ; work         ;
-;             |FullAdder:FA13|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ADDER:B_ADDER|FullAdder:FA13                         ; work         ;
-;             |FullAdder:FA14|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ADDER:B_ADDER|FullAdder:FA14                         ; work         ;
-;             |FullAdder:FA15|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ADDER:B_ADDER|FullAdder:FA15                         ; work         ;
-;             |FullAdder:FA16|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ADDER:B_ADDER|FullAdder:FA16                         ; work         ;
-;             |FullAdder:FA1|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ADDER:B_ADDER|FullAdder:FA1                          ; work         ;
-;             |FullAdder:FA2|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ADDER:B_ADDER|FullAdder:FA2                          ; work         ;
-;             |FullAdder:FA3|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ADDER:B_ADDER|FullAdder:FA3                          ; work         ;
-;             |FullAdder:FA4|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ADDER:B_ADDER|FullAdder:FA4                          ; work         ;
-;             |FullAdder:FA5|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ADDER:B_ADDER|FullAdder:FA5                          ; work         ;
-;             |FullAdder:FA6|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ADDER:B_ADDER|FullAdder:FA6                          ; work         ;
-;             |FullAdder:FA7|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ADDER:B_ADDER|FullAdder:FA7                          ; work         ;
-;             |FullAdder:FA8|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ADDER:B_ADDER|FullAdder:FA8                          ; work         ;
-;             |FullAdder:FA9|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ADDER:B_ADDER|FullAdder:FA9                          ; work         ;
-;          |Banderas:B_Banderas|                ; 10 (10)           ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|Banderas:B_Banderas                                  ; work         ;
-;          |ControlALU:B_Control|               ; 30 (18)           ; 10 (6)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ControlALU:B_Control                                 ; work         ;
-;             |CounterMulti:B_Counter|          ; 7 (7)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ControlALU:B_Control|CounterMulti:B_Counter          ; work         ;
-;             |SelecctorOpera:B_SeleccionOpera| ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ControlALU:B_Control|SelecctorOpera:B_SeleccionOpera ; work         ;
-;          |R_Resultado:B_R_Resultado|          ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|R_Resultado:B_R_Resultado                            ; work         ;
-;          |Registro_A_Q_E:B_registroAQE|       ; 21 (21)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|Registro_A_Q_E:B_registroAQE                         ; work         ;
-;          |SelecctorG:B_SelectorG|             ; 122 (122)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|SelecctorG:B_SelectorG                               ; work         ;
-;          |SelectorSM:B_SelectorMP|            ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|SelectorSM:B_SelectorMP                              ; work         ;
-;          |SelectorSM:B_SelectorSM|            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|SelectorSM:B_SelectorSM                              ; work         ;
-;       |ALUMux:B_ALUMux|                       ; 34 (34)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALUMux:B_ALUMux                                                ; work         ;
-;       |AcumMUX:B_AcumMUX|                     ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|AcumMUX:B_AcumMUX                                              ; work         ;
-;       |Acumulador:B_Acum|                     ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|Acumulador:B_Acum                                              ; work         ;
-;       |Control:B_Control|                     ; 42 (42)           ; 42 (42)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|Control:B_Control                                              ; work         ;
-;       |Data_MdMux:B_Data_MdMux|               ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|Data_MdMux:B_Data_MdMux                                        ; work         ;
-;       |DirMdMux:B_DirMdMux|                   ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|DirMdMux:B_DirMdMux                                            ; work         ;
-;       |GeneralPR:B_GPR|                       ; 0 (0)             ; 23 (23)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|GeneralPR:B_GPR                                                ; work         ;
-;       |ProgramCounter:B_Program_counter|      ; 34 (34)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ProgramCounter:B_Program_counter                               ; work         ;
-;       |ProgramStatus:B_ProgramStatus|         ; 0 (0)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ProgramStatus:B_ProgramStatus                                  ; work         ;
-;       |StackPointer:B_StackPointer|           ; 15 (15)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|StackPointer:B_StackPointer                                    ; work         ;
-+-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------------------------------------------------------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                           ;
++-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                    ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                ; Library Name ;
++-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------+--------------+
+; |Computador                                   ; 438 (0)           ; 176 (0)      ; 9984        ; 0            ; 0       ; 0         ; 59   ; 0            ; |Computador                                                                                        ; work         ;
+;    |MemoryRAM:B_MemoryRAM|                    ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador|MemoryRAM:B_MemoryRAM                                                                  ; work         ;
+;       |altsyncram:altsyncram_component|       ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador|MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component                                  ; work         ;
+;          |altsyncram_3up3:auto_generated|     ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador|MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_3up3:auto_generated   ; work         ;
+;    |MemoryROM:B_MemoryROM|                    ; 1 (0)             ; 1 (0)        ; 5888        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador|MemoryROM:B_MemoryROM                                                                  ; work         ;
+;       |altsyncram:altsyncram_component|       ; 1 (0)             ; 1 (0)        ; 5888        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador|MemoryROM:B_MemoryROM|altsyncram:altsyncram_component                                  ; work         ;
+;          |altsyncram_gas3:auto_generated|     ; 1 (1)             ; 1 (1)        ; 5888        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador|MemoryROM:B_MemoryROM|altsyncram:altsyncram_component|altsyncram_gas3:auto_generated   ; work         ;
+;    |Procesador:B_Procesador|                  ; 437 (1)           ; 175 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador                                                                ; work         ;
+;       |ALU:B_ALU|                             ; 223 (0)           ; 49 (1)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU                                                      ; work         ;
+;          |ADDER:B_ADDER|                      ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ADDER:B_ADDER                                        ; work         ;
+;             |FullAdder:FA10|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ADDER:B_ADDER|FullAdder:FA10                         ; work         ;
+;             |FullAdder:FA11|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ADDER:B_ADDER|FullAdder:FA11                         ; work         ;
+;             |FullAdder:FA12|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ADDER:B_ADDER|FullAdder:FA12                         ; work         ;
+;             |FullAdder:FA13|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ADDER:B_ADDER|FullAdder:FA13                         ; work         ;
+;             |FullAdder:FA14|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ADDER:B_ADDER|FullAdder:FA14                         ; work         ;
+;             |FullAdder:FA15|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ADDER:B_ADDER|FullAdder:FA15                         ; work         ;
+;             |FullAdder:FA16|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ADDER:B_ADDER|FullAdder:FA16                         ; work         ;
+;             |FullAdder:FA1|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ADDER:B_ADDER|FullAdder:FA1                          ; work         ;
+;             |FullAdder:FA2|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ADDER:B_ADDER|FullAdder:FA2                          ; work         ;
+;             |FullAdder:FA3|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ADDER:B_ADDER|FullAdder:FA3                          ; work         ;
+;             |FullAdder:FA4|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ADDER:B_ADDER|FullAdder:FA4                          ; work         ;
+;             |FullAdder:FA5|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ADDER:B_ADDER|FullAdder:FA5                          ; work         ;
+;             |FullAdder:FA6|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ADDER:B_ADDER|FullAdder:FA6                          ; work         ;
+;             |FullAdder:FA7|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ADDER:B_ADDER|FullAdder:FA7                          ; work         ;
+;             |FullAdder:FA8|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ADDER:B_ADDER|FullAdder:FA8                          ; work         ;
+;             |FullAdder:FA9|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ADDER:B_ADDER|FullAdder:FA9                          ; work         ;
+;          |Banderas:B_Banderas|                ; 12 (12)           ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|Banderas:B_Banderas                                  ; work         ;
+;          |ControlALU:B_Control|               ; 29 (18)           ; 10 (6)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ControlALU:B_Control                                 ; work         ;
+;             |CounterMulti:B_Counter|          ; 7 (7)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ControlALU:B_Control|CounterMulti:B_Counter          ; work         ;
+;             |SelecctorOpera:B_SeleccionOpera| ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ControlALU:B_Control|SelecctorOpera:B_SeleccionOpera ; work         ;
+;          |R_Resultado:B_R_Resultado|          ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|R_Resultado:B_R_Resultado                            ; work         ;
+;          |Registro_A_Q_E:B_registroAQE|       ; 21 (21)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|Registro_A_Q_E:B_registroAQE                         ; work         ;
+;          |SelecctorG:B_SelectorG|             ; 119 (119)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|SelecctorG:B_SelectorG                               ; work         ;
+;          |SelectorSM:B_SelectorMP|            ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|SelectorSM:B_SelectorMP                              ; work         ;
+;          |SelectorSM:B_SelectorSM|            ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|SelectorSM:B_SelectorSM                              ; work         ;
+;       |ALUMux:B_ALUMux|                       ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALUMux:B_ALUMux                                                ; work         ;
+;       |AcumMUX:B_AcumMUX|                     ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|AcumMUX:B_AcumMUX                                              ; work         ;
+;       |Acumulador:B_Acumulador|               ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|Acumulador:B_Acumulador                                        ; work         ;
+;       |Control:B_Control|                     ; 53 (53)           ; 58 (58)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|Control:B_Control                                              ; work         ;
+;       |Data_MdMux:B_Data_MdMux|               ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|Data_MdMux:B_Data_MdMux                                        ; work         ;
+;       |DirMdMux:B_DirMdMux|                   ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|DirMdMux:B_DirMdMux                                            ; work         ;
+;       |GeneralPR:B_GPR|                       ; 0 (0)             ; 23 (23)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|GeneralPR:B_GPR                                                ; work         ;
+;       |PSRMux:B_PSRMux|                       ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|PSRMux:B_PSRMux                                                ; work         ;
+;       |ProgramCounter:B_Program_counter|      ; 49 (49)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ProgramCounter:B_Program_counter                               ; work         ;
+;       |ProgramStatus:B_ProgramStatus|         ; 0 (0)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ProgramStatus:B_ProgramStatus                                  ; work         ;
+;       |StackPointer:B_StackPointer|           ; 17 (17)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|StackPointer:B_StackPointer                                    ; work         ;
++-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -304,8 +318,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+----------------+
 ; Name                                                                                            ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF            ;
 +-------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+----------------+
-; MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_t1q3:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 256          ; 16           ; --           ; --           ; 4096 ; None           ;
-; MemoryROM:B_MemoryROM|altsyncram:altsyncram_component|altsyncram_aes3:auto_generated|ALTSYNCRAM ; AUTO ; ROM         ; 256          ; 23           ; --           ; --           ; 5888 ; Computador.hex ;
+; MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_3up3:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 256          ; 16           ; --           ; --           ; 4096 ; None           ;
+; MemoryROM:B_MemoryROM|altsyncram:altsyncram_component|altsyncram_gas3:auto_generated|ALTSYNCRAM ; AUTO ; ROM         ; 256          ; 23           ; --           ; --           ; 5888 ; Computador.hex ;
 +-------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+----------------+
 
 
@@ -324,13 +338,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------+---------------------------------------------+
 ; Register name                                         ; Reason for Removal                          ;
 +-------------------------------------------------------+---------------------------------------------+
-; Procesador:B_Procesador|Control:B_Control|FF42        ; Stuck at GND due to stuck port data_in      ;
-; Procesador:B_Procesador|Control:B_Control|FF43        ; Stuck at GND due to stuck port data_in      ;
-; Procesador:B_Procesador|Control:B_Control|FF44        ; Stuck at GND due to stuck port data_in      ;
-; Procesador:B_Procesador|Control:B_Control|FF45        ; Stuck at GND due to stuck port data_in      ;
-; Procesador:B_Procesador|Control:B_Control|FF46        ; Stuck at GND due to stuck port data_in      ;
-; Procesador:B_Procesador|Control:B_Control|FF47        ; Stuck at GND due to stuck port data_in      ;
-; Procesador:B_Procesador|Control:B_Control|FF48        ; Stuck at GND due to stuck port data_in      ;
 ; Procesador:B_Procesador|DirRegister:B_DirRegister|FF0 ; Stuck at GND due to stuck port clock_enable ;
 ; Procesador:B_Procesador|DirRegister:B_DirRegister|FF1 ; Stuck at GND due to stuck port clock_enable ;
 ; Procesador:B_Procesador|DirRegister:B_DirRegister|FF2 ; Stuck at GND due to stuck port clock_enable ;
@@ -339,7 +346,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Procesador:B_Procesador|DirRegister:B_DirRegister|FF5 ; Stuck at GND due to stuck port clock_enable ;
 ; Procesador:B_Procesador|DirRegister:B_DirRegister|FF6 ; Stuck at GND due to stuck port clock_enable ;
 ; Procesador:B_Procesador|DirRegister:B_DirRegister|FF7 ; Stuck at GND due to stuck port clock_enable ;
-; Total Number of Removed Registers = 15                ;                                             ;
+; Total Number of Removed Registers = 8                 ;                                             ;
 +-------------------------------------------------------+---------------------------------------------+
 
 
@@ -358,10 +365,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 160   ;
+; Total registers                              ; 176   ;
 ; Number of registers using Synchronous Clear  ; 1     ;
 ; Number of registers using Synchronous Load   ; 7     ;
-; Number of registers using Asynchronous Clear ; 159   ;
+; Number of registers using Asynchronous Clear ; 175   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 110   ;
 ; Number of registers using Preset             ; 0     ;
@@ -373,31 +380,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------+---------+
 ; Inverted Register                                          ; Fan out ;
 +------------------------------------------------------------+---------+
-; Procesador:B_Procesador|Control:B_Control|FF0              ; 4       ;
-; Procesador:B_Procesador|ALU:B_ALU|ControlALU:B_Control|FF0 ; 3       ;
-; Procesador:B_Procesador|StackPointer:B_StackPointer|FF0    ; 5       ;
-; Procesador:B_Procesador|StackPointer:B_StackPointer|FF1    ; 4       ;
+; Procesador:B_Procesador|Control:B_Control|FF0              ; 3       ;
+; Procesador:B_Procesador|StackPointer:B_StackPointer|FF0    ; 3       ;
+; Procesador:B_Procesador|StackPointer:B_StackPointer|FF1    ; 3       ;
 ; Procesador:B_Procesador|StackPointer:B_StackPointer|FF2    ; 3       ;
-; Procesador:B_Procesador|StackPointer:B_StackPointer|FF3    ; 5       ;
-; Procesador:B_Procesador|StackPointer:B_StackPointer|FF4    ; 4       ;
+; Procesador:B_Procesador|StackPointer:B_StackPointer|FF3    ; 3       ;
+; Procesador:B_Procesador|StackPointer:B_StackPointer|FF4    ; 3       ;
 ; Procesador:B_Procesador|StackPointer:B_StackPointer|FF5    ; 3       ;
 ; Procesador:B_Procesador|StackPointer:B_StackPointer|FF6    ; 3       ;
 ; Procesador:B_Procesador|StackPointer:B_StackPointer|FF7    ; 2       ;
+; Procesador:B_Procesador|ALU:B_ALU|ControlALU:B_Control|FF0 ; 3       ;
 ; Total number of inverted registers = 10                    ;         ;
 +------------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
-; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |Computador|Procesador:B_Procesador|ALUMux:B_ALUMux|ALUMUXOut[0] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |Computador|Procesador:B_Procesador|ALUMux:B_ALUMux|ALUMUXOut[12] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------+
-; Source assignments for MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_t1q3:auto_generated ;
+; Source assignments for MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_3up3:auto_generated ;
 +---------------------------------+--------------------+------+-----------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                            ;
 +---------------------------------+--------------------+------+-----------------------------------------------+
@@ -406,7 +413,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +-------------------------------------------------------------------------------------------------------------+
-; Source assignments for MemoryROM:B_MemoryROM|altsyncram:altsyncram_component|altsyncram_aes3:auto_generated ;
+; Source assignments for MemoryROM:B_MemoryROM|altsyncram:altsyncram_component|altsyncram_gas3:auto_generated ;
 +---------------------------------+--------------------+------+-----------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                            ;
 +---------------------------------+--------------------+------+-----------------------------------------------+
@@ -469,8 +476,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ENABLE_ECC                         ; FALSE                ; Untyped                                ;
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Signed Integer                         ;
-; DEVICE_FAMILY                      ; Cyclone IV GX        ; Untyped                                ;
-; CBXI_PARAMETER                     ; altsyncram_t1q3      ; Untyped                                ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                                ;
+; CBXI_PARAMETER                     ; altsyncram_3up3      ; Untyped                                ;
 +------------------------------------+----------------------+----------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -530,8 +537,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ENABLE_ECC                         ; FALSE                ; Untyped                                ;
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Signed Integer                         ;
-; DEVICE_FAMILY                      ; Cyclone IV GX        ; Untyped                                ;
-; CBXI_PARAMETER                     ; altsyncram_aes3      ; Untyped                                ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                                ;
+; CBXI_PARAMETER                     ; altsyncram_gas3      ; Untyped                                ;
 +------------------------------------+----------------------+----------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -609,7 +616,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Port  ; Type   ; Severity ; Details                                                                             ;
 +-------+--------+----------+-------------------------------------------------------------------------------------+
 ; sra_s ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; rtn   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; push  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; pop   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +-------+--------+----------+-------------------------------------------------------------------------------------+
@@ -622,6 +628,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------+--------+----------+-------------------------------------------------------------------------------------+
 ; dir_mp[15..8] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; dir_md[15..8] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; estados       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +---------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
@@ -640,7 +647,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Wed Dec 02 23:46:57 2020
+    Info: Processing started: Thu Dec 03 03:57:45 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Computador -c Computador
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file generalpr.vhd
@@ -668,25 +675,24 @@ Info (12021): Found 2 design units, including 1 entities, in source file memoryr
     Info (12022): Found design unit 1: memoryrom-SYN
     Info (12023): Found entity 1: MemoryROM
 Info (12127): Elaborating entity "Computador" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at Computador.vhd(108): object "SEstados" assigned a value but never read
 Info (12128): Elaborating entity "Procesador" for hierarchy "Procesador:B_Procesador"
 Warning (10873): Using initial value X (don't care) for net "TempStatusPSR[15..5]" at Procesador.vhd(485)
 Info (12128): Elaborating entity "ProgramCounter" for hierarchy "Procesador:B_Procesador|ProgramCounter:B_Program_counter"
 Info (12128): Elaborating entity "Control" for hierarchy "Procesador:B_Procesador|Control:B_Control"
 Warning (10541): VHDL Signal Declaration warning at Control.vhd(62): used implicit default value for signal "SaveDirR" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Warning (10036): Verilog HDL or VHDL warning at Control.vhd(155): object "SRA_S" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at Control.vhd(160): object "RTN" assigned a value but never read
 Warning (10036): Verilog HDL or VHDL warning at Control.vhd(166): object "PUSH" assigned a value but never read
 Warning (10036): Verilog HDL or VHDL warning at Control.vhd(167): object "POP" assigned a value but never read
 Warning (10036): Verilog HDL or VHDL warning at Control.vhd(172): object "Indirecto" assigned a value but never read
-Warning (10873): Using initial value X (don't care) for net "IncDec[0]" at Control.vhd(67)
-Warning (10873): Using initial value X (don't care) for net "Q[49]" at Control.vhd(176)
-Warning (10873): Using initial value X (don't care) for net "D[48..42]" at Control.vhd(177)
+Warning (10873): Using initial value X (don't care) for net "Q[99..69]" at Control.vhd(176)
+Warning (10873): Using initial value X (don't care) for net "D[68..59]" at Control.vhd(177)
 Info (12128): Elaborating entity "OperatorMUX" for hierarchy "Procesador:B_Procesador|Control:B_Control|OperatorMUX:B_OperatorMUX"
 Info (12128): Elaborating entity "GeneralPR" for hierarchy "Procesador:B_Procesador|GeneralPR:B_GPR"
 Warning (12125): Using design file acumulador.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: Acumulador-Acumulador
     Info (12023): Found entity 1: Acumulador
-Info (12128): Elaborating entity "Acumulador" for hierarchy "Procesador:B_Procesador|Acumulador:B_Acum"
+Info (12128): Elaborating entity "Acumulador" for hierarchy "Procesador:B_Procesador|Acumulador:B_Acumulador"
 Warning (12125): Using design file alu.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: ALU-ALU
     Info (12023): Found entity 1: ALU
@@ -845,9 +851,9 @@ Info (12133): Instantiated megafunction "MemoryRAM:B_MemoryRAM|altsyncram:altsyn
     Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK1"
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_t1q3.tdf
-    Info (12023): Found entity 1: altsyncram_t1q3
-Info (12128): Elaborating entity "altsyncram_t1q3" for hierarchy "MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_t1q3:auto_generated"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_3up3.tdf
+    Info (12023): Found entity 1: altsyncram_3up3
+Info (12128): Elaborating entity "altsyncram_3up3" for hierarchy "MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_3up3:auto_generated"
 Info (12128): Elaborating entity "MemoryROM" for hierarchy "MemoryROM:B_MemoryROM"
 Info (12128): Elaborating entity "altsyncram" for hierarchy "MemoryROM:B_MemoryROM|altsyncram:altsyncram_component"
 Info (12130): Elaborated megafunction instantiation "MemoryROM:B_MemoryROM|altsyncram:altsyncram_component"
@@ -902,32 +908,23 @@ Info (12133): Instantiated megafunction "MemoryROM:B_MemoryROM|altsyncram:altsyn
     Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK1"
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_aes3.tdf
-    Info (12023): Found entity 1: altsyncram_aes3
-Info (12128): Elaborating entity "altsyncram_aes3" for hierarchy "MemoryROM:B_MemoryROM|altsyncram:altsyncram_component|altsyncram_aes3:auto_generated"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_gas3.tdf
+    Info (12023): Found entity 1: altsyncram_gas3
+Info (12128): Elaborating entity "altsyncram_gas3" for hierarchy "MemoryROM:B_MemoryROM|altsyncram:altsyncram_component|altsyncram_gas3:auto_generated"
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "Estados[42]" is stuck at GND
-    Warning (13410): Pin "Estados[43]" is stuck at GND
-    Warning (13410): Pin "Estados[44]" is stuck at GND
-    Warning (13410): Pin "Estados[45]" is stuck at GND
-    Warning (13410): Pin "Estados[46]" is stuck at GND
-    Warning (13410): Pin "Estados[47]" is stuck at GND
-    Warning (13410): Pin "Estados[48]" is stuck at GND
-    Warning (13410): Pin "Estados[49]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 610 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 605 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 106 output pins
-    Info (21061): Implemented 462 logic cells
+    Info (21059): Implemented 56 output pins
+    Info (21061): Implemented 507 logic cells
     Info (21064): Implemented 39 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 50 warnings
-    Info: Peak virtual memory: 4719 megabytes
-    Info: Processing ended: Wed Dec 02 23:47:04 2020
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 40 warnings
+    Info: Peak virtual memory: 4665 megabytes
+    Info: Processing ended: Thu Dec 03 03:57:52 2020
     Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Total CPU time (on all processors): 00:00:05
 
 
