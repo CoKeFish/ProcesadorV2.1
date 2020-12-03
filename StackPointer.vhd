@@ -98,21 +98,22 @@ BEGIN
 	   ENA(15) <= ((Q(14) AND Inc) OR (NOT(Q(14)) AND (Dec))) AND ENA(14);
 		
 		
-		FF0  : DFFE PORT MAP (D(0) , Clock, ResetSystem, '1', ENA(0) , Q(0));
-		FF1  : DFFE PORT MAP (D(1) , Clock, ResetSystem, '1', ENA(1) , Q(1));
-		FF2  : DFFE PORT MAP (D(2) , Clock, ResetSystem, '1', ENA(2) , Q(2));
-		FF3  : DFFE PORT MAP (D(3) , Clock, ResetSystem, '1', ENA(3) , Q(3));
-		FF4  : DFFE PORT MAP (D(4) , Clock, ResetSystem, '1', ENA(4) , Q(4));
-		FF5  : DFFE PORT MAP (D(5) , Clock, ResetSystem, '1', ENA(5) , Q(5));
-		FF6  : DFFE PORT MAP (D(6) , Clock, ResetSystem, '1', ENA(6) , Q(6));
-		FF7  : DFFE PORT MAP (D(7) , Clock, ResetSystem, '1', ENA(7) , Q(7));
-		FF8  : DFFE PORT MAP (D(8) , Clock, ResetSystem, '1', ENA(8) , Q(8));
-		FF9  : DFFE PORT MAP (D(9) , Clock, ResetSystem, '1', ENA(9) , Q(9));
-		FF10 : DFFE PORT MAP (D(10), Clock, ResetSystem, '1', ENA(10), Q(10));
-		FF11 : DFFE PORT MAP (D(11), Clock, ResetSystem, '1', ENA(11), Q(11));
-		FF12 : DFFE PORT MAP (D(12), Clock, ResetSystem, '1', ENA(12), Q(12));
-	   FF13 : DFFE PORT MAP (D(13), Clock, ResetSystem, '1', ENA(13), Q(13));
-		FF14 : DFFE PORT MAP (D(14), Clock, ResetSystem, '1', ENA(14), Q(14));
+		FF0  : DFFE PORT MAP (D(0) , Clock, '1', ResetSystem, ENA(0) , Q(0));
+		FF1  : DFFE PORT MAP (D(1) , Clock, '1', ResetSystem, ENA(1) , Q(1));
+		FF2  : DFFE PORT MAP (D(2) , Clock, '1', ResetSystem, ENA(2) , Q(2));
+		FF3  : DFFE PORT MAP (D(3) , Clock, '1', ResetSystem, ENA(3) , Q(3));
+		FF4  : DFFE PORT MAP (D(4) , Clock, '1', ResetSystem, ENA(4) , Q(4));
+		FF5  : DFFE PORT MAP (D(5) , Clock, '1', ResetSystem, ENA(5) , Q(5));
+		FF6  : DFFE PORT MAP (D(6) , Clock, '1', ResetSystem, ENA(6) , Q(6));
+		FF7  : DFFE PORT MAP (D(7) , Clock, '1', ResetSystem, ENA(7) , Q(7));
+		FF8  : DFFE PORT MAP (D(8) , Clock, '1', ResetSystem, ENA(8) , Q(8));
+		FF9  : DFFE PORT MAP (D(9) , Clock, '1', ResetSystem, ENA(9) , Q(9));
+		FF10 : DFFE PORT MAP (D(10), Clock, '1', ResetSystem, ENA(10), Q(10));
+		FF11 : DFFE PORT MAP (D(11), Clock, '1', ResetSystem, ENA(11), Q(11));
+		FF12 : DFFE PORT MAP (D(12), Clock, '1', ResetSystem, ENA(12), Q(12));
+	   FF13 : DFFE PORT MAP (D(13), Clock, '1', ResetSystem, ENA(13), Q(13));
+		FF14 : DFFE PORT MAP (D(14), Clock, '1', ResetSystem, ENA(14), Q(14));
+		FF15 : DFFE PORT MAP (D(15), Clock, '1', ResetSystem, ENA(15), Q(15));
 		
 		
 		SP_out <= Q;

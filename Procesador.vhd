@@ -36,7 +36,8 @@ ENTITY Procesador IS
 				Ena_Md_Write		:OUT STD_LOGIC;
 				--Test
 				Count					:OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
-				Estados				:OUT STD_LOGIC_VECTOR(49 DOWNTO 0)
+				Estados				:OUT STD_LOGIC_VECTOR(49 DOWNTO 0);
+				Acum						:OUT STD_LOGIC_VECTOR (15 DOWNTO 0)
 		);
 	
 END ENTITY Procesador;
@@ -287,6 +288,7 @@ ARCHITECTURE	Procesador OF Procesador IS
 				SelectPC				:IN STD_LOGIC;--Señal que viene control, indica que se realizará una resta
 				--------------------------------------------------
 				--SALIDAS
+				Int					:IN STD_LOGIC;
 				PCMUXOut				:OUT STD_LOGIC_VECTOR (15 DOWNTO 0)--Señal de numero_2-M o NOT numero_2-M 
 				
 		);
@@ -478,6 +480,8 @@ ARCHITECTURE	Procesador OF Procesador IS
 			SIGNAL AC_out					:STD_LOGIC_VECTOR(15 DOWNTO 0);
 			SIGNAL IncDec					:STD_LOGIC_VECTOR(1 DOWNTO 0);
 			SIGNAL SDirMp					:STD_LOGIC_VECTOR(15 DOWNTO 0);
+			SIGNAL SDirMd					:STD_LOGIC_VECTOR(15 DOWNTO 0);
+			SIGNAL SDataout_Md			:STD_LOGIC_VECTOR(15 DOWNTO 0);
 			SIGNAL TempStatusPSR			:STD_LOGIC_VECTOR(15 DOWNTO 0);
 			
 			SIGNAL SEstados					:STD_LOGIC_VECTOR(49 DOWNTO 0);
@@ -490,10 +494,22 @@ BEGIN
 
 	--******************************************************--
 	
-	
-		Count <= AC_Out;
+		OutStatusALU(0) <= Resultado_O;
+		OutStatusALU(1) <= Resultado_C;
+		OutStatusALU(2) <= Resultado_N;
+		OutStatusALU(3) <= Resultado_Z;	
+		
+		Acum <= AC_Out;
+		Count <= SDirMp;
+		
+		
+		Dataout_Md <= SDataout_Md;
+		
 		Dir_Mp <= SDirMp;
+		Dir_Md <= SDirMd;
 		Estados <= SEstados;
+		
+		
 		B_Program_counter	:	ProgramCounter	PORT MAP (
 																			Clock,
 																			ResetSystem,
@@ -588,6 +604,7 @@ BEGIN
 																			Datoin_Md,
 																			DataGPR,
 																			SelectProgramCounter,
+																			Int,
 																			PC_in);
 		
 		
@@ -609,7 +626,7 @@ BEGIN
 																			SP_Out,
 																			DirR_Out,
 																			Select_DirMd,
-																			Dir_Md);
+																			SDirMd);
 		
 		
 		TempStatusPSR(4 DOWNTO 0) <= StatusPSR;
@@ -619,7 +636,7 @@ BEGIN
 																			TempStatusPSR,
 																			DataGPR,
 																			Select_DataMd,
-																			Dataout_Md);
+																			SDataout_Md);
 		
 		
 		

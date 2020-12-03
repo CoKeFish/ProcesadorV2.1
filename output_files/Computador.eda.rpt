@@ -1,5 +1,5 @@
 EDA Netlist Writer report for Computador
-Wed Dec 02 03:11:11 2020
+Wed Dec 02 23:10:36 2020
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Wed Dec 02 03:11:11 2020 ;
+; EDA Netlist Writer Status ; Successful - Wed Dec 02 23:10:36 2020 ;
 ; Revision Name             ; Computador                            ;
 ; Top-level Entity Name     ; Computador                            ;
 ; Family                    ; Cyclone IV GX                         ;
@@ -93,14 +93,14 @@ Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: programming logic devices manufactured by Altera and sold by 
     Info: Altera or its authorized distributors.  Please refer to the 
     Info: applicable agreement for further details.
-    Info: Processing started: Wed Dec 02 03:11:10 2020
+    Info: Processing started: Wed Dec 02 23:10:35 2020
 Info: Command: quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/OMEN/Desktop/ProcesadorV2/simulation/qsim/ Computador -c Computador
 Info (119004): Automatically selected device EP4CGX22CF19C6 for design Computador
 Info (119005): Fitting design with smaller device may be possible, but smaller device must be specified
 Info (204019): Generated file Computador.vo in folder "C:/Users/OMEN/Desktop/ProcesadorV2/simulation/qsim//" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4590 megabytes
-    Info: Processing ended: Wed Dec 02 03:11:11 2020
+    Info: Processing ended: Wed Dec 02 23:10:36 2020
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

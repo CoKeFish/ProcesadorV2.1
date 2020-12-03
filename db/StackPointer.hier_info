@@ -14,21 +14,23 @@ Clock => FF11.CLK
 Clock => FF12.CLK
 Clock => FF13.CLK
 Clock => FF14.CLK
-ResetSystem => FF0.ACLR
-ResetSystem => FF1.ACLR
-ResetSystem => FF2.ACLR
-ResetSystem => FF3.ACLR
-ResetSystem => FF4.ACLR
-ResetSystem => FF5.ACLR
-ResetSystem => FF6.ACLR
-ResetSystem => FF7.ACLR
-ResetSystem => FF8.ACLR
-ResetSystem => FF9.ACLR
-ResetSystem => FF10.ACLR
-ResetSystem => FF11.ACLR
-ResetSystem => FF12.ACLR
-ResetSystem => FF13.ACLR
-ResetSystem => FF14.ACLR
+Clock => FF15.CLK
+ResetSystem => FF0.PRESET
+ResetSystem => FF1.PRESET
+ResetSystem => FF2.PRESET
+ResetSystem => FF3.PRESET
+ResetSystem => FF4.PRESET
+ResetSystem => FF5.PRESET
+ResetSystem => FF6.PRESET
+ResetSystem => FF7.PRESET
+ResetSystem => FF8.PRESET
+ResetSystem => FF9.PRESET
+ResetSystem => FF10.PRESET
+ResetSystem => FF11.PRESET
+ResetSystem => FF12.PRESET
+ResetSystem => FF13.PRESET
+ResetSystem => FF14.PRESET
+ResetSystem => FF15.PRESET
 Ena_SP => ENA[1].IN1
 Ena_SP => FF0.ENA
 IncDec[0] => Inc.IN0
@@ -50,6 +52,6 @@ SP_out[11] << FF11.DB_MAX_OUTPUT_PORT_TYPE
 SP_out[12] << FF12.DB_MAX_OUTPUT_PORT_TYPE
 SP_out[13] << FF13.DB_MAX_OUTPUT_PORT_TYPE
 SP_out[14] << FF14.DB_MAX_OUTPUT_PORT_TYPE
-SP_out[15] << <GND>
+SP_out[15] << FF15.DB_MAX_OUTPUT_PORT_TYPE
 
 

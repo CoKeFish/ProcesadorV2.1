@@ -59,24 +59,25 @@ BEGIN
 
 	--******************************************************--
 		
-		D(0)  <= (((NOT Q(0)) AND (Inc_PC)) OR (PC_in(0)  AND Save_PC));
-		D(1)  <= (((NOT Q(1)) AND (Inc_PC)) OR (PC_in(1)  AND Save_PC));
-		D(2)  <= (((NOT Q(2)) AND (Inc_PC)) OR (PC_in(2)  AND Save_PC));
-		D(3)  <= (((NOT Q(3)) AND (Inc_PC)) OR (PC_in(3)  AND Save_PC));
-		D(4)  <= (((NOT Q(4)) AND (Inc_PC)) OR (PC_in(4)  AND Save_PC));
-		D(5)  <= (((NOT Q(5)) AND (Inc_PC)) OR (PC_in(5)  AND Save_PC));
-		D(6)  <= (((NOT Q(6)) AND (Inc_PC)) OR (PC_in(6)  AND Save_PC));
-		D(7)  <= (((NOT Q(7)) AND (Inc_PC)) OR (PC_in(7)  AND Save_PC));
-		D(8)  <= (((NOT Q(8)) AND (Inc_PC)) OR (PC_in(8)  AND Save_PC));
-		D(9)  <= (((NOT Q(9)) AND (Inc_PC)) OR (PC_in(9)  AND Save_PC));
-		D(10) <= (((NOT Q(10))AND (Inc_PC)) OR (PC_in(10) AND Save_PC));
-		D(11) <= (((NOT Q(11))AND (Inc_PC)) OR (PC_in(11) AND Save_PC));
-		D(12) <= (((NOT Q(12))AND (Inc_PC)) OR (PC_in(12) AND Save_PC));
-		D(13) <= (((NOT Q(13))AND (Inc_PC)) OR (PC_in(13) AND Save_PC));
-		D(14) <= (((NOT Q(14))AND (Inc_PC)) OR (PC_in(14) AND Save_PC));
-		D(15) <= (((NOT Q(15))AND (Inc_PC)) OR (PC_in(15) AND Save_PC));
+		D(0)  <= ((NOT (Q(0))) AND (Inc_PC)) OR (PC_in(0)  AND Save_PC);
+		D(1)  <= ((NOT (Q(1))) AND (Inc_PC)) OR (PC_in(1)  AND Save_PC);
+		D(2)  <= ((NOT (Q(2))) AND (Inc_PC)) OR (PC_in(2)  AND Save_PC);
+		D(3)  <= ((NOT (Q(3))) AND (Inc_PC)) OR (PC_in(3)  AND Save_PC);
+		D(4)  <= ((NOT (Q(4))) AND (Inc_PC)) OR (PC_in(4)  AND Save_PC);
+		D(5)  <= ((NOT (Q(5))) AND (Inc_PC)) OR (PC_in(5)  AND Save_PC);
+		D(6)  <= ((NOT (Q(6))) AND (Inc_PC)) OR (PC_in(6)  AND Save_PC);
+		D(7)  <= ((NOT (Q(7))) AND (Inc_PC)) OR (PC_in(7)  AND Save_PC);
+		D(8)  <= ((NOT (Q(8))) AND (Inc_PC)) OR (PC_in(8)  AND Save_PC);
+		D(9)  <= ((NOT (Q(9))) AND (Inc_PC)) OR (PC_in(9)  AND Save_PC);
+		D(10)  <= ((NOT (Q(10))) AND (Inc_PC)) OR (PC_in(10)  AND Save_PC);
+		D(11)  <= ((NOT (Q(11))) AND (Inc_PC)) OR (PC_in(11)  AND Save_PC);
+		D(12)  <= ((NOT (Q(12))) AND (Inc_PC)) OR (PC_in(12)  AND Save_PC);
+		D(13)  <= ((NOT (Q(13))) AND (Inc_PC)) OR (PC_in(13)  AND Save_PC);
+		D(14)  <= ((NOT (Q(14))) AND (Inc_PC)) OR (PC_in(14)  AND Save_PC);
+		D(15)  <= ((NOT (Q(15))) AND (Inc_PC)) OR (PC_in(15)  AND Save_PC);
+
 		
-		ENA(0)  <=  Inc_PC;
+		ENA(0)  <=  Inc_PC OR Save_PC;
 		ENA(1)  <= ((Q(0)  AND ENA(0)) OR Save_PC);
 		ENA(2)  <= ((Q(1)  AND ENA(1)) OR Save_PC);
 		ENA(3)  <= ((Q(2)  AND ENA(2)) OR Save_PC);

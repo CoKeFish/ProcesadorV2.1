@@ -16,7 +16,7 @@
 // PROGRAM "Quartus II 64-Bit"
 // VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Web Edition"
 
-// DATE "12/01/2020 19:12:47"
+// DATE "12/02/2020 19:48:18"
 
 // 
 // Device: Altera EP4CGX15BF14C6 Package FBGA169
@@ -73,65 +73,69 @@ wire \ResetSystem~input_o ;
 wire \Ena_SP~input_o ;
 wire \FF0~q ;
 wire \FF1~0_combout ;
-wire \IncDec[0]~input_o ;
 wire \IncDec[1]~input_o ;
-wire \ENA[1]~8_combout ;
+wire \IncDec[0]~input_o ;
+wire \ENA[1]~10_combout ;
 wire \FF1~q ;
 wire \FF2~0_combout ;
-wire \ENA[2]~28_combout ;
+wire \ENA[2]~29_combout ;
 wire \FF2~q ;
 wire \FF3~0_combout ;
-wire \ENA[3]~32_combout ;
-wire \ENA[3]~33_combout ;
+wire \ENA[3]~36_combout ;
+wire \ENA[3]~37_combout ;
 wire \FF3~q ;
 wire \FF4~0_combout ;
-wire \ENA[4]~9_combout ;
-wire \ENA[4]~10_combout ;
 wire \ENA[4]~11_combout ;
+wire \ENA[4]~12_combout ;
+wire \ENA[4]~13_combout ;
 wire \FF4~q ;
 wire \FF5~0_combout ;
-wire \ENA[5]~29_combout ;
+wire \ENA[5]~30_combout ;
 wire \FF5~q ;
 wire \FF6~0_combout ;
-wire \ENA[5]~12_combout ;
-wire \ENA[6]~13_combout ;
-wire \ENA[6]~14_combout ;
+wire \ENA[5]~14_combout ;
+wire \ENA[6]~15_combout ;
+wire \ENA[6]~16_combout ;
 wire \FF6~q ;
 wire \FF7~0_combout ;
-wire \ENA[7]~15_combout ;
-wire \ENA[7]~16_combout ;
+wire \ENA[7]~17_combout ;
+wire \ENA[7]~18_combout ;
 wire \FF7~q ;
 wire \FF8~0_combout ;
-wire \ENA[8]~30_combout ;
+wire \ENA[8]~31_combout ;
 wire \FF8~q ;
 wire \FF9~0_combout ;
-wire \ENA[8]~17_combout ;
-wire \ENA[9]~18_combout ;
-wire \ENA[9]~19_combout ;
+wire \ENA[8]~19_combout ;
+wire \ENA[9]~20_combout ;
+wire \ENA[9]~21_combout ;
 wire \FF9~q ;
 wire \FF10~0_combout ;
-wire \ENA[10]~20_combout ;
-wire \ENA[10]~21_combout ;
+wire \ENA[10]~22_combout ;
+wire \ENA[10]~23_combout ;
 wire \FF10~q ;
 wire \FF11~0_combout ;
-wire \ENA[11]~31_combout ;
+wire \ENA[11]~32_combout ;
 wire \FF11~q ;
 wire \FF12~0_combout ;
-wire \ENA[11]~22_combout ;
-wire \ENA[12]~23_combout ;
-wire \ENA[12]~24_combout ;
+wire \ENA[11]~24_combout ;
+wire \ENA[12]~25_combout ;
+wire \ENA[12]~26_combout ;
 wire \FF12~q ;
 wire \FF13~0_combout ;
-wire \ENA[13]~25_combout ;
-wire \ENA[13]~26_combout ;
+wire \ENA[13]~27_combout ;
+wire \ENA[13]~28_combout ;
 wire \FF13~q ;
 wire \FF14~0_combout ;
-wire \ENA[14]~27_combout ;
+wire \ENA[14]~33_combout ;
 wire \FF14~q ;
+wire \FF15~0_combout ;
+wire \ENA[15]~34_combout ;
+wire \ENA[15]~35_combout ;
+wire \FF15~q ;
 
 
 cycloneiv_io_obuf \SP_out[0]~output (
-	.i(\FF0~q ),
+	.i(!\FF0~q ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -143,7 +147,7 @@ defparam \SP_out[0]~output .open_drain_output = "false";
 // synopsys translate_on
 
 cycloneiv_io_obuf \SP_out[1]~output (
-	.i(\FF1~q ),
+	.i(!\FF1~q ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -155,7 +159,7 @@ defparam \SP_out[1]~output .open_drain_output = "false";
 // synopsys translate_on
 
 cycloneiv_io_obuf \SP_out[2]~output (
-	.i(\FF2~q ),
+	.i(!\FF2~q ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -167,7 +171,7 @@ defparam \SP_out[2]~output .open_drain_output = "false";
 // synopsys translate_on
 
 cycloneiv_io_obuf \SP_out[3]~output (
-	.i(\FF3~q ),
+	.i(!\FF3~q ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -179,7 +183,7 @@ defparam \SP_out[3]~output .open_drain_output = "false";
 // synopsys translate_on
 
 cycloneiv_io_obuf \SP_out[4]~output (
-	.i(\FF4~q ),
+	.i(!\FF4~q ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -191,7 +195,7 @@ defparam \SP_out[4]~output .open_drain_output = "false";
 // synopsys translate_on
 
 cycloneiv_io_obuf \SP_out[5]~output (
-	.i(\FF5~q ),
+	.i(!\FF5~q ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -203,7 +207,7 @@ defparam \SP_out[5]~output .open_drain_output = "false";
 // synopsys translate_on
 
 cycloneiv_io_obuf \SP_out[6]~output (
-	.i(\FF6~q ),
+	.i(!\FF6~q ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -215,7 +219,7 @@ defparam \SP_out[6]~output .open_drain_output = "false";
 // synopsys translate_on
 
 cycloneiv_io_obuf \SP_out[7]~output (
-	.i(\FF7~q ),
+	.i(!\FF7~q ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -227,7 +231,7 @@ defparam \SP_out[7]~output .open_drain_output = "false";
 // synopsys translate_on
 
 cycloneiv_io_obuf \SP_out[8]~output (
-	.i(\FF8~q ),
+	.i(!\FF8~q ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -239,7 +243,7 @@ defparam \SP_out[8]~output .open_drain_output = "false";
 // synopsys translate_on
 
 cycloneiv_io_obuf \SP_out[9]~output (
-	.i(\FF9~q ),
+	.i(!\FF9~q ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -251,7 +255,7 @@ defparam \SP_out[9]~output .open_drain_output = "false";
 // synopsys translate_on
 
 cycloneiv_io_obuf \SP_out[10]~output (
-	.i(\FF10~q ),
+	.i(!\FF10~q ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -263,7 +267,7 @@ defparam \SP_out[10]~output .open_drain_output = "false";
 // synopsys translate_on
 
 cycloneiv_io_obuf \SP_out[11]~output (
-	.i(\FF11~q ),
+	.i(!\FF11~q ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -275,7 +279,7 @@ defparam \SP_out[11]~output .open_drain_output = "false";
 // synopsys translate_on
 
 cycloneiv_io_obuf \SP_out[12]~output (
-	.i(\FF12~q ),
+	.i(!\FF12~q ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -287,7 +291,7 @@ defparam \SP_out[12]~output .open_drain_output = "false";
 // synopsys translate_on
 
 cycloneiv_io_obuf \SP_out[13]~output (
-	.i(\FF13~q ),
+	.i(!\FF13~q ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -299,7 +303,7 @@ defparam \SP_out[13]~output .open_drain_output = "false";
 // synopsys translate_on
 
 cycloneiv_io_obuf \SP_out[14]~output (
-	.i(\FF14~q ),
+	.i(!\FF14~q ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -311,7 +315,7 @@ defparam \SP_out[14]~output .open_drain_output = "false";
 // synopsys translate_on
 
 cycloneiv_io_obuf \SP_out[15]~output (
-	.i(gnd),
+	.i(!\FF15~q ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -399,15 +403,6 @@ defparam \FF1~0 .lut_mask = 16'h5555;
 defparam \FF1~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-cycloneiv_io_ibuf \IncDec[0]~input (
-	.i(IncDec[0]),
-	.ibar(gnd),
-	.o(\IncDec[0]~input_o ));
-// synopsys translate_off
-defparam \IncDec[0]~input .bus_hold = "false";
-defparam \IncDec[0]~input .simulate_z_as = "z";
-// synopsys translate_on
-
 cycloneiv_io_ibuf \IncDec[1]~input (
 	.i(IncDec[1]),
 	.ibar(gnd),
@@ -417,20 +412,29 @@ defparam \IncDec[1]~input .bus_hold = "false";
 defparam \IncDec[1]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-cycloneiv_lcell_comb \ENA[1]~8 (
+cycloneiv_io_ibuf \IncDec[0]~input (
+	.i(IncDec[0]),
+	.ibar(gnd),
+	.o(\IncDec[0]~input_o ));
+// synopsys translate_off
+defparam \IncDec[0]~input .bus_hold = "false";
+defparam \IncDec[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneiv_lcell_comb \ENA[1]~10 (
 // Equation(s):
-// \ENA[1]~8_combout  = (\Ena_SP~input_o  & ((\FF0~q  & (\IncDec[0]~input_o  & !\IncDec[1]~input_o )) # (!\FF0~q  & (!\IncDec[0]~input_o  & \IncDec[1]~input_o ))))
+// \ENA[1]~10_combout  = (\Ena_SP~input_o  & ((\FF0~q  & (\IncDec[1]~input_o  & !\IncDec[0]~input_o )) # (!\FF0~q  & (!\IncDec[1]~input_o  & \IncDec[0]~input_o ))))
 
 	.dataa(\Ena_SP~input_o ),
 	.datab(\FF0~q ),
-	.datac(\IncDec[0]~input_o ),
-	.datad(\IncDec[1]~input_o ),
+	.datac(\IncDec[1]~input_o ),
+	.datad(\IncDec[0]~input_o ),
 	.cin(gnd),
-	.combout(\ENA[1]~8_combout ),
+	.combout(\ENA[1]~10_combout ),
 	.cout());
 // synopsys translate_off
-defparam \ENA[1]~8 .lut_mask = 16'h0280;
-defparam \ENA[1]~8 .sum_lutc_input = "datac";
+defparam \ENA[1]~10 .lut_mask = 16'h0280;
+defparam \ENA[1]~10 .sum_lutc_input = "datac";
 // synopsys translate_on
 
 dffeas FF1(
@@ -441,7 +445,7 @@ dffeas FF1(
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(\ENA[1]~8_combout ),
+	.ena(\ENA[1]~10_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.q(\FF1~q ),
@@ -467,20 +471,20 @@ defparam \FF2~0 .lut_mask = 16'h5555;
 defparam \FF2~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-cycloneiv_lcell_comb \ENA[2]~28 (
+cycloneiv_lcell_comb \ENA[2]~29 (
 // Equation(s):
-// \ENA[2]~28_combout  = (\ENA[1]~8_combout  & ((\FF1~q  & (\IncDec[0]~input_o  & !\IncDec[1]~input_o )) # (!\FF1~q  & (!\IncDec[0]~input_o  & \IncDec[1]~input_o ))))
+// \ENA[2]~29_combout  = (\ENA[1]~10_combout  & ((\FF1~q  & (\IncDec[1]~input_o  & !\IncDec[0]~input_o )) # (!\FF1~q  & (!\IncDec[1]~input_o  & \IncDec[0]~input_o ))))
 
 	.dataa(\FF1~q ),
-	.datab(\IncDec[0]~input_o ),
-	.datac(\IncDec[1]~input_o ),
-	.datad(\ENA[1]~8_combout ),
+	.datab(\IncDec[1]~input_o ),
+	.datac(\IncDec[0]~input_o ),
+	.datad(\ENA[1]~10_combout ),
 	.cin(gnd),
-	.combout(\ENA[2]~28_combout ),
+	.combout(\ENA[2]~29_combout ),
 	.cout());
 // synopsys translate_off
-defparam \ENA[2]~28 .lut_mask = 16'h1800;
-defparam \ENA[2]~28 .sum_lutc_input = "datac";
+defparam \ENA[2]~29 .lut_mask = 16'h1800;
+defparam \ENA[2]~29 .sum_lutc_input = "datac";
 // synopsys translate_on
 
 dffeas FF2(
@@ -491,7 +495,7 @@ dffeas FF2(
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(\ENA[2]~28_combout ),
+	.ena(\ENA[2]~29_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.q(\FF2~q ),
@@ -517,36 +521,36 @@ defparam \FF3~0 .lut_mask = 16'h5555;
 defparam \FF3~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-cycloneiv_lcell_comb \ENA[3]~32 (
+cycloneiv_lcell_comb \ENA[3]~36 (
 // Equation(s):
-// \ENA[3]~32_combout  = (\ENA[1]~8_combout  & ((\FF2~q  & (\FF1~q  & \IncDec[0]~input_o )) # (!\FF2~q  & (!\FF1~q  & !\IncDec[0]~input_o ))))
+// \ENA[3]~36_combout  = (\ENA[1]~10_combout  & ((\FF2~q  & (\FF1~q  & \IncDec[1]~input_o )) # (!\FF2~q  & (!\FF1~q  & !\IncDec[1]~input_o ))))
 
 	.dataa(\FF2~q ),
 	.datab(\FF1~q ),
-	.datac(\IncDec[0]~input_o ),
-	.datad(\ENA[1]~8_combout ),
+	.datac(\IncDec[1]~input_o ),
+	.datad(\ENA[1]~10_combout ),
 	.cin(gnd),
-	.combout(\ENA[3]~32_combout ),
+	.combout(\ENA[3]~36_combout ),
 	.cout());
 // synopsys translate_off
-defparam \ENA[3]~32 .lut_mask = 16'h8100;
-defparam \ENA[3]~32 .sum_lutc_input = "datac";
+defparam \ENA[3]~36 .lut_mask = 16'h8100;
+defparam \ENA[3]~36 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-cycloneiv_lcell_comb \ENA[3]~33 (
+cycloneiv_lcell_comb \ENA[3]~37 (
 // Equation(s):
-// \ENA[3]~33_combout  = (\ENA[3]~32_combout  & ((\FF2~q  & (\FF1~q  & !\IncDec[1]~input_o )) # (!\FF2~q  & (!\FF1~q  & \IncDec[1]~input_o ))))
+// \ENA[3]~37_combout  = (\ENA[3]~36_combout  & ((\FF2~q  & (\FF1~q  & !\IncDec[0]~input_o )) # (!\FF2~q  & (!\FF1~q  & \IncDec[0]~input_o ))))
 
 	.dataa(\FF2~q ),
-	.datab(\ENA[3]~32_combout ),
+	.datab(\ENA[3]~36_combout ),
 	.datac(\FF1~q ),
-	.datad(\IncDec[1]~input_o ),
+	.datad(\IncDec[0]~input_o ),
 	.cin(gnd),
-	.combout(\ENA[3]~33_combout ),
+	.combout(\ENA[3]~37_combout ),
 	.cout());
 // synopsys translate_off
-defparam \ENA[3]~33 .lut_mask = 16'h0480;
-defparam \ENA[3]~33 .sum_lutc_input = "datac";
+defparam \ENA[3]~37 .lut_mask = 16'h0480;
+defparam \ENA[3]~37 .sum_lutc_input = "datac";
 // synopsys translate_on
 
 dffeas FF3(
@@ -557,7 +561,7 @@ dffeas FF3(
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(\ENA[3]~33_combout ),
+	.ena(\ENA[3]~37_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.q(\FF3~q ),
@@ -583,52 +587,52 @@ defparam \FF4~0 .lut_mask = 16'h5555;
 defparam \FF4~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-cycloneiv_lcell_comb \ENA[4]~9 (
+cycloneiv_lcell_comb \ENA[4]~11 (
 // Equation(s):
-// \ENA[4]~9_combout  = (\Ena_SP~input_o  & ((\IncDec[0]~input_o  & (!\IncDec[1]~input_o  & \FF3~q )) # (!\IncDec[0]~input_o  & (\IncDec[1]~input_o  & !\FF3~q ))))
+// \ENA[4]~11_combout  = (\Ena_SP~input_o  & ((\IncDec[1]~input_o  & (!\IncDec[0]~input_o  & \FF3~q )) # (!\IncDec[1]~input_o  & (\IncDec[0]~input_o  & !\FF3~q ))))
 
-	.dataa(\IncDec[0]~input_o ),
-	.datab(\IncDec[1]~input_o ),
+	.dataa(\IncDec[1]~input_o ),
+	.datab(\IncDec[0]~input_o ),
 	.datac(\Ena_SP~input_o ),
 	.datad(\FF3~q ),
 	.cin(gnd),
-	.combout(\ENA[4]~9_combout ),
+	.combout(\ENA[4]~11_combout ),
 	.cout());
 // synopsys translate_off
-defparam \ENA[4]~9 .lut_mask = 16'h2040;
-defparam \ENA[4]~9 .sum_lutc_input = "datac";
+defparam \ENA[4]~11 .lut_mask = 16'h2040;
+defparam \ENA[4]~11 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-cycloneiv_lcell_comb \ENA[4]~10 (
+cycloneiv_lcell_comb \ENA[4]~12 (
 // Equation(s):
-// \ENA[4]~10_combout  = (\FF1~q  & (\FF0~q  & \FF3~q )) # (!\FF1~q  & (!\FF0~q  & !\FF3~q ))
+// \ENA[4]~12_combout  = (\FF1~q  & (\FF0~q  & \FF3~q )) # (!\FF1~q  & (!\FF0~q  & !\FF3~q ))
 
 	.dataa(\FF1~q ),
 	.datab(\FF0~q ),
 	.datac(\FF3~q ),
 	.datad(gnd),
 	.cin(gnd),
-	.combout(\ENA[4]~10_combout ),
+	.combout(\ENA[4]~12_combout ),
 	.cout());
 // synopsys translate_off
-defparam \ENA[4]~10 .lut_mask = 16'h8181;
-defparam \ENA[4]~10 .sum_lutc_input = "datac";
+defparam \ENA[4]~12 .lut_mask = 16'h8181;
+defparam \ENA[4]~12 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-cycloneiv_lcell_comb \ENA[4]~11 (
+cycloneiv_lcell_comb \ENA[4]~13 (
 // Equation(s):
-// \ENA[4]~11_combout  = (\ENA[4]~9_combout  & (\ENA[4]~10_combout  & (\FF2~q  $ (!\FF3~q ))))
+// \ENA[4]~13_combout  = (\ENA[4]~11_combout  & (\ENA[4]~12_combout  & (\FF2~q  $ (!\FF3~q ))))
 
 	.dataa(\FF2~q ),
 	.datab(\FF3~q ),
-	.datac(\ENA[4]~9_combout ),
-	.datad(\ENA[4]~10_combout ),
+	.datac(\ENA[4]~11_combout ),
+	.datad(\ENA[4]~12_combout ),
 	.cin(gnd),
-	.combout(\ENA[4]~11_combout ),
+	.combout(\ENA[4]~13_combout ),
 	.cout());
 // synopsys translate_off
-defparam \ENA[4]~11 .lut_mask = 16'h9000;
-defparam \ENA[4]~11 .sum_lutc_input = "datac";
+defparam \ENA[4]~13 .lut_mask = 16'h9000;
+defparam \ENA[4]~13 .sum_lutc_input = "datac";
 // synopsys translate_on
 
 dffeas FF4(
@@ -639,7 +643,7 @@ dffeas FF4(
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(\ENA[4]~11_combout ),
+	.ena(\ENA[4]~13_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.q(\FF4~q ),
@@ -665,20 +669,20 @@ defparam \FF5~0 .lut_mask = 16'h5555;
 defparam \FF5~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-cycloneiv_lcell_comb \ENA[5]~29 (
+cycloneiv_lcell_comb \ENA[5]~30 (
 // Equation(s):
-// \ENA[5]~29_combout  = (\ENA[4]~11_combout  & ((\FF4~q  & (\IncDec[0]~input_o  & !\IncDec[1]~input_o )) # (!\FF4~q  & (!\IncDec[0]~input_o  & \IncDec[1]~input_o ))))
+// \ENA[5]~30_combout  = (\ENA[4]~13_combout  & ((\FF4~q  & (\IncDec[1]~input_o  & !\IncDec[0]~input_o )) # (!\FF4~q  & (!\IncDec[1]~input_o  & \IncDec[0]~input_o ))))
 
 	.dataa(\FF4~q ),
-	.datab(\IncDec[0]~input_o ),
-	.datac(\IncDec[1]~input_o ),
-	.datad(\ENA[4]~11_combout ),
+	.datab(\IncDec[1]~input_o ),
+	.datac(\IncDec[0]~input_o ),
+	.datad(\ENA[4]~13_combout ),
 	.cin(gnd),
-	.combout(\ENA[5]~29_combout ),
+	.combout(\ENA[5]~30_combout ),
 	.cout());
 // synopsys translate_off
-defparam \ENA[5]~29 .lut_mask = 16'h1800;
-defparam \ENA[5]~29 .sum_lutc_input = "datac";
+defparam \ENA[5]~30 .lut_mask = 16'h1800;
+defparam \ENA[5]~30 .sum_lutc_input = "datac";
 // synopsys translate_on
 
 dffeas FF5(
@@ -689,7 +693,7 @@ dffeas FF5(
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(\ENA[5]~29_combout ),
+	.ena(\ENA[5]~30_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.q(\FF5~q ),
@@ -715,52 +719,52 @@ defparam \FF6~0 .lut_mask = 16'h5555;
 defparam \FF6~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-cycloneiv_lcell_comb \ENA[5]~12 (
+cycloneiv_lcell_comb \ENA[5]~14 (
 // Equation(s):
-// \ENA[5]~12_combout  = (\FF4~q  & (\IncDec[0]~input_o  & !\IncDec[1]~input_o )) # (!\FF4~q  & (!\IncDec[0]~input_o  & \IncDec[1]~input_o ))
+// \ENA[5]~14_combout  = (\FF4~q  & (\IncDec[1]~input_o  & !\IncDec[0]~input_o )) # (!\FF4~q  & (!\IncDec[1]~input_o  & \IncDec[0]~input_o ))
 
 	.dataa(gnd),
 	.datab(\FF4~q ),
-	.datac(\IncDec[0]~input_o ),
-	.datad(\IncDec[1]~input_o ),
+	.datac(\IncDec[1]~input_o ),
+	.datad(\IncDec[0]~input_o ),
 	.cin(gnd),
-	.combout(\ENA[5]~12_combout ),
+	.combout(\ENA[5]~14_combout ),
 	.cout());
 // synopsys translate_off
-defparam \ENA[5]~12 .lut_mask = 16'h03C0;
-defparam \ENA[5]~12 .sum_lutc_input = "datac";
+defparam \ENA[5]~14 .lut_mask = 16'h03C0;
+defparam \ENA[5]~14 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-cycloneiv_lcell_comb \ENA[6]~13 (
+cycloneiv_lcell_comb \ENA[6]~15 (
 // Equation(s):
-// \ENA[6]~13_combout  = (\FF5~q  & (\IncDec[0]~input_o  & !\IncDec[1]~input_o )) # (!\FF5~q  & (!\IncDec[0]~input_o  & \IncDec[1]~input_o ))
+// \ENA[6]~15_combout  = (\FF5~q  & (\IncDec[1]~input_o  & !\IncDec[0]~input_o )) # (!\FF5~q  & (!\IncDec[1]~input_o  & \IncDec[0]~input_o ))
 
 	.dataa(gnd),
 	.datab(\FF5~q ),
-	.datac(\IncDec[0]~input_o ),
-	.datad(\IncDec[1]~input_o ),
+	.datac(\IncDec[1]~input_o ),
+	.datad(\IncDec[0]~input_o ),
 	.cin(gnd),
-	.combout(\ENA[6]~13_combout ),
+	.combout(\ENA[6]~15_combout ),
 	.cout());
 // synopsys translate_off
-defparam \ENA[6]~13 .lut_mask = 16'h03C0;
-defparam \ENA[6]~13 .sum_lutc_input = "datac";
+defparam \ENA[6]~15 .lut_mask = 16'h03C0;
+defparam \ENA[6]~15 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-cycloneiv_lcell_comb \ENA[6]~14 (
+cycloneiv_lcell_comb \ENA[6]~16 (
 // Equation(s):
-// \ENA[6]~14_combout  = (\ENA[4]~11_combout  & (\ENA[5]~12_combout  & \ENA[6]~13_combout ))
+// \ENA[6]~16_combout  = (\ENA[4]~13_combout  & (\ENA[5]~14_combout  & \ENA[6]~15_combout ))
 
-	.dataa(\ENA[4]~11_combout ),
-	.datab(\ENA[5]~12_combout ),
-	.datac(\ENA[6]~13_combout ),
+	.dataa(\ENA[4]~13_combout ),
+	.datab(\ENA[5]~14_combout ),
+	.datac(\ENA[6]~15_combout ),
 	.datad(gnd),
 	.cin(gnd),
-	.combout(\ENA[6]~14_combout ),
+	.combout(\ENA[6]~16_combout ),
 	.cout());
 // synopsys translate_off
-defparam \ENA[6]~14 .lut_mask = 16'h8080;
-defparam \ENA[6]~14 .sum_lutc_input = "datac";
+defparam \ENA[6]~16 .lut_mask = 16'h8080;
+defparam \ENA[6]~16 .sum_lutc_input = "datac";
 // synopsys translate_on
 
 dffeas FF6(
@@ -771,7 +775,7 @@ dffeas FF6(
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(\ENA[6]~14_combout ),
+	.ena(\ENA[6]~16_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.q(\FF6~q ),
@@ -797,36 +801,36 @@ defparam \FF7~0 .lut_mask = 16'h5555;
 defparam \FF7~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-cycloneiv_lcell_comb \ENA[7]~15 (
+cycloneiv_lcell_comb \ENA[7]~17 (
 // Equation(s):
-// \ENA[7]~15_combout  = (\FF6~q  & (\IncDec[0]~input_o  & !\IncDec[1]~input_o )) # (!\FF6~q  & (!\IncDec[0]~input_o  & \IncDec[1]~input_o ))
+// \ENA[7]~17_combout  = (\FF6~q  & (\IncDec[1]~input_o  & !\IncDec[0]~input_o )) # (!\FF6~q  & (!\IncDec[1]~input_o  & \IncDec[0]~input_o ))
 
 	.dataa(gnd),
 	.datab(\FF6~q ),
-	.datac(\IncDec[0]~input_o ),
-	.datad(\IncDec[1]~input_o ),
+	.datac(\IncDec[1]~input_o ),
+	.datad(\IncDec[0]~input_o ),
 	.cin(gnd),
-	.combout(\ENA[7]~15_combout ),
+	.combout(\ENA[7]~17_combout ),
 	.cout());
 // synopsys translate_off
-defparam \ENA[7]~15 .lut_mask = 16'h03C0;
-defparam \ENA[7]~15 .sum_lutc_input = "datac";
+defparam \ENA[7]~17 .lut_mask = 16'h03C0;
+defparam \ENA[7]~17 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-cycloneiv_lcell_comb \ENA[7]~16 (
+cycloneiv_lcell_comb \ENA[7]~18 (
 // Equation(s):
-// \ENA[7]~16_combout  = (\ENA[4]~11_combout  & (\ENA[5]~12_combout  & (\ENA[6]~13_combout  & \ENA[7]~15_combout )))
+// \ENA[7]~18_combout  = (\ENA[4]~13_combout  & (\ENA[5]~14_combout  & (\ENA[6]~15_combout  & \ENA[7]~17_combout )))
 
-	.dataa(\ENA[4]~11_combout ),
-	.datab(\ENA[5]~12_combout ),
-	.datac(\ENA[6]~13_combout ),
-	.datad(\ENA[7]~15_combout ),
+	.dataa(\ENA[4]~13_combout ),
+	.datab(\ENA[5]~14_combout ),
+	.datac(\ENA[6]~15_combout ),
+	.datad(\ENA[7]~17_combout ),
 	.cin(gnd),
-	.combout(\ENA[7]~16_combout ),
+	.combout(\ENA[7]~18_combout ),
 	.cout());
 // synopsys translate_off
-defparam \ENA[7]~16 .lut_mask = 16'h8000;
-defparam \ENA[7]~16 .sum_lutc_input = "datac";
+defparam \ENA[7]~18 .lut_mask = 16'h8000;
+defparam \ENA[7]~18 .sum_lutc_input = "datac";
 // synopsys translate_on
 
 dffeas FF7(
@@ -837,7 +841,7 @@ dffeas FF7(
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(\ENA[7]~16_combout ),
+	.ena(\ENA[7]~18_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.q(\FF7~q ),
@@ -863,20 +867,20 @@ defparam \FF8~0 .lut_mask = 16'h5555;
 defparam \FF8~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-cycloneiv_lcell_comb \ENA[8]~30 (
+cycloneiv_lcell_comb \ENA[8]~31 (
 // Equation(s):
-// \ENA[8]~30_combout  = (\ENA[7]~16_combout  & ((\FF7~q  & (\IncDec[0]~input_o  & !\IncDec[1]~input_o )) # (!\FF7~q  & (!\IncDec[0]~input_o  & \IncDec[1]~input_o ))))
+// \ENA[8]~31_combout  = (\ENA[7]~18_combout  & ((\FF7~q  & (\IncDec[1]~input_o  & !\IncDec[0]~input_o )) # (!\FF7~q  & (!\IncDec[1]~input_o  & \IncDec[0]~input_o ))))
 
 	.dataa(\FF7~q ),
-	.datab(\IncDec[0]~input_o ),
-	.datac(\IncDec[1]~input_o ),
-	.datad(\ENA[7]~16_combout ),
+	.datab(\IncDec[1]~input_o ),
+	.datac(\IncDec[0]~input_o ),
+	.datad(\ENA[7]~18_combout ),
 	.cin(gnd),
-	.combout(\ENA[8]~30_combout ),
+	.combout(\ENA[8]~31_combout ),
 	.cout());
 // synopsys translate_off
-defparam \ENA[8]~30 .lut_mask = 16'h1800;
-defparam \ENA[8]~30 .sum_lutc_input = "datac";
+defparam \ENA[8]~31 .lut_mask = 16'h1800;
+defparam \ENA[8]~31 .sum_lutc_input = "datac";
 // synopsys translate_on
 
 dffeas FF8(
@@ -887,7 +891,7 @@ dffeas FF8(
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(\ENA[8]~30_combout ),
+	.ena(\ENA[8]~31_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.q(\FF8~q ),
@@ -913,52 +917,52 @@ defparam \FF9~0 .lut_mask = 16'h5555;
 defparam \FF9~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-cycloneiv_lcell_comb \ENA[8]~17 (
+cycloneiv_lcell_comb \ENA[8]~19 (
 // Equation(s):
-// \ENA[8]~17_combout  = (\FF7~q  & (\IncDec[0]~input_o  & !\IncDec[1]~input_o )) # (!\FF7~q  & (!\IncDec[0]~input_o  & \IncDec[1]~input_o ))
+// \ENA[8]~19_combout  = (\FF7~q  & (\IncDec[1]~input_o  & !\IncDec[0]~input_o )) # (!\FF7~q  & (!\IncDec[1]~input_o  & \IncDec[0]~input_o ))
 
 	.dataa(gnd),
 	.datab(\FF7~q ),
-	.datac(\IncDec[0]~input_o ),
-	.datad(\IncDec[1]~input_o ),
+	.datac(\IncDec[1]~input_o ),
+	.datad(\IncDec[0]~input_o ),
 	.cin(gnd),
-	.combout(\ENA[8]~17_combout ),
+	.combout(\ENA[8]~19_combout ),
 	.cout());
 // synopsys translate_off
-defparam \ENA[8]~17 .lut_mask = 16'h03C0;
-defparam \ENA[8]~17 .sum_lutc_input = "datac";
+defparam \ENA[8]~19 .lut_mask = 16'h03C0;
+defparam \ENA[8]~19 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-cycloneiv_lcell_comb \ENA[9]~18 (
+cycloneiv_lcell_comb \ENA[9]~20 (
 // Equation(s):
-// \ENA[9]~18_combout  = (\FF8~q  & (\IncDec[0]~input_o  & !\IncDec[1]~input_o )) # (!\FF8~q  & (!\IncDec[0]~input_o  & \IncDec[1]~input_o ))
+// \ENA[9]~20_combout  = (\FF8~q  & (\IncDec[1]~input_o  & !\IncDec[0]~input_o )) # (!\FF8~q  & (!\IncDec[1]~input_o  & \IncDec[0]~input_o ))
 
 	.dataa(gnd),
 	.datab(\FF8~q ),
-	.datac(\IncDec[0]~input_o ),
-	.datad(\IncDec[1]~input_o ),
+	.datac(\IncDec[1]~input_o ),
+	.datad(\IncDec[0]~input_o ),
 	.cin(gnd),
-	.combout(\ENA[9]~18_combout ),
+	.combout(\ENA[9]~20_combout ),
 	.cout());
 // synopsys translate_off
-defparam \ENA[9]~18 .lut_mask = 16'h03C0;
-defparam \ENA[9]~18 .sum_lutc_input = "datac";
+defparam \ENA[9]~20 .lut_mask = 16'h03C0;
+defparam \ENA[9]~20 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-cycloneiv_lcell_comb \ENA[9]~19 (
+cycloneiv_lcell_comb \ENA[9]~21 (
 // Equation(s):
-// \ENA[9]~19_combout  = (\ENA[7]~16_combout  & (\ENA[8]~17_combout  & \ENA[9]~18_combout ))
+// \ENA[9]~21_combout  = (\ENA[7]~18_combout  & (\ENA[8]~19_combout  & \ENA[9]~20_combout ))
 
-	.dataa(\ENA[7]~16_combout ),
-	.datab(\ENA[8]~17_combout ),
-	.datac(\ENA[9]~18_combout ),
+	.dataa(\ENA[7]~18_combout ),
+	.datab(\ENA[8]~19_combout ),
+	.datac(\ENA[9]~20_combout ),
 	.datad(gnd),
 	.cin(gnd),
-	.combout(\ENA[9]~19_combout ),
+	.combout(\ENA[9]~21_combout ),
 	.cout());
 // synopsys translate_off
-defparam \ENA[9]~19 .lut_mask = 16'h8080;
-defparam \ENA[9]~19 .sum_lutc_input = "datac";
+defparam \ENA[9]~21 .lut_mask = 16'h8080;
+defparam \ENA[9]~21 .sum_lutc_input = "datac";
 // synopsys translate_on
 
 dffeas FF9(
@@ -969,7 +973,7 @@ dffeas FF9(
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(\ENA[9]~19_combout ),
+	.ena(\ENA[9]~21_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.q(\FF9~q ),
@@ -995,36 +999,36 @@ defparam \FF10~0 .lut_mask = 16'h5555;
 defparam \FF10~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-cycloneiv_lcell_comb \ENA[10]~20 (
+cycloneiv_lcell_comb \ENA[10]~22 (
 // Equation(s):
-// \ENA[10]~20_combout  = (\FF9~q  & (\IncDec[0]~input_o  & !\IncDec[1]~input_o )) # (!\FF9~q  & (!\IncDec[0]~input_o  & \IncDec[1]~input_o ))
+// \ENA[10]~22_combout  = (\FF9~q  & (\IncDec[1]~input_o  & !\IncDec[0]~input_o )) # (!\FF9~q  & (!\IncDec[1]~input_o  & \IncDec[0]~input_o ))
 
 	.dataa(gnd),
 	.datab(\FF9~q ),
-	.datac(\IncDec[0]~input_o ),
-	.datad(\IncDec[1]~input_o ),
+	.datac(\IncDec[1]~input_o ),
+	.datad(\IncDec[0]~input_o ),
 	.cin(gnd),
-	.combout(\ENA[10]~20_combout ),
+	.combout(\ENA[10]~22_combout ),
 	.cout());
 // synopsys translate_off
-defparam \ENA[10]~20 .lut_mask = 16'h03C0;
-defparam \ENA[10]~20 .sum_lutc_input = "datac";
+defparam \ENA[10]~22 .lut_mask = 16'h03C0;
+defparam \ENA[10]~22 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-cycloneiv_lcell_comb \ENA[10]~21 (
+cycloneiv_lcell_comb \ENA[10]~23 (
 // Equation(s):
-// \ENA[10]~21_combout  = (\ENA[7]~16_combout  & (\ENA[8]~17_combout  & (\ENA[9]~18_combout  & \ENA[10]~20_combout )))
+// \ENA[10]~23_combout  = (\ENA[7]~18_combout  & (\ENA[8]~19_combout  & (\ENA[9]~20_combout  & \ENA[10]~22_combout )))
 
-	.dataa(\ENA[7]~16_combout ),
-	.datab(\ENA[8]~17_combout ),
-	.datac(\ENA[9]~18_combout ),
-	.datad(\ENA[10]~20_combout ),
+	.dataa(\ENA[7]~18_combout ),
+	.datab(\ENA[8]~19_combout ),
+	.datac(\ENA[9]~20_combout ),
+	.datad(\ENA[10]~22_combout ),
 	.cin(gnd),
-	.combout(\ENA[10]~21_combout ),
+	.combout(\ENA[10]~23_combout ),
 	.cout());
 // synopsys translate_off
-defparam \ENA[10]~21 .lut_mask = 16'h8000;
-defparam \ENA[10]~21 .sum_lutc_input = "datac";
+defparam \ENA[10]~23 .lut_mask = 16'h8000;
+defparam \ENA[10]~23 .sum_lutc_input = "datac";
 // synopsys translate_on
 
 dffeas FF10(
@@ -1035,7 +1039,7 @@ dffeas FF10(
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(\ENA[10]~21_combout ),
+	.ena(\ENA[10]~23_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.q(\FF10~q ),
@@ -1061,20 +1065,20 @@ defparam \FF11~0 .lut_mask = 16'h5555;
 defparam \FF11~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-cycloneiv_lcell_comb \ENA[11]~31 (
+cycloneiv_lcell_comb \ENA[11]~32 (
 // Equation(s):
-// \ENA[11]~31_combout  = (\ENA[10]~21_combout  & ((\FF10~q  & (\IncDec[0]~input_o  & !\IncDec[1]~input_o )) # (!\FF10~q  & (!\IncDec[0]~input_o  & \IncDec[1]~input_o ))))
+// \ENA[11]~32_combout  = (\ENA[10]~23_combout  & ((\FF10~q  & (\IncDec[1]~input_o  & !\IncDec[0]~input_o )) # (!\FF10~q  & (!\IncDec[1]~input_o  & \IncDec[0]~input_o ))))
 
 	.dataa(\FF10~q ),
-	.datab(\IncDec[0]~input_o ),
-	.datac(\IncDec[1]~input_o ),
-	.datad(\ENA[10]~21_combout ),
+	.datab(\IncDec[1]~input_o ),
+	.datac(\IncDec[0]~input_o ),
+	.datad(\ENA[10]~23_combout ),
 	.cin(gnd),
-	.combout(\ENA[11]~31_combout ),
+	.combout(\ENA[11]~32_combout ),
 	.cout());
 // synopsys translate_off
-defparam \ENA[11]~31 .lut_mask = 16'h1800;
-defparam \ENA[11]~31 .sum_lutc_input = "datac";
+defparam \ENA[11]~32 .lut_mask = 16'h1800;
+defparam \ENA[11]~32 .sum_lutc_input = "datac";
 // synopsys translate_on
 
 dffeas FF11(
@@ -1085,7 +1089,7 @@ dffeas FF11(
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(\ENA[11]~31_combout ),
+	.ena(\ENA[11]~32_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.q(\FF11~q ),
@@ -1111,52 +1115,52 @@ defparam \FF12~0 .lut_mask = 16'h5555;
 defparam \FF12~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-cycloneiv_lcell_comb \ENA[11]~22 (
+cycloneiv_lcell_comb \ENA[11]~24 (
 // Equation(s):
-// \ENA[11]~22_combout  = (\FF10~q  & (\IncDec[0]~input_o  & !\IncDec[1]~input_o )) # (!\FF10~q  & (!\IncDec[0]~input_o  & \IncDec[1]~input_o ))
+// \ENA[11]~24_combout  = (\FF10~q  & (\IncDec[1]~input_o  & !\IncDec[0]~input_o )) # (!\FF10~q  & (!\IncDec[1]~input_o  & \IncDec[0]~input_o ))
 
 	.dataa(gnd),
 	.datab(\FF10~q ),
-	.datac(\IncDec[0]~input_o ),
-	.datad(\IncDec[1]~input_o ),
+	.datac(\IncDec[1]~input_o ),
+	.datad(\IncDec[0]~input_o ),
 	.cin(gnd),
-	.combout(\ENA[11]~22_combout ),
+	.combout(\ENA[11]~24_combout ),
 	.cout());
 // synopsys translate_off
-defparam \ENA[11]~22 .lut_mask = 16'h03C0;
-defparam \ENA[11]~22 .sum_lutc_input = "datac";
+defparam \ENA[11]~24 .lut_mask = 16'h03C0;
+defparam \ENA[11]~24 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-cycloneiv_lcell_comb \ENA[12]~23 (
+cycloneiv_lcell_comb \ENA[12]~25 (
 // Equation(s):
-// \ENA[12]~23_combout  = (\FF11~q  & (\IncDec[0]~input_o  & !\IncDec[1]~input_o )) # (!\FF11~q  & (!\IncDec[0]~input_o  & \IncDec[1]~input_o ))
+// \ENA[12]~25_combout  = (\FF11~q  & (\IncDec[1]~input_o  & !\IncDec[0]~input_o )) # (!\FF11~q  & (!\IncDec[1]~input_o  & \IncDec[0]~input_o ))
 
 	.dataa(gnd),
 	.datab(\FF11~q ),
-	.datac(\IncDec[0]~input_o ),
-	.datad(\IncDec[1]~input_o ),
+	.datac(\IncDec[1]~input_o ),
+	.datad(\IncDec[0]~input_o ),
 	.cin(gnd),
-	.combout(\ENA[12]~23_combout ),
+	.combout(\ENA[12]~25_combout ),
 	.cout());
 // synopsys translate_off
-defparam \ENA[12]~23 .lut_mask = 16'h03C0;
-defparam \ENA[12]~23 .sum_lutc_input = "datac";
+defparam \ENA[12]~25 .lut_mask = 16'h03C0;
+defparam \ENA[12]~25 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-cycloneiv_lcell_comb \ENA[12]~24 (
+cycloneiv_lcell_comb \ENA[12]~26 (
 // Equation(s):
-// \ENA[12]~24_combout  = (\ENA[10]~21_combout  & (\ENA[11]~22_combout  & \ENA[12]~23_combout ))
+// \ENA[12]~26_combout  = (\ENA[10]~23_combout  & (\ENA[11]~24_combout  & \ENA[12]~25_combout ))
 
-	.dataa(\ENA[10]~21_combout ),
-	.datab(\ENA[11]~22_combout ),
-	.datac(\ENA[12]~23_combout ),
+	.dataa(\ENA[10]~23_combout ),
+	.datab(\ENA[11]~24_combout ),
+	.datac(\ENA[12]~25_combout ),
 	.datad(gnd),
 	.cin(gnd),
-	.combout(\ENA[12]~24_combout ),
+	.combout(\ENA[12]~26_combout ),
 	.cout());
 // synopsys translate_off
-defparam \ENA[12]~24 .lut_mask = 16'h8080;
-defparam \ENA[12]~24 .sum_lutc_input = "datac";
+defparam \ENA[12]~26 .lut_mask = 16'h8080;
+defparam \ENA[12]~26 .sum_lutc_input = "datac";
 // synopsys translate_on
 
 dffeas FF12(
@@ -1167,7 +1171,7 @@ dffeas FF12(
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(\ENA[12]~24_combout ),
+	.ena(\ENA[12]~26_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.q(\FF12~q ),
@@ -1193,36 +1197,36 @@ defparam \FF13~0 .lut_mask = 16'h5555;
 defparam \FF13~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-cycloneiv_lcell_comb \ENA[13]~25 (
+cycloneiv_lcell_comb \ENA[13]~27 (
 // Equation(s):
-// \ENA[13]~25_combout  = (\FF12~q  & (\IncDec[0]~input_o  & !\IncDec[1]~input_o )) # (!\FF12~q  & (!\IncDec[0]~input_o  & \IncDec[1]~input_o ))
+// \ENA[13]~27_combout  = (\FF12~q  & (\IncDec[1]~input_o  & !\IncDec[0]~input_o )) # (!\FF12~q  & (!\IncDec[1]~input_o  & \IncDec[0]~input_o ))
 
 	.dataa(gnd),
 	.datab(\FF12~q ),
-	.datac(\IncDec[0]~input_o ),
-	.datad(\IncDec[1]~input_o ),
+	.datac(\IncDec[1]~input_o ),
+	.datad(\IncDec[0]~input_o ),
 	.cin(gnd),
-	.combout(\ENA[13]~25_combout ),
+	.combout(\ENA[13]~27_combout ),
 	.cout());
 // synopsys translate_off
-defparam \ENA[13]~25 .lut_mask = 16'h03C0;
-defparam \ENA[13]~25 .sum_lutc_input = "datac";
+defparam \ENA[13]~27 .lut_mask = 16'h03C0;
+defparam \ENA[13]~27 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-cycloneiv_lcell_comb \ENA[13]~26 (
+cycloneiv_lcell_comb \ENA[13]~28 (
 // Equation(s):
-// \ENA[13]~26_combout  = (\ENA[10]~21_combout  & (\ENA[11]~22_combout  & (\ENA[12]~23_combout  & \ENA[13]~25_combout )))
+// \ENA[13]~28_combout  = (\ENA[10]~23_combout  & (\ENA[11]~24_combout  & (\ENA[12]~25_combout  & \ENA[13]~27_combout )))
 
-	.dataa(\ENA[10]~21_combout ),
-	.datab(\ENA[11]~22_combout ),
-	.datac(\ENA[12]~23_combout ),
-	.datad(\ENA[13]~25_combout ),
+	.dataa(\ENA[10]~23_combout ),
+	.datab(\ENA[11]~24_combout ),
+	.datac(\ENA[12]~25_combout ),
+	.datad(\ENA[13]~27_combout ),
 	.cin(gnd),
-	.combout(\ENA[13]~26_combout ),
+	.combout(\ENA[13]~28_combout ),
 	.cout());
 // synopsys translate_off
-defparam \ENA[13]~26 .lut_mask = 16'h8000;
-defparam \ENA[13]~26 .sum_lutc_input = "datac";
+defparam \ENA[13]~28 .lut_mask = 16'h8000;
+defparam \ENA[13]~28 .sum_lutc_input = "datac";
 // synopsys translate_on
 
 dffeas FF13(
@@ -1233,7 +1237,7 @@ dffeas FF13(
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(\ENA[13]~26_combout ),
+	.ena(\ENA[13]~28_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.q(\FF13~q ),
@@ -1259,20 +1263,20 @@ defparam \FF14~0 .lut_mask = 16'h5555;
 defparam \FF14~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-cycloneiv_lcell_comb \ENA[14]~27 (
+cycloneiv_lcell_comb \ENA[14]~33 (
 // Equation(s):
-// \ENA[14]~27_combout  = (\ENA[13]~26_combout  & ((\FF13~q  & (\IncDec[0]~input_o  & !\IncDec[1]~input_o )) # (!\FF13~q  & (!\IncDec[0]~input_o  & \IncDec[1]~input_o ))))
+// \ENA[14]~33_combout  = (\ENA[13]~28_combout  & ((\FF13~q  & (\IncDec[1]~input_o  & !\IncDec[0]~input_o )) # (!\FF13~q  & (!\IncDec[1]~input_o  & \IncDec[0]~input_o ))))
 
-	.dataa(\ENA[13]~26_combout ),
-	.datab(\FF13~q ),
+	.dataa(\FF13~q ),
+	.datab(\IncDec[1]~input_o ),
 	.datac(\IncDec[0]~input_o ),
-	.datad(\IncDec[1]~input_o ),
+	.datad(\ENA[13]~28_combout ),
 	.cin(gnd),
-	.combout(\ENA[14]~27_combout ),
+	.combout(\ENA[14]~33_combout ),
 	.cout());
 // synopsys translate_off
-defparam \ENA[14]~27 .lut_mask = 16'h0280;
-defparam \ENA[14]~27 .sum_lutc_input = "datac";
+defparam \ENA[14]~33 .lut_mask = 16'h1800;
+defparam \ENA[14]~33 .sum_lutc_input = "datac";
 // synopsys translate_on
 
 dffeas FF14(
@@ -1283,7 +1287,7 @@ dffeas FF14(
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(\ENA[14]~27_combout ),
+	.ena(\ENA[14]~33_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.q(\FF14~q ),
@@ -1291,6 +1295,72 @@ dffeas FF14(
 // synopsys translate_off
 defparam FF14.is_wysiwyg = "true";
 defparam FF14.power_up = "low";
+// synopsys translate_on
+
+cycloneiv_lcell_comb \FF15~0 (
+// Equation(s):
+// \FF15~0_combout  = !\FF15~q 
+
+	.dataa(\FF15~q ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(\FF15~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \FF15~0 .lut_mask = 16'h5555;
+defparam \FF15~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneiv_lcell_comb \ENA[15]~34 (
+// Equation(s):
+// \ENA[15]~34_combout  = (\ENA[13]~28_combout  & ((\FF14~q  & (!\IncDec[0]~input_o  & \FF13~q )) # (!\FF14~q  & (\IncDec[0]~input_o  & !\FF13~q ))))
+
+	.dataa(\FF14~q ),
+	.datab(\IncDec[0]~input_o ),
+	.datac(\FF13~q ),
+	.datad(\ENA[13]~28_combout ),
+	.cin(gnd),
+	.combout(\ENA[15]~34_combout ),
+	.cout());
+// synopsys translate_off
+defparam \ENA[15]~34 .lut_mask = 16'h2400;
+defparam \ENA[15]~34 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneiv_lcell_comb \ENA[15]~35 (
+// Equation(s):
+// \ENA[15]~35_combout  = (\ENA[15]~34_combout  & ((\FF14~q  & (!\IncDec[0]~input_o  & \IncDec[1]~input_o )) # (!\FF14~q  & (\IncDec[0]~input_o  & !\IncDec[1]~input_o ))))
+
+	.dataa(\FF14~q ),
+	.datab(\ENA[15]~34_combout ),
+	.datac(\IncDec[0]~input_o ),
+	.datad(\IncDec[1]~input_o ),
+	.cin(gnd),
+	.combout(\ENA[15]~35_combout ),
+	.cout());
+// synopsys translate_off
+defparam \ENA[15]~35 .lut_mask = 16'h0840;
+defparam \ENA[15]~35 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+dffeas FF15(
+	.clk(\Clock~input_o ),
+	.d(\FF15~0_combout ),
+	.asdata(vcc),
+	.clrn(\ResetSystem~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\ENA[15]~35_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\FF15~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam FF15.is_wysiwyg = "true";
+defparam FF15.power_up = "low";
 // synopsys translate_on
 
 assign SP_out[0] = \SP_out[0]~output_o ;

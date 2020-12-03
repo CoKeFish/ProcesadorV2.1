@@ -3,7 +3,7 @@ $comment
 		vcd file StackPointer.msim.vcd -direction
 $end
 $date
-	Tue Dec 01 19:12:48 2020
+	Wed Dec 02 19:48:20 2020
 $end
 $version
 	ModelSim Version 10.1d
@@ -62,61 +62,65 @@ $var wire 1 N ResetSystem~input_o $end
 $var wire 1 O Ena_SP~input_o $end
 $var wire 1 P FF0~q $end
 $var wire 1 Q FF1~0_combout $end
-$var wire 1 R IncDec[0]~input_o $end
-$var wire 1 S IncDec[1]~input_o $end
-$var wire 1 T ENA[1]~8_combout $end
+$var wire 1 R IncDec[1]~input_o $end
+$var wire 1 S IncDec[0]~input_o $end
+$var wire 1 T ENA[1]~10_combout $end
 $var wire 1 U FF1~q $end
 $var wire 1 V FF2~0_combout $end
-$var wire 1 W ENA[2]~28_combout $end
+$var wire 1 W ENA[2]~29_combout $end
 $var wire 1 X FF2~q $end
 $var wire 1 Y FF3~0_combout $end
-$var wire 1 Z ENA[3]~32_combout $end
-$var wire 1 [ ENA[3]~33_combout $end
+$var wire 1 Z ENA[3]~36_combout $end
+$var wire 1 [ ENA[3]~37_combout $end
 $var wire 1 \ FF3~q $end
 $var wire 1 ] FF4~0_combout $end
-$var wire 1 ^ ENA[4]~9_combout $end
-$var wire 1 _ ENA[4]~10_combout $end
-$var wire 1 ` ENA[4]~11_combout $end
+$var wire 1 ^ ENA[4]~11_combout $end
+$var wire 1 _ ENA[4]~12_combout $end
+$var wire 1 ` ENA[4]~13_combout $end
 $var wire 1 a FF4~q $end
 $var wire 1 b FF5~0_combout $end
-$var wire 1 c ENA[5]~29_combout $end
+$var wire 1 c ENA[5]~30_combout $end
 $var wire 1 d FF5~q $end
 $var wire 1 e FF6~0_combout $end
-$var wire 1 f ENA[5]~12_combout $end
-$var wire 1 g ENA[6]~13_combout $end
-$var wire 1 h ENA[6]~14_combout $end
+$var wire 1 f ENA[5]~14_combout $end
+$var wire 1 g ENA[6]~15_combout $end
+$var wire 1 h ENA[6]~16_combout $end
 $var wire 1 i FF6~q $end
 $var wire 1 j FF7~0_combout $end
-$var wire 1 k ENA[7]~15_combout $end
-$var wire 1 l ENA[7]~16_combout $end
+$var wire 1 k ENA[7]~17_combout $end
+$var wire 1 l ENA[7]~18_combout $end
 $var wire 1 m FF7~q $end
 $var wire 1 n FF8~0_combout $end
-$var wire 1 o ENA[8]~30_combout $end
+$var wire 1 o ENA[8]~31_combout $end
 $var wire 1 p FF8~q $end
 $var wire 1 q FF9~0_combout $end
-$var wire 1 r ENA[8]~17_combout $end
-$var wire 1 s ENA[9]~18_combout $end
-$var wire 1 t ENA[9]~19_combout $end
+$var wire 1 r ENA[8]~19_combout $end
+$var wire 1 s ENA[9]~20_combout $end
+$var wire 1 t ENA[9]~21_combout $end
 $var wire 1 u FF9~q $end
 $var wire 1 v FF10~0_combout $end
-$var wire 1 w ENA[10]~20_combout $end
-$var wire 1 x ENA[10]~21_combout $end
+$var wire 1 w ENA[10]~22_combout $end
+$var wire 1 x ENA[10]~23_combout $end
 $var wire 1 y FF10~q $end
 $var wire 1 z FF11~0_combout $end
-$var wire 1 { ENA[11]~31_combout $end
+$var wire 1 { ENA[11]~32_combout $end
 $var wire 1 | FF11~q $end
 $var wire 1 } FF12~0_combout $end
-$var wire 1 ~ ENA[11]~22_combout $end
-$var wire 1 !! ENA[12]~23_combout $end
-$var wire 1 "! ENA[12]~24_combout $end
+$var wire 1 ~ ENA[11]~24_combout $end
+$var wire 1 !! ENA[12]~25_combout $end
+$var wire 1 "! ENA[12]~26_combout $end
 $var wire 1 #! FF12~q $end
 $var wire 1 $! FF13~0_combout $end
-$var wire 1 %! ENA[13]~25_combout $end
-$var wire 1 &! ENA[13]~26_combout $end
+$var wire 1 %! ENA[13]~27_combout $end
+$var wire 1 &! ENA[13]~28_combout $end
 $var wire 1 '! FF13~q $end
 $var wire 1 (! FF14~0_combout $end
-$var wire 1 )! ENA[14]~27_combout $end
+$var wire 1 )! ENA[14]~33_combout $end
 $var wire 1 *! FF14~q $end
+$var wire 1 +! FF15~0_combout $end
+$var wire 1 ,! ENA[15]~34_combout $end
+$var wire 1 -! ENA[15]~35_combout $end
+$var wire 1 .! FF15~q $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
@@ -125,23 +129,23 @@ $dumpvars
 0!
 0"
 b0 #
-1$
-04
-03
-02
-01
-00
-0/
-0.
-0-
-0,
-0+
-0*
-0)
-0(
-0'
-0&
-0%
+0$
+14
+13
+12
+11
+10
+1/
+1.
+1-
+1,
+1+
+1*
+1)
+1(
+1'
+1&
+1%
 x5
 06
 17
@@ -149,25 +153,25 @@ x8
 19
 1:
 1;
-0<
-0=
-0>
-0?
-0@
-0A
-0B
-0C
-0D
-0E
-0F
-0G
-0H
-0I
-0J
-0K
+1<
+1=
+1>
+1?
+1@
+1A
+1B
+1C
+1D
+1E
+1F
+1G
+1H
+1I
+1J
+1K
 0L
 1M
-1N
+0N
 0O
 0P
 1Q
@@ -226,13 +230,19 @@ x8
 1(!
 0)!
 0*!
+1+!
+0,!
+0-!
+0.!
 $end
 #10000
 1!
 1L
 05
 #20000
+1$
 0!
+1N
 0L
 15
 #30000
@@ -256,9 +266,36 @@ $end
 b1 #
 1!
 1O
-1R
+1S
 1L
 05
+1^
+1T
+1%!
+1!!
+1~
+1w
+1s
+1r
+1k
+1g
+1f
+1`
+1Z
+1W
+1l
+1h
+1c
+1[
+1x
+1t
+1o
+1&!
+1"!
+1{
+1,!
+1)!
+1-!
 #80000
 0!
 0L
@@ -267,12 +304,97 @@ b1 #
 1!
 1L
 05
+1.!
+1*!
+1'!
+1#!
+1|
+1y
+1u
+1p
+1m
+1i
+1d
+1a
+1\
+1X
+1U
 1P
-0_
-1T
+0+!
+0-!
+0,!
+0(!
+0)!
+0$!
+0%!
+0}
+0!!
+0z
+0~
+0{
+0v
+0w
+0q
+0s
+0n
+0r
+0o
+0j
+0k
+0e
+0g
+0b
+0f
+0c
+0]
+0^
+0Y
+0[
+0Z
+0V
+0W
+0Q
+0T
 0M
-1<
-14
+0K
+0J
+0I
+0H
+0G
+0F
+0E
+0D
+0C
+0B
+0A
+0@
+0?
+0>
+0=
+0<
+0%
+0&
+0'
+0(
+0)
+0*
+0+
+0,
+0-
+0.
+0/
+00
+01
+02
+03
+04
+0&!
+0"!
+0x
+0t
+0l
+0h
+0`
 #100000
 0!
 0L
@@ -281,17 +403,12 @@ b1 #
 1!
 1L
 05
-1U
 0P
-1W
-0Q
-0T
+0_
+1T
 1M
-1=
-0<
-13
-04
-0W
+1<
+14
 #120000
 0!
 0L
@@ -300,12 +417,17 @@ b1 #
 1!
 1L
 05
+0U
 1P
-1T
-0M
-1<
-14
 1W
+1Q
+0T
+0M
+1=
+0<
+13
+04
+0W
 #140000
 0!
 0L
@@ -314,21 +436,12 @@ b1 #
 1!
 1L
 05
-1X
-0U
 0P
-0V
-1_
-0W
-1Q
-0T
+1T
 1M
-1>
-0=
-0<
-12
-03
-04
+1<
+14
+1W
 #160000
 0!
 0L
@@ -337,12 +450,21 @@ b1 #
 1!
 1L
 05
+0X
+1U
 1P
-0_
-1T
+1V
+1_
+0W
+0Q
+0T
 0M
-1<
-14
+1>
+0=
+0<
+12
+03
+04
 #180000
 0!
 0L
@@ -351,21 +473,12 @@ b1 #
 1!
 1L
 05
-1U
 0P
-1Z
-1W
-0Q
-0T
+0_
+1T
 1M
-1=
-0<
-13
-04
-1[
-0Z
-0W
-0[
+1<
+14
 #200000
 0!
 0L
@@ -375,13 +488,18 @@ b1 #
 b0 #
 1!
 0O
-0R
+0S
 1L
 05
+0T
+0U
 1P
+1Q
 0M
-1<
-14
+1=
+0<
+13
+04
 #220000
 0!
 0L
@@ -486,7 +604,7 @@ b0 #
 b10 #
 1"
 1!
-1S
+1R
 1O
 1L
 05
@@ -500,6 +618,7 @@ b10 #
 1g
 1f
 1^
+1T
 #480000
 0!
 0L
@@ -508,11 +627,17 @@ b10 #
 1!
 1L
 05
+1U
 0P
-1T
+1W
+0Q
+0T
 1M
-0<
-04
+0=
+1<
+03
+14
+0W
 #500000
 0!
 0L
@@ -521,17 +646,13 @@ b10 #
 1!
 1L
 05
-0U
 1P
-1W
-1Q
-0T
+1_
+1T
 0M
-0=
-1<
-03
-14
-0W
+0<
+04
+1W
 #520000
 0!
 0L
@@ -540,31 +661,16 @@ b10 #
 1!
 1L
 05
+1X
+0U
 0P
-1_
-1T
-1M
-0<
-04
-1W
-#540000
-0!
-0L
-15
-#550000
-1!
-1L
-05
-0X
-1U
-1P
 1`
-1V
+0V
 0_
 0W
-0Q
+1Q
 0T
-0M
+1M
 0>
 1=
 1<
@@ -587,11 +693,28 @@ b10 #
 0x
 0t
 0o
+1,!
 1)!
 0&!
 0"!
 0{
+1-!
+0,!
 0)!
+0-!
+#540000
+0!
+0L
+15
+#550000
+1!
+1L
+05
+1P
+1T
+0M
+0<
+04
 #560000
 0!
 0L
@@ -600,26 +723,13 @@ b10 #
 1!
 1L
 05
+1U
 0P
-1T
-1M
-0<
-04
-#580000
-0!
-0L
-15
-#590000
-1!
-1L
-05
-0U
-1P
 1Z
 1W
-1Q
+0Q
 0T
-0M
+1M
 0=
 1<
 03
@@ -628,18 +738,18 @@ b10 #
 0Z
 0W
 0[
-#600000
+#580000
 0!
 0L
 15
-#610000
+#590000
 1!
 1L
 05
-0P
+1P
 1_
 1T
-1M
+0M
 0<
 04
 1`
@@ -655,63 +765,70 @@ b10 #
 1&!
 1"!
 1{
+1,!
 1)!
-#620000
+1-!
+#600000
 0!
 0L
 15
-#630000
+#610000
 1!
 1L
 05
-1*!
-1'!
-1#!
-1|
-1y
-1u
-1p
-1m
-1i
-1d
-1a
-1\
-1X
-1U
-1P
-0(!
+0.!
+0*!
+0'!
+0#!
+0|
+0y
+0u
+0p
+0m
+0i
+0d
+0a
+0\
+0X
+0U
+0P
+1+!
+0-!
+0,!
+1(!
 0)!
-0$!
+1$!
 0%!
-0}
+1}
 0!!
-0z
+1z
 0~
 0{
-0v
+1v
 0w
-0q
+1q
 0s
-0n
+1n
 0r
 0o
-0j
+1j
 0k
-0e
+1e
 0g
-0b
+1b
 0f
 0c
-0]
+1]
 0^
-0Y
+1Y
 0[
 0Z
-0V
+1V
 0W
-0Q
+1Q
 0T
-0M
+1M
+1K
 1J
 1I
 1H
@@ -727,6 +844,7 @@ b10 #
 1>
 1=
 1<
+1%
 1&
 1'
 1(
@@ -749,6 +867,20 @@ b10 #
 0l
 0h
 0`
+#620000
+0!
+0L
+15
+#630000
+1!
+1L
+05
+1P
+0_
+1T
+0M
+0<
+04
 #640000
 0!
 0L
@@ -757,12 +889,17 @@ b10 #
 1!
 1L
 05
+1U
 0P
-0_
-1T
+1W
+0Q
+0T
 1M
-0<
-04
+0=
+1<
+03
+14
+0W
 #660000
 0!
 0L
@@ -771,17 +908,12 @@ b10 #
 1!
 1L
 05
-0U
 1P
-1W
-1Q
-0T
+1T
 0M
-0=
-1<
-03
-14
-0W
+0<
+04
+1W
 #680000
 0!
 0L
@@ -790,12 +922,21 @@ b10 #
 1!
 1L
 05
+1X
+0U
 0P
-1T
+0V
+1_
+0W
+1Q
+0T
 1M
-0<
-04
-1W
+0>
+1=
+1<
+02
+13
+14
 #700000
 0!
 0L
@@ -804,21 +945,12 @@ b10 #
 1!
 1L
 05
-0X
-1U
 1P
-1V
-1_
-0W
-0Q
-0T
+0_
+1T
 0M
-0>
-1=
-1<
-02
-13
-14
+0<
+04
 #720000
 0!
 0L
@@ -827,12 +959,21 @@ b10 #
 1!
 1L
 05
+1U
 0P
-0_
-1T
+1Z
+1W
+0Q
+0T
 1M
-0<
-04
+0=
+1<
+03
+14
+1[
+0Z
+0W
+0[
 #740000
 0!
 0L
@@ -841,21 +982,14 @@ b10 #
 1!
 1L
 05
-0U
 1P
+1T
+0M
+0<
+04
 1Z
 1W
-1Q
-0T
-0M
-0=
-1<
-03
-14
 1[
-0Z
-0W
-0[
 #760000
 0!
 0L
@@ -864,35 +998,19 @@ b10 #
 1!
 1L
 05
+1\
+0X
+0U
 0P
-1T
-1M
-0<
-04
-1Z
-1W
-1[
-#780000
-0!
-0L
-15
-#790000
-1!
-1L
-05
-0\
-1X
-1U
-1P
 1^
-1Y
+0Y
 0[
 0Z
-0V
+1V
 0W
-0Q
+1Q
 0T
-0M
+1M
 0?
 1>
 1=
@@ -901,6 +1019,19 @@ b10 #
 12
 13
 14
+#780000
+0!
+0L
+15
+#790000
+1!
+1L
+05
+1P
+1T
+0M
+0<
+04
 #800000
 0!
 0L
@@ -909,11 +1040,17 @@ b10 #
 1!
 1L
 05
+1U
 0P
-1T
+1W
+0Q
+0T
 1M
-0<
-04
+0=
+1<
+03
+14
+0W
 #820000
 0!
 0L
@@ -922,20 +1059,16 @@ b10 #
 b0 #
 0"
 1!
-0S
+0R
 0O
 1L
 05
 0^
-0T
-0U
 1P
-1Q
+1_
 0M
-0=
-1<
-03
-14
+0<
+04
 #840000
 0!
 0L

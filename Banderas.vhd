@@ -118,7 +118,7 @@ BEGIN
 	--Condiciones para activar la bandera de Overflow
 	SResultado_O   <=(ADD_CO AND In_carry) OR (ADD_CA AND In_carry) OR (SUB AND N1(15) AND (NOT N2(15)) AND (Resultado(15))) OR (SUB AND (NOT N1(15)) AND (N2(15)) AND ( Resultado(15)));
 	--Condiciones para activar la bandera de resultado Negativo
-	SResultado_N   <=((CR) OR (SRA_S) OR (SR) OR (NOT_S) OR (MULT) OR (COMP) OR (SUB) OR (ADD_CO) OR (ADD_CA)) AND Resultado(15);
+	SResultado_N   <=((CR) OR (SRA_S) OR (SR) OR (NOT_S) OR (MULT) OR (COMP) OR (SUB) OR (ADD_CO) OR (ADD_CA) OR (AND_S) OR (OR_S)) AND Resultado(15);
 	
 
 	

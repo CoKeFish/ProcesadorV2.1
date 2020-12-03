@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Computador
-Wed Dec 02 03:12:31 2020
+Wed Dec 02 23:47:04 2020
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -16,22 +16,23 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   8. Analysis & Synthesis RAM Summary
   9. Analysis & Synthesis IP Cores Summary
  10. Registers Removed During Synthesis
- 11. General Register Statistics
- 12. Inverted Register Statistics
- 13. Source assignments for MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_t1q3:auto_generated
- 14. Source assignments for MemoryROM:B_MemoryROM|altsyncram:altsyncram_component|altsyncram_aes3:auto_generated
- 15. Parameter Settings for User Entity Instance: MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component
- 16. Parameter Settings for User Entity Instance: MemoryROM:B_MemoryROM|altsyncram:altsyncram_component
- 17. altsyncram Parameter Settings by Entity Instance
- 18. Port Connectivity Checks: "Procesador:B_Procesador|Data_MdMux:B_Data_MdMux"
- 19. Port Connectivity Checks: "Procesador:B_Procesador|ALU:B_ALU|Banderas:B_Banderas|SelecctorOpera:B_SeleccionOpera"
- 20. Port Connectivity Checks: "Procesador:B_Procesador|ALU:B_ALU|SelectorSM:B_SelectorMP"
- 21. Port Connectivity Checks: "Procesador:B_Procesador|ALU:B_ALU|ControlALU:B_Control|SelecctorOpera:B_SeleccionOpera"
- 22. Port Connectivity Checks: "Procesador:B_Procesador|ALU:B_ALU"
- 23. Port Connectivity Checks: "Procesador:B_Procesador|Control:B_Control|OperatorMUX:B_OperatorMUX"
- 24. Port Connectivity Checks: "Procesador:B_Procesador"
- 25. Elapsed Time Per Partition
- 26. Analysis & Synthesis Messages
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Source assignments for MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_t1q3:auto_generated
+ 16. Source assignments for MemoryROM:B_MemoryROM|altsyncram:altsyncram_component|altsyncram_aes3:auto_generated
+ 17. Parameter Settings for User Entity Instance: MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component
+ 18. Parameter Settings for User Entity Instance: MemoryROM:B_MemoryROM|altsyncram:altsyncram_component
+ 19. altsyncram Parameter Settings by Entity Instance
+ 20. Port Connectivity Checks: "Procesador:B_Procesador|Data_MdMux:B_Data_MdMux"
+ 21. Port Connectivity Checks: "Procesador:B_Procesador|ALU:B_ALU|Banderas:B_Banderas|SelecctorOpera:B_SeleccionOpera"
+ 22. Port Connectivity Checks: "Procesador:B_Procesador|ALU:B_ALU|SelectorSM:B_SelectorMP"
+ 23. Port Connectivity Checks: "Procesador:B_Procesador|ALU:B_ALU|ControlALU:B_Control|SelecctorOpera:B_SeleccionOpera"
+ 24. Port Connectivity Checks: "Procesador:B_Procesador|Control:B_Control|OperatorMUX:B_OperatorMUX"
+ 25. Port Connectivity Checks: "Procesador:B_Procesador"
+ 26. Elapsed Time Per Partition
+ 27. Analysis & Synthesis Messages
 
 
 
@@ -57,18 +58,18 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Dec 02 03:12:31 2020      ;
+; Analysis & Synthesis Status        ; Successful - Wed Dec 02 23:47:04 2020      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; Computador                                 ;
 ; Top-level Entity Name              ; Computador                                 ;
 ; Family                             ; Cyclone IV GX                              ;
-; Total logic elements               ; 306                                        ;
-;     Total combinational functions  ; 261                                        ;
-;     Dedicated logic registers      ; 106                                        ;
-; Total registers                    ; 106                                        ;
-; Total pins                         ; 93                                         ;
+; Total logic elements               ; 459                                        ;
+;     Total combinational functions  ; 406                                        ;
+;     Dedicated logic registers      ; 160                                        ;
+; Total registers                    ; 160                                        ;
+; Total pins                         ; 109                                        ;
 ; Total virtual pins                 ; 0                                          ;
-; Total memory bits                  ; 5,888                                      ;
+; Total memory bits                  ; 9,984                                      ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
 ; Total GXB Receiver Channel PCS     ; 0                                          ;
 ; Total GXB Receiver Channel PMA     ; 0                                          ;
@@ -234,13 +235,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------+------------------+
 ; Resource                 ; Usage            ;
 +--------------------------+------------------+
-; I/O pins                 ; 93               ;
-; Total memory bits        ; 5888             ;
+; I/O pins                 ; 109              ;
+; Total memory bits        ; 9984             ;
 ; DSP block 9-bit elements ; 0                ;
 ; Maximum fan-out node     ; Clock~input      ;
-; Maximum fan-out          ; 129              ;
-; Total fan-out            ; 1714             ;
-; Average fan-out          ; 2.98             ;
+; Maximum fan-out          ; 199              ;
+; Total fan-out            ; 2677             ;
+; Average fan-out          ; 3.25             ;
 +--------------------------+------------------+
 
 
@@ -249,12 +250,15 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                    ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                ; Library Name ;
 +-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------------------------------------------------------------------+--------------+
-; |Computador                                   ; 261 (0)           ; 106 (0)      ; 5888        ; 0            ; 0       ; 0         ; 0         ; 93   ; 0            ; |Computador                                                                                        ; work         ;
+; |Computador                                   ; 406 (0)           ; 160 (0)      ; 9984        ; 0            ; 0       ; 0         ; 0         ; 109  ; 0            ; |Computador                                                                                        ; work         ;
+;    |MemoryRAM:B_MemoryRAM|                    ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|MemoryRAM:B_MemoryRAM                                                                  ; work         ;
+;       |altsyncram:altsyncram_component|       ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component                                  ; work         ;
+;          |altsyncram_t1q3:auto_generated|     ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_t1q3:auto_generated   ; work         ;
 ;    |MemoryROM:B_MemoryROM|                    ; 1 (0)             ; 1 (0)        ; 5888        ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|MemoryROM:B_MemoryROM                                                                  ; work         ;
 ;       |altsyncram:altsyncram_component|       ; 1 (0)             ; 1 (0)        ; 5888        ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|MemoryROM:B_MemoryROM|altsyncram:altsyncram_component                                  ; work         ;
 ;          |altsyncram_aes3:auto_generated|     ; 1 (1)             ; 1 (1)        ; 5888        ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|MemoryROM:B_MemoryROM|altsyncram:altsyncram_component|altsyncram_aes3:auto_generated   ; work         ;
-;    |Procesador:B_Procesador|                  ; 260 (0)           ; 105 (0)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador                                                                ; work         ;
-;       |ALU:B_ALU|                             ; 212 (0)           ; 44 (1)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU                                                      ; work         ;
+;    |Procesador:B_Procesador|                  ; 405 (0)           ; 159 (0)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador                                                                ; work         ;
+;       |ALU:B_ALU|                             ; 222 (0)           ; 49 (1)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU                                                      ; work         ;
 ;          |ADDER:B_ADDER|                      ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ADDER:B_ADDER                                        ; work         ;
 ;             |FullAdder:FA10|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ADDER:B_ADDER|FullAdder:FA10                         ; work         ;
 ;             |FullAdder:FA11|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ADDER:B_ADDER|FullAdder:FA11                         ; work         ;
@@ -272,30 +276,37 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;             |FullAdder:FA7|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ADDER:B_ADDER|FullAdder:FA7                          ; work         ;
 ;             |FullAdder:FA8|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ADDER:B_ADDER|FullAdder:FA8                          ; work         ;
 ;             |FullAdder:FA9|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ADDER:B_ADDER|FullAdder:FA9                          ; work         ;
-;          |ControlALU:B_Control|               ; 27 (19)           ; 10 (6)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ControlALU:B_Control                                 ; work         ;
+;          |Banderas:B_Banderas|                ; 10 (10)           ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|Banderas:B_Banderas                                  ; work         ;
+;          |ControlALU:B_Control|               ; 30 (18)           ; 10 (6)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ControlALU:B_Control                                 ; work         ;
 ;             |CounterMulti:B_Counter|          ; 7 (7)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ControlALU:B_Control|CounterMulti:B_Counter          ; work         ;
-;             |SelecctorOpera:B_SeleccionOpera| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ControlALU:B_Control|SelecctorOpera:B_SeleccionOpera ; work         ;
+;             |SelecctorOpera:B_SeleccionOpera| ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|ControlALU:B_Control|SelecctorOpera:B_SeleccionOpera ; work         ;
 ;          |R_Resultado:B_R_Resultado|          ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|R_Resultado:B_R_Resultado                            ; work         ;
 ;          |Registro_A_Q_E:B_registroAQE|       ; 21 (21)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|Registro_A_Q_E:B_registroAQE                         ; work         ;
-;          |SelecctorG:B_SelectorG|             ; 124 (124)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|SelecctorG:B_SelectorG                               ; work         ;
+;          |SelecctorG:B_SelectorG|             ; 122 (122)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|SelecctorG:B_SelectorG                               ; work         ;
 ;          |SelectorSM:B_SelectorMP|            ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|SelectorSM:B_SelectorMP                              ; work         ;
-;          |SelectorSM:B_SelectorSM|            ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|SelectorSM:B_SelectorSM                              ; work         ;
-;       |ALUMux:B_ALUMux|                       ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALUMux:B_ALUMux                                                ; work         ;
+;          |SelectorSM:B_SelectorSM|            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALU:B_ALU|SelectorSM:B_SelectorSM                              ; work         ;
+;       |ALUMux:B_ALUMux|                       ; 34 (34)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ALUMux:B_ALUMux                                                ; work         ;
+;       |AcumMUX:B_AcumMUX|                     ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|AcumMUX:B_AcumMUX                                              ; work         ;
 ;       |Acumulador:B_Acum|                     ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|Acumulador:B_Acum                                              ; work         ;
-;       |Control:B_Control|                     ; 17 (17)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|Control:B_Control                                              ; work         ;
+;       |Control:B_Control|                     ; 42 (42)           ; 42 (42)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|Control:B_Control                                              ; work         ;
+;       |Data_MdMux:B_Data_MdMux|               ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|Data_MdMux:B_Data_MdMux                                        ; work         ;
+;       |DirMdMux:B_DirMdMux|                   ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|DirMdMux:B_DirMdMux                                            ; work         ;
 ;       |GeneralPR:B_GPR|                       ; 0 (0)             ; 23 (23)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|GeneralPR:B_GPR                                                ; work         ;
-;       |ProgramCounter:B_Program_counter|      ; 15 (15)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ProgramCounter:B_Program_counter                               ; work         ;
+;       |ProgramCounter:B_Program_counter|      ; 34 (34)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ProgramCounter:B_Program_counter                               ; work         ;
+;       |ProgramStatus:B_ProgramStatus|         ; 0 (0)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|ProgramStatus:B_ProgramStatus                                  ; work         ;
+;       |StackPointer:B_StackPointer|           ; 15 (15)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Computador|Procesador:B_Procesador|StackPointer:B_StackPointer                                    ; work         ;
 +-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                  ;
-+-------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+----------------+
-; Name                                                                                            ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF            ;
-+-------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+----------------+
-; MemoryROM:B_MemoryROM|altsyncram:altsyncram_component|altsyncram_aes3:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 256          ; 23           ; --           ; --           ; 5888 ; Computador.hex ;
-+-------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+----------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                         ;
++-------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+----------------+
+; Name                                                                                            ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF            ;
++-------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+----------------+
+; MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_t1q3:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 256          ; 16           ; --           ; --           ; 4096 ; None           ;
+; MemoryROM:B_MemoryROM|altsyncram:altsyncram_component|altsyncram_aes3:auto_generated|ALTSYNCRAM ; AUTO ; ROM         ; 256          ; 23           ; --           ; --           ; 5888 ; Computador.hex ;
++-------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+----------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -308,78 +319,38 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+-----------------------------------+--------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                          ;
-+---------------------------------------------------------------+---------------------------------------------+
-; Register name                                                 ; Reason for Removal                          ;
-+---------------------------------------------------------------+---------------------------------------------+
-; Procesador:B_Procesador|StackPointer:B_StackPointer|FF0       ; Stuck at GND due to stuck port clock_enable ;
-; Procesador:B_Procesador|StackPointer:B_StackPointer|FF1       ; Stuck at GND due to stuck port clock_enable ;
-; Procesador:B_Procesador|StackPointer:B_StackPointer|FF2       ; Stuck at GND due to stuck port clock_enable ;
-; Procesador:B_Procesador|StackPointer:B_StackPointer|FF3       ; Stuck at GND due to stuck port clock_enable ;
-; Procesador:B_Procesador|StackPointer:B_StackPointer|FF4       ; Stuck at GND due to stuck port clock_enable ;
-; Procesador:B_Procesador|StackPointer:B_StackPointer|FF5       ; Stuck at GND due to stuck port clock_enable ;
-; Procesador:B_Procesador|StackPointer:B_StackPointer|FF6       ; Stuck at GND due to stuck port clock_enable ;
-; Procesador:B_Procesador|StackPointer:B_StackPointer|FF7       ; Stuck at GND due to stuck port clock_enable ;
-; Procesador:B_Procesador|Control:B_Control|FF14                ; Stuck at GND due to stuck port data_in      ;
-; Procesador:B_Procesador|Control:B_Control|FF15                ; Stuck at GND due to stuck port data_in      ;
-; Procesador:B_Procesador|Control:B_Control|FF16                ; Stuck at GND due to stuck port data_in      ;
-; Procesador:B_Procesador|Control:B_Control|FF17                ; Stuck at GND due to stuck port data_in      ;
-; Procesador:B_Procesador|Control:B_Control|FF18                ; Stuck at GND due to stuck port data_in      ;
-; Procesador:B_Procesador|Control:B_Control|FF19                ; Stuck at GND due to stuck port data_in      ;
-; Procesador:B_Procesador|Control:B_Control|FF20                ; Stuck at GND due to stuck port data_in      ;
-; Procesador:B_Procesador|Control:B_Control|FF21                ; Stuck at GND due to stuck port data_in      ;
-; Procesador:B_Procesador|Control:B_Control|FF22                ; Stuck at GND due to stuck port data_in      ;
-; Procesador:B_Procesador|Control:B_Control|FF23                ; Stuck at GND due to stuck port data_in      ;
-; Procesador:B_Procesador|Control:B_Control|FF24                ; Stuck at GND due to stuck port data_in      ;
-; Procesador:B_Procesador|Control:B_Control|FF25                ; Stuck at GND due to stuck port data_in      ;
-; Procesador:B_Procesador|Control:B_Control|FF26                ; Stuck at GND due to stuck port data_in      ;
-; Procesador:B_Procesador|Control:B_Control|FF27                ; Stuck at GND due to stuck port data_in      ;
-; Procesador:B_Procesador|Control:B_Control|FF28                ; Stuck at GND due to stuck port data_in      ;
-; Procesador:B_Procesador|Control:B_Control|FF29                ; Stuck at GND due to stuck port data_in      ;
-; Procesador:B_Procesador|Control:B_Control|FF30                ; Stuck at GND due to stuck port data_in      ;
-; Procesador:B_Procesador|Control:B_Control|FF31                ; Stuck at GND due to stuck port data_in      ;
-; Procesador:B_Procesador|Control:B_Control|FF32                ; Stuck at GND due to stuck port data_in      ;
-; Procesador:B_Procesador|Control:B_Control|FF33                ; Stuck at GND due to stuck port data_in      ;
-; Procesador:B_Procesador|Control:B_Control|FF34                ; Stuck at GND due to stuck port data_in      ;
-; Procesador:B_Procesador|Control:B_Control|FF35                ; Stuck at GND due to stuck port data_in      ;
-; Procesador:B_Procesador|Control:B_Control|FF36                ; Stuck at GND due to stuck port data_in      ;
-; Procesador:B_Procesador|Control:B_Control|FF37                ; Stuck at GND due to stuck port data_in      ;
-; Procesador:B_Procesador|Control:B_Control|FF38                ; Stuck at GND due to stuck port data_in      ;
-; Procesador:B_Procesador|Control:B_Control|FF39                ; Stuck at GND due to stuck port data_in      ;
-; Procesador:B_Procesador|Control:B_Control|FF40                ; Stuck at GND due to stuck port data_in      ;
-; Procesador:B_Procesador|Control:B_Control|FF41                ; Stuck at GND due to stuck port data_in      ;
-; Procesador:B_Procesador|Control:B_Control|FF42                ; Stuck at GND due to stuck port data_in      ;
-; Procesador:B_Procesador|Control:B_Control|FF43                ; Stuck at GND due to stuck port data_in      ;
-; Procesador:B_Procesador|Control:B_Control|FF44                ; Stuck at GND due to stuck port data_in      ;
-; Procesador:B_Procesador|Control:B_Control|FF45                ; Stuck at GND due to stuck port data_in      ;
-; Procesador:B_Procesador|Control:B_Control|FF46                ; Stuck at GND due to stuck port data_in      ;
-; Procesador:B_Procesador|Control:B_Control|FF47                ; Stuck at GND due to stuck port data_in      ;
-; Procesador:B_Procesador|Control:B_Control|FF48                ; Stuck at GND due to stuck port data_in      ;
-; Procesador:B_Procesador|Control:B_Control|FF49                ; Stuck at GND due to stuck port data_in      ;
-; Procesador:B_Procesador|ProgramStatus:B_ProgramStatus|FF0     ; Lost fanout                                 ;
-; Procesador:B_Procesador|ProgramStatus:B_ProgramStatus|FF1     ; Lost fanout                                 ;
-; Procesador:B_Procesador|ProgramStatus:B_ProgramStatus|FF2     ; Lost fanout                                 ;
-; Procesador:B_Procesador|ProgramStatus:B_ProgramStatus|FF3     ; Lost fanout                                 ;
-; Procesador:B_Procesador|ProgramStatus:B_ProgramStatus|FF4     ; Lost fanout                                 ;
-; Procesador:B_Procesador|DirRegister:B_DirRegister|FF0         ; Lost fanout                                 ;
-; Procesador:B_Procesador|DirRegister:B_DirRegister|FF1         ; Lost fanout                                 ;
-; Procesador:B_Procesador|DirRegister:B_DirRegister|FF2         ; Lost fanout                                 ;
-; Procesador:B_Procesador|DirRegister:B_DirRegister|FF3         ; Lost fanout                                 ;
-; Procesador:B_Procesador|DirRegister:B_DirRegister|FF4         ; Lost fanout                                 ;
-; Procesador:B_Procesador|DirRegister:B_DirRegister|FF5         ; Lost fanout                                 ;
-; Procesador:B_Procesador|DirRegister:B_DirRegister|FF6         ; Lost fanout                                 ;
-; Procesador:B_Procesador|DirRegister:B_DirRegister|FF7         ; Lost fanout                                 ;
-; Procesador:B_Procesador|ProgramCounter:B_Program_counter|FF8  ; Lost fanout                                 ;
-; Procesador:B_Procesador|ProgramCounter:B_Program_counter|FF9  ; Lost fanout                                 ;
-; Procesador:B_Procesador|ProgramCounter:B_Program_counter|FF10 ; Lost fanout                                 ;
-; Procesador:B_Procesador|ProgramCounter:B_Program_counter|FF11 ; Lost fanout                                 ;
-; Procesador:B_Procesador|ProgramCounter:B_Program_counter|FF12 ; Lost fanout                                 ;
-; Procesador:B_Procesador|ProgramCounter:B_Program_counter|FF13 ; Lost fanout                                 ;
-; Procesador:B_Procesador|ProgramCounter:B_Program_counter|FF14 ; Lost fanout                                 ;
-; Procesador:B_Procesador|ProgramCounter:B_Program_counter|FF15 ; Lost fanout                                 ;
-; Total Number of Removed Registers = 65                        ;                                             ;
-+---------------------------------------------------------------+---------------------------------------------+
++-----------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                  ;
++-------------------------------------------------------+---------------------------------------------+
+; Register name                                         ; Reason for Removal                          ;
++-------------------------------------------------------+---------------------------------------------+
+; Procesador:B_Procesador|Control:B_Control|FF42        ; Stuck at GND due to stuck port data_in      ;
+; Procesador:B_Procesador|Control:B_Control|FF43        ; Stuck at GND due to stuck port data_in      ;
+; Procesador:B_Procesador|Control:B_Control|FF44        ; Stuck at GND due to stuck port data_in      ;
+; Procesador:B_Procesador|Control:B_Control|FF45        ; Stuck at GND due to stuck port data_in      ;
+; Procesador:B_Procesador|Control:B_Control|FF46        ; Stuck at GND due to stuck port data_in      ;
+; Procesador:B_Procesador|Control:B_Control|FF47        ; Stuck at GND due to stuck port data_in      ;
+; Procesador:B_Procesador|Control:B_Control|FF48        ; Stuck at GND due to stuck port data_in      ;
+; Procesador:B_Procesador|DirRegister:B_DirRegister|FF0 ; Stuck at GND due to stuck port clock_enable ;
+; Procesador:B_Procesador|DirRegister:B_DirRegister|FF1 ; Stuck at GND due to stuck port clock_enable ;
+; Procesador:B_Procesador|DirRegister:B_DirRegister|FF2 ; Stuck at GND due to stuck port clock_enable ;
+; Procesador:B_Procesador|DirRegister:B_DirRegister|FF3 ; Stuck at GND due to stuck port clock_enable ;
+; Procesador:B_Procesador|DirRegister:B_DirRegister|FF4 ; Stuck at GND due to stuck port clock_enable ;
+; Procesador:B_Procesador|DirRegister:B_DirRegister|FF5 ; Stuck at GND due to stuck port clock_enable ;
+; Procesador:B_Procesador|DirRegister:B_DirRegister|FF6 ; Stuck at GND due to stuck port clock_enable ;
+; Procesador:B_Procesador|DirRegister:B_DirRegister|FF7 ; Stuck at GND due to stuck port clock_enable ;
+; Total Number of Removed Registers = 15                ;                                             ;
++-------------------------------------------------------+---------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                     ;
++-------------------------------------------------------+--------------------------------+--------------------------------------------------------+
+; Register name                                         ; Reason for Removal             ; Registers Removed due to This Register                 ;
++-------------------------------------------------------+--------------------------------+--------------------------------------------------------+
+; Procesador:B_Procesador|DirRegister:B_DirRegister|FF5 ; Stuck at GND                   ; Procesador:B_Procesador|DirRegister:B_DirRegister|FF6, ;
+;                                                       ; due to stuck port clock_enable ; Procesador:B_Procesador|DirRegister:B_DirRegister|FF7  ;
++-------------------------------------------------------+--------------------------------+--------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -387,12 +358,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 106   ;
+; Total registers                              ; 160   ;
 ; Number of registers using Synchronous Clear  ; 1     ;
 ; Number of registers using Synchronous Load   ; 7     ;
-; Number of registers using Asynchronous Clear ; 105   ;
+; Number of registers using Asynchronous Clear ; 159   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 85    ;
+; Number of registers using Clock Enable       ; 110   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -404,8 +375,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------+---------+
 ; Procesador:B_Procesador|Control:B_Control|FF0              ; 4       ;
 ; Procesador:B_Procesador|ALU:B_ALU|ControlALU:B_Control|FF0 ; 3       ;
-; Total number of inverted registers = 2                     ;         ;
+; Procesador:B_Procesador|StackPointer:B_StackPointer|FF0    ; 5       ;
+; Procesador:B_Procesador|StackPointer:B_StackPointer|FF1    ; 4       ;
+; Procesador:B_Procesador|StackPointer:B_StackPointer|FF2    ; 3       ;
+; Procesador:B_Procesador|StackPointer:B_StackPointer|FF3    ; 5       ;
+; Procesador:B_Procesador|StackPointer:B_StackPointer|FF4    ; 4       ;
+; Procesador:B_Procesador|StackPointer:B_StackPointer|FF5    ; 3       ;
+; Procesador:B_Procesador|StackPointer:B_StackPointer|FF6    ; 3       ;
+; Procesador:B_Procesador|StackPointer:B_StackPointer|FF7    ; 2       ;
+; Total number of inverted registers = 10                    ;         ;
 +------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |Computador|Procesador:B_Procesador|ALUMux:B_ALUMux|ALUMUXOut[0] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------+
@@ -590,13 +578,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 +-------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "Procesador:B_Procesador|ALU:B_ALU|Banderas:B_Banderas|SelecctorOpera:B_SeleccionOpera" ;
-+-------+--------+----------+---------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                               ;
-+-------+--------+----------+---------------------------------------------------------------------------------------+
-; none  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.   ;
-; and_s ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.   ;
-; or_s  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.   ;
-+-------+--------+----------+---------------------------------------------------------------------------------------+
++------+--------+----------+----------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                ;
++------+--------+----------+----------------------------------------------------------------------------------------+
+; none ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.    ;
++------+--------+----------+----------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------+
@@ -617,37 +603,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------+--------+----------+----------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Procesador:B_Procesador|ALU:B_ALU"                                                         ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                             ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; resultado_z ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; resultado_c ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; resultado_o ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; resultado_n ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +-----------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "Procesador:B_Procesador|Control:B_Control|OperatorMUX:B_OperatorMUX"                 ;
 +-------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port  ; Type   ; Severity ; Details                                                                             ;
 +-------+--------+----------+-------------------------------------------------------------------------------------+
 ; sra_s ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; mov   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; str   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; jsr   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; rtn   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; stp   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; jmp   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; beqz  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; beqn  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; beqo  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; push  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; pop   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; sli   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; cli   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +-------+--------+----------+-------------------------------------------------------------------------------------+
 
 
@@ -676,7 +640,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Wed Dec 02 03:12:23 2020
+    Info: Processing started: Wed Dec 02 23:46:57 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Computador -c Computador
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file generalpr.vhd
@@ -705,39 +669,18 @@ Info (12021): Found 2 design units, including 1 entities, in source file memoryr
     Info (12023): Found entity 1: MemoryROM
 Info (12127): Elaborating entity "Computador" for the top level hierarchy
 Info (12128): Elaborating entity "Procesador" for hierarchy "Procesador:B_Procesador"
-Warning (10036): Verilog HDL or VHDL warning at Procesador.vhd(450): object "Resultado_Z" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at Procesador.vhd(451): object "Resultado_N" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at Procesador.vhd(452): object "Resultado_O" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at Procesador.vhd(453): object "Resultado_C" assigned a value but never read
-Warning (10541): VHDL Signal Declaration warning at Procesador.vhd(475): used implicit default value for signal "OutStatusALU" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10873): Using initial value X (don't care) for net "TempStatusPSR[15..5]" at Procesador.vhd(481)
+Warning (10873): Using initial value X (don't care) for net "TempStatusPSR[15..5]" at Procesador.vhd(485)
 Info (12128): Elaborating entity "ProgramCounter" for hierarchy "Procesador:B_Procesador|ProgramCounter:B_Program_counter"
 Info (12128): Elaborating entity "Control" for hierarchy "Procesador:B_Procesador|Control:B_Control"
-Warning (10541): VHDL Signal Declaration warning at Control.vhd(51): used implicit default value for signal "Ena_Md_Read" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at Control.vhd(52): used implicit default value for signal "Ena_Md_Write" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at Control.vhd(61): used implicit default value for signal "SaveInt" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Warning (10541): VHDL Signal Declaration warning at Control.vhd(62): used implicit default value for signal "SaveDirR" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at Control.vhd(65): used implicit default value for signal "IntE" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at Control.vhd(67): used implicit default value for signal "IncDec" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at Control.vhd(74): used implicit default value for signal "SelectDataMd" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at Control.vhd(75): used implicit default value for signal "SelectDir" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Warning (10036): Verilog HDL or VHDL warning at Control.vhd(155): object "SRA_S" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at Control.vhd(157): object "MOV" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at Control.vhd(158): object "STR" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at Control.vhd(159): object "JSR" assigned a value but never read
 Warning (10036): Verilog HDL or VHDL warning at Control.vhd(160): object "RTN" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at Control.vhd(161): object "STP" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at Control.vhd(162): object "JMP" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at Control.vhd(163): object "BEQZ" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at Control.vhd(164): object "BEQN" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at Control.vhd(165): object "BEQO" assigned a value but never read
 Warning (10036): Verilog HDL or VHDL warning at Control.vhd(166): object "PUSH" assigned a value but never read
 Warning (10036): Verilog HDL or VHDL warning at Control.vhd(167): object "POP" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at Control.vhd(168): object "SLI" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at Control.vhd(169): object "CLI" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at Control.vhd(171): object "Directo" assigned a value but never read
 Warning (10036): Verilog HDL or VHDL warning at Control.vhd(172): object "Indirecto" assigned a value but never read
-Warning (10873): Using initial value X (don't care) for net "D[49..14]" at Control.vhd(177)
+Warning (10873): Using initial value X (don't care) for net "IncDec[0]" at Control.vhd(67)
+Warning (10873): Using initial value X (don't care) for net "Q[49]" at Control.vhd(176)
+Warning (10873): Using initial value X (don't care) for net "D[48..42]" at Control.vhd(177)
 Info (12128): Elaborating entity "OperatorMUX" for hierarchy "Procesador:B_Procesador|Control:B_Control|OperatorMUX:B_OperatorMUX"
 Info (12128): Elaborating entity "GeneralPR" for hierarchy "Procesador:B_Procesador|GeneralPR:B_GPR"
 Warning (12125): Using design file acumulador.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
@@ -812,8 +755,6 @@ Warning (12125): Using design file banderas.vhd, which is not specified as a des
     Info (12023): Found entity 1: Banderas
 Info (12128): Elaborating entity "Banderas" for hierarchy "Procesador:B_Procesador|ALU:B_ALU|Banderas:B_Banderas"
 Warning (10036): Verilog HDL or VHDL warning at banderas.vhd(86): object "None" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at banderas.vhd(92): object "AND_S" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at banderas.vhd(93): object "OR_S" assigned a value but never read
 Warning (12125): Using design file acummux.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: AcumMUX-AcumMUX
     Info (12023): Found entity 1: AcumMUX
@@ -846,7 +787,6 @@ Warning (12125): Using design file stackpointer.vhd, which is not specified as a
     Info (12022): Found design unit 1: StackPointer-StackPointer
     Info (12023): Found entity 1: StackPointer
 Info (12128): Elaborating entity "StackPointer" for hierarchy "Procesador:B_Procesador|StackPointer:B_StackPointer"
-Warning (10873): Using initial value X (don't care) for net "Q[15]" at stackpointer.vhd(53)
 Warning (12125): Using design file psrmux.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: PSRMux-PSRMux
     Info (12023): Found entity 1: PSRMux
@@ -965,57 +905,9 @@ Info (12133): Instantiated megafunction "MemoryROM:B_MemoryROM|altsyncram:altsyn
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_aes3.tdf
     Info (12023): Found entity 1: altsyncram_aes3
 Info (12128): Elaborating entity "altsyncram_aes3" for hierarchy "MemoryROM:B_MemoryROM|altsyncram:altsyncram_component|altsyncram_aes3:auto_generated"
-Warning (14284): Synthesized away the following node(s):
-    Warning (14285): Synthesized away the following RAM node(s):
-        Warning (14320): Synthesized away node "MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_t1q3:auto_generated|q_a[8]"
-        Warning (14320): Synthesized away node "MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_t1q3:auto_generated|q_a[9]"
-        Warning (14320): Synthesized away node "MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_t1q3:auto_generated|q_a[10]"
-        Warning (14320): Synthesized away node "MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_t1q3:auto_generated|q_a[11]"
-        Warning (14320): Synthesized away node "MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_t1q3:auto_generated|q_a[12]"
-        Warning (14320): Synthesized away node "MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_t1q3:auto_generated|q_a[13]"
-        Warning (14320): Synthesized away node "MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_t1q3:auto_generated|q_a[14]"
-        Warning (14320): Synthesized away node "MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_t1q3:auto_generated|q_a[15]"
-Warning (14284): Synthesized away the following node(s):
-    Warning (14285): Synthesized away the following RAM node(s):
-        Warning (14320): Synthesized away node "MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_t1q3:auto_generated|q_a[0]"
-        Warning (14320): Synthesized away node "MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_t1q3:auto_generated|q_a[1]"
-        Warning (14320): Synthesized away node "MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_t1q3:auto_generated|q_a[2]"
-        Warning (14320): Synthesized away node "MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_t1q3:auto_generated|q_a[3]"
-        Warning (14320): Synthesized away node "MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_t1q3:auto_generated|q_a[4]"
-        Warning (14320): Synthesized away node "MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_t1q3:auto_generated|q_a[5]"
-        Warning (14320): Synthesized away node "MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_t1q3:auto_generated|q_a[6]"
-        Warning (14320): Synthesized away node "MemoryRAM:B_MemoryRAM|altsyncram:altsyncram_component|altsyncram_t1q3:auto_generated|q_a[7]"
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "Estados[14]" is stuck at GND
-    Warning (13410): Pin "Estados[15]" is stuck at GND
-    Warning (13410): Pin "Estados[16]" is stuck at GND
-    Warning (13410): Pin "Estados[17]" is stuck at GND
-    Warning (13410): Pin "Estados[18]" is stuck at GND
-    Warning (13410): Pin "Estados[19]" is stuck at GND
-    Warning (13410): Pin "Estados[20]" is stuck at GND
-    Warning (13410): Pin "Estados[21]" is stuck at GND
-    Warning (13410): Pin "Estados[22]" is stuck at GND
-    Warning (13410): Pin "Estados[23]" is stuck at GND
-    Warning (13410): Pin "Estados[24]" is stuck at GND
-    Warning (13410): Pin "Estados[25]" is stuck at GND
-    Warning (13410): Pin "Estados[26]" is stuck at GND
-    Warning (13410): Pin "Estados[27]" is stuck at GND
-    Warning (13410): Pin "Estados[28]" is stuck at GND
-    Warning (13410): Pin "Estados[29]" is stuck at GND
-    Warning (13410): Pin "Estados[30]" is stuck at GND
-    Warning (13410): Pin "Estados[31]" is stuck at GND
-    Warning (13410): Pin "Estados[32]" is stuck at GND
-    Warning (13410): Pin "Estados[33]" is stuck at GND
-    Warning (13410): Pin "Estados[34]" is stuck at GND
-    Warning (13410): Pin "Estados[35]" is stuck at GND
-    Warning (13410): Pin "Estados[36]" is stuck at GND
-    Warning (13410): Pin "Estados[37]" is stuck at GND
-    Warning (13410): Pin "Estados[38]" is stuck at GND
-    Warning (13410): Pin "Estados[39]" is stuck at GND
-    Warning (13410): Pin "Estados[40]" is stuck at GND
-    Warning (13410): Pin "Estados[41]" is stuck at GND
     Warning (13410): Pin "Estados[42]" is stuck at GND
     Warning (13410): Pin "Estados[43]" is stuck at GND
     Warning (13410): Pin "Estados[44]" is stuck at GND
@@ -1025,20 +917,17 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "Estados[48]" is stuck at GND
     Warning (13410): Pin "Estados[49]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 21 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "Int"
-Info (21057): Implemented 424 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 610 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 90 output pins
-    Info (21061): Implemented 308 logic cells
-    Info (21064): Implemented 23 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 124 warnings
+    Info (21059): Implemented 106 output pins
+    Info (21061): Implemented 462 logic cells
+    Info (21064): Implemented 39 RAM segments
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 50 warnings
     Info: Peak virtual memory: 4719 megabytes
-    Info: Processing ended: Wed Dec 02 03:12:31 2020
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:06
+    Info: Processing ended: Wed Dec 02 23:47:04 2020
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:07
 
 

@@ -191,21 +191,21 @@ SelectDataMd[1] => DatOut_Md.IN1
 SelectDataMd[1] => DatOut_Md.IN1
 SelectDataMd[1] => DatOut_Md.IN1
 SelectDataMd[1] => DatOut_Md.IN1
-DatOut_Md[0] <= DatOut_Md.DB_MAX_OUTPUT_PORT_TYPE
-DatOut_Md[1] <= DatOut_Md.DB_MAX_OUTPUT_PORT_TYPE
-DatOut_Md[2] <= DatOut_Md.DB_MAX_OUTPUT_PORT_TYPE
-DatOut_Md[3] <= DatOut_Md.DB_MAX_OUTPUT_PORT_TYPE
-DatOut_Md[4] <= DatOut_Md.DB_MAX_OUTPUT_PORT_TYPE
-DatOut_Md[5] <= DatOut_Md.DB_MAX_OUTPUT_PORT_TYPE
-DatOut_Md[6] <= DatOut_Md.DB_MAX_OUTPUT_PORT_TYPE
-DatOut_Md[7] <= DatOut_Md.DB_MAX_OUTPUT_PORT_TYPE
-DatOut_Md[8] <= DatOut_Md.DB_MAX_OUTPUT_PORT_TYPE
-DatOut_Md[9] <= DatOut_Md.DB_MAX_OUTPUT_PORT_TYPE
-DatOut_Md[10] <= DatOut_Md.DB_MAX_OUTPUT_PORT_TYPE
-DatOut_Md[11] <= DatOut_Md.DB_MAX_OUTPUT_PORT_TYPE
-DatOut_Md[12] <= DatOut_Md.DB_MAX_OUTPUT_PORT_TYPE
-DatOut_Md[13] <= DatOut_Md.DB_MAX_OUTPUT_PORT_TYPE
-DatOut_Md[14] <= DatOut_Md.DB_MAX_OUTPUT_PORT_TYPE
-DatOut_Md[15] <= DatOut_Md.DB_MAX_OUTPUT_PORT_TYPE
+DatOut_Md[0] << DatOut_Md.DB_MAX_OUTPUT_PORT_TYPE
+DatOut_Md[1] << DatOut_Md.DB_MAX_OUTPUT_PORT_TYPE
+DatOut_Md[2] << DatOut_Md.DB_MAX_OUTPUT_PORT_TYPE
+DatOut_Md[3] << DatOut_Md.DB_MAX_OUTPUT_PORT_TYPE
+DatOut_Md[4] << DatOut_Md.DB_MAX_OUTPUT_PORT_TYPE
+DatOut_Md[5] << DatOut_Md.DB_MAX_OUTPUT_PORT_TYPE
+DatOut_Md[6] << DatOut_Md.DB_MAX_OUTPUT_PORT_TYPE
+DatOut_Md[7] << DatOut_Md.DB_MAX_OUTPUT_PORT_TYPE
+DatOut_Md[8] << DatOut_Md.DB_MAX_OUTPUT_PORT_TYPE
+DatOut_Md[9] << DatOut_Md.DB_MAX_OUTPUT_PORT_TYPE
+DatOut_Md[10] << DatOut_Md.DB_MAX_OUTPUT_PORT_TYPE
+DatOut_Md[11] << DatOut_Md.DB_MAX_OUTPUT_PORT_TYPE
+DatOut_Md[12] << DatOut_Md.DB_MAX_OUTPUT_PORT_TYPE
+DatOut_Md[13] << DatOut_Md.DB_MAX_OUTPUT_PORT_TYPE
+DatOut_Md[14] << DatOut_Md.DB_MAX_OUTPUT_PORT_TYPE
+DatOut_Md[15] << DatOut_Md.DB_MAX_OUTPUT_PORT_TYPE
 
 

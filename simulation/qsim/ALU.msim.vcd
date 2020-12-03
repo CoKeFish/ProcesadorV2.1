@@ -3,7 +3,7 @@ $comment
 		vcd file ALU.msim.vcd -direction
 $end
 $date
-	Tue Dec 01 10:48:50 2020
+	Wed Dec 02 10:31:08 2020
 $end
 $version
 	ModelSim Version 10.1d
@@ -69,355 +69,348 @@ $var wire 1 U Resultado_C~output_o $end
 $var wire 1 V Resultado_O~output_o $end
 $var wire 1 W Resultado_N~output_o $end
 $var wire 1 X Reloj~input_o $end
-$var wire 1 Y Reloj~inputclkctrl_outclk $end
-$var wire 1 Z Operacion[3]~input_o $end
-$var wire 1 [ Operacion[1]~input_o $end
+$var wire 1 Y Operacion[3]~input_o $end
+$var wire 1 Z Operacion[1]~input_o $end
+$var wire 1 [ Operacion[2]~input_o $end
 $var wire 1 \ Operacion[0]~input_o $end
-$var wire 1 ] Operacion[2]~input_o $end
-$var wire 1 ^ B_SelectorG|SignalOUT~0_combout $end
-$var wire 1 _ B_Control|Show_Foo[0]~1_combout $end
-$var wire 1 ` Numero_2[0]~input_o $end
-$var wire 1 a B_registroAQE|Din~1_combout $end
+$var wire 1 ] B_SelectorG|SignalOUT~2_combout $end
+$var wire 1 ^ Numero_1[1]~input_o $end
+$var wire 1 _ B_Banderas|SResultado_O~0_combout $end
+$var wire 1 ` B_Control|B_SeleccionOpera|MULT~0_combout $end
+$var wire 1 a Habilitar~input_o $end
 $var wire 1 b Restablecer~input_o $end
-$var wire 1 c Habilitar~input_o $end
-$var wire 1 d B_Control|B_SeleccionOpera|MULT~combout $end
-$var wire 1 e Restablecer~inputclkctrl_outclk $end
-$var wire 1 f B_Control|FF2~q $end
-$var wire 1 g B_registroAQE|Reset_Mul~combout $end
-$var wire 1 h B_registroAQE|Eregistro~combout $end
-$var wire 1 i B_registroAQE|Registro0~q $end
-$var wire 1 j B_Control|FF5~q $end
-$var wire 1 k B_Control|B_Counter|FF3~0_combout $end
-$var wire 1 l B_Control|comb~0_combout $end
-$var wire 1 m B_Control|B_Counter|FF2~0_combout $end
-$var wire 1 n B_Control|B_Counter|FF1~0_combout $end
-$var wire 1 o B_Control|B_Counter|FF0~0_combout $end
-$var wire 1 p B_Control|B_Counter|FF0~q $end
-$var wire 1 q B_Control|B_Counter|FF1~q $end
-$var wire 1 r B_Control|B_Counter|FF2~q $end
-$var wire 1 s B_Control|B_Counter|FF3~q $end
+$var wire 1 c B_Control|FF2~q $end
+$var wire 1 d B_registroAQE|Eregistro~combout $end
+$var wire 1 e B_Control|FF5~q $end
+$var wire 1 f B_Control|B_Counter|FF3~0_combout $end
+$var wire 1 g B_Control|comb~0_combout $end
+$var wire 1 h B_Control|B_Counter|FF0~0_combout $end
+$var wire 1 i B_Control|B_Counter|FF0~q $end
+$var wire 1 j B_Control|B_Counter|FF1~0_combout $end
+$var wire 1 k B_Control|B_Counter|FF1~q $end
+$var wire 1 l B_Control|B_Counter|FF2~0_combout $end
+$var wire 1 m B_Control|B_Counter|FF2~q $end
+$var wire 1 n B_Control|B_Counter|FF3~q $end
+$var wire 1 o B_Control|D~5_combout $end
+$var wire 1 p B_Control|FF4~q $end
+$var wire 1 q B_registroAQE|Din~1_combout $end
+$var wire 1 r B_registroAQE|Reset_Mul~combout $end
+$var wire 1 s B_registroAQE|Registro0~q $end
 $var wire 1 t B_Control|D~2_combout $end
 $var wire 1 u B_Control|D[3]~3_combout $end
 $var wire 1 v B_Control|FF3~q $end
-$var wire 1 w B_Control|FF4~q $end
-$var wire 1 x Numero_1[1]~input_o $end
-$var wire 1 y Numero_1[3]~input_o $end
-$var wire 1 z Numero_1[5]~input_o $end
-$var wire 1 { B_Control|Restar~0_combout $end
-$var wire 1 | B_Control|Restar~1_combout $end
+$var wire 1 w B_registroAQE|Din[9]~2_combout $end
+$var wire 1 x B_SelectorMP|SignalOUT[1]~1_combout $end
+$var wire 1 y B_Control|Restar~0_combout $end
+$var wire 1 z Numero_2[1]~input_o $end
+$var wire 1 { B_SelectorSM|SignalOUT[1]~9_combout $end
+$var wire 1 | Numero_2[0]~input_o $end
 $var wire 1 } Numero_1[0]~input_o $end
 $var wire 1 ~ B_SelectorMP|SignalOUT[0]~0_combout $end
-$var wire 1 !! Numero_1[15]~input_o $end
-$var wire 1 "! B_SelectorMP|SignalOUT~15_combout $end
-$var wire 1 #! Numero_2[15]~input_o $end
-$var wire 1 $! Numero_1[14]~input_o $end
-$var wire 1 %! B_SelectorMP|SignalOUT~14_combout $end
-$var wire 1 &! Numero_2[14]~input_o $end
-$var wire 1 '! Numero_1[13]~input_o $end
-$var wire 1 (! B_SelectorMP|SignalOUT~13_combout $end
-$var wire 1 )! Numero_2[13]~input_o $end
-$var wire 1 *! Numero_2[12]~input_o $end
-$var wire 1 +! Numero_1[12]~input_o $end
-$var wire 1 ,! B_SelectorMP|SignalOUT~12_combout $end
-$var wire 1 -! Numero_2[11]~input_o $end
-$var wire 1 .! Numero_1[11]~input_o $end
-$var wire 1 /! B_SelectorMP|SignalOUT~11_combout $end
-$var wire 1 0! Numero_1[10]~input_o $end
-$var wire 1 1! B_SelectorMP|SignalOUT~10_combout $end
-$var wire 1 2! Numero_2[10]~input_o $end
-$var wire 1 3! Numero_2[9]~input_o $end
-$var wire 1 4! Numero_1[9]~input_o $end
-$var wire 1 5! B_SelectorMP|SignalOUT~9_combout $end
-$var wire 1 6! Numero_1[8]~input_o $end
-$var wire 1 7! B_SelectorMP|SignalOUT~8_combout $end
-$var wire 1 8! Numero_2[8]~input_o $end
-$var wire 1 9! Numero_1[7]~input_o $end
-$var wire 1 :! Numero_2[6]~input_o $end
+$var wire 1 !! B_ADDER|FA1|SCarry~0_combout $end
+$var wire 1 "! B_registroAQE|Din[10]~3_combout $end
+$var wire 1 #! Numero_1[2]~input_o $end
+$var wire 1 $! B_SelectorMP|SignalOUT[2]~2_combout $end
+$var wire 1 %! Numero_2[2]~input_o $end
+$var wire 1 &! B_SelectorSM|SignalOUT[2]~0_combout $end
+$var wire 1 '! B_ADDER|FA2|SCarry~0_combout $end
+$var wire 1 (! B_registroAQE|Din[11]~5_combout $end
+$var wire 1 )! Numero_1[3]~input_o $end
+$var wire 1 *! B_SelectorMP|SignalOUT[3]~3_combout $end
+$var wire 1 +! Numero_2[3]~input_o $end
+$var wire 1 ,! B_SelectorSM|SignalOUT[3]~1_combout $end
+$var wire 1 -! B_ADDER|FA3|SCarry~0_combout $end
+$var wire 1 .! B_registroAQE|Din[12]~8_combout $end
+$var wire 1 /! Numero_1[4]~input_o $end
+$var wire 1 0! B_SelectorMP|SignalOUT[4]~4_combout $end
+$var wire 1 1! Numero_2[4]~input_o $end
+$var wire 1 2! B_SelectorSM|SignalOUT[4]~2_combout $end
+$var wire 1 3! B_ADDER|FA4|SCarry~0_combout $end
+$var wire 1 4! B_registroAQE|Din[13]~9_combout $end
+$var wire 1 5! Numero_1[5]~input_o $end
+$var wire 1 6! B_SelectorMP|SignalOUT[5]~5_combout $end
+$var wire 1 7! Numero_2[5]~input_o $end
+$var wire 1 8! B_SelectorSM|SignalOUT[5]~3_combout $end
+$var wire 1 9! B_ADDER|FA5|SCarry~0_combout $end
+$var wire 1 :! B_registroAQE|Din[14]~11_combout $end
 $var wire 1 ;! Numero_1[6]~input_o $end
-$var wire 1 <! Numero_2[5]~input_o $end
-$var wire 1 =! Numero_2[4]~input_o $end
-$var wire 1 >! Numero_1[4]~input_o $end
-$var wire 1 ?! B_SelectorSM|SignalOUT[4]~2_combout $end
-$var wire 1 @! Numero_2[3]~input_o $end
-$var wire 1 A! B_SelectorSM|SignalOUT[3]~1_combout $end
-$var wire 1 B! Numero_2[2]~input_o $end
-$var wire 1 C! Numero_2[1]~input_o $end
-$var wire 1 D! B_ADDER|FA1|SCarry~0_combout $end
-$var wire 1 E! B_SelectorSM|SignalOUT[1]~8_combout $end
-$var wire 1 F! B_registroAQE|Din[10]~3_combout $end
-$var wire 1 G! B_registroAQE|Registro10~feeder_combout $end
-$var wire 1 H! B_registroAQE|EregisA~combout $end
-$var wire 1 I! B_registroAQE|Registro10~q $end
-$var wire 1 J! B_SelectorMP|SignalOUT[1]~1_combout $end
-$var wire 1 K! B_ADDER|FA2|SCarry~0_combout $end
-$var wire 1 L! B_SelectorSM|SignalOUT[2]~0_combout $end
-$var wire 1 M! B_registroAQE|Din[11]~5_combout $end
-$var wire 1 N! B_registroAQE|Registro11~feeder_combout $end
-$var wire 1 O! B_registroAQE|Registro11~q $end
-$var wire 1 P! Numero_1[2]~input_o $end
-$var wire 1 Q! B_SelectorMP|SignalOUT[2]~2_combout $end
-$var wire 1 R! B_ADDER|FA3|SCarry~0_combout $end
-$var wire 1 S! B_registroAQE|Din[12]~8_combout $end
-$var wire 1 T! B_registroAQE|Registro12~feeder_combout $end
-$var wire 1 U! B_registroAQE|Registro12~q $end
-$var wire 1 V! B_SelectorMP|SignalOUT[3]~3_combout $end
-$var wire 1 W! B_ADDER|FA4|SCarry~0_combout $end
-$var wire 1 X! B_registroAQE|Din[13]~9_combout $end
-$var wire 1 Y! B_registroAQE|Registro13~feeder_combout $end
-$var wire 1 Z! B_registroAQE|Registro13~q $end
-$var wire 1 [! B_SelectorMP|SignalOUT[4]~4_combout $end
-$var wire 1 \! B_ADDER|FA5|SCarry~0_combout $end
-$var wire 1 ]! B_SelectorSM|SignalOUT[5]~3_combout $end
-$var wire 1 ^! B_registroAQE|Din[14]~11_combout $end
-$var wire 1 _! B_registroAQE|Registro14~feeder_combout $end
-$var wire 1 `! B_registroAQE|Registro14~q $end
-$var wire 1 a! B_SelectorMP|SignalOUT[5]~5_combout $end
-$var wire 1 b! B_ADDER|FA6|SCarry~0_combout $end
-$var wire 1 c! B_SelectorSM|SignalOUT[6]~4_combout $end
-$var wire 1 d! B_registroAQE|Din[15]~13_combout $end
-$var wire 1 e! B_registroAQE|Registro15~feeder_combout $end
-$var wire 1 f! B_registroAQE|Registro15~q $end
-$var wire 1 g! B_SelectorMP|SignalOUT[6]~6_combout $end
-$var wire 1 h! B_ADDER|FA7|SCarry~0_combout $end
-$var wire 1 i! Numero_2[7]~input_o $end
-$var wire 1 j! B_ADDER|FA8|ResultBit~0_combout $end
-$var wire 1 k! B_registroAQE|Registro16~q $end
-$var wire 1 l! B_SelectorMP|SignalOUT[7]~7_combout $end
-$var wire 1 m! B_ADDER|FA8|SCarry~0_combout $end
-$var wire 1 n! B_ADDER|FA9|SCarry~0_combout $end
-$var wire 1 o! B_ADDER|FA10|SCarry~0_combout $end
-$var wire 1 p! B_ADDER|FA11|SCarry~0_combout $end
-$var wire 1 q! B_ADDER|FA12|SCarry~0_combout $end
-$var wire 1 r! B_ADDER|FA13|SCarry~0_combout $end
-$var wire 1 s! B_ADDER|FA14|SCarry~0_combout $end
-$var wire 1 t! B_ADDER|FA15|SCarry~0_combout $end
-$var wire 1 u! B_ADDER|FA16|SCarry~0_combout $end
-$var wire 1 v! B_Control|SaveCarry~0_combout $end
-$var wire 1 w! B_Control|D~4_combout $end
-$var wire 1 x! B_Control|FF1~q $end
-$var wire 1 y! B_Control|SaveCarry~1_combout $end
-$var wire 1 z! BR_Carry~q $end
-$var wire 1 {! B_Control|B_SeleccionOpera|MULT~0_combout $end
-$var wire 1 |! B_Control|CarryOutput~combout $end
-$var wire 1 }! B_ADDER|FA1|ResultBit~0_combout $end
-$var wire 1 ~! B_registroAQE|Din[9]~2_combout $end
-$var wire 1 !" B_registroAQE|Registro9~q $end
-$var wire 1 "" B_registroAQE|Din[8]~15_combout $end
-$var wire 1 #" B_registroAQE|Registro8~q $end
-$var wire 1 $" B_registroAQE|Din[7]~14_combout $end
-$var wire 1 %" B_registroAQE|Registro7~q $end
-$var wire 1 &" B_registroAQE|Din[6]~12_combout $end
-$var wire 1 '" B_registroAQE|Registro6~q $end
-$var wire 1 (" B_registroAQE|Din[5]~10_combout $end
-$var wire 1 )" B_registroAQE|Registro5~q $end
-$var wire 1 *" B_registroAQE|Din[4]~7_combout $end
-$var wire 1 +" B_registroAQE|Registro4~q $end
-$var wire 1 ," B_registroAQE|Din[3]~6_combout $end
-$var wire 1 -" B_registroAQE|Registro3~q $end
-$var wire 1 ." B_registroAQE|Din[2]~4_combout $end
-$var wire 1 /" B_registroAQE|Registro2~q $end
-$var wire 1 0" B_registroAQE|Din[1]~0_combout $end
-$var wire 1 1" B_registroAQE|Registro1~q $end
-$var wire 1 2" B_SelectorG|SignalOUT[0]~2_combout $end
-$var wire 1 3" B_Control|Show_Foo~0_combout $end
-$var wire 1 4" B_SelectorG|SignalOUT[0]~1_combout $end
-$var wire 1 5" B_SelectorG|SignalOUT[0]~3_combout $end
-$var wire 1 6" B_SelectorG|SignalOUT[0]~4_combout $end
-$var wire 1 7" B_SelectorG|SignalOUT[0]~5_combout $end
-$var wire 1 8" B_SelectorG|SignalOUT[0]~7_combout $end
-$var wire 1 9" B_SelectorG|SignalOUT~6_combout $end
-$var wire 1 :" B_SelectorG|SignalOUT[0]~8_combout $end
-$var wire 1 ;" B_Control|D[0]~0_combout $end
-$var wire 1 <" B_R_Resultado|FF0~q $end
-$var wire 1 =" B_SelectorG|SignalOUT[1]~13_combout $end
-$var wire 1 >" B_ADDER|FA2|ResultBit~0_combout $end
-$var wire 1 ?" B_SelectorG|SignalOUT[1]~9_combout $end
-$var wire 1 @" B_SelectorG|SignalOUT[1]~10_combout $end
-$var wire 1 A" B_SelectorG|SignalOUT[1]~11_combout $end
-$var wire 1 B" B_SelectorG|SignalOUT[1]~12_combout $end
-$var wire 1 C" B_SelectorG|SignalOUT[1]~14_combout $end
-$var wire 1 D" B_R_Resultado|FF1~q $end
-$var wire 1 E" B_SelectorG|SignalOUT[2]~19_combout $end
-$var wire 1 F" B_SelectorG|SignalOUT[2]~20_combout $end
-$var wire 1 G" B_SelectorG|SignalOUT[2]~15_combout $end
-$var wire 1 H" B_SelectorG|SignalOUT[2]~16_combout $end
-$var wire 1 I" B_SelectorG|SignalOUT[2]~17_combout $end
-$var wire 1 J" B_SelectorG|SignalOUT[2]~18_combout $end
-$var wire 1 K" B_SelectorG|SignalOUT[2]~21_combout $end
-$var wire 1 L" B_R_Resultado|FF2~q $end
-$var wire 1 M" B_SelectorG|SignalOUT[3]~22_combout $end
-$var wire 1 N" B_SelectorG|SignalOUT[3]~26_combout $end
-$var wire 1 O" B_SelectorG|SignalOUT[3]~24_combout $end
-$var wire 1 P" B_SelectorG|SignalOUT[3]~25_combout $end
-$var wire 1 Q" B_SelectorG|SignalOUT[3]~27_combout $end
-$var wire 1 R" B_SelectorG|SignalOUT[3]~23_combout $end
-$var wire 1 S" B_SelectorG|SignalOUT[3]~28_combout $end
-$var wire 1 T" B_R_Resultado|FF3~q $end
-$var wire 1 U" B_SelectorG|SignalOUT[4]~34_combout $end
-$var wire 1 V" B_SelectorG|SignalOUT[4]~33_combout $end
-$var wire 1 W" B_SelectorG|SignalOUT[4]~31_combout $end
-$var wire 1 X" B_SelectorG|SignalOUT[4]~29_combout $end
-$var wire 1 Y" B_SelectorG|SignalOUT[4]~30_combout $end
-$var wire 1 Z" B_SelectorG|SignalOUT[4]~32_combout $end
-$var wire 1 [" B_SelectorG|SignalOUT[4]~35_combout $end
-$var wire 1 \" B_R_Resultado|FF4~q $end
-$var wire 1 ]" B_SelectorG|SignalOUT[5]~40_combout $end
-$var wire 1 ^" B_SelectorG|SignalOUT[5]~41_combout $end
-$var wire 1 _" B_SelectorG|SignalOUT[5]~36_combout $end
-$var wire 1 `" B_SelectorG|SignalOUT[5]~37_combout $end
-$var wire 1 a" B_SelectorG|SignalOUT[5]~38_combout $end
-$var wire 1 b" B_SelectorG|SignalOUT[5]~39_combout $end
-$var wire 1 c" B_SelectorG|SignalOUT[5]~42_combout $end
-$var wire 1 d" B_R_Resultado|FF5~q $end
-$var wire 1 e" B_SelectorG|SignalOUT[6]~47_combout $end
-$var wire 1 f" B_SelectorG|SignalOUT[6]~48_combout $end
-$var wire 1 g" B_SelectorG|SignalOUT[6]~45_combout $end
-$var wire 1 h" B_SelectorG|SignalOUT[6]~43_combout $end
-$var wire 1 i" B_SelectorG|SignalOUT[6]~44_combout $end
-$var wire 1 j" B_SelectorG|SignalOUT[6]~46_combout $end
-$var wire 1 k" B_SelectorG|SignalOUT[6]~49_combout $end
-$var wire 1 l" B_R_Resultado|FF6~q $end
-$var wire 1 m" B_SelectorG|SignalOUT[7]~54_combout $end
-$var wire 1 n" B_SelectorG|SignalOUT[7]~53_combout $end
-$var wire 1 o" B_SelectorG|SignalOUT[7]~51_combout $end
-$var wire 1 p" B_SelectorG|SignalOUT[7]~50_combout $end
-$var wire 1 q" B_SelectorG|SignalOUT[7]~52_combout $end
-$var wire 1 r" B_SelectorG|SignalOUT[7]~55_combout $end
-$var wire 1 s" B_R_Resultado|FF7~q $end
-$var wire 1 t" B_SelectorG|SignalOUT~62_combout $end
-$var wire 1 u" B_SelectorG|SignalOUT~64_combout $end
-$var wire 1 v" B_SelectorG|SignalOUT[14]~63_combout $end
-$var wire 1 w" B_SelectorG|SignalOUT[8]~65_combout $end
-$var wire 1 x" B_SelectorG|SignalOUT[8]~60_combout $end
-$var wire 1 y" B_SelectorG|SignalOUT[8]~56_combout $end
-$var wire 1 z" B_SelectorG|SignalOUT~58_combout $end
-$var wire 1 {" B_SelectorG|SignalOUT[8]~57_combout $end
-$var wire 1 |" B_SelectorG|SignalOUT[8]~59_combout $end
-$var wire 1 }" B_SelectorG|SignalOUT[8]~61_combout $end
-$var wire 1 ~" B_SelectorG|SignalOUT[8]~66_combout $end
-$var wire 1 !# B_R_Resultado|FF8~q $end
-$var wire 1 "# B_SelectorG|SignalOUT[9]~72_combout $end
-$var wire 1 ## B_SelectorG|SignalOUT~71_combout $end
-$var wire 1 $# B_SelectorG|SignalOUT[9]~69_combout $end
-$var wire 1 %# B_SelectorG|SignalOUT[9]~67_combout $end
-$var wire 1 &# B_SelectorG|SignalOUT[9]~68_combout $end
-$var wire 1 '# B_SelectorG|SignalOUT[9]~70_combout $end
-$var wire 1 (# B_SelectorG|SignalOUT[9]~73_combout $end
-$var wire 1 )# B_R_Resultado|FF9~q $end
-$var wire 1 *# B_SelectorG|SignalOUT[10]~79_combout $end
-$var wire 1 +# B_SelectorG|SignalOUT~78_combout $end
-$var wire 1 ,# B_SelectorG|SignalOUT[10]~76_combout $end
-$var wire 1 -# B_SelectorG|SignalOUT[10]~74_combout $end
-$var wire 1 .# B_SelectorG|SignalOUT[10]~75_combout $end
-$var wire 1 /# B_SelectorG|SignalOUT[10]~77_combout $end
-$var wire 1 0# B_SelectorG|SignalOUT[10]~80_combout $end
-$var wire 1 1# B_R_Resultado|FF10~q $end
-$var wire 1 2# B_SelectorG|SignalOUT[11]~84_combout $end
-$var wire 1 3# B_SelectorG|SignalOUT[11]~85_combout $end
-$var wire 1 4# B_SelectorG|SignalOUT~81_combout $end
-$var wire 1 5# B_SelectorG|SignalOUT[11]~82_combout $end
-$var wire 1 6# B_SelectorG|SignalOUT[11]~83_combout $end
-$var wire 1 7# B_SelectorG|SignalOUT[11]~86_combout $end
-$var wire 1 8# B_SelectorG|SignalOUT[11]~87_combout $end
-$var wire 1 9# B_SelectorG|SignalOUT[11]~88_combout $end
-$var wire 1 :# B_R_Resultado|FF11~q $end
-$var wire 1 ;# B_SelectorG|SignalOUT[12]~92_combout $end
-$var wire 1 <# B_SelectorG|SignalOUT[12]~93_combout $end
-$var wire 1 =# B_SelectorG|SignalOUT[12]~90_combout $end
-$var wire 1 ># B_SelectorG|SignalOUT~89_combout $end
-$var wire 1 ?# B_SelectorG|SignalOUT[12]~91_combout $end
-$var wire 1 @# B_SelectorG|SignalOUT[12]~94_combout $end
-$var wire 1 A# B_SelectorG|SignalOUT[12]~95_combout $end
-$var wire 1 B# B_SelectorG|SignalOUT[12]~96_combout $end
-$var wire 1 C# B_R_Resultado|FF12~q $end
-$var wire 1 D# B_SelectorG|SignalOUT[13]~103_combout $end
-$var wire 1 E# B_SelectorG|SignalOUT~102_combout $end
-$var wire 1 F# B_SelectorG|SignalOUT[13]~99_combout $end
-$var wire 1 G# B_SelectorG|SignalOUT[13]~97_combout $end
-$var wire 1 H# B_SelectorG|SignalOUT[13]~98_combout $end
-$var wire 1 I# B_SelectorSM|SignalOUT[13]~5_combout $end
-$var wire 1 J# B_SelectorG|SignalOUT[13]~100_combout $end
-$var wire 1 K# B_SelectorG|SignalOUT[13]~101_combout $end
-$var wire 1 L# B_SelectorG|SignalOUT[13]~104_combout $end
-$var wire 1 M# B_R_Resultado|FF13~q $end
-$var wire 1 N# B_SelectorG|SignalOUT[14]~111_combout $end
-$var wire 1 O# B_SelectorG|SignalOUT~112_combout $end
-$var wire 1 P# B_SelectorG|SignalOUT[14]~110_combout $end
-$var wire 1 Q# B_SelectorG|SignalOUT[14]~113_combout $end
-$var wire 1 R# B_SelectorG|SignalOUT[14]~106_combout $end
-$var wire 1 S# B_SelectorG|SignalOUT[14]~105_combout $end
-$var wire 1 T# B_SelectorG|SignalOUT[14]~107_combout $end
-$var wire 1 U# B_SelectorSM|SignalOUT[14]~6_combout $end
-$var wire 1 V# B_SelectorG|SignalOUT~108_combout $end
-$var wire 1 W# B_SelectorG|SignalOUT[14]~109_combout $end
-$var wire 1 X# B_SelectorG|SignalOUT[14]~114_combout $end
-$var wire 1 Y# B_R_Resultado|FF14~q $end
-$var wire 1 Z# B_SelectorG|SignalOUT[15]~115_combout $end
-$var wire 1 [# B_SelectorG|SignalOUT[15]~116_combout $end
-$var wire 1 \# B_SelectorG|SignalOUT[15]~118_combout $end
-$var wire 1 ]# B_SelectorG|SignalOUT[15]~119_combout $end
-$var wire 1 ^# B_SelectorSM|SignalOUT[15]~7_combout $end
-$var wire 1 _# B_SelectorG|SignalOUT[15]~117_combout $end
-$var wire 1 `# B_SelectorG|SignalOUT[15]~120_combout $end
-$var wire 1 a# B_R_Resultado|FF15~q $end
-$var wire 1 b# B_Control|D[0]~1_combout $end
-$var wire 1 c# B_Control|FF0~q $end
-$var wire 1 d# B_Banderas|SResultado_Z~3_combout $end
-$var wire 1 e# B_Banderas|SResultado_Z~0_combout $end
-$var wire 1 f# B_Banderas|SResultado_Z~1_combout $end
-$var wire 1 g# B_Banderas|SResultado_Z~2_combout $end
-$var wire 1 h# B_Banderas|SResultado_Z~4_combout $end
-$var wire 1 i# B_Banderas|FF4~0_combout $end
-$var wire 1 j# B_Banderas|FF4~q $end
-$var wire 1 k# B_Banderas|FF0~q $end
-$var wire 1 l# B_Banderas|SResultado_C~combout $end
-$var wire 1 m# B_Banderas|FF2~q $end
-$var wire 1 n# B_Banderas|SResultado_O~1_combout $end
-$var wire 1 o# B_Banderas|SResultado_O~0_combout $end
-$var wire 1 p# B_Banderas|SResultado_O~2_combout $end
-$var wire 1 q# B_Banderas|SResultado_O~3_combout $end
-$var wire 1 r# B_Banderas|FF1~q $end
-$var wire 1 s# B_Banderas|SResultado_N~0_combout $end
-$var wire 1 t# B_Banderas|FF3~q $end
-$var wire 1 u# B_Control|B_Counter|ENA [3] $end
-$var wire 1 v# B_Control|B_Counter|ENA [2] $end
-$var wire 1 w# B_Control|B_Counter|ENA [1] $end
-$var wire 1 x# B_Control|B_Counter|ENA [0] $end
-$var wire 1 y# B_Control|D [5] $end
-$var wire 1 z# B_Control|D [4] $end
-$var wire 1 {# B_Control|D [3] $end
-$var wire 1 |# B_Control|D [2] $end
-$var wire 1 }# B_Control|D [1] $end
-$var wire 1 ~# B_Control|D [0] $end
-$var wire 1 !$ B_Control|Show_Foo [2] $end
-$var wire 1 "$ B_Control|Show_Foo [1] $end
-$var wire 1 #$ B_Control|Show_Foo [0] $end
-$var wire 1 $$ B_registroAQE|Din [16] $end
-$var wire 1 %$ B_registroAQE|Din [15] $end
-$var wire 1 &$ B_registroAQE|Din [14] $end
-$var wire 1 '$ B_registroAQE|Din [13] $end
-$var wire 1 ($ B_registroAQE|Din [12] $end
-$var wire 1 )$ B_registroAQE|Din [11] $end
-$var wire 1 *$ B_registroAQE|Din [10] $end
-$var wire 1 +$ B_registroAQE|Din [9] $end
-$var wire 1 ,$ B_registroAQE|Din [8] $end
-$var wire 1 -$ B_registroAQE|Din [7] $end
-$var wire 1 .$ B_registroAQE|Din [6] $end
-$var wire 1 /$ B_registroAQE|Din [5] $end
-$var wire 1 0$ B_registroAQE|Din [4] $end
-$var wire 1 1$ B_registroAQE|Din [3] $end
-$var wire 1 2$ B_registroAQE|Din [2] $end
-$var wire 1 3$ B_registroAQE|Din [1] $end
-$var wire 1 4$ B_registroAQE|Din [0] $end
+$var wire 1 <! B_SelectorMP|SignalOUT[6]~6_combout $end
+$var wire 1 =! Numero_2[6]~input_o $end
+$var wire 1 >! B_SelectorSM|SignalOUT[6]~4_combout $end
+$var wire 1 ?! B_ADDER|FA6|SCarry~0_combout $end
+$var wire 1 @! B_registroAQE|Din[15]~13_combout $end
+$var wire 1 A! Numero_2[7]~input_o $end
+$var wire 1 B! Numero_1[7]~input_o $end
+$var wire 1 C! B_SelectorMP|SignalOUT[7]~7_combout $end
+$var wire 1 D! B_ADDER|FA7|SCarry~0_combout $end
+$var wire 1 E! B_ADDER|FA8|ResultBit~0_combout $end
+$var wire 1 F! B_registroAQE|EregisA~combout $end
+$var wire 1 G! B_registroAQE|Registro16~q $end
+$var wire 1 H! B_registroAQE|Registro15~q $end
+$var wire 1 I! B_registroAQE|Registro14~q $end
+$var wire 1 J! B_registroAQE|Registro13~q $end
+$var wire 1 K! B_registroAQE|Registro12~q $end
+$var wire 1 L! B_registroAQE|Registro11~q $end
+$var wire 1 M! B_registroAQE|Registro10~q $end
+$var wire 1 N! B_registroAQE|Registro9~q $end
+$var wire 1 O! B_registroAQE|Din[8]~15_combout $end
+$var wire 1 P! B_registroAQE|Registro8~q $end
+$var wire 1 Q! B_registroAQE|Din[7]~14_combout $end
+$var wire 1 R! B_registroAQE|Registro7~q $end
+$var wire 1 S! B_registroAQE|Din[6]~12_combout $end
+$var wire 1 T! B_registroAQE|Registro6~q $end
+$var wire 1 U! B_registroAQE|Din[5]~10_combout $end
+$var wire 1 V! B_registroAQE|Registro5~q $end
+$var wire 1 W! B_registroAQE|Din[4]~7_combout $end
+$var wire 1 X! B_registroAQE|Registro4~q $end
+$var wire 1 Y! B_registroAQE|Din[3]~6_combout $end
+$var wire 1 Z! B_registroAQE|Registro3~q $end
+$var wire 1 [! B_registroAQE|Din[2]~4_combout $end
+$var wire 1 \! B_registroAQE|Registro2~q $end
+$var wire 1 ]! B_registroAQE|Din[1]~0_combout $end
+$var wire 1 ^! B_registroAQE|Registro1~q $end
+$var wire 1 _! B_Control|Restar~1_combout $end
+$var wire 1 `! Numero_2[15]~input_o $end
+$var wire 1 a! Numero_2[14]~input_o $end
+$var wire 1 b! Numero_2[13]~input_o $end
+$var wire 1 c! Numero_2[12]~input_o $end
+$var wire 1 d! Numero_2[11]~input_o $end
+$var wire 1 e! Numero_2[10]~input_o $end
+$var wire 1 f! Numero_2[9]~input_o $end
+$var wire 1 g! Numero_2[8]~input_o $end
+$var wire 1 h! B_ADDER|FA8|SCarry~0_combout $end
+$var wire 1 i! Numero_1[8]~input_o $end
+$var wire 1 j! B_SelectorMP|SignalOUT~8_combout $end
+$var wire 1 k! B_ADDER|FA9|SCarry~0_combout $end
+$var wire 1 l! Numero_1[9]~input_o $end
+$var wire 1 m! B_SelectorMP|SignalOUT~9_combout $end
+$var wire 1 n! B_ADDER|FA10|SCarry~0_combout $end
+$var wire 1 o! Numero_1[10]~input_o $end
+$var wire 1 p! B_SelectorMP|SignalOUT~10_combout $end
+$var wire 1 q! B_ADDER|FA11|SCarry~0_combout $end
+$var wire 1 r! Numero_1[11]~input_o $end
+$var wire 1 s! B_SelectorMP|SignalOUT~11_combout $end
+$var wire 1 t! B_ADDER|FA12|SCarry~0_combout $end
+$var wire 1 u! Numero_1[12]~input_o $end
+$var wire 1 v! B_SelectorMP|SignalOUT~12_combout $end
+$var wire 1 w! B_ADDER|FA13|SCarry~0_combout $end
+$var wire 1 x! Numero_1[13]~input_o $end
+$var wire 1 y! B_SelectorMP|SignalOUT~13_combout $end
+$var wire 1 z! B_ADDER|FA14|SCarry~0_combout $end
+$var wire 1 {! Numero_1[14]~input_o $end
+$var wire 1 |! B_SelectorMP|SignalOUT~14_combout $end
+$var wire 1 }! B_ADDER|FA15|SCarry~0_combout $end
+$var wire 1 ~! Numero_1[15]~input_o $end
+$var wire 1 !" B_SelectorMP|SignalOUT~15_combout $end
+$var wire 1 "" B_ADDER|FA16|SCarry~0_combout $end
+$var wire 1 #" B_Control|D~4_combout $end
+$var wire 1 $" B_Control|FF1~q $end
+$var wire 1 %" B_Control|SaveCarry~0_combout $end
+$var wire 1 &" B_Control|SaveCarry~1_combout $end
+$var wire 1 '" BR_Carry~q $end
+$var wire 1 (" B_Control|CarryOutput~combout $end
+$var wire 1 )" B_ADDER|FA1|ResultBit~0_combout $end
+$var wire 1 *" B_Control|Show_Foo~0_combout $end
+$var wire 1 +" B_SelectorG|SignalOUT[0]~3_combout $end
+$var wire 1 ," B_SelectorG|SignalOUT[0]~4_combout $end
+$var wire 1 -" B_Control|Show_Foo[0]~1_combout $end
+$var wire 1 ." B_SelectorG|SignalOUT[0]~5_combout $end
+$var wire 1 /" B_SelectorG|SignalOUT[0]~6_combout $end
+$var wire 1 0" B_SelectorG|SignalOUT[0]~7_combout $end
+$var wire 1 1" B_SelectorG|SignalOUT~8_combout $end
+$var wire 1 2" B_SelectorG|SignalOUT[0]~9_combout $end
+$var wire 1 3" B_SelectorG|SignalOUT[0]~10_combout $end
+$var wire 1 4" B_Control|D[0]~0_combout $end
+$var wire 1 5" B_R_Resultado|FF0~q $end
+$var wire 1 6" B_ADDER|FA2|ResultBit~0_combout $end
+$var wire 1 7" B_SelectorG|SignalOUT[1]~11_combout $end
+$var wire 1 8" B_SelectorG|SignalOUT[1]~12_combout $end
+$var wire 1 9" B_SelectorG|SignalOUT[1]~13_combout $end
+$var wire 1 :" B_SelectorG|SignalOUT[1]~14_combout $end
+$var wire 1 ;" B_SelectorG|SignalOUT[1]~15_combout $end
+$var wire 1 <" B_SelectorG|SignalOUT[1]~16_combout $end
+$var wire 1 =" B_R_Resultado|FF1~q $end
+$var wire 1 >" B_SelectorG|SignalOUT[2]~17_combout $end
+$var wire 1 ?" B_SelectorG|SignalOUT[2]~18_combout $end
+$var wire 1 @" B_SelectorG|SignalOUT[2]~19_combout $end
+$var wire 1 A" B_SelectorG|SignalOUT[2]~20_combout $end
+$var wire 1 B" B_SelectorG|SignalOUT[2]~21_combout $end
+$var wire 1 C" B_SelectorG|SignalOUT[2]~22_combout $end
+$var wire 1 D" B_SelectorG|SignalOUT[2]~23_combout $end
+$var wire 1 E" B_R_Resultado|FF2~q $end
+$var wire 1 F" B_SelectorG|SignalOUT[3]~24_combout $end
+$var wire 1 G" B_SelectorG|SignalOUT~25_combout $end
+$var wire 1 H" B_SelectorG|SignalOUT[3]~26_combout $end
+$var wire 1 I" B_SelectorG|SignalOUT[3]~27_combout $end
+$var wire 1 J" B_SelectorG|SignalOUT[3]~28_combout $end
+$var wire 1 K" B_SelectorG|SignalOUT[3]~29_combout $end
+$var wire 1 L" B_SelectorG|SignalOUT[3]~30_combout $end
+$var wire 1 M" B_SelectorG|SignalOUT[3]~31_combout $end
+$var wire 1 N" B_R_Resultado|FF3~q $end
+$var wire 1 O" B_SelectorG|SignalOUT[4]~32_combout $end
+$var wire 1 P" B_SelectorG|SignalOUT[4]~33_combout $end
+$var wire 1 Q" B_SelectorG|SignalOUT[4]~34_combout $end
+$var wire 1 R" B_SelectorG|SignalOUT[4]~35_combout $end
+$var wire 1 S" B_SelectorG|SignalOUT[4]~36_combout $end
+$var wire 1 T" B_SelectorG|SignalOUT[4]~37_combout $end
+$var wire 1 U" B_SelectorG|SignalOUT[4]~38_combout $end
+$var wire 1 V" B_R_Resultado|FF4~q $end
+$var wire 1 W" B_SelectorG|SignalOUT[5]~39_combout $end
+$var wire 1 X" B_SelectorG|SignalOUT[5]~40_combout $end
+$var wire 1 Y" B_SelectorG|SignalOUT[5]~41_combout $end
+$var wire 1 Z" B_SelectorG|SignalOUT[5]~42_combout $end
+$var wire 1 [" B_SelectorG|SignalOUT[5]~43_combout $end
+$var wire 1 \" B_SelectorG|SignalOUT[5]~44_combout $end
+$var wire 1 ]" B_SelectorG|SignalOUT[5]~45_combout $end
+$var wire 1 ^" B_R_Resultado|FF5~q $end
+$var wire 1 _" B_SelectorG|SignalOUT[6]~46_combout $end
+$var wire 1 `" B_SelectorG|SignalOUT[6]~47_combout $end
+$var wire 1 a" B_SelectorG|SignalOUT[6]~48_combout $end
+$var wire 1 b" B_SelectorG|SignalOUT[6]~49_combout $end
+$var wire 1 c" B_SelectorG|SignalOUT[6]~50_combout $end
+$var wire 1 d" B_SelectorG|SignalOUT[6]~51_combout $end
+$var wire 1 e" B_SelectorG|SignalOUT[6]~52_combout $end
+$var wire 1 f" B_R_Resultado|FF6~q $end
+$var wire 1 g" B_SelectorG|SignalOUT[7]~53_combout $end
+$var wire 1 h" B_SelectorG|SignalOUT[7]~54_combout $end
+$var wire 1 i" B_SelectorG|SignalOUT[7]~55_combout $end
+$var wire 1 j" B_SelectorG|SignalOUT[7]~56_combout $end
+$var wire 1 k" B_SelectorG|SignalOUT[7]~57_combout $end
+$var wire 1 l" B_SelectorG|SignalOUT[7]~58_combout $end
+$var wire 1 m" B_R_Resultado|FF7~q $end
+$var wire 1 n" B_SelectorG|SignalOUT[8]~59_combout $end
+$var wire 1 o" B_SelectorG|SignalOUT[8]~60_combout $end
+$var wire 1 p" B_SelectorG|SignalOUT[8]~61_combout $end
+$var wire 1 q" B_SelectorG|SignalOUT~62_combout $end
+$var wire 1 r" B_SelectorG|SignalOUT[8]~63_combout $end
+$var wire 1 s" B_SelectorG|SignalOUT~64_combout $end
+$var wire 1 t" B_SelectorG|SignalOUT[14]~65_combout $end
+$var wire 1 u" B_SelectorG|SignalOUT~66_combout $end
+$var wire 1 v" B_SelectorG|SignalOUT[8]~67_combout $end
+$var wire 1 w" B_SelectorG|SignalOUT[8]~68_combout $end
+$var wire 1 x" B_R_Resultado|FF8~q $end
+$var wire 1 y" B_SelectorG|SignalOUT[9]~69_combout $end
+$var wire 1 z" B_SelectorG|SignalOUT[9]~70_combout $end
+$var wire 1 {" B_SelectorG|SignalOUT[9]~71_combout $end
+$var wire 1 |" B_SelectorG|SignalOUT[9]~72_combout $end
+$var wire 1 }" B_SelectorG|SignalOUT~73_combout $end
+$var wire 1 ~" B_SelectorG|SignalOUT[9]~74_combout $end
+$var wire 1 !# B_SelectorG|SignalOUT[9]~75_combout $end
+$var wire 1 "# B_R_Resultado|FF9~q $end
+$var wire 1 ## B_SelectorG|SignalOUT[10]~76_combout $end
+$var wire 1 $# B_SelectorG|SignalOUT[10]~77_combout $end
+$var wire 1 %# B_SelectorG|SignalOUT[10]~78_combout $end
+$var wire 1 &# B_SelectorG|SignalOUT[10]~79_combout $end
+$var wire 1 '# B_SelectorG|SignalOUT~80_combout $end
+$var wire 1 (# B_SelectorG|SignalOUT[10]~81_combout $end
+$var wire 1 )# B_SelectorG|SignalOUT[10]~82_combout $end
+$var wire 1 *# B_R_Resultado|FF10~q $end
+$var wire 1 +# B_SelectorG|SignalOUT~83_combout $end
+$var wire 1 ,# B_SelectorG|SignalOUT[11]~84_combout $end
+$var wire 1 -# B_SelectorG|SignalOUT[11]~85_combout $end
+$var wire 1 .# B_SelectorSM|SignalOUT[11]~5_combout $end
+$var wire 1 /# B_SelectorG|SignalOUT[11]~86_combout $end
+$var wire 1 0# B_SelectorG|SignalOUT[11]~87_combout $end
+$var wire 1 1# B_SelectorG|SignalOUT[11]~88_combout $end
+$var wire 1 2# B_SelectorG|SignalOUT[11]~89_combout $end
+$var wire 1 3# B_R_Resultado|FF11~q $end
+$var wire 1 4# B_SelectorG|SignalOUT~90_combout $end
+$var wire 1 5# B_SelectorG|SignalOUT[12]~91_combout $end
+$var wire 1 6# B_SelectorG|SignalOUT[12]~92_combout $end
+$var wire 1 7# B_SelectorSM|SignalOUT[12]~6_combout $end
+$var wire 1 8# B_SelectorG|SignalOUT[12]~93_combout $end
+$var wire 1 9# B_SelectorG|SignalOUT[12]~94_combout $end
+$var wire 1 :# B_SelectorG|SignalOUT[12]~95_combout $end
+$var wire 1 ;# B_SelectorG|SignalOUT[12]~96_combout $end
+$var wire 1 <# B_R_Resultado|FF12~q $end
+$var wire 1 =# B_SelectorG|SignalOUT[13]~102_combout $end
+$var wire 1 ># B_ADDER|FA14|ResultBit~2_combout $end
+$var wire 1 ?# B_SelectorG|SignalOUT[13]~100_combout $end
+$var wire 1 @# B_SelectorG|SignalOUT[13]~101_combout $end
+$var wire 1 A# B_SelectorG|SignalOUT[13]~118_combout $end
+$var wire 1 B# B_SelectorG|SignalOUT~97_combout $end
+$var wire 1 C# B_SelectorG|SignalOUT[13]~98_combout $end
+$var wire 1 D# B_SelectorG|SignalOUT[13]~99_combout $end
+$var wire 1 E# B_SelectorG|SignalOUT[13]~119_combout $end
+$var wire 1 F# B_R_Resultado|FF13~q $end
+$var wire 1 G# B_SelectorG|SignalOUT[14]~103_combout $end
+$var wire 1 H# B_SelectorG|SignalOUT[14]~104_combout $end
+$var wire 1 I# B_SelectorG|SignalOUT[14]~105_combout $end
+$var wire 1 J# B_SelectorG|SignalOUT~106_combout $end
+$var wire 1 K# B_SelectorSM|SignalOUT[14]~7_combout $end
+$var wire 1 L# B_SelectorG|SignalOUT[14]~107_combout $end
+$var wire 1 M# B_SelectorG|SignalOUT[14]~108_combout $end
+$var wire 1 N# B_SelectorG|SignalOUT[14]~109_combout $end
+$var wire 1 O# B_SelectorG|SignalOUT[14]~110_combout $end
+$var wire 1 P# B_SelectorG|SignalOUT[14]~111_combout $end
+$var wire 1 Q# B_R_Resultado|FF14~q $end
+$var wire 1 R# B_SelectorG|SignalOUT[15]~112_combout $end
+$var wire 1 S# B_SelectorG|SignalOUT[15]~113_combout $end
+$var wire 1 T# B_SelectorSM|SignalOUT[15]~8_combout $end
+$var wire 1 U# B_SelectorG|SignalOUT[15]~114_combout $end
+$var wire 1 V# B_SelectorG|SignalOUT[15]~115_combout $end
+$var wire 1 W# B_SelectorG|SignalOUT[15]~116_combout $end
+$var wire 1 X# B_SelectorG|SignalOUT[15]~117_combout $end
+$var wire 1 Y# B_R_Resultado|FF15~q $end
+$var wire 1 Z# B_Control|D[0]~1_combout $end
+$var wire 1 [# B_Control|FF0~q $end
+$var wire 1 \# B_Banderas|SResultado_Z~0_combout $end
+$var wire 1 ]# B_Banderas|SResultado_Z~1_combout $end
+$var wire 1 ^# B_Banderas|SResultado_Z~2_combout $end
+$var wire 1 _# B_Banderas|SResultado_Z~3_combout $end
+$var wire 1 `# B_Banderas|SResultado_Z~4_combout $end
+$var wire 1 a# B_Banderas|FF4~0_combout $end
+$var wire 1 b# B_Banderas|FF4~q $end
+$var wire 1 c# B_Banderas|FF0~q $end
+$var wire 1 d# B_Banderas|SResultado_C~0_combout $end
+$var wire 1 e# B_Banderas|SResultado_C~1_combout $end
+$var wire 1 f# B_Banderas|FF2~q $end
+$var wire 1 g# B_Banderas|SResultado_O~1_combout $end
+$var wire 1 h# B_Banderas|SResultado_O~2_combout $end
+$var wire 1 i# B_Banderas|SResultado_O~3_combout $end
+$var wire 1 j# B_Banderas|FF1~q $end
+$var wire 1 k# B_Banderas|SResultado_N~0_combout $end
+$var wire 1 l# B_Banderas|SResultado_N~1_combout $end
+$var wire 1 m# B_Banderas|FF3~q $end
+$var wire 1 n# B_Control|B_Counter|ENA [3] $end
+$var wire 1 o# B_Control|B_Counter|ENA [2] $end
+$var wire 1 p# B_Control|B_Counter|ENA [1] $end
+$var wire 1 q# B_Control|B_Counter|ENA [0] $end
+$var wire 1 r# B_Control|D [5] $end
+$var wire 1 s# B_Control|D [4] $end
+$var wire 1 t# B_Control|D [3] $end
+$var wire 1 u# B_Control|D [2] $end
+$var wire 1 v# B_Control|D [1] $end
+$var wire 1 w# B_Control|D [0] $end
+$var wire 1 x# B_Control|Show_Foo [2] $end
+$var wire 1 y# B_Control|Show_Foo [1] $end
+$var wire 1 z# B_Control|Show_Foo [0] $end
+$var wire 1 {# B_registroAQE|Din [16] $end
+$var wire 1 |# B_registroAQE|Din [15] $end
+$var wire 1 }# B_registroAQE|Din [14] $end
+$var wire 1 ~# B_registroAQE|Din [13] $end
+$var wire 1 !$ B_registroAQE|Din [12] $end
+$var wire 1 "$ B_registroAQE|Din [11] $end
+$var wire 1 #$ B_registroAQE|Din [10] $end
+$var wire 1 $$ B_registroAQE|Din [9] $end
+$var wire 1 %$ B_registroAQE|Din [8] $end
+$var wire 1 &$ B_registroAQE|Din [7] $end
+$var wire 1 '$ B_registroAQE|Din [6] $end
+$var wire 1 ($ B_registroAQE|Din [5] $end
+$var wire 1 )$ B_registroAQE|Din [4] $end
+$var wire 1 *$ B_registroAQE|Din [3] $end
+$var wire 1 +$ B_registroAQE|Din [2] $end
+$var wire 1 ,$ B_registroAQE|Din [1] $end
+$var wire 1 -$ B_registroAQE|Din [0] $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
 1!
-b10100 "
-b10100 #
-b1 $
+b1111111111111111 "
+b0 #
+b111 $
 0%
 1&
 1'
@@ -471,8 +464,8 @@ x?
 0W
 0X
 0Y
-0Z
-0[
+1Z
+1[
 1\
 0]
 1^
@@ -480,95 +473,95 @@ x?
 0`
 1a
 1b
-1c
+0c
 0d
-1e
-0f
+0e
+1f
 0g
-0h
+1h
 0i
-0j
-1k
-0l
-1m
-1n
-1o
+1j
+0k
+1l
+0m
+0n
+0o
 0p
-0q
+1q
 0r
 0s
 0t
 0u
 0v
 0w
-0x
-0y
+1x
+1y
 0z
-1{
+0{
 0|
-0}
-0~
+1}
+1~
 0!!
 0"!
-0#!
-0$!
+1#!
+1$!
 0%!
 0&!
 0'!
 0(!
-0)!
-0*!
+1)!
+1*!
 0+!
 0,!
 0-!
 0.!
-0/!
-00!
+1/!
+10!
 01!
 02!
 03!
 04!
-05!
-06!
+15!
+16!
 07!
 08!
 09!
 0:!
-0;!
-0<!
-1=!
-1>!
-1?!
+1;!
+1<!
+0=!
+0>!
+0?!
 0@!
 0A!
 1B!
-0C!
+1C!
 0D!
-0E!
+1E!
 0F!
 0G!
 0H!
 0I!
 0J!
 0K!
-1L!
+0L!
 0M!
 0N!
-0O!
-1P!
+1O!
+0P!
 1Q!
-1R!
-0S!
+0R!
+1S!
 0T!
-0U!
+1U!
 0V!
-0W!
+1W!
 0X!
-0Y!
+1Y!
 0Z!
 1[!
-1\!
-0]!
+0\!
+1]!
 0^!
 0_!
 0`!
@@ -580,169 +573,169 @@ x?
 0f!
 0g!
 0h!
-0i!
-0j!
+1i!
+1j!
 0k!
-0l!
-0m!
+1l!
+1m!
 0n!
-0o!
-0p!
+1o!
+1p!
 0q!
-0r!
-0s!
+1r!
+1s!
 0t!
-0u!
-0v!
-1w!
-0x!
-0y!
+1u!
+1v!
+0w!
+1x!
+1y!
 0z!
 1{!
-0|!
+1|!
 0}!
-0~!
-0!"
+1~!
+1!"
 0""
-0#"
+1#"
 0$"
-0%"
+1%"
 0&"
 0'"
-1("
-0)"
+0("
+1)"
 0*"
 0+"
 1,"
 0-"
-0."
+1."
 0/"
 00"
 01"
 02"
-03"
-04"
+13"
+14"
 05"
-06"
+16"
 07"
-08"
-09"
+18"
+19"
 0:"
-1;"
-0<"
+0;"
+1<"
 0="
-0>"
+1>"
 0?"
-0@"
-0A"
+1@"
+1A"
 0B"
 0C"
-0D"
+1D"
 0E"
-1F"
-0G"
+0F"
+1G"
 0H"
 1I"
 0J"
-0K"
-0L"
-0M"
-1N"
-0O"
+1K"
+1L"
+1M"
+0N"
+1O"
 0P"
 1Q"
-0R"
-1S"
+1R"
+0S"
 0T"
 1U"
 0V"
-1W"
+0W"
 0X"
-0Y"
+1Y"
 0Z"
-0["
-0\"
-0]"
+1["
+1\"
+1]"
 0^"
-0_"
+1_"
 0`"
 1a"
 1b"
-1c"
+0c"
 0d"
-0e"
+1e"
 0f"
 0g"
-0h"
-0i"
+1h"
+1i"
 0j"
 0k"
-0l"
+1l"
 0m"
-0n"
-0o"
-0p"
-0q"
-0r"
+1n"
+1o"
+1p"
+1q"
+1r"
 0s"
 0t"
 1u"
 0v"
-0w"
+1w"
 0x"
-0y"
-0z"
-0{"
-0|"
+1y"
+1z"
+1{"
+1|"
 0}"
 0~"
-0!#
+1!#
 0"#
-0##
-0$#
-0%#
-0&#
+1##
+1$#
+1%#
+1&#
 0'#
 0(#
-0)#
+1)#
 0*#
 0+#
 0,#
 0-#
 0.#
 0/#
-00#
-01#
-02#
+10#
+11#
+12#
 03#
 04#
 05#
 06#
 07#
 08#
-09#
-0:#
-0;#
+19#
+1:#
+1;#
 0<#
 0=#
-0>#
-0?#
-0@#
-0A#
+1>#
+1?#
+1@#
+1A#
 0B#
 0C#
 0D#
-0E#
+1E#
 0F#
 0G#
-0H#
-0I#
+1H#
+1I#
 0J#
 0K#
 0L#
 0M#
 0N#
-1O#
+0O#
 1P#
 0Q#
 0R#
@@ -750,8 +743,8 @@ x?
 0T#
 0U#
 1V#
-0W#
-0X#
+1W#
+1X#
 0Y#
 0Z#
 0[#
@@ -759,7 +752,7 @@ x?
 0]#
 0^#
 0_#
-0`#
+1`#
 0a#
 0b#
 0c#
@@ -767,39 +760,25 @@ x?
 0e#
 0f#
 0g#
-1h#
+0h#
 0i#
 0j#
 0k#
 0l#
 0m#
-0n#
-0o#
+zq#
 0p#
-0q#
-0r#
-0s#
-0t#
-zx#
+0o#
+0n#
 0w#
 0v#
 0u#
-0~#
-0}#
-0|#
-z{#
-0z#
+zt#
+0s#
+zr#
+zz#
 zy#
-z#$
-z"$
-0!$
-z4$
-z3$
-z2$
-z1$
-z0$
-z/$
-z.$
+0x#
 z-$
 z,$
 z+$
@@ -809,536 +788,488 @@ z($
 z'$
 z&$
 z%$
-0$$
+z$$
+z#$
+z"$
+z!$
+z~#
+z}#
+z|#
+0{#
 $end
 #10000
 1%
 1X
-1Y
 0<
 #20000
 0%
 0X
-0Y
 1<
 #30000
 1%
 1X
-1Y
 0<
 #40000
 0%
 0X
-0Y
 1<
 #50000
 1%
 1X
-1Y
 0<
 #60000
 0%
 0X
-0Y
 1<
 #70000
 1%
 1X
-1Y
 0<
 #80000
 0%
 0X
-0Y
 1<
 #90000
 1%
 1X
-1Y
 0<
 #100000
 0%
 0X
-0Y
 1<
 #110000
 1%
 1X
-1Y
 0<
 #120000
 0%
 0X
-0Y
 1<
 #130000
 0!
 1%
-0c
+0a
 1X
-1Y
 0<
-1~#
-1}#
+1w#
+1v#
 #140000
 0%
 0X
-0Y
 1<
 #150000
 1!
 1%
-1c
+1a
 1X
-1Y
 0<
-0~#
-0}#
-1c#
-1x!
-1~#
-0;"
-1y!
+0w#
+0v#
+1[#
+1$"
+1w#
+04"
 0S
 0'
-1i#
-0~#
+1a#
+0w#
 #160000
 0%
 0X
-0Y
 1<
 #170000
 1%
 1X
-1Y
 0<
-1j#
-0c#
-0x!
-1d"
-1T"
-1;"
-0y!
-1f#
-1e#
+1b#
+0[#
+0$"
+1Y#
+1Q#
+1F#
+1<#
+13#
+1*#
+1"#
+1x"
+1m"
+1f"
+1^"
+1V"
+1N"
+1E"
+1="
+15"
+14"
+1g#
+1_#
+1^#
+1]#
+1\#
 1S
+1R
+1Q
+1P
+1O
+1N
+1M
+1L
+1K
+1J
+1I
 1H
+1G
 1F
+1E
+1D
+1C
 1'
+1,
+1-
+1.
+1/
+10
+11
+12
+13
+14
+15
 16
+17
 18
-0i#
-0h#
+19
+1:
+1;
+0a#
+1h#
+0`#
 #180000
 0%
 0X
-0Y
 1<
 #190000
 1%
 1X
-1Y
 0<
-0j#
+0b#
 #200000
 0%
 0X
-0Y
 1<
 #210000
 1%
 1X
-1Y
 0<
 #220000
 0%
 0X
-0Y
 1<
 #230000
 1%
 1X
-1Y
 0<
 #240000
 0%
 0X
-0Y
 1<
 #250000
 1%
 1X
-1Y
 0<
 #260000
 0%
 0X
-0Y
 1<
 #270000
 1%
 1X
-1Y
 0<
 #280000
 0%
 0X
-0Y
 1<
 #290000
 1%
 1X
-1Y
 0<
 #300000
 0%
 0X
-0Y
 1<
 #310000
 1%
 1X
-1Y
 0<
 #320000
 0%
 0X
-0Y
 1<
 #330000
 1%
 1X
-1Y
 0<
 #340000
 0%
 0X
-0Y
 1<
 #350000
 1%
 1X
-1Y
 0<
 #360000
 0%
 0X
-0Y
 1<
 #370000
 1%
 1X
-1Y
 0<
 #380000
 0%
 0X
-0Y
 1<
 #390000
 1%
 1X
-1Y
 0<
 #400000
 0%
 0X
-0Y
 1<
 #410000
 1%
 1X
-1Y
 0<
 #420000
 0%
 0X
-0Y
 1<
 #430000
 1%
 1X
-1Y
 0<
 #440000
 0%
 0X
-0Y
 1<
 #450000
 1%
 1X
-1Y
 0<
 #460000
 0%
 0X
-0Y
 1<
 #470000
 1%
 1X
-1Y
 0<
 #480000
 0%
 0X
-0Y
 1<
 #490000
 1%
 1X
-1Y
 0<
 #500000
 0%
 0X
-0Y
 1<
 #510000
 1%
 1X
-1Y
 0<
 #520000
 0%
 0X
-0Y
 1<
 #530000
 1%
 1X
-1Y
 0<
 #540000
 0%
 0X
-0Y
 1<
 #550000
 1%
 1X
-1Y
 0<
 #560000
 0%
 0X
-0Y
 1<
 #570000
 1%
 1X
-1Y
 0<
 #580000
 0%
 0X
-0Y
 1<
 #590000
 1%
 1X
-1Y
 0<
 #600000
 0%
 0X
-0Y
 1<
 #610000
 1%
 1X
-1Y
 0<
 #620000
 0%
 0X
-0Y
 1<
 #630000
 1%
 1X
-1Y
 0<
 #640000
 0%
 0X
-0Y
 1<
 #650000
 1%
 1X
-1Y
 0<
 #660000
 0%
 0X
-0Y
 1<
 #670000
 1%
 1X
-1Y
 0<
 #680000
 0%
 0X
-0Y
 1<
 #690000
 1%
 1X
-1Y
 0<
 #700000
 0%
 0X
-0Y
 1<
 #710000
 1%
 1X
-1Y
 0<
 #720000
 0%
 0X
-0Y
 1<
 #730000
 1%
 1X
-1Y
 0<
 #740000
 0%
 0X
-0Y
 1<
 #750000
 1%
 1X
-1Y
 0<
 #760000
 0%
 0X
-0Y
 1<
 #770000
 1%
 1X
-1Y
 0<
 #780000
 0%
 0X
-0Y
 1<
 #790000
 1%
 1X
-1Y
 0<
 #800000
 0%
 0X
-0Y
 1<
 #810000
 1%
 1X
-1Y
 0<
 #820000
 0%
 0X
-0Y
 1<
 #830000
 1%
 1X
-1Y
 0<
 #840000
 0%
 0X
-0Y
 1<
 #850000
 1%
 1X
-1Y
 0<
 #860000
 0%
 0X
-0Y
 1<
 #870000
 1%
 1X
-1Y
 0<
 #880000
 0%
 0X
-0Y
 1<
 #890000
 1%
 1X
-1Y
 0<
 #900000
 0%
 0X
-0Y
 1<
 #910000
 1%
 1X
-1Y
 0<
 #920000
 0%
 0X
-0Y
 1<
 #930000
 1%
 1X
-1Y
 0<
 #940000
 0%
 0X
-0Y
 1<
 #950000
 1%
 1X
-1Y
 0<
 #960000
 0%
 0X
-0Y
 1<
 #970000
 1%
 1X
-1Y
 0<
 #980000
 0%
 0X
-0Y
 1<
 #990000
 1%
 1X
-1Y
 0<
 #1000000

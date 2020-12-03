@@ -4,6 +4,7 @@ entity ProgramCounterMUX_vlg_sample_tst is
     port(
         DataGPR         : in     vl_logic_vector(15 downto 0);
         DataMd          : in     vl_logic_vector(15 downto 0);
+        Int             : in     vl_logic;
         SelectPC        : in     vl_logic;
         sampler_tx      : out    vl_logic
     );

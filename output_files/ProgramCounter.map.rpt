@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ProgramCounter
-Tue Dec 01 10:54:20 2020
+Wed Dec 02 10:15:07 2020
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -41,13 +41,13 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Dec 01 10:54:20 2020      ;
+; Analysis & Synthesis Status        ; Successful - Wed Dec 02 10:15:07 2020      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; ProgramCounter                             ;
 ; Top-level Entity Name              ; ProgramCounter                             ;
 ; Family                             ; Cyclone IV GX                              ;
-; Total logic elements               ; 32                                         ;
-;     Total combinational functions  ; 32                                         ;
+; Total logic elements               ; 33                                         ;
+;     Total combinational functions  ; 33                                         ;
 ;     Dedicated logic registers      ; 16                                         ;
 ; Total registers                    ; 16                                         ;
 ; Total pins                         ; 36                                         ;
@@ -176,9 +176,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; I/O pins                 ; 36               ;
 ; DSP block 9-bit elements ; 0                ;
 ; Maximum fan-out node     ; Save_PC~input    ;
-; Maximum fan-out          ; 31               ;
-; Total fan-out            ; 235              ;
-; Average fan-out          ; 1.96             ;
+; Maximum fan-out          ; 32               ;
+; Total fan-out            ; 238              ;
+; Average fan-out          ; 1.97             ;
 +--------------------------+------------------+
 
 
@@ -187,7 +187,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
-; |ProgramCounter            ; 32 (32)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 36   ; 0            ; |ProgramCounter     ; work         ;
+; |ProgramCounter            ; 33 (33)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 36   ; 0            ; |ProgramCounter     ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -212,7 +212,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -222,7 +222,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Tue Dec 01 10:54:16 2020
+    Info: Processing started: Wed Dec 02 10:15:05 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProgramCounter -c ProgramCounter
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file programcounter.vhd
@@ -232,14 +232,14 @@ Info (12127): Elaborating entity "ProgramCounter" for the top level hierarchy
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 68 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 69 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 20 input pins
     Info (21059): Implemented 16 output pins
-    Info (21061): Implemented 32 logic cells
+    Info (21061): Implemented 33 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4700 megabytes
-    Info: Processing ended: Tue Dec 01 10:54:20 2020
-    Info: Elapsed time: 00:00:04
+    Info: Peak virtual memory: 4692 megabytes
+    Info: Processing ended: Wed Dec 02 10:15:07 2020
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
 

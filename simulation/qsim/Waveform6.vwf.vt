@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "12/01/2020 10:48:47"
+// Generated on "12/02/2020 10:31:04"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    ALU
 // 
@@ -623,57 +623,57 @@ end
 // Numero_1[ 15 ]
 initial
 begin
-	Numero_1[15] = 1'b0;
+	Numero_1[15] = 1'b1;
 end 
 // Numero_1[ 14 ]
 initial
 begin
-	Numero_1[14] = 1'b0;
+	Numero_1[14] = 1'b1;
 end 
 // Numero_1[ 13 ]
 initial
 begin
-	Numero_1[13] = 1'b0;
+	Numero_1[13] = 1'b1;
 end 
 // Numero_1[ 12 ]
 initial
 begin
-	Numero_1[12] = 1'b0;
+	Numero_1[12] = 1'b1;
 end 
 // Numero_1[ 11 ]
 initial
 begin
-	Numero_1[11] = 1'b0;
+	Numero_1[11] = 1'b1;
 end 
 // Numero_1[ 10 ]
 initial
 begin
-	Numero_1[10] = 1'b0;
+	Numero_1[10] = 1'b1;
 end 
 // Numero_1[ 9 ]
 initial
 begin
-	Numero_1[9] = 1'b0;
+	Numero_1[9] = 1'b1;
 end 
 // Numero_1[ 8 ]
 initial
 begin
-	Numero_1[8] = 1'b0;
+	Numero_1[8] = 1'b1;
 end 
 // Numero_1[ 7 ]
 initial
 begin
-	Numero_1[7] = 1'b0;
+	Numero_1[7] = 1'b1;
 end 
 // Numero_1[ 6 ]
 initial
 begin
-	Numero_1[6] = 1'b0;
+	Numero_1[6] = 1'b1;
 end 
 // Numero_1[ 5 ]
 initial
 begin
-	Numero_1[5] = 1'b0;
+	Numero_1[5] = 1'b1;
 end 
 // Numero_1[ 4 ]
 initial
@@ -683,7 +683,7 @@ end
 // Numero_1[ 3 ]
 initial
 begin
-	Numero_1[3] = 1'b0;
+	Numero_1[3] = 1'b1;
 end 
 // Numero_1[ 2 ]
 initial
@@ -693,12 +693,12 @@ end
 // Numero_1[ 1 ]
 initial
 begin
-	Numero_1[1] = 1'b0;
+	Numero_1[1] = 1'b1;
 end 
 // Numero_1[ 0 ]
 initial
 begin
-	Numero_1[0] = 1'b0;
+	Numero_1[0] = 1'b1;
 end 
 // Numero_2[ 15 ]
 initial
@@ -758,7 +758,7 @@ end
 // Numero_2[ 4 ]
 initial
 begin
-	Numero_2[4] = 1'b1;
+	Numero_2[4] = 1'b0;
 end 
 // Numero_2[ 3 ]
 initial
@@ -768,7 +768,7 @@ end
 // Numero_2[ 2 ]
 initial
 begin
-	Numero_2[2] = 1'b1;
+	Numero_2[2] = 1'b0;
 end 
 // Numero_2[ 1 ]
 initial
@@ -788,12 +788,12 @@ end
 // Operacion[ 2 ]
 initial
 begin
-	Operacion[2] = 1'b0;
+	Operacion[2] = 1'b1;
 end 
 // Operacion[ 1 ]
 initial
 begin
-	Operacion[1] = 1'b0;
+	Operacion[1] = 1'b1;
 end 
 // Operacion[ 0 ]
 initial

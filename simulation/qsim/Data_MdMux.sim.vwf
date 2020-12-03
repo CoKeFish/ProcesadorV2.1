@@ -1128,7 +1128,8 @@ TRANSITION_LIST("DatOut_Md[15]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 1 FOR 1000.0;
+			LEVEL 1 FOR 500.0;
+			LEVEL 0 FOR 500.0;
 		}
 	}
 }
@@ -1141,7 +1142,8 @@ TRANSITION_LIST("DatOut_Md[14]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 1 FOR 1000.0;
+			LEVEL 1 FOR 500.0;
+			LEVEL 0 FOR 500.0;
 		}
 	}
 }
@@ -1154,7 +1156,8 @@ TRANSITION_LIST("DatOut_Md[13]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 1 FOR 1000.0;
+			LEVEL 1 FOR 500.0;
+			LEVEL 0 FOR 500.0;
 		}
 	}
 }
@@ -1167,7 +1170,9 @@ TRANSITION_LIST("DatOut_Md[12]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
+			LEVEL 0 FOR 250.0;
+			LEVEL 1 FOR 250.0;
+			LEVEL 0 FOR 500.0;
 		}
 	}
 }
@@ -1193,7 +1198,8 @@ TRANSITION_LIST("DatOut_Md[10]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
+			LEVEL 0 FOR 750.0;
+			LEVEL 1 FOR 250.0;
 		}
 	}
 }
@@ -1206,7 +1212,8 @@ TRANSITION_LIST("DatOut_Md[9]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
+			LEVEL 0 FOR 750.0;
+			LEVEL 1 FOR 250.0;
 		}
 	}
 }
@@ -1219,7 +1226,8 @@ TRANSITION_LIST("DatOut_Md[8]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
+			LEVEL 0 FOR 750.0;
+			LEVEL 1 FOR 250.0;
 		}
 	}
 }
@@ -1232,7 +1240,8 @@ TRANSITION_LIST("DatOut_Md[7]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
+			LEVEL 0 FOR 750.0;
+			LEVEL 1 FOR 250.0;
 		}
 	}
 }
@@ -1271,7 +1280,9 @@ TRANSITION_LIST("DatOut_Md[4]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
+			LEVEL 0 FOR 500.0;
+			LEVEL 1 FOR 250.0;
+			LEVEL 0 FOR 250.0;
 		}
 	}
 }
@@ -1284,7 +1295,9 @@ TRANSITION_LIST("DatOut_Md[3]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
+			LEVEL 0 FOR 500.0;
+			LEVEL 1 FOR 250.0;
+			LEVEL 0 FOR 250.0;
 		}
 	}
 }
@@ -1297,7 +1310,10 @@ TRANSITION_LIST("DatOut_Md[2]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 1 FOR 1000.0;
+			LEVEL 1 FOR 250.0;
+			LEVEL 0 FOR 250.0;
+			LEVEL 1 FOR 250.0;
+			LEVEL 0 FOR 250.0;
 		}
 	}
 }
@@ -1310,7 +1326,10 @@ TRANSITION_LIST("DatOut_Md[1]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 1 FOR 1000.0;
+			LEVEL 1 FOR 250.0;
+			LEVEL 0 FOR 250.0;
+			LEVEL 1 FOR 250.0;
+			LEVEL 0 FOR 250.0;
 		}
 	}
 }
@@ -1323,7 +1342,10 @@ TRANSITION_LIST("DatOut_Md[0]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 1 FOR 1000.0;
+			LEVEL 1 FOR 250.0;
+			LEVEL 0 FOR 250.0;
+			LEVEL 1 FOR 250.0;
+			LEVEL 0 FOR 250.0;
 		}
 	}
 }
@@ -1960,7 +1982,8 @@ TRANSITION_LIST("SelectDataMd[1]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
+			LEVEL 0 FOR 500.0;
+			LEVEL 1 FOR 500.0;
 		}
 	}
 }
@@ -1973,7 +1996,10 @@ TRANSITION_LIST("SelectDataMd[0]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
+			LEVEL 0 FOR 250.0;
+			LEVEL 1 FOR 250.0;
+			LEVEL 0 FOR 250.0;
+			LEVEL 1 FOR 250.0;
 		}
 	}
 }

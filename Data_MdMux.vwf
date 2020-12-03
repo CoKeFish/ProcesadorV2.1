@@ -1637,7 +1637,12 @@ TRANSITION_LIST("SelectDataMd[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 500.0;
+			LEVEL 1 FOR 500.0;
+		}
 	}
 }
 
@@ -1646,7 +1651,12 @@ TRANSITION_LIST("SelectDataMd[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 250.0;
+			LEVEL 1 FOR 250.0;
+		}
 	}
 }
 

@@ -186,9 +186,9 @@ BEGIN
 		Directo <= (((ModeDir(0))) AND (NOT (ModeDir(1))));
 		Indirecto <= ((NOT (ModeDir(0))) AND ((ModeDir(1))));
 		
-				
+	-----------------------------------Leemos la instruccion----------------------------------------|			
 	--#Estado 1
-		D(0) <= Q(6) OR Q(7) OR Q(10) OR Q(13);
+		D(0) <= (Q(6) OR Q(7) OR Q(10) OR Q(13) OR Q(16) OR Q(19) OR Q(23) OR Q(24) OR Q(25) OR Q(37)) AND (NOT Int);
 		
 	--#Estado 2-
 		D(1) <= Q(0);
@@ -202,8 +202,10 @@ BEGIN
 	--#Estado 4
 		D(3) <= Q(2);
 		
+	----------------------------Operaciones logicas y aritmeticas modo inmediato--------------------
+		
 	--#Estado 5
-		D(4) <= Q(3) AND Inmediato AND (ADD_CA OR ADD_CO OR SUB OR COMP OR AND_S OR OR_S OR CR);
+		D(4) <= (Q(3) AND Inmediato AND (ADD_CA OR ADD_CO OR SUB OR COMP OR AND_S OR OR_S OR CR)) OR Q(29);
 		
 	
 	--#Estado 6
@@ -212,10 +214,14 @@ BEGIN
 	--#Estado 7
 		D(6) <= Q(5);
 		
+	--------------------------------------Contemplamos una instruccion vacia------------------------
+	
 	--#Estado 8
 		
 		D(7) <= Q(3) AND None;
 		
+	-------------------------------Operacion de multiplicacion----------------------------------------
+	
 	--#Estado 9
 		
 		D(8) <= Q(3) AND Inmediato AND MULT;
@@ -224,50 +230,160 @@ BEGIN
 	
 		D(9) <= Q(8) OR ((NOT (Disponible)) AND Q(9));
 		
-	--#Estado 10
+	--#Estado 11
 		D(10) <= Q(9) AND (Disponible);
 		
-	--#Estado 11
+	---------------------------------Operacion de NOT y Corrimiento logico------------------------------
+		
+	--#Estado 12
 		
 		D(11) <= Q(3) AND Inmediato AND (NOT_S OR SR);
 		
 		
-	--#Estado 12
+	--#Estado 13
 		D(12) <= Q(11);
 		
 		
-	--#Estado 13
+	--#Estado 14
 		D(13) <= Q(12);
 		Ena_AcALU <= Q(11) OR Q(12) OR Q(13);
 		
-	--#Estado 14
+	-------------------------------Operaciones para el almacenamiento de datos-------------------------------
+		
+	--#Estado 15
 		D(14) <= Q(3) AND Directo AND STR;
-		SelectDir(1) <= Q(14);
-		SelectDataMd(0) <= Q(14);
-		Ena_Md_Write <= Q(14);
 	
-	--#Estado 12
-		D(15) <= Q(15);
+	--#Estado 16
+		D(15) <= Q(14);
+		
+	--#Estado 17
+		D(16) <= Q(15);
+		
+		
+	--#Estado 18
+		D(17) <= Q(3) AND Directo AND MOV;
+		
+
+	--#Estado 19
+		D(18) <= Q(17);
+		
+	--#Estado 20
+		D(19) <= Q(18);
+	--------------------------------Operacion para detener el procesador(fin de la maquina de estados-----------
+	--#Estado 21
+		D(20) <= Q(3) AND STP;
 		
 		
 		
-		Save_Acum <= Q(6) OR Q(10) OR Q(13);
-		SaveB <= Q(6) OR Q(10);
-		SelectPSR <=Q(6) OR Q(10) OR Q(13);
+	-------------------------------Operaciones de saltos incondicinales y condicionales-------------------------------	
+	--#Estado 22
+		D(21) <= Q(3) AND Directo AND (JMP OR (BEQZ AND PSROut(3)) OR (BEQN AND PSROut(2)) OR (BEQO AND PSROut(0)));
+	
+	--#Estado 23
+		D(22) <= Q(21);
+		
+	--#Estado 24
+		D(23) <= Q(22);
+		
+	---------------------------------Habilitamos y desabilitamos las interrupciones-------------------------------------------------
+	--#Estado 25
+		D(24) <= Q(3) AND SLI;
+		IntE <= Q(24);
+		
+	--#Estado 26
+		D(25) <= Q(3) AND CLI;
+		SaveInt <= Q(25) OR Q(24);
+	------------------------------------Estado adicional para guardar las banderas----------------------------------------
+	--#Estado 27--SaveB
+		D(26) <= Q(6) OR Q(10);
+	
+	------------------------------------Aritmetico y logicas en modo directo----------------------------------------------
+	--#Estado 28
+		D(27) <= Q(3) AND Directo AND (ADD_CA OR ADD_CO OR SUB OR COMP OR AND_S OR OR_S OR CR);
+		
+	--#Estado 29
+		D(28) <= Q(27);
+		
+	--#Estado 30
+		D(29) <= Q(28);
+		
+	--#Estado 31
+		D(30) <= Q(29);
+		
+	--#Estado 32
+		D(31) <= Q(30);
+		
+	--#Estado 33
+		D(32) <= Q(31);
+	
+	-------------------------------------Zona de interrupciones---------------------------------------------------------------
+		
+	--#Estado 34--Interupciones
+		D(33) <= Int;
+		
+	--#Estado 35
+		D(34) <= Q(33);
+		
+	-------------------------------------Operacion de subrutina----------------------------------------------------
+		
+	--#Estado 36
+		D(35) <= Q(3) AND Directo AND JSR;
+		
+	--#Estado 37
+		D(36) <= Q(35);
+		
+	--#Estado 38
+		D(37) <= Q(36);
+	
+	
+	--#Estado 39
+		D(38) <= Q(37);
+		
+		
+	--#Estado 40
+		D(39) <= Q(38);
+		
+	--#Estado 41
+		D(40) <= Q(39);
+		
+	--#Estado 42
+		D(41) <= Q(40);
+		
+		
+		
+		
+		
+		
+		Save_PC <= Q(22);
+		SelectPC <= '0';
+		SelectALU <= Q(27) OR Q(28) OR Q(29) OR Q(30) OR Q(31) OR Q(32);
+		
+		
+		
+		SelectAcum <= Q(17) OR Q(18) OR Q(19);
+		
+		SelectDir(1) <= Q(14) OR Q(15) OR Q(16) OR Q(17) OR Q(18) OR Q(19) OR Q(27) OR Q(28) OR Q(29) OR Q(30) OR Q(31) OR Q(32);
+		SelectDir(0) <= Q(35) OR Q(36) OR Q(37) OR Q(38) OR Q(39) OR Q(40) OR Q(41);
+		
+		SelectDataMd(0) <= Q(14) OR Q(15) OR Q(16);
+		SelectDataMd(1) <= Q(35) OR Q(36) OR Q(37);
+		
+		Ena_Md_Read <= Q(17) OR Q(18) OR Q(19) OR Q(27) OR Q(28) OR Q(29) OR Q(30) OR Q(31) OR Q(32);
+		
+		Save_Acum <= Q(6) OR Q(10) OR Q(13) OR Q(17) OR Q(18) OR Q(19);
+		SaveB <= Q(26);
+		SelectPSR <= '0';
 		Habilitar <= Q(4) OR Q(8) OR Q(11);
-		Inc_PC <= Q(6) OR Q(7) OR Q(10) OR Q(13);
+		Inc_PC <= Q(6) OR Q(7) OR Q(10) OR Q(13) OR Q(16) OR Q(19) OR Q(24) OR Q(25) OR Q(37);
+		Ena_Md_Write <= Q(14) OR Q(15) OR Q(16) OR Q(35) OR Q(36) OR Q(37);
 		
+		Ena_SP <= Q(38);
+		IncDec(1) <= Q(38);
 		
-		
+
 		Estados <= Q;
 		
 		
-		
-		Ena_SP <= '0';
-		SelectALU <= '0';
-		SelectAcum <= '0';
-		SelectPC <= '0';
-		Save_PC <= '0';
 		
 		
 		
@@ -322,7 +438,6 @@ BEGIN
 		FF46 : DFFE PORT MAP (D(46), Clock, ResetSystem, '1', '1', Q(46));
 		FF47 : DFFE PORT MAP (D(47), Clock, ResetSystem, '1', '1', Q(47));
 		FF48 : DFFE PORT MAP (D(48), Clock, ResetSystem, '1', '1', Q(48));
-		FF49 : DFFE PORT MAP (D(49), Clock, ResetSystem, '1', '1', Q(49));
 
 		
 		B_OperatorMUX: OperatorMUX PORT MAP (

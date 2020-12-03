@@ -1,5 +1,5 @@
 Flow report for StackPointer
-Tue Dec 01 19:12:47 2020
+Wed Dec 02 19:48:18 2020
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -40,15 +40,15 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Tue Dec 01 19:12:47 2020      ;
+; Flow Status                        ; Successful - Wed Dec 02 19:48:18 2020      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; StackPointer                               ;
 ; Top-level Entity Name              ; StackPointer                               ;
 ; Family                             ; Cyclone IV GX                              ;
-; Total logic elements               ; 41                                         ;
-;     Total combinational functions  ; 41                                         ;
-;     Dedicated logic registers      ; 15                                         ;
-; Total registers                    ; 15                                         ;
+; Total logic elements               ; 44                                         ;
+;     Total combinational functions  ; 44                                         ;
+;     Dedicated logic registers      ; 16                                         ;
+; Total registers                    ; 16                                         ;
 ; Total pins                         ; 21                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
@@ -66,7 +66,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/01/2020 19:10:35 ;
+; Start date & time ; 12/02/2020 19:47:59 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; StackPointer        ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ applicable agreement for further details.
 +-------------------------------------+-----------------------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                               ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+-----------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 193866609351778.160686783501492                     ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 193866609351778.160695647913244                     ; --            ; --          ; --             ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                                                  ; --            ; --          ; eda_simulation ;
 ; EDA_NETLIST_WRITER_OUTPUT_DIR       ; C:/Users/OMEN/Desktop/ProcesadorV2/simulation/qsim/ ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                                         ; --            ; --          ; eda_simulation ;
@@ -96,12 +96,8 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Analysis & Synthesis ; 00:00:02     ; 1.0                     ; 4701 MB             ; 00:00:02                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4585 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4585 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4585 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4585 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4586 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4585 MB             ; 00:00:01                           ;
-; Total                ; 00:00:08     ; --                      ; --                  ; 00:00:08                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4585 MB             ; 00:00:01                           ;
+; Total                ; 00:00:03     ; --                      ; --                  ; 00:00:04                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -113,10 +109,6 @@ applicable agreement for further details.
 ; Analysis & Synthesis ; DESKTOP-IETUVTB  ; Windows 7 ; 6.2        ; x86_64         ;
 ; EDA Netlist Writer   ; DESKTOP-IETUVTB  ; Windows 7 ; 6.2        ; x86_64         ;
 ; EDA Netlist Writer   ; DESKTOP-IETUVTB  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-IETUVTB  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-IETUVTB  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-IETUVTB  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-IETUVTB  ; Windows 7 ; 6.2        ; x86_64         ;
 +----------------------+------------------+-----------+------------+----------------+
 
 
@@ -124,10 +116,6 @@ applicable agreement for further details.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off StackPointer -c StackPointer
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog StackPointer -c StackPointer --vector_source=C:/Users/OMEN/Desktop/ProcesadorV2/StackPointer.vwf --testbench_file=C:/Users/OMEN/Desktop/ProcesadorV2/simulation/qsim/StackPointer.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/OMEN/Desktop/ProcesadorV2/simulation/qsim/ StackPointer -c StackPointer
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog StackPointer -c StackPointer --vector_source=C:/Users/OMEN/Desktop/ProcesadorV2/StackPointer.vwf --testbench_file=C:/Users/OMEN/Desktop/ProcesadorV2/simulation/qsim/StackPointer.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/OMEN/Desktop/ProcesadorV2/simulation/qsim/ StackPointer -c StackPointer
 quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog StackPointer -c StackPointer --vector_source=C:/Users/OMEN/Desktop/ProcesadorV2/StackPointer.vwf --testbench_file=C:/Users/OMEN/Desktop/ProcesadorV2/simulation/qsim/StackPointer.vwf.vt
 quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/OMEN/Desktop/ProcesadorV2/simulation/qsim/ StackPointer -c StackPointer
 
